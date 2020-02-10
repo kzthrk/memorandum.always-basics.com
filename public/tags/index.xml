@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Memorandum - Danger past, got forgotten</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Memorandum - Danger past, got forgotten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>©2020 Always Basics.</copyright>
+    <lastBuildDate>Mon, 10 Feb 2020 16:24:31 +0900</lastBuildDate>
+    
+        <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mac</title>
+      <link>/tags/mac/</link>
+      <pubDate>Mon, 10 Feb 2020 16:24:31 +0900</pubDate>
+      
+      <guid>/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Arduino</title>
+      <link>/tags/arduino/</link>
+      <pubDate>Sat, 08 Feb 2020 15:10:52 +0900</pubDate>
+      
+      <guid>/tags/arduino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Thu, 06 Feb 2020 13:57:04 +0900</pubDate>
+      
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>install</title>
+      <link>/tags/install/</link>
+      <pubDate>Thu, 06 Feb 2020 13:57:04 +0900</pubDate>
+      
+      <guid>/tags/install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>静的サイトジェネレータ</title>
+      <link>/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</link>
+      <pubDate>Thu, 06 Feb 2020 13:57:04 +0900</pubDate>
+      
+      <guid>/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>note</title>
+      <link>/tags/note/</link>
+      <pubDate>Wed, 05 Feb 2020 13:57:04 +0900</pubDate>
+      
+      <guid>/tags/note/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: http://memorandum.always-basics.com/sitemap.xml

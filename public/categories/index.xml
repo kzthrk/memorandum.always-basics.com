@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Memorandum - Danger past, got forgotten</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Memorandum - Danger past, got forgotten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>©2020 Always Basics.</copyright>
+    <lastBuildDate>Mon, 10 Feb 2020 16:24:31 +0900</lastBuildDate>
+    
+        <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Misc</title>
+      <link>/categories/misc/</link>
+      <pubDate>Mon, 10 Feb 2020 16:24:31 +0900</pubDate>
+      
+      <guid>/categories/misc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>電子工作</title>
+      <link>/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Sat, 08 Feb 2020 15:10:52 +0900</pubDate>
+      
+      <guid>/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>/categories/web/</link>
+      <pubDate>Thu, 06 Feb 2020 13:57:04 +0900</pubDate>
+      
+      <guid>/categories/web/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

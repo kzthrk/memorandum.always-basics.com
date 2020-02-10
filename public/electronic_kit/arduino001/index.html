@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Arduinoでリモコンを作ろう&nbsp;&ndash;&nbsp;Memorandum - Danger past, got forgotten</title><link rel="stylesheet" href="/css/core.min.2afffb91c470e0193a6e12fd02ba70b078d207aa384789ec7b39a3f263595710fa0d1e1373f3f3988a8a1663ee51d7f6.css" integrity="sha384-Kv/7kcRw4Bk6bhL9ArpwsHjSB6o4R4nsezmj8mNZVxD6DR4Tc/PzmIqKFmPuUdf2"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, got forgotten</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時に、もう一度だけ繰り返すこと</span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">Arduinoでリモコンを作ろう</h1><p class="article date">Saturday, February 8, 2020</p></section><article class="article markdown-body"><h1 id="概要">概要</h1>
+<p>Arduinoでリモコンを作成してみたいと思います。作成するリモコンは赤外線を使った一般的なリモコンです。いわゆるテレビやエアコンなどを操作するリモコンで、単純にリモコン側から赤外線を使った信号を送りつけ、本体が側がそれに反応しているタイプのものです。</p>
+<p>一部のリモコンには一方通行ではないものがあるようですが、今回作成するArduinoのリモコンはそれには対応していません。</p>
+<h1 id="準備するもの">準備するもの</h1>
+<p>Arduinoでリモコンを作成するにあたり、必要なパーツを以下にリストします。まず<strong>Arduinoでリモコンに特化したもの</strong>を先に挙げます。続いて、ArduinoでLチカだったり、Raspberry Piでリモコンだったり、いわゆる<strong>電子工作として一般的に必要なもの</strong>をリストします。この分類は微妙な線引きではありますが、察してやって下さい。</p>
+<h2 id="arduinoでリモコンに必要なもの">Arduinoでリモコンに必要なもの</h2>
+<table>
+<thead>
+<tr>
+<th>価格</th>
+<th>品名</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100円</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gI-04659/"target="_blank">赤外線リモコン受信モジュール OSRB38C9AA（2個入）</a></td>
+<td></td>
+</tr>
+<tr>
+<td>100円</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gI-12612/"target="_blank">5mm 赤外線LED OSI5LA5113A（10個入）</a></td>
+<td>可視光線のLEDもあると動作確認に便利。赤外線は目に見えないので。</td>
+</tr>
+<tr>
+<td>200円</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gR-07960/"target="_blank">抵抗 27Ω 1W（100本入）</a></td>
+<td>これである必要はありません。実際、最終的には並行に繋いで抵抗を下げました。</td>
+</tr>
+<tr>
+<td>1980円</td>
+<td><a href="https://www.switch-science.com/catalog/2500/"target="_blank">ESPr® Developer（ESP-WROOM-02開発ボード）</a></td>
+<td>これも他のArduinoでもOKです。実際最初はUnoを使って試していました</td>
+</tr>
+</tbody>
+</table>
+<h2 id="電子工作として一般的に必要なもの">電子工作として一般的に必要なもの</h2>
+<table>
+<thead>
+<tr>
+<th>参考価格</th>
+<th>品名</th>
+<th>商品例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>35円</td>
+<td>ピンヘッダ</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gC-00167/"target="_blank">ピンヘッダ　１×４０　（４０Ｐ）</a></td>
+</tr>
+<tr>
+<td>270円</td>
+<td>ブレッドボード</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gP-00315/"target="_blank">ブレッドボード（1枚）</a></td>
+</tr>
+<tr>
+<td>180円</td>
+<td>ジャンパーワイヤ</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gC-05371/"target="_blank">ブレッドボード・ジャンパーワイヤ（オス－オス）　１０ｃｍセット</a></td>
+</tr>
+<tr>
+<td>60円</td>
+<td>ユニバーサル基板</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gP-03229/"target="_blank">片面ガラスコンポジット・ユニバーサル基板　Ｃタイプ　めっき仕上げ　（７２×４７ｍｍ）　日本製</a></td>
+</tr>
+<tr>
+<td>210円</td>
+<td>はんだ</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gT-02594/"target="_blank">はんだ　０．８ｍｍ</a></td>
+</tr>
+<tr>
+<td>2,300円</td>
+<td>はんだごて</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gT-02534/"target="_blank">即熱はんだこて　ＴＱ－９５（９０Ｗ／１５Ｗ）</a></td>
+</tr>
+</tbody>
+</table>
+<p>これらに関しては、これでなければダメというものでもありませんし、道具の類いは特に好みやこだわりもあると思いますので、手持ちのものをご使用いただくか、必要に応じて購入(場合によっては我慢)するなど、適宜ご判断の上お願いします。</p>
+<h1 id="実装">実装</h1>
+<p>まずは純粋にArduinoでリモコン作りをしたいと思います。その後、使用しているArduinoがWi-Fiをしゃべることから、リモコンのリモコン化(Web化)をしたいと思います。</p>
+<h2 id="実装その1">実装その1</h2>
+<p>まずは純粋にArduinoでリモコンです。</p>
+<h3 id="回路">回路</h3>
+<h3 id="スケッチ">スケッチ</h3>
+<h3 id="動作確認">動作確認</h3>
+<h2 id="上手く動作しない場合">上手く動作しない場合</h2>
+<h3 id="デバッグその1">デバッグその1</h3>
+<p>赤外線LEDが本当に光っているかが最も気になるところかと思いますが、それを確かめる方法を紹介する前に、まずは可視光を放つLEDでデバッグしてみましょう。</p>
+<p>スケッチに変更はありません。ただただLEDを可視光を放つLEDに変更してみます。</p>
+<h3 id="デバッグその2">デバッグその2</h3>
+<p>可視光のLEDが実際に光った場合、それでも赤外線LEDは光っていないのではないかと疑心暗鬼になる気持ち、十分すぎるほどに分かります。私自身がそうでした。</p>
+<p>過去には携帯電話(ガラケー)のカメラであれば、赤外線の光線を撮影することが可能でした。最近のスマートフォンの場合は赤外線をカットしているものがあり、お手元のスマートフォンで写るかどうかは分かりませんが、幸いなことにお手元のリモコンは確実に赤外線を発しているはずで、それを撮影することで写るカメラであるかどうかはすぐに判断可能です。</p>
+<p>なお、iPhoneの場合にはインカメラ(液晶画面側のカメラ)であれば赤外線の光が写ります。</p>
+<p>そのカメラを使って赤外線LEDが光っているかを確かめてみましょう。</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>写真&laquo;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2 id="実装その2">実装その2</h2>
+<h3 id="回路-1">回路</h3>
+<h3 id="スケッチ-1">スケッチ</h3>
+<p>今回Arduinoとして用いたのは<a href="ESP-WROOM-02">https://www.switch-science.com/catalog/2346/</a>を用いた[https://www.switch-science.com/catalog/2500/](ESPr® Developer（ESP-WROOM-02開発ボード）)です。このボードの用いた理由は、一番は私のような素人でも取り扱いやすいということですが、同時にWi-Fiで制御することが可能になります。</p>
+<p>具体的にはArduinoをWebサーバーとして自宅のWi-Fiルータに接続しています。その上で、リモコンの各ボタンをURLと紐付けてアクセスされたURLに応じて赤外線のシグナルを発信するという算段です。
+さらにもう一つ工夫をしています。それはHTMLを外部に持たせていることです。ArduinoをWebサーバーしたのは良いのですが、HTMLを返させるには少々編集に手間が掛かります。
+そこでHTMLは外部のサーバーに配置しています。Webブラウザからみるとリンク先が自宅内のネットワーク上にあるWebサーバーを指していますので、HTTPリクエストは無事にArduinoへ届きます。Arduinoでは&quot;302 Moved Temporarily&quot;を返し、再び外部のWebサーバー上のHTMLへ戻るようにしています。</p>
+<p>この方法は、ArduinoにWebSocketをしゃべらせて外部サーバーと通信させるケースに比べてセキュリティに優れていると言えます。今回はHTML内のIPアドレスを固定で書き込んでいますが、自宅のWi-Fi環境においてDHCPとなっているのであれば、外部のWebサーバー上でIPアドレスを受領して動的にHTMLを生成して返却するようなサーバー側の仕組みを用意すれば良いでしょう。</p>
+<p>一つ言えることは、この方法はいろいろな回路を組み、色々と外部から操作したいと思ったときに、選択の幅を広げることになると思いますので是非この機会にお試し下さい。</p>
+<h1 id="編集後記">編集後記</h1>
+<p>軟弱な(Softwareな)世界に生きていると、電子工作(ハード)な世界のデバッグのやりづらさたるや半端ない負担で、実際にはこれもう一つ回路設計しないと分からないのでは？と思うこともあるほどですが&hellip;
+今回は実際、予備の意味もあって受信モジュールを2つ買っておいたので、お迎え合わせにもう一つリモコン回路を作ってお迎え合わせにして確かめました。</p>
+</article><section class="article labels"><a class="category" href=/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/>電子工作</a><a class="tag" href=/tags/arduino/>Arduino</a></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Always Basics.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-75025058-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</body>
+
+</html>

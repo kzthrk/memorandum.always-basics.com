@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc on Memorandum - Danger past, got forgotten</title>
+    <link>/categories/misc/</link>
+    <description>Recent content in Misc on Memorandum - Danger past, got forgotten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>©2020 Always Basics.</copyright>
+    <lastBuildDate>Mon, 10 Feb 2020 16:24:31 +0900</lastBuildDate>
+    
+        <atom:link href="/categories/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MacOS Catalinaへのアップデート</title>
+      <link>/misc/macos/</link>
+      <pubDate>Mon, 10 Feb 2020 16:24:31 +0900</pubDate>
+      
+      <guid>/misc/macos/</guid>
+      <description>概要 職業柄OSは最新を常に使うようにしています。と、同様に職業柄少し遅れて(様子見てから)OSのアップデート(最新化)はします。 先陣切って乗</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>/misc/welcome/</link>
+      <pubDate>Wed, 05 Feb 2020 13:57:04 +0900</pubDate>
+      
+      <guid>/misc/welcome/</guid>
+      <description>はじめに この投稿はお試し用です。 なにするサイト？ このサイトでは、プログラミング言語や電子工作など日頃行っている作業のメモを纏め公開していく予</description>
+    </item>
+    
+  </channel>
+</rss>

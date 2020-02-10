@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>MacOS Catalinaへのアップデート&nbsp;&ndash;&nbsp;Memorandum - Danger past, got forgotten</title><link rel="stylesheet" href="/css/core.min.2afffb91c470e0193a6e12fd02ba70b078d207aa384789ec7b39a3f263595710fa0d1e1373f3f3988a8a1663ee51d7f6.css" integrity="sha384-Kv/7kcRw4Bk6bhL9ArpwsHjSB6o4R4nsezmj8mNZVxD6DR4Tc/PzmIqKFmPuUdf2"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, got forgotten</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時に、もう一度だけ繰り返すこと</span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">MacOS Catalinaへのアップデート</h1><p class="article date">Monday, February 10, 2020</p></section><article class="article markdown-body"><h1 id="概要">概要</h1>
+<p>職業柄OSは最新を常に使うようにしています。と、同様に職業柄少し遅れて(様子見てから)OSのアップデート(最新化)はします。</p>
+<p>先陣切って乗り込むと、OSとしての問題に遭遇し、その解決方法が現在進行形で目の前を流れて行きます。
+OSのバグが理由で仕事が停滞してしまったり、その情報を追うのに時間を取られるというのは困りものです。</p>
+<p>もう一つは、仕事で使うツール類がすべて自分と同じペースでアップデートをしているわけではないということです。
+こちらはどんなに自分に頑張る気があっても、開発している側がそれに追いついていなければ一向に前に進みません。</p>
+<p>なので、少し遅れてアップデートするようにしています。</p>
+<p>一つ今になった理由としては、仕事が忙しい時期には出来ないということです。</p>
+<p>もしも問題が起こった時には、事前に取得済みのバックアップから戻すといったことも想定しなければなりませんし、最悪のケースとしては
+文鎮化するということさえどこかで覚悟は必要です。</p>
+<p>ということで、少し遅れて+仕事が落ち着いているときの結果が2月になってしまったという次第です。</p>
+<h1 id="内容">内容</h1>
+<p>内容は1つずつ対応するたびにアップデートして追加していきます。
+つまり、いまから書く内容は次の1つだけです。</p>
+<ol>
+<li>アップデート後gitコマンドが使えない</li>
+</ol>
+<h2 id="アップデート後gitコマンドが使えない">アップデート後gitコマンドが使えない</h2>
+<p>文字通りCatalinaにアプデート後、gitコマンドを使用しようとすると<code>xcrun</code>がないと怒られる。
+前提としては、Xcode/Command Line Toolsでgitをインストールしているというのがあるかと思います。
+Homebrewとかgitが用意したインストーラーだったり、人それぞれだと思います。</p>
+<h3 id="エラー症状">エラー、症状</h3>
+<pre><code class="language-ログ" data-lang="ログ">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+
+</code></pre><h3 id="対応">対応</h3>
+<p>xcode-selectをインストールし直しました。</p>
+<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">xcode-select --install
+</code></pre></div><h3 id="確認">確認</h3>
+<p>その後、バージョン表示させて確認しました。</p>
+<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">git --version
+</code></pre></div><pre><code class="language-ログ" data-lang="ログ">MacBookPro-2:~ $ git --version
+git version 2.21.1 (Apple Git-122.3)
+MacBookPro-2:~ $
+</code></pre><p>おわり。</p>
+</article><section class="article labels"><a class="category" href=/categories/misc/>Misc</a><a class="tag" href=/tags/mac/>Mac</a></section><section class="article navigation"><p><a class="link" href="/misc/welcome/"><span class="li">&rarr;</span>Welcome</a class="link">
+    </p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Always Basics.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-75025058-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</body>
+
+</html>
