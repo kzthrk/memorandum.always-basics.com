@@ -1,9 +1,18 @@
 ---
 title: "Arduinoでリモコンを作ろう"
-date: 2020-02-08T15:10:52+09:00
+date: 2020-02-12T11:15:17+09:00
+lastmod: 2020-02-12T11:15:17+09:00
 Categories: ["電子工作"]
 Tags: ["Arduino"]
 Description: "Arduinoでリモコンを作成"
+imgs: []
+cover: ""  # image show on top
+readingTime: true  # show reading time after article date
+toc: true
+comments: false
+justify: false  # text-align: justify;
+single: false  # display as a single page, hide navigation on bottom, like as about page.
+license: ""  # CC License
 draft: false
 ---
 
@@ -92,6 +101,4 @@ Arduinoでリモコンを作成するにあたり、必要なパーツを以下�
 # 編集後記
 軟弱な(Softwareな)世界に生きていると、電子工作(ハード)な世界のデバッグのやりづらさたるや半端ない負担で、実際にはこれもう一つ回路設計しないと分からないのでは？と思うこともあるほどですが...
 今回は実際、予備の意味もあって受信モジュールを2つ買っておいたので、お迎え合わせにもう一つリモコン回路を作ってお迎え合わせにして確かめました。
-
-
 

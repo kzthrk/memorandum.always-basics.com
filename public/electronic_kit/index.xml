@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Sat, 08 Feb 2020 15:10:52 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 11:15:17 +0900</lastBuildDate>
     
         <atom:link href="/electronic_kit/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Arduinoでリモコンを作ろう</title>
       <link>/electronic_kit/arduino001/</link>
-      <pubDate>Sat, 08 Feb 2020 15:10:52 +0900</pubDate>
+      <pubDate>Wed, 12 Feb 2020 11:15:17 +0900</pubDate>
       
       <guid>/electronic_kit/arduino001/</guid>
       <description>概要 Arduinoでリモコンを作成してみたいと思います。作成するリモコンは赤外線を使った一般的なリモコンです。いわゆるテレビやエアコンなどを</description>

@@ -29,10 +29,12 @@ unsafe = true  # enable raw HTML in Markdown
 
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
-dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
-slogan = "継続する秘訣は、途切れたと思った時に、もう一度だけ繰り返すこと"
+# dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
+slogan = "継続する秘訣は、途切れたと思った時に、もう一度繰り返すこと"
 license = ""  # CC License
 logo = "/images/logo.jpg"
+
+mainSections = ["electronic_kit", "misc", "programming", "web"]
 
 [params.nav]
 showCategories = true       # /categories/
@@ -42,7 +44,7 @@ showTags = true             # /tags/
 disqusShortname = "kzthrk"  # your short name
 
 [params.comments]
-enable = true  # En/Disable comments globally, default: false. You can always enable comments on per page.
+enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
 
 # [params.math]
 # enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
@@ -52,7 +54,6 @@ enable = true  # En/Disable comments globally, default: false. You can always en
 use = "hljs"  # 1. prismjs 2. hljs 3. none
 theme = "dracula"
 darkTheme = "xcode-dark"  # apply this theme in dark mode
-
 
 # # custom navigation items
 

@@ -7,24 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Mon, 10 Feb 2020 16:24:31 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 11:15:17 +0900</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Miscs</title>
-      <link>/misc/</link>
-      <pubDate>Mon, 10 Feb 2020 16:24:31 +0900</pubDate>
-      
-      <guid>/misc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Electronic_kits</title>
       <link>/electronic_kit/</link>
-      <pubDate>Sat, 08 Feb 2020 15:10:52 +0900</pubDate>
+      <pubDate>Wed, 12 Feb 2020 11:15:17 +0900</pubDate>
       
       <guid>/electronic_kit/</guid>
       <description></description>
@@ -33,9 +24,18 @@
     <item>
       <title>Webs</title>
       <link>/web/</link>
-      <pubDate>Thu, 06 Feb 2020 13:57:04 +0900</pubDate>
+      <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
       
       <guid>/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Miscs</title>
+      <link>/misc/</link>
+      <pubDate>Mon, 10 Feb 2020 16:24:31 +0900</pubDate>
+      
+      <guid>/misc/</guid>
       <description></description>
     </item>
     

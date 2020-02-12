@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Mon, 10 Feb 2020 16:24:31 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2020 11:15:17 +0900</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Arduino</title>
+      <link>/tags/arduino/</link>
+      <pubDate>Wed, 12 Feb 2020 11:15:17 +0900</pubDate>
+      
+      <guid>/tags/arduino/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>config</title>
+      <link>/tags/config/</link>
+      <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
+      
+      <guid>/tags/config/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/tags/hugo/</link>
+      <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
+      
+      <guid>/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>静的サイトジェネレータ</title>
+      <link>/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</link>
+      <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
+      
+      <guid>/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Mac</title>
@@ -22,38 +58,11 @@
     </item>
     
     <item>
-      <title>Arduino</title>
-      <link>/tags/arduino/</link>
-      <pubDate>Sat, 08 Feb 2020 15:10:52 +0900</pubDate>
-      
-      <guid>/tags/arduino/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>/tags/hugo/</link>
-      <pubDate>Thu, 06 Feb 2020 13:57:04 +0900</pubDate>
-      
-      <guid>/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>install</title>
       <link>/tags/install/</link>
       <pubDate>Thu, 06 Feb 2020 13:57:04 +0900</pubDate>
       
       <guid>/tags/install/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>静的サイトジェネレータ</title>
-      <link>/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</link>
-      <pubDate>Thu, 06 Feb 2020 13:57:04 +0900</pubDate>
-      
-      <guid>/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</guid>
       <description></description>
     </item>
     
