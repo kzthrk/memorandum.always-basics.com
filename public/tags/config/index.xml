@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>config on Memorandum - Danger past, got forgotten</title>
+    <link>/tags/config/</link>
+    <description>Recent content in config on Memorandum - Danger past, got forgotten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>©2020 Always Basics.</copyright>
+    <lastBuildDate>Mon, 10 Feb 2020 23:11:57 +0900</lastBuildDate>
+    
+        <atom:link href="/tags/config/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugoで作成したサイトを追加構成</title>
+      <link>/web/hugo002/</link>
+      <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
+      
+      <guid>/web/hugo002/</guid>
+      <description>はじめに 前回は静的サイトジェネレータ Hugoをインストールで、静的サイトジェネレータのひとつであるHugoをインストールしました。 今回はその</description>
+    </item>
+    
+  </channel>
+</rss>
