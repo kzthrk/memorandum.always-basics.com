@@ -9,17 +9,6 @@ enableRobotsTXT = true
 # Google Analytics
 googleAnalytics = "UA-75025058-6"
 
-# <!-- Global site tag (gtag.js) - Google Analytics -->
-# <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75025058-6"></script>
-# <script>
-#   window.dataLayer = window.dataLayer || [];
-#   function gtag(){dataLayer.push(arguments);}
-#   gtag('js', new Date());
-
-#   gtag('config', 'UA-75025058-6');
-# </script>
-
-
 [markup.highlight]
 codeFences = true
 noClasses = false
@@ -30,7 +19,7 @@ unsafe = true  # enable raw HTML in Markdown
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 # dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
-slogan = "継続する秘訣は、途切れたと思った時に、もう一度繰り返すこと"
+slogan = "継続する秘訣は、途切れたと思った時にもう一度繰り返すこと"
 license = ""  # CC License
 logo = "/images/logo.jpg"
 

@@ -1,80 +1,23 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
-
-    
-        <url>
-        <loc>http://memorandum.always-basics.com/electronic_kit/arduino001/</loc>
-        
-            <lastmod>2020-02-12T11:15:17+09:00</lastmod>
-        
-        </url>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <url>
-        <loc>http://memorandum.always-basics.com/web/hugo002/</loc>
-        
-            <lastmod>2020-02-10T23:11:57+09:00</lastmod>
-        
-        </url>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <url>
-        <loc>http://memorandum.always-basics.com/misc/macos/</loc>
-        
-            <lastmod>2020-02-10T16:24:31+09:00</lastmod>
-        
-        </url>
-    
-
-    
-
-    
-
-    
-
-    
-        <url>
-        <loc>http://memorandum.always-basics.com/web/hugo001/</loc>
-        
-            <lastmod>2020-02-06T13:57:04+09:00</lastmod>
-        
-        </url>
-    
-
-    
-
-    
-        <url>
-        <loc>http://memorandum.always-basics.com/misc/welcome/</loc>
-        
-            <lastmod>2020-02-05T13:57:04+09:00</lastmod>
-        
-        </url>
-    
-
-</urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
+    <loc>http://memorandum.always-basics.com/tags/arduino/</loc><lastmod>2020-02-12T11:15:17+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/electronic_kit/arduino001/</loc><lastmod>2020-02-12T11:15:17+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/categories/</loc><lastmod>2020-02-12T11:15:17+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/electronic_kit/</loc><lastmod>2020-02-12T11:15:17+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/</loc><lastmod>2020-02-12T11:15:17+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/tags/</loc><lastmod>2020-02-12T11:15:17+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/</loc><lastmod>2020-02-12T11:15:17+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/tags/config/</loc><lastmod>2020-02-10T23:11:57+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/tags/hugo/</loc><lastmod>2020-02-10T23:11:57+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/web/hugo002/</loc><lastmod>2020-02-10T23:11:57+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/categories/web/</loc><lastmod>2020-02-10T23:11:57+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/web/</loc><lastmod>2020-02-10T23:11:57+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</loc><lastmod>2020-02-10T23:11:57+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/tags/mac/</loc><lastmod>2020-02-10T16:24:31+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/misc/macos/</loc><lastmod>2020-02-10T16:24:31+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/categories/misc/</loc><lastmod>2020-02-10T16:24:31+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/misc/</loc><lastmod>2020-02-10T16:24:31+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/tags/install/</loc><lastmod>2020-02-06T13:57:04+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/web/hugo001/</loc><lastmod>2020-02-06T13:57:04+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/tags/note/</loc><lastmod>2020-02-05T13:57:04+09:00</lastmod></url><url>
+    <loc>http://memorandum.always-basics.com/misc/welcome/</loc><lastmod>2020-02-05T13:57:04+09:00</lastmod></url></urlset>
