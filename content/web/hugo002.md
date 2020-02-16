@@ -255,6 +255,100 @@ mainSections = ["electronic_kit", "misc", "programming", "web"]
 
 <!-- ==================================================================================================== -->
 
+## HugoでGoogle Adsenseに対応してみる
+
+HugoでGoogle Adsenseに対応させてみたいと思います。
+根本的には`<HEAD>...</HEAD>`に任意の文字列と挿入できればゴールです。
+
+以下のようなコードを入れるように指示されたと思います。
+個別に広告を配置する場合、投稿(mdファイル)毎にHTMLを直書きする感じで対応するイメージでしょうか。
+
+```HTML
+<script data-ad-client="ca-pub-000000000000000000" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+```
+
+※0000・・・の部分はご自身のもので置き換えて下さいね。
+
+### 設定
+
+まず`themes/hugo-notepadium/layouts/_default/baseof.html`をみると、HEADタグの中身はhead.htmlに任せているようですね。
+
+```HTML
+<!DOCTYPE html>
+<html lang="{{- site.Language.Lang -}}">
+{{- partial "head.html" . -}}
+
+<body>
+    <div class="base-body">
+        {{- partial "header.html" . -}}
+        <div id="content">
+            {{- block "main" . -}}{{- end -}}
+        </div>
+        {{- partial "footer.html" . -}}
+    </div>
+</body>
+
+</html>
+```
+
+なので`themes/hugo-notepadium/layouts/partials/head.html`を見てみます。
+
+```HTML
+<meta charset="utf-8">
+{{- hugo.Generator -}}
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+
+{{- define "title" -}}
+    {{- $title := .Title -}}
+    {{- if and (ne $title "") (ne $title site.Title) -}}
+        <title>{{- $title | safeHTML -}} &nbsp;&ndash;&nbsp; {{- site.Title | safeHTML -}}</title>
+    {{- else -}}
+        {{- $slogan := site.Params.slogan -}}
+        <title>{{- site.Title | safeHTML -}}{{- if and (isset site.Params "slogan") (ne $slogan "") -}} &nbsp;&ndash;&nbsp;
+            {{- $slogan | safeHTML -}}{{- end -}}</title>
+    {{- end -}}
+{{- end -}}
+
+{{- block "title" . -}}{{- end -}}
+
+{{- partial "style.html" . -}}
+{{- partial "rss-feed.html" . -}}
+{{- partial "head-extra.html" . -}}
+```
+
+まぁ、ごちゃごちゃ書いてありますが、こっちは中身は何にも分からないという前提で突き進んでいますので、一番下の行に注目です。
+なにやら、追加があったらそれらはこのextraファイルに書いてね、という雰囲気を感じますね。
+
+なので`themes/hugo-notepadium/layouts/partials/head-extra.html`を見てみます。
+
+```HTML
+<!--
+    for user-side override
+-->
+```
+どうやらあたりのようです。
+
+
+ということで、`layouts/partials/head-extra.html`を作り、以下のようにしました。
+
+```HTML
+<!--
+    for user-side override
+-->
+<script data-ad-client="ca-pub-000000000000000000" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+```
+
+
+### 確認
+実際に広告が配信されることを持って確認としても良いのですが、一応やったことの確認ということで。
+
+![GoogleAdsense設定確認](/assets/2020-02-16-21-06-14.png)
+
+他にも自動で挿入されているんだと思いますが、一応下線を引いたところが追加されているのでよしとします。
+
 <!-- ==================================================================================================== -->
 
 

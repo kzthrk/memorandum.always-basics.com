@@ -181,6 +181,72 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
         alt="メインセクション追加確認"/></a></p>
 <p>無事に出てくるようになりました！</p>
 <!-- ==================================================================================================== -->
+<h2 id="hugoでgoogle-adsenseに対応してみる">HugoでGoogle Adsenseに対応してみる</h2>
+<p>HugoでGoogle Adsenseに対応させてみたいと思います。
+根本的には<code>&lt;HEAD&gt;...&lt;/HEAD&gt;</code>に任意の文字列と挿入できればゴールです。</p>
+<p>以下のようなコードを入れるように指示されたと思います。
+個別に広告を配置する場合、投稿(mdファイル)毎にHTMLを直書きする感じで対応するイメージでしょうか。</p>
+<div class="highlight"><pre class="chroma"><code class="language-HTML" data-lang="HTML"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">data-ad-client</span><span class="o">=</span><span class="s">&#34;ca-pub-000000000000000000&#34;</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><p>※0000・・・の部分はご自身のもので置き換えて下さいね。</p>
+<h3 id="設定-1">設定</h3>
+<p>まず<code>themes/hugo-notepadium/layouts/_default/baseof.html</code>をみると、HEADタグの中身はhead.htmlに任せているようですね。</p>
+<div class="highlight"><pre class="chroma"><code class="language-HTML" data-lang="HTML"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;{{- site.Language.Lang -}}&#34;</span><span class="p"></span><span class="p">&gt;</span>
+{{- partial &#34;head.html&#34; . -}}
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p"></span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;base-body&#34;</span><span class="p"></span><span class="p">&gt;</span>
+        {{- partial &#34;header.html&#34; . -}}
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p"></span><span class="p">&gt;</span>
+            {{- block &#34;main&#34; . -}}{{- end -}}
+        <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+        {{- partial &#34;footer.html&#34; . -}}
+    <span class="p">&lt;</span><span class="p">/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="p">/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div><p>なので<code>themes/hugo-notepadium/layouts/partials/head.html</code>を見てみます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-HTML" data-lang="HTML"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p"></span><span class="p">&gt;</span>
+{{- hugo.Generator -}}
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width,initial-scale=1,viewport-fit=cover&#34;</span><span class="p"></span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;color-scheme&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;light dark&#34;</span><span class="p"></span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;supported-color-schemes&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;light dark&#34;</span><span class="p"></span><span class="p">&gt;</span>
+
+{{- define &#34;title&#34; -}}
+    {{- $title := .Title -}}
+    {{- if and (ne $title &#34;&#34;) (ne $title site.Title) -}}
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p"></span><span class="p">&gt;</span>{{- $title | safeHTML -}} <span class="ni">&amp;nbsp;</span><span class="ni">&amp;ndash;</span><span class="ni">&amp;nbsp;</span> {{- site.Title | safeHTML -}}<span class="p">&lt;</span><span class="p">/</span><span class="nt">title</span><span class="p">&gt;</span>
+    {{- else -}}
+        {{- $slogan := site.Params.slogan -}}
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p"></span><span class="p">&gt;</span>{{- site.Title | safeHTML -}}{{- if and (isset site.Params &#34;slogan&#34;) (ne $slogan &#34;&#34;) -}} <span class="ni">&amp;nbsp;</span><span class="ni">&amp;ndash;</span><span class="ni">&amp;nbsp;</span>
+            {{- $slogan | safeHTML -}}{{- end -}}<span class="p">&lt;</span><span class="p">/</span><span class="nt">title</span><span class="p">&gt;</span>
+    {{- end -}}
+{{- end -}}
+
+{{- block &#34;title&#34; . -}}{{- end -}}
+
+{{- partial &#34;style.html&#34; . -}}
+{{- partial &#34;rss-feed.html&#34; . -}}
+{{- partial &#34;head-extra.html&#34; . -}}
+</code></pre></div><p>まぁ、ごちゃごちゃ書いてありますが、こっちは中身は何にも分からないという前提で突き進んでいますので、一番下の行に注目です。
+なにやら、追加があったらそれらはこのextraファイルに書いてね、という雰囲気を感じますね。</p>
+<p>なので<code>themes/hugo-notepadium/layouts/partials/head-extra.html</code>を見てみます。</p>
+<div class="highlight"><pre class="chroma"><code class="language-HTML" data-lang="HTML"><span class="c">&lt;!--</span><span class="c">
+</span><span class="c">    for user</span><span class="c">-</span><span class="c">side override
+</span><span class="c"></span><span class="c">--&gt;</span>
+</code></pre></div><p>どうやらあたりのようです。</p>
+<p>ということで、<code>layouts/partials/head-extra.html</code>を作り、以下のようにしました。</p>
+<div class="highlight"><pre class="chroma"><code class="language-HTML" data-lang="HTML"><span class="c">&lt;!--</span><span class="c">
+</span><span class="c">    for user</span><span class="c">-</span><span class="c">side override
+</span><span class="c"></span><span class="c">--&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">data-ad-client</span><span class="o">=</span><span class="s">&#34;ca-pub-000000000000000000&#34;</span> <span class="na">async</span>
+    <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;</span><span class="p"></span><span class="p">&gt;</span><span class="p">&lt;</span><span class="p">/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div><h3 id="確認-5">確認</h3>
+<p>実際に広告が配信されることを持って確認としても良いのですが、一応やったことの確認ということで。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="/assets/2020-02-16-21-06-14.png"><img  src="/assets/2020-02-16-21-06-14.png"
+        alt="GoogleAdsense設定確認"/></a></p>
+<p>他にも自動で挿入されているんだと思いますが、一応下線を引いたところが追加されているのでよしとします。</p>
 <!-- ==================================================================================================== -->
 <p>以上</p>
 </article><section class="article labels"><a class="category" href=/categories/web/>Web</a><a class="tag" href=/tags/hugo/>Hugo</a><a class="tag" href=/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/>静的サイトジェネレータ</a><a class="tag" href=/tags/config/>config</a></section><section class="article navigation"><p><a class="link" href="/web/hugo001/"><span class="li">&rarr;</span>静的サイトジェネレータ Hugoをインストール</a class="link">
