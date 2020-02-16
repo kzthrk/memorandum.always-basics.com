@@ -21,6 +21,20 @@ Arduinoでリモコンを作成してみたいと思います。作成するリ�
 
 一部のリモコンには一方通行ではないものがあるようですが、今回作成するArduinoのリモコンはそれには対応していません。
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
+
 # 準備するもの
 
 Arduinoでリモコンを作成するにあたり、必要なパーツを以下にリストします。まず**Arduinoでリモコンに特化したもの**を先に挙げます。続いて、ArduinoでLチカだったり、Raspberry Piでリモコンだったり、いわゆる**電子工作として一般的に必要なもの**をリストします。この分類は微妙な線引きではありますが、察してやって下さい。
@@ -45,6 +59,21 @@ Arduinoでリモコンを作成するにあたり、必要なパーツを以下�
 |2,300円|はんだごて|[即熱はんだこて　ＴＱ－９５（９０Ｗ／１５Ｗ）](http://akizukidenshi.com/catalog/g/gT-02534/)|
 
 これらに関しては、これでなければダメというものでもありませんし、道具の類いは特に好みやこだわりもあると思いますので、手持ちのものをご使用いただくか、必要に応じて購入(場合によっては我慢)するなど、適宜ご判断の上お願いします。
+
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 # 実装
 
@@ -193,6 +222,19 @@ void loop() {
 
 ![赤外線LEDを撮影](/assets/2020-02-14-01-54-44.png)
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 ## 実装その3
 
@@ -432,3 +474,16 @@ void loop(void) {
 
 今回は送信と受信のArduinoを用意して、それをお迎え合わせにして確かめたりもしました。
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->

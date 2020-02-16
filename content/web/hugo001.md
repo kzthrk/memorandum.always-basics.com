@@ -1,6 +1,7 @@
 ---
 title: "静的サイトジェネレータ Hugoをインストール"
 date: 2020-02-06T13:57:04+09:00
+lastmod: 2020-02-06T13:57:04+09:00
 Categories: ["Web"]
 Description: "静的サイトジェネレータ Hugoをインストール"
 Tags: ["Hugo", "静的サイトジェネレータ", "install"]
@@ -12,6 +13,20 @@ draft: false
 静的サイトジェネレータのひとつであるHugoをインストールし、実際にWebサイトとして公開する過程を記録しました。
 
 このサイトはHugoを使って作成されています。
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 # 静的サイトジェネレータ
 
@@ -40,6 +55,20 @@ HugoとはGo言語というGoogleが開発したプログラミング言語で�
 知って頂くのは嬉しいですが、知らなくてもHugoに関しては使いこなせます。
 
 静的サイトジェネレータはHugo以外にもいくつも存在しています。できることは似たり寄ったり。というかどのツールもゴールは静的ページの生成なので、そんなに劇的に違うと事件ですよね？この記事では比較はいたしませんが、ひとまずHugoを押しておきます。
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 # Hugoのインストール
 
@@ -315,6 +344,20 @@ darkTheme = "xcode-dark"  # apply this theme in dark mode
 
 一つ一つの投稿の中で画像を貼り付けるときも同じことです。
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
+
 ## 記事を追加
 
 1つ本稿を追加しました.
@@ -339,3 +382,16 @@ Wordpressでのブログ運営を念頭に置くと、コメント欄が必要�
 
 そして、Hugoを是非その候補のの一つに。
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->

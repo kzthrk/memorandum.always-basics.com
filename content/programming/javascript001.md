@@ -1,6 +1,7 @@
 ---
 title: "JavaScriptでループの同期処理"
 date: 2020-02-06T13:57:04+09:00
+lastmod: 2020-02-06T13:57:04+09:00
 Categories: ["Programming"]
 Description: "JavaScriptでループの同期処理"
 Tags: ["JavaScript", "同期"]

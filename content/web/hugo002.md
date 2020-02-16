@@ -1,6 +1,7 @@
 ---
 title: "Hugoで作成したサイトを追加構成"
 date: 2020-02-10T23:11:57+09:00
+lastmod: 2020-02-16T23:11:57+09:00
 Categories: ["Web"]
 Tags: ["Hugo", "静的サイトジェネレータ", "config"]
 Description: "Hugoで作成したサイトの追加構成"
@@ -13,6 +14,20 @@ draft: false
 今回はそのサイトに記事を増やす方向の充実ではなく、**機能や構成**を充実させていく方向でのメモをです。
 
 この記事は、順次追記されて充実していきます。(つまり、最初は1つ、2つしかトピックがありません)
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 # Hugoで作成したサイトに追加の構成を行う
 
@@ -57,6 +72,19 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
 
 ![sitemap.xmlの確認](/assets/2020-02-11-00-00-56.png)
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 <!-- ==================================================================================================== -->
 ## GoogleAnalytics
@@ -74,6 +102,19 @@ googleAnalytics = "UA-xxxxx-xx"
 ### 確認
 これに関しては、確認を割愛します。 
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 <!-- ==================================================================================================== -->
 ## Favicon.ico
@@ -95,6 +136,20 @@ HugoにFaviconを設定した後の確認です。
 ![favicon設定確認](/assets/2020-02-10-23-35-12.png)
 
 適当に写真を切り取って使いましたが、やはりアイコンとしてデザインしたモノを用意した方が良いですね。
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 <!-- ==================================================================================================== -->
 ## テーマを変更
@@ -184,6 +239,19 @@ disqusShortname = "kzthrk"  # your short name
 
 無事に変更できていました。
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 <!-- ==================================================================================================== -->
 
@@ -252,6 +320,20 @@ mainSections = ["electronic_kit", "misc", "programming", "web"]
 ![メインセクション追加確認](/assets/2020-02-12-22-11-29.png)
 
 無事に出てくるようになりました！
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 <!-- ==================================================================================================== -->
 
@@ -349,6 +431,19 @@ HugoでGoogle Adsenseに対応させてみたいと思います。
 
 他にも自動で挿入されているんだと思いますが、一応下線を引いたところが追加されているのでよしとします。
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 <!-- ==================================================================================================== -->
 
 

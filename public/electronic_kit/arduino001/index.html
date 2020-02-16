@@ -2,14 +2,26 @@
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="supported-color-schemes" content="light dark"><title>Arduinoでリモコンを作ろう&nbsp;&ndash;&nbsp;Memorandum - Danger past, got forgotten</title><link rel="stylesheet" href="/css/core.min.2afffb91c470e0193a6e12fd02ba70b078d207aa384789ec7b39a3f263595710fa0d1e1373f3f3988a8a1663ee51d7f6.css" integrity="sha384-Kv/7kcRw4Bk6bhL9ArpwsHjSB6o4R4nsezmj8mNZVxD6DR4Tc/PzmIqKFmPuUdf2">
-<script data-ad-client="ca-pub-9230307049349065" async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><body>
+<body>
     <div class="base-body"><section id="header" class="site header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, got forgotten</span></a></span>
         <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
     <h1 class="article title">Arduinoでリモコンを作ろう</h1><p class="article date">2020-02-12<span class="reading-time"> • 11 minutes to read</span></p></section><article class="article markdown-body"><h1 id="概要">概要</h1>
 <p>Arduinoでリモコンを作成してみたいと思います。作成するリモコンは赤外線を使った一般的なリモコンです。いわゆるテレビやエアコンなどを操作するリモコンで、単純にリモコン側から赤外線を使った信号を送りつけ、本体が側がそれに反応しているタイプのものです。</p>
 <p>一部のリモコンには一方通行ではないものがあるようですが、今回作成するArduinoのリモコンはそれには対応していません。</p>
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<p><ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-9230307049349065"
+data-ad-slot="9446890582"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 <h1 id="準備するもの">準備するもの</h1>
 <p>Arduinoでリモコンを作成するにあたり、必要なパーツを以下にリストします。まず<strong>Arduinoでリモコンに特化したもの</strong>を先に挙げます。続いて、ArduinoでLチカだったり、Raspberry Piでリモコンだったり、いわゆる<strong>電子工作として一般的に必要なもの</strong>をリストします。この分類は微妙な線引きではありますが、察してやって下さい。</p>
 <h2 id="arduinoでリモコンに必要なもの">Arduinoでリモコンに必要なもの</h2>
@@ -87,6 +99,19 @@
 </tbody>
 </table>
 <p>これらに関しては、これでなければダメというものでもありませんし、道具の類いは特に好みやこだわりもあると思いますので、手持ちのものをご使用いただくか、必要に応じて購入(場合によっては我慢)するなど、適宜ご判断の上お願いします。</p>
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<p><ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-9230307049349065"
+data-ad-slot="9446890582"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 <h1 id="実装">実装</h1>
 <p>実装は次の3段階に分けて行います。</p>
 <ol>
@@ -185,6 +210,19 @@ RAWデータも使えますので、興味のある方は、次の実装2で見�
 <p><a target="_blank" rel="noopener noreferrer" 
   href="/assets/2020-02-14-01-54-44.png"><img  src="/assets/2020-02-14-01-54-44.png"
         alt="赤外線LEDを撮影"/></a></p>
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<p><ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-9230307049349065"
+data-ad-slot="9446890582"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 <h2 id="実装その3">実装その3</h2>
 <p>いよいよ最終形です。Webリモコン化します。</p>
 <h3 id="回路3">回路3</h3>
@@ -406,6 +444,19 @@ void loop(void) {
 <h1 id="編集後記">編集後記</h1>
 <p>軟弱な(Softwareな)世界に生きていると、電子工作(ハード)な世界のデバッグのやりづらさたるや半端ない負担で、実際にはこれもう一つ回路設計しないと分からないのでは？と思うこともあるほどですが&hellip;</p>
 <p>今回は送信と受信のArduinoを用意して、それをお迎え合わせにして確かめたりもしました。</p>
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<p><ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-9230307049349065"
+data-ad-slot="9446890582"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 </article><section class="article labels"><a class="category" href=/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/>電子工作</a><a class="tag" href=/tags/arduino/>Arduino</a></section></div><section id="footer" class="footer"><div class="footer-wrap">
     <p class="copyright">©2020 Always Basics.</p>
     <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
