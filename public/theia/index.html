@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Theia&nbsp;&ndash;&nbsp;Memorandum - Danger past, got forgotten</title><link rel="stylesheet" href="/css/core.min.2afffb91c470e0193a6e12fd02ba70b078d207aa384789ec7b39a3f263595710fa0d1e1373f3f3988a8a1663ee51d7f6.css" integrity="sha384-Kv/7kcRw4Bk6bhL9ArpwsHjSB6o4R4nsezmj8mNZVxD6DR4Tc/PzmIqKFmPuUdf2">
+<body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, got forgotten</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">Theia</h1><p class="article date">2020-04-10<span class="reading-time"> • 5 minutes to read</span></p></section><article class="article markdown-body"><h1 id="はじめに">はじめに</h1>
+<h2 id="theiaとは">Theiaとは</h2>
+<p>Theiaとは<a href="https://theia-ide.org/"target="_blank">公式ページ</a>の説明を借りれば</p>
+<blockquote>
+<p>Eclipse Theia is an extensible platform to develop multi-language Cloud &amp; Desktop IDEs with state-of-the-art web technologies.</p>
+</blockquote>
+<p>Eclipse Theiaは、最先端のWebテクノロジーを使用して多言語のクラウドおよびデスクトップIDEを開発するための拡張可能なプラットフォームです。</p>
+<h3 id="だからなに">だからなに？</h3>
+<p>我々一般ユーザーにとって見れば、このスクリーンショットのような開発環境が提供されるってことです。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-10-23-54-22.png"><img  src="assets/2020-04-10-23-54-22.png"
+        alt="ScreenShot"/></a></p>
+<h3 id="つまりは">つまりは？</h3>
+<p>こちらの記事で紹介されていますが、デスクトップ版とブラウザ版が想定されていて、どちらでも同じソースコードで開発環境が提供されることになります。</p>
+<p><a href="https://www.publickey1.jp/blog/20/visual_studio_codeeclipse_theia_10vs_codeweb.html"target="_blank">Visual Studio Codeの代替を狙う統合開発環境「Eclipse Theia 1.0」リリース。VS Codeの拡張機能を利用可能、デスクトップ版とWebブラウザ版に両対応</a></p>
+<blockquote>
+<p>Eclipse Theiaは、「真のオープンソースによるVisual Studio Codeの代替」（a true open source alternative to Microsoft’s popular Visual Studio Code (VS Code) software）だとEclipse Foundationは紹介しており、デスクトップアプリケーションだけでなくWebブラウザからも同一機能が利用できるWebアプリケーション版も提供されています。</p>
+</blockquote>
+<h3 id="theiaとは-1">Theiaとは？</h3>
+<p>仕切り直しますね。<strong>Theia</strong> とはVS Code(Vidual Studio Code)そっくりなんですが、それがブラウザの中で(も)動きます。先に書いた通りデスクトップ版もありますが、デスクトップ版というのはElectronでパッケージングしたものになるので、それってそのまんまVS Codeじゃんってことですね。</p>
+<p><em>脱線: ElectronとはNode.jsのアプリ(サーバーサイド)とChromium(ブラウザ)を一塊にすることでデスクトップ・アプリケーションにするフレームワークです。</em></p>
+<p>この投稿を読んでいる方がVS Codeを聞いたことがないとは思えないですが、念のため簡単に触れておくと、Microsoftが開発しているElectronベースのソースコードエディタです。
+ソースコードエディタって微妙な表現ですが、MicrosoftはVisual Studioという統合開発環境をもっていてそのエディタ部分だけを切り出したというイメージなので、VS Code自身はソースコードエディタという説明に。
+ただご承知の通り、だれもソースコードエディタとしての使用にとどまっている人はおらず、豊富な拡張機能を <strong>拡張機能(プラグイン)</strong> をガシガシインストールして統合開発環境として使用している訳です。</p>
+<p>一方で、TheiaはEclipseが開発しているので別物ではあります。ですが、TheiaはVS Codeそっくりなだけでなく <strong>VS Codeの拡張機能(プラグイン)</strong> が使えます。いよいよヤバイ感じですね。
+はっきり言って、第一印象は丸パクリ状態です。</p>
+<h2 id="theiaを使ってみる">Theiaを使ってみる</h2>
+<h3 id="gitpodを使ってみる">Gitpodを使ってみる</h3>
+<p>まず真っ先に試してみるべきは、ブラウザで動作するこちらです。
+<a href="https://theia-ide.org/"target="_blank">公式ページ</a>の<strong>Try in Gitpod</strong>を利用します。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-00-22-21.png"><img  src="assets/2020-04-11-00-22-21.png"
+        alt="Try in Gitpod"/></a></p>
+<p>Gitpodへ移動すると、 <strong>Login with Github &amp; Launch Workspace</strong> をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-00-49-55.png"><img  src="assets/2020-04-11-00-49-55.png"
+        alt="Gitpod"/></a></p>
+<p>Githubのアカウントで認証します。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-00-51-39.png"><img  src="assets/2020-04-11-00-51-39.png"
+        alt="Sign in to Github"/></a></p>
+<p>拡張機能のインストールの案内が出てくるはずです。 <strong>Get Chrome Extension</strong> をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-00-58-05.png"><img  src="assets/2020-04-11-00-58-05.png"
+        alt="拡張機能"/></a></p>
+<p>すでにインストールしてしまった状態で画面をキャプチャしたので、ボタンが削除になっているのは許してください。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-00-59-47.png"><img  src="assets/2020-04-11-00-59-47.png"
+        alt="機能拡張のインストール"/></a></p>
+<p>そして、いよいよ&hellip;いよいよ&hellip;　ええ、Dockerですのでしばらくお待ちください。
+こんな状態になっていると思います。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-01-10-33.png"><img  src="assets/2020-04-11-01-10-33.png"
+        alt="theia"/></a></p>
+<p>これが、GitpodによるTheiaです。
+Theia自身の開発をしたい人はこのままで良いかと思いますが、多分そんな人はほとんどいないと思いますので一旦閉じます。</p>
+<p>右上のアイコンをクリックするとメニューが表示されるので、 <strong>Stop Workspace</strong> をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-01-22-20.png"><img  src="assets/2020-04-11-01-22-20.png"
+        alt="Menu"/></a></p>
+<p><strong>Workspaces</strong> をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-01-23-35.png"><img  src="assets/2020-04-11-01-23-35.png"
+        alt="Dialog"/></a></p>
+<p>ワークスペースのリストが表示されていることと思います。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-01-34-07.png"><img  src="assets/2020-04-11-01-34-07.png"
+        alt="WorkspaceList"/></a></p>
+<p>この画面は何度か訪れることになりますが、今は自分の環境を手に入れることが目的なので、一旦放置します。
+Githubの自分のリポジトリにブラウザでアクセスします。</p>
+<p><strong>Gitpod</strong> ボタンがあるはずなのでクリックしてください。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-01-38-44.png"><img  src="assets/2020-04-11-01-38-44.png"
+        alt="Github"/></a></p>
+<p>これで、 <strong>拡張機能</strong> なし状態のVS Codeでプロジェクトを開いた環境が手に入りました。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-01-51-04.png"><img  src="assets/2020-04-11-01-51-04.png"
+        alt="Theia"/></a></p>
+<h3 id="拡張機能をインストールしてみる">拡張機能をインストールしてみる</h3>
+<p>さて、先ほどから何度となくVS Codeの拡張が使えると言ってきました。
+ですが、拡張機能をインストール使用としてみても、検索なんて出来ません。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-02-01-26.png"><img  src="assets/2020-04-11-02-01-26.png"
+        alt="拡張機能"/></a></p>
+<p>これは、VS Codeの拡張機能には少し制限があるためです。</p>
+<p>Microsoftは、Visual Studio Marketplaceを他のソフトウェアに直接使用することを禁止しているのです。
+拡張機能事態はそのほとんどがオープンソースで、Microsoftによって開発または保守されていませんが、<a href="https://marketplace.visualstudio.com/vscode"target="_blank">マーケットプレイス</a>へのアクセスが制限されています。</p>
+<p>ということで、<a href="https://marketplace.visualstudio.com/vscode"target="_blank">マーケットプレイス</a>にアクセスして、直接ファイルを手に入れてTheiaにインストールするという流れを取ります。
+また多くの拡張がGithubを利用しているのでこちらで手に入れても構いません。</p>
+<p>早速ですが<a href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja"target="_blank">Japanese Language Pack</a>を例にインストールしてみたいと思います。</p>
+<p>vsixファイルをダウンロードするためのリンクが用意されていますので、それをクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-02-41-49.png"><img  src="assets/2020-04-11-02-41-49.png"
+        alt="DownloadExtension"/></a></p>
+<p>手元にダウンロードしたファイルを、TheiaにDrag &amp; Dropするとインストールできます。
+(っていうか、リンク教えたらそっちで勝手にやってよって感じですが・・・)</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-02-43-08.png"><img  src="assets/2020-04-11-02-43-08.png"
+        alt="Install"/></a></p>
+<p>右下にダイアログが表示されるので、有効化をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-02-41-15.png"><img  src="assets/2020-04-11-02-41-15.png"
+        alt="有効化"/></a></p>
+<p>この例だとインストール前とそれほど変わってませんが、一応有効になったようです。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-04-11-02-45-45.png"><img  src="assets/2020-04-11-02-45-45.png"
+        alt="icon"/></a></p>
+<h2 id="theiaを使ってみるその2">Theiaを使ってみる　その2</h2>
+<p>Electron版つまりは、デスクトップ版はについては、また改めて記載したいと思います。</p>
+</article><section class="article labels"><a class="category" href=/categories/theia/>Theia</a><a class="tag" href=/tags/ide/>IDE</a><a class="tag" href=/tags/development/>Development</a></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Always Basics.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-75025058-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</body>
+
+</html>
