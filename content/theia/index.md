@@ -60,7 +60,7 @@ https://www.publickey1.jp/blog/20/visual_studio_codeeclipse_theia_10vs_codeweb.h
 
 ## Theiaを使ってみる
 
-### Gitpodを使ってみる
+### Gitpodで使ってみる
 
 まず真っ先に試してみるべきは、ブラウザで動作するこちらです。
 [公式ページ](https://theia-ide.org/)の**Try in Gitpod**を利用します。
@@ -110,26 +110,28 @@ Githubの自分のリポジトリにブラウザでアクセスします。
 
 ![Github](assets/2020-04-11-01-38-44.png)
 
-これで、 **拡張機能** なし状態のVS Codeでプロジェクトを開いた環境が手に入りました。
+これで自分自身は、 **拡張機能** を導入していないですが、VS Codeでプロジェクトを開いた相当の環境が手に入りました。
 
 ![Theia](assets/2020-04-11-01-51-04.png)
 
 ### 拡張機能をインストールしてみる
 
 さて、先ほどから何度となくVS Codeの拡張が使えると言ってきました。
-ですが、拡張機能をインストール使用としてみても、検索なんて出来ません。
+いくつかの拡張がすでにインストールされているようですが、やはり自分のお好みのものをインストールしたいと思うでしょう。
+
+ですが、拡張機能をインストールしようとしてみても、検索なんて出来ません。
 
 ![拡張機能](assets/2020-04-11-02-01-26.png)
 
-これは、VS Codeの拡張機能には少し制限があるためです。
+これは、VS Codeの拡張機能には制限があるためです。正確には拡張自身ではなくてそのカタログ表示の部分です。
 
-Microsoftは、Visual Studio Marketplaceを他のソフトウェアに直接使用することを禁止しているのです。
-拡張機能事態はそのほとんどがオープンソースで、Microsoftによって開発または保守されていませんが、[マーケットプレイス](https://marketplace.visualstudio.com/vscode)へのアクセスが制限されています。
+Microsoftは、Visual Studio Marketplaceを他のソフトウェアによって直接使用することを禁止しているのです。
+拡張機能事態はそのほとんどがオープンソースで、Microsoftが開発したり保守したりしていませんが、[マーケットプレイス](https://marketplace.visualstudio.com/vscode)へのアクセスは制限されています。
 
 ということで、[マーケットプレイス](https://marketplace.visualstudio.com/vscode)にアクセスして、直接ファイルを手に入れてTheiaにインストールするという流れを取ります。
-また多くの拡張がGithubを利用しているのでこちらで手に入れても構いません。
+また多くの拡張がGithubを利用しているのでそちらで手に入れても構いません。
 
-早速ですが[Japanese Language Pack](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja)を例にインストールしてみたいと思います。
+早速ですが[vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)を例にインストールしてみたいと思います。
 
 vsixファイルをダウンロードするためのリンクが用意されていますので、それをクリックします。
 
