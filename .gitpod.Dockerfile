@@ -10,7 +10,7 @@ USER root
 # More information: https://www.gitpod.io/docs/config-docker/
 
 RUN apt-get update \
-    && sudo apt-get install -y \
+    && apt-get install -y \
         xclip \
     && rm -rf /var/lib/apt/lists/*
 
