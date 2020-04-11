@@ -1,6 +1,6 @@
 FROM gitpod/workspace-full
                     
-USER gitpod
+USER root
 
 # Install custom tools, runtime, etc. using apt-get
 # For example, the command below would install "bastet" - a command line tetris clone:
@@ -9,8 +9,9 @@ USER gitpod
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 
-RUN echo "test"
-RUN sudo apt-get update \
+RUN apt-get update \
     && sudo apt-get install -y \
         xclip \
     && rm -rf /var/lib/apt/lists/*
+
+USER gitpod
