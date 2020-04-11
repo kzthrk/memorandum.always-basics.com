@@ -15,3 +15,4 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 USER gitpod
+mkdir ~/test
