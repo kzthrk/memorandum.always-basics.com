@@ -9,5 +9,8 @@ USER gitpod
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 
-RUN sudo apt-get update
-RUN sudo apt-get install xclip
+RUN echo "test"
+RUN sudo apt-get update \
+    && sudo apt-get install -y \
+        xclip \
+    && rm -rf /var/lib/apt/lists/*
