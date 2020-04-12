@@ -1,15 +1,96 @@
 <!DOCTYPE html>
 <html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Theia | Gitpodの環境設定&nbsp;&ndash;&nbsp;Memorandum - Danger past, got forgotten</title><link rel="stylesheet" href="/css/core.min.2afffb91c470e0193a6e12fd02ba70b078d207aa384789ec7b39a3f263595710fa0d1e1373f3f3988a8a1663ee51d7f6.css" integrity="sha384-Kv/7kcRw4Bk6bhL9ArpwsHjSB6o4R4nsezmj8mNZVxD6DR4Tc/PzmIqKFmPuUdf2">
-<body>
+<meta name="supported-color-schemes" content="light dark"><title>Theia | Gitpodの環境設定&nbsp;&ndash;&nbsp;Memorandum - Danger past, got forgotten</title><link rel="stylesheet" href="/css/core.min.8d84e0eeadb042523696874218e589bc62cd7a2a375e47ef0dfea9414eadd1d01b93b8878cf4cae69d892251c385c155.css" integrity="sha384-jYTg7q2wQlI2lodCGOWJvGLNeio3XkfvDf6pQU6t0dAbk7iHjPTK5p2JIlHDhcFV"><body>
     <div class="base-body"><section id="header" class="site header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, got forgotten</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/Programming/">プログラミング</a><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
-    <h1 class="article title">Theia | Gitpodの環境設定</h1><p class="article date">2020-04-12<span class="reading-time"> • One minute to read</span></p></section><article class="article markdown-body"><h1 id="gitpodの環境設定">Gitpodの環境設定</h1>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">Theia | Gitpodの環境設定</h1><span class="article date">2020-04-12</span><section class="article labels"><a class="category" href=/categories/theia/>Theia</a><a class="tag" href=/tags/ide/>IDE</a><a class="tag" href=/tags/development/>Development</a></section></section><article class="article markdown-body"><h1 id="gitpodの環境設定">Gitpodの環境設定</h1>
 <h2 id="はじめに">はじめに</h2>
 <p>本稿は、<a href="http://localhost:1313/theia/theia/"target="_blank">Theia | Theiaを始めてみよう</a>の中でGitpodおよびその中で使用されるDockerの設定について切り出したものです。</p>
-</article><section class="article labels"><a class="category" href=/categories/theia/>Theia</a><a class="tag" href=/tags/ide/>IDE</a><a class="tag" href=/tags/development/>Development</a></section><section class="article navigation"><p><a class="link" href="/theia/theia/"><span class="li">&rarr;</span>Theia | Theiaを始めてみよう</a class="link">
+<h2 id="環境設定">環境設定</h2>
+<p>設定がまだ済んでいない場合、右下にGitpodの設定が出来るますよと小さなウインドウが出ているかと思います。
+もちろん出ていなくても、この記事にあるように2つのファイルを作成することで設定することは可能です。
+本稿では、敷かれたレールの上を走る形で設定したいと思います。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-00-47-24.png"><img  src="../assets/2020-04-13-00-47-24.png"
+        alt="設定用メニュー呼び出し"/></a></p>
+<p>赤枠で囲ったところが、表示されました。ついでに右側のバーにも1つアイコンが増えています。
+設定が終わると消えてしまうようですが、それまでは表示されているようですので、もし何らかの操作によって閉じてしまった場合には、ここから再度呼び出してください。</p>
+<p>まずは、一番上の<strong>Create .gitpod.yml</strong>をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-01-07-51.png"><img  src="../assets/2020-04-13-01-07-51.png"
+        alt="設定メニュー"/></a></p>
+<p><strong>Create .gitpod.yml</strong>ボタンをクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-01-01-51.png"><img  src="../assets/2020-04-13-01-01-51.png"
+        alt/></a></p>
+<p><strong>update .gitpod.Dockerfile</strong>ボタンをクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-01-05-29.png"><img  src="../assets/2020-04-13-01-05-29.png"
+        alt/></a></p>
+<p>ベースとするイメージを選択します。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-01-13-41.png"><img  src="../assets/2020-04-13-01-13-41.png"
+        alt/></a></p>
+<p>.gitpod.Dockerfile を作ります。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-01-22-10.png"><img  src="../assets/2020-04-13-01-22-10.png"
+        alt/></a></p>
+<p>.gitpod.yml には、Dockefileの項目が追加されていると思います。
+編集するのは、.gitpod.Dockerfileの方です。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-01-37-46.png"><img  src="../assets/2020-04-13-01-37-46.png"
+        alt/></a></p>
+<p>上記は、xclipをインストールしてみた時の例です。</p>
+<p><strong>Test Drive Configuration</strong>をクリックして、<strong>Push to Branch &amp; Start Workspace</strong>をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-01-41-27.png"><img  src="../assets/2020-04-13-01-41-27.png"
+        alt/></a></p>
+<p>直接保管した上で再起動しても問題無いのですが、間違っていたとき、想定している結果が得られなかったときに少し面倒です。
+そのため、Gitpod側のブログにも記載がありますが、転じてんでは別ブランチでコミットしておいて、Github側から新しいインスタンスを使い捨てで起動してテストすることが進められています。</p>
+<p>上手く動作することが分かった場合には、そのブランチをマージするようにします。</p>
+<p><strong>Create a pull request</strong>をクリックし、<strong>Open Pull Request View</strong>をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-02-02-06.png"><img  src="../assets/2020-04-13-02-02-06.png"
+        alt/></a></p>
+<p><strong>Publish Changes</strong>をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-02-03-07.png"><img  src="../assets/2020-04-13-02-03-07.png"
+        alt/></a></p>
+<p>ブランチをmasterから先ほど作成した<strong>xxxxx/gitpod-setup</strong>を選択します。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-02-03-38.png"><img  src="../assets/2020-04-13-02-03-38.png"
+        alt/></a></p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-02-04-06.png"><img  src="../assets/2020-04-13-02-04-06.png"
+        alt/></a></p>
+<p>設定ファイルをコミットします。左のバーでGitのペインを呼び出します。変更対象のファイルをステージングし、コメントを入力してコミットします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-02-22-30.png"><img  src="../assets/2020-04-13-02-22-30.png"
+        alt/></a></p>
+<p><strong>push</strong>をクリックしてください。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-02-04-21.png"><img  src="../assets/2020-04-13-02-04-21.png"
+        alt/></a></p>
+<p>Githubにアクセスして、ブランチを先ほどpushしたブランチに切り替えてからGitpodボタンをクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-02-05-28.png"><img  src="../assets/2020-04-13-02-05-28.png"
+        alt/></a></p>
+<p>Theiaが起動しますが、その時Dockerが初期化されているのが確認できます。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-02-05-43.png"><img  src="../assets/2020-04-13-02-05-43.png"
+        alt/></a></p>
+<p>環境したら環境がセットアップされているはずです。変更を加えた内容に応じて確認してください。</p>
+<p>問題が無ければ、これを元のブランチにマージすることでDockerの設定作業は完了です。</p>
+<p>その他、<strong>.gitpod.yml</strong>を編集することで、起動した際の動作(例えばサーバーを毎回起動するなども)可能です。
+その場合には、以下echo部分を変更してください。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-02-28-55.png"><img  src="../assets/2020-04-13-02-28-55.png"
+        alt/></a></p>
+<p>以上で、Gitpodの環境設定は終了です。</p>
+</article>
+<section class="article navigation"><p><a class="link" href="/theia/theia/"><span class="li">&rarr;</span>Theia | Theiaを始めてみよう</a class="link">
     </p></section></div><section id="footer" class="footer"><div class="footer-wrap">
     <p class="copyright">©2020 Always Basics.</p>
     <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
