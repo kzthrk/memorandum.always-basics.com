@@ -18,7 +18,8 @@ draft: false
 
 # はじめに
 ## Theiaとは
-まずは読み方ですが、**[テイア](https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%A4%E3%82%A2_(%E4%BB%AE%E8%AA%AC%E4%B8%8A%E3%81%AE%E5%A4%A9%E4%BD%93))**と読むようです。
+まずは読み方ですが『[テイア](https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%A4%E3%82%A2_(%E4%BB%AE%E8%AA%AC%E4%B8%8A%E3%81%AE%E5%A4%A9%E4%BD%93))』と読むようです。
+
 Theiaとは[公式ページ](https://theia-ide.org/)の説明を借りれば
 
 > Eclipse Theia is an extensible platform to develop multi-language Cloud & Desktop IDEs with state-of-the-art web technologies.
