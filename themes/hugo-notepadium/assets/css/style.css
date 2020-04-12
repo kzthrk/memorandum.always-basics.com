@@ -412,7 +412,12 @@ acronym {
   background-color: #eb7350;
 }
 
-.article.labels,
+.article.labels {
+  margin-top: 20px;
+  margin-left: 20px;
+  display: inline-block;
+
+}
 .article.license,
 .article.navigation,
 .article.discussion {

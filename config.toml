@@ -22,12 +22,13 @@ style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: bas
 slogan = "継続する秘訣は、途切れたと思った時にもう一度繰り返すこと"
 license = ""  # CC License
 logo = "/images/logo.jpg"
+readingTime = false  # show reading time after article date
 
-mainSections = ["electronic_kit", "misc", "programming", "web"]
+mainSections = ["electronic_kit", "programming", "web", "theia"]
 
 [params.nav]
-showCategories = true       # /categories/
-showTags = true             # /tags/
+showCategories = false       # /categories/
+showTags = false             # /tags/
 
 # disqus
 disqusShortname = "kzthrk"  # your short name
@@ -47,10 +48,6 @@ darkTheme = "xcode-dark"  # apply this theme in dark mode
 # # custom navigation items
 
 # [[params.nav.custom]]
-# title = "About"
-# url = "/about"
-
-# [[params.nav.custom]]
 # title = "Hugo"
 # url = "https://gohugo.io/"
 
@@ -59,7 +56,25 @@ darkTheme = "xcode-dark"  # apply this theme in dark mode
 # url = "/tags/ios"
 
 # [[params.nav.custom]]
-# title = "Hugo"
-# url = "https://gohugo.io/"
+# title = "プログラミング"
+# url = "/categories/programming/"
 
+[[params.nav.custom]]
+title = "Hugo"
+url = "/categories/web/"
 
+[[params.nav.custom]]
+title = "Theia"
+url = "/categories/theia/"
+
+[[params.nav.custom]]
+title = "電子工作"
+url = "/categories/電子工作/"
+
+[[params.nav.custom]]
+title = "Misc."
+url = "/categories/misc/"
+
+[[params.nav.custom]]
+title = "About"
+url = "/about"

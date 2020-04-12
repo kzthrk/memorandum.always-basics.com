@@ -1,8 +1,8 @@
 ---
-title: "静的サイトジェネレータ Hugoをインストール"
+title: "Hugo | 静的サイトジェネレータ Hugoをインストール"
 date: 2020-02-06T13:57:04+09:00
 lastmod: 2020-02-06T13:57:04+09:00
-Categories: ["Web"]
+Categories: ["web"]
 Description: "静的サイトジェネレータ Hugoをインストール"
 Tags: ["Hugo", "静的サイトジェネレータ", "install"]
 draft: false
@@ -272,7 +272,7 @@ hugo server -w
 
 [http://localhost:1313/](http://localhost:1313/) にアクセスしてみて下さい。
 
-![動作確認](/assets/2020-02-08-12-22-50.png)
+![動作確認](../assets/2020-02-08-12-22-50.png)
 
 無事に画面が表示されましたでしょうか。
 また、[http://localhost:1313/post/welcome/](http://localhost:1313/post/welcome/) にもアクセスしてみて下さい。こちらが中身は空ですが記念すべき1つ目の投稿です。せっかくですので中身を適当に追記して、自動で更新される所を体験してみてはどうでしょうか。
@@ -364,9 +364,9 @@ darkTheme = "xcode-dark"  # apply this theme in dark mode
 
 ## 動作確認
 
-![動作確認2](/assets/2020-02-08-12-55-40.png)
+![動作確認2](../assets/2020-02-08-12-55-40.png)
 
-![動作確認3](/assets/2020-02-08-13-02-24.png)
+![動作確認3](../assets/2020-02-08-13-02-24.png)
 
 
 # 静的サイトジェネレータ Hugoをインストールしてみて

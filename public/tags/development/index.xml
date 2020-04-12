@@ -7,17 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Fri, 10 Apr 2020 23:25:55 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 09:24:50 +0900</lastBuildDate>
     
         <atom:link href="/tags/development/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Theia</title>
-      <link>/theia/</link>
+      <title>Theia | Gitpodの環境設定</title>
+      <link>/theia/docker_settings/</link>
+      <pubDate>Sun, 12 Apr 2020 09:24:50 +0900</pubDate>
+      
+      <guid>/theia/docker_settings/</guid>
+      <description>Gitpodの環境設定 はじめに 本稿は、Theia | Theiaを始めてみようの中でGitpodおよびその中で使用されるDockerの設定につい</description>
+    </item>
+    
+    <item>
+      <title>Theia | Theiaを始めてみよう</title>
+      <link>/theia/theia/</link>
       <pubDate>Fri, 10 Apr 2020 23:25:55 +0900</pubDate>
       
-      <guid>/theia/</guid>
+      <guid>/theia/theia/</guid>
       <description>はじめに Theiaとは Theiaとは公式ページの説明を借りれば Eclipse Theia is an extensible platform to develop multi-language Cloud &amp;amp; Desktop IDEs with state-of-the-art web technologies. Eclipse Theiaは、最先端のWebテクノロジーを</description>
     </item>
     

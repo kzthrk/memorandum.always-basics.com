@@ -5,7 +5,7 @@
 <body>
     <div class="base-body"><section id="header" class="site header">
     <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, got forgotten</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/tags/">Tags</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/Programming/">プログラミング</a><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
     <h1 class="article title">Arduinoでリモコンを作ろう</h1><p class="article date">2020-02-12<span class="reading-time"> • 11 minutes to read</span></p></section><article class="article markdown-body"><h1 id="概要">概要</h1>
 <p>Arduinoでリモコンを作成してみたいと思います。作成するリモコンは赤外線を使った一般的なリモコンです。いわゆるテレビやエアコンなどを操作するリモコンで、単純にリモコン側から赤外線を使った信号を送りつけ、本体が側がそれに反応しているタイプのものです。</p>
 <p>一部のリモコンには一方通行ではないものがあるようですが、今回作成するArduinoのリモコンはそれには対応していません。</p>
@@ -134,15 +134,15 @@ data-full-width-responsive="true"></ins></p>
 <h3 id="回路1">回路1</h3>
 <p>使うのはこちらのみ。(本体は別にという意味です)</p>
 <p><a target="_blank" rel="noopener noreferrer" 
-  href="/assets/2020-02-13-22-34-40.png"><img  src="/assets/2020-02-13-22-34-40.png"
+  href="../assets/2020-02-13-22-34-40.png"><img  src="../assets/2020-02-13-22-34-40.png"
         alt="赤外線リモコン受信モジュール"/></a></p>
 <p>モジュールの仕様を確認すると、向かって左からOUTPUT、GROUND、VCCとなっています。</p>
 <p><a target="_blank" rel="noopener noreferrer" 
-  href="/assets/2020-02-13-22-36-02.png"><img  src="/assets/2020-02-13-22-36-02.png"
+  href="../assets/2020-02-13-22-36-02.png"><img  src="../assets/2020-02-13-22-36-02.png"
         alt="OSRB38C9AAの仕様"/></a></p>
 <p>ということで、単純に3つ接続すると使えるわけですが、回路は以下です。</p>
 <p><a target="_blank" rel="noopener noreferrer" 
-  href="/assets/2020-02-13-23-47-56.png"><img  src="/assets/2020-02-13-23-47-56.png"
+  href="../assets/2020-02-13-23-47-56.png"><img  src="../assets/2020-02-13-23-47-56.png"
         alt="回路1"/></a></p>
 <p>実物そのもののパーツがなかったので代用品ですが、ピンの位置と名前をラベルで貼ってあるので伝わりますでしょうか。</p>
 <h3 id="スケッチ1">スケッチ1</h3>
@@ -175,7 +175,7 @@ RAWデータも使えますので、興味のある方は、次の実装2で見�
 実装1の内容とこの実装2の内容を1つにしてしまっても構いませんが、ここでは一旦チャラにしています。</p>
 <h3 id="回路2">回路2</h3>
 <p><a target="_blank" rel="noopener noreferrer" 
-  href="/assets/2020-02-14-00-57-12.png"><img  src="/assets/2020-02-14-00-57-12.png"
+  href="../assets/2020-02-14-00-57-12.png"><img  src="../assets/2020-02-14-00-57-12.png"
         alt="回路2"/></a></p>
 <p>抵抗を2つにしたのは単に思ったよりも赤外線が弱くてかなり近づけないと反応しなかったからで、本体、LEDなど壊れない範囲でお好みで。</p>
 <h3 id="スケッチ2">スケッチ2</h3>
@@ -208,7 +208,7 @@ RAWデータも使えますので、興味のある方は、次の実装2で見�
 <p>そのカメラを使って赤外線LEDが光っているかを確かめてみましょう。
 あー、一つだけ言っておきますと、真っ暗闇でやった方が良いかもしれません。私は見えなくて泣きそうでしたから。</p>
 <p><a target="_blank" rel="noopener noreferrer" 
-  href="/assets/2020-02-14-01-54-44.png"><img  src="/assets/2020-02-14-01-54-44.png"
+  href="../assets/2020-02-14-01-54-44.png"><img  src="../assets/2020-02-14-01-54-44.png"
         alt="赤外線LEDを撮影"/></a></p>
 <!-- 広告 -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

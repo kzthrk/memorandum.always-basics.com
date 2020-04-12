@@ -1,5 +1,5 @@
 ---
-title: "MacOS Catalinaへのアップデート"
+title: "MacOS | MacOS Catalinaへのアップデート"
 date: 2020-02-10T16:24:31+09:00
 Categories: ["Misc"]
 Tags: ["Mac"]
