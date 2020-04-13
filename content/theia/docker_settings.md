@@ -20,7 +20,7 @@ draft: false
 
 ## はじめに
 
-本稿は、[Theia | Theiaを始めてみよう](http://localhost:1313/theia/theia/)の中でGitpodおよびその中で使用されるDockerの設定について切り出したものです。
+本稿は、[Theia | Theiaを始めてみよう](/theia/theia/)の中でGitpodおよびその中で使用されるDockerの設定について切り出したものです。
 
 ## Github権限設定
 
