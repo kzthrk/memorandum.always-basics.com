@@ -55,18 +55,17 @@ data-full-width-responsive="true"></ins></p>
 <!-- 広告 -->
 <h1 id="hugoのインストール">Hugoのインストール</h1>
 <h2 id="前提">前提</h2>
-<p>静的サイトジェネレータHugoをインストールするための前提ではありません。この記事の記載がここに示す環境を前提にしていると言うだけです。
-実際には、Windows、Mac、Linuxと事実上この記事の読者全ての方がインストール可能かと思います。</p>
+<p>静的サイトジェネレータHugoをインストールするための前提ではありません。この記事が例示するのが、以下のOS,バージョンというだけです。</p>
 <p>macOS 10.14.6</p>
-<p>を使っています。</p>
+<p>実際には、Windows、Mac、Linuxと事実上この記事の読者全ての方がインストール可能かと思います。</p>
 <h2 id="手順1-hugoのインストール">手順1 Hugoのインストール</h2>
 <p>Hugoのインストール手順はとても簡単です。Homebrewを使えば一発インストールが可能です。</p>
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">brew install hugo 
 </code></pre></div><p>長々と処理が流れて行きますが、しばらく放置しておけば良いです。</p>
-<p>もしHomeBrewがまだインストールされていない場合は、こちら[https://brew.sh/index_ja]を参考にしてインストールしてください。
+<p>もしHomeBrewがまだインストールされていない場合は、<a href="https://brew.sh/index_ja"target="_blank">こちら</a>を参考にしてインストールしてください。
 とはいっても、以下のコマンドを1発実行するだけだと思います。</p>
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">/usr/bin/ruby -e <span class="s2">&#34;</span><span class="s2">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span><span class="s2">&#34;</span>
-</code></pre></div><h2 id="手順2新規サイトの作成">手順2　新規サイトの作成</h2>
+</code></pre></div><h2 id="手順2-新規サイトの作成">手順2 新規サイトの作成</h2>
 <p>Hugoをインストールすると、hugoコマンドが使えるようになります。
 ここでは、memorandum.always-basics.comという新規サイトを作成するべく、以下のコマンドを実行します。</p>
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo new site memorandum.always-basics.com
@@ -112,11 +111,11 @@ drwxr-xr-x  2 user  staff  64  2  6 11:42 static
 drwxr-xr-x  2 user  staff  64  2  6 11:42 themes
 MacBookPro-2:memorandum.always-basics.com $
 </code></pre><p>なにやら？出来ているようですね。</p>
-<h2 id="手順4テーマのインストール">手順4　テーマのインストール</h2>
+<h2 id="手順4-テーマのインストール">手順4 テーマのインストール</h2>
 <p>静的サイトジェネレータでサイトを作成するということは、ファイルリソースはgitで管理するのが半ば当たり前？それともgitってなぁに？
-この投稿を読んで下さる方がどちらのお立場なのかは分かりませんが、ここではgitで管理する前提で書きます。
-なお、Hugoにgitが必須ということではありません。テーマをダウンロードしてthemesディレクトリに配置することでも問題ありません。
-おそらくテーマのインストール手順のところに、gitを使う場合と使わない場合の説明があると思います。</p>
+この投稿を読んで下さる方がどちらのお立場なのかは分かりませんが、ここではgitで管理する前提で書きます。</p>
+<p>なお、Hugoにgitが必須ということではありません。テーマをダウンロードしてthemesディレクトリに配置することでも問題ありません。
+おそらく各テーマのインストール手順の説明で、gitを使う場合と使わない場合の説明があると思います。</p>
 <p>当サイトでは一つ一つの記事の繋がりは薄く、カテゴリーやタグによってなんとなく分類されるメモを残していくのが趣旨なので、hugo-notepadiumというテーマを選択しました。</p>
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">git init
 git submodule add https://github.com/cntrump/hugo-notepadium.git themes/hugo-notepadium
@@ -131,9 +130,11 @@ remote: Total 7288 (delta 7), reused 16 (delta 5), pack-reused 7262
 Receiving objects: 100% (7288/7288), 13.94 MiB | 2.82 MiB/s, done.
 Resolving deltas: 100% (3970/3970), done.
 MacBookPro-2:memorandum.always-basics.com $
-</code></pre><p>もしもgitをインストールしていない方でいまインストールされる方には、ここではHomebrewでのインストールを記載しておきます。gitに関してはXcodeあるいはCommand Line Tools、またはgitが提供するインストーラーなど様々なインストール方法がありますが、どれでも構いませんので適宜お調べの上インストールください。</p>
+</code></pre><p>もしもgitをインストールしていない方でいまインストールされる方には、ここではHomebrewでのインストールを記載しておきます。
+gitに関してはXcodeあるいはCommand Line Tools、またはgitが提供するインストーラーなど様々なインストール方法がありますが、
+どれでも構いませんので適宜お調べの上インストールください。</p>
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">brew install git
-</code></pre></div><h2 id="手順5configtomlを編集">手順5　config.tomlを編集</h2>
+</code></pre></div><h2 id="手順5-configtomlを編集">手順5 config.tomlを編集</h2>
 <p>Hugoの設定ファイルであるconfig.tomlを編集します。
 サイトの構成を変える場合には編集することがあるかと思いますが、最初に編集した内容で問題が無ければ、記事を追加していく通常の運用のタイミングでは、変更することは無いと思います。</p>
 <p>ひとまず、動作確認が出来るように以下を設定しました。ご自身の環境に合わせて変更して下さい。</p>
@@ -178,10 +179,10 @@ MacBookPro-2:memorandum.always-basics.com $
 </tr>
 </tbody>
 </table>
-<h2 id="手順6テーマを有効にする">手順6　テーマを有効にする</h2>
+<h2 id="手順6-テーマを有効にする">手順6 テーマを有効にする</h2>
 <p>すでにHugoのテーマとして1つをインストールしたわけですが、そのテーマを有効にしておきます。</p>
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo -t hugo-notepadium
-</code></pre></div><h2 id="手順71つ目の記事を作成">手順7　1つ目の記事を作成</h2>
+</code></pre></div><h2 id="手順7-1つ目の記事を作成">手順7 1つ目の記事を作成</h2>
 <p>静的ジェネレーター Hugoをインストールしてからようやく1つ目の記事の作成です。</p>
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo new post/welcome.md
 </code></pre></div><p>これで<strong>content/post/welcome.md</strong>ファイルが作られたので、それを編集して記念すべき1つ目のページを生成してみましょう。</p>
@@ -202,8 +203,9 @@ draft: false
   href="../assets/2020-02-08-12-22-50.png"><img  src="../assets/2020-02-08-12-22-50.png"
         alt="動作確認"/></a></p>
 <p>無事に画面が表示されましたでしょうか。
-また、<a href="http://localhost:1313/post/welcome/"target="_blank">http://localhost:1313/post/welcome/</a> にもアクセスしてみて下さい。こちらが中身は空ですが記念すべき1つ目の投稿です。せっかくですので中身を適当に追記して、自動で更新される所を体験してみてはどうでしょうか。</p>
-<p>なお、先ほどテーマを呈しましたが、実際にはサーバを起動するタイミングでも指定は出来ます。</p>
+また、<a href="http://localhost:1313/post/welcome/"target="_blank">http://localhost:1313/post/welcome/</a> にもアクセスしてみて下さい。
+こちらが中身は空ですが記念すべき1つ目の投稿です。せっかくですので中身を適当に追記して、自動で更新される所を体験してみてはどうでしょうか。</p>
+<p>なお、先ほどテーマを設定しましたが、実際にはサーバを起動するタイミングでも指定は出来ます。</p>
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo server -t hugo-uno -w
 </code></pre></div><h1 id="静的サイトジェネレータ-hugoで作成したサイトを公開">静的サイトジェネレータ Hugoで作成したサイトを公開</h1>
 <p>ここまではローカルで動作させているだけなので、実際にインターネット上に公開して動作させてみたいと思います。</p>
@@ -245,7 +247,8 @@ draft: false
 <span class="nx">use</span> <span class="p">=</span> <span class="s2">&#34;hljs&#34;</span>  <span class="c"># 1. prismjs 2. hljs 3. none</span>
 <span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;dracula&#34;</span>
 <span class="nx">darkTheme</span> <span class="p">=</span> <span class="s2">&#34;xcode-dark&#34;</span>  <span class="c"># apply this theme in dark mode</span>
-</code></pre></div><p>一つだけ、これはどうしたら？と調べたのは、logoのイメージファイルの配置先です。Hugoにはstaticという名前のディレクトリが作られており、ここに画像ファイルなどを配置するようです。パスはそこをTOPにした状態で記載します。</p>
+</code></pre></div><p>一つだけ、これはどうしたら良いのか？と調べたのは、logoのイメージファイルの配置先です。
+Hugoにはstaticという名前のディレクトリが作られており、ここに画像ファイルなどを配置するようです。パスはそこをTOPにした状態で記載します。</p>
 <p>一つ一つの投稿の中で画像を貼り付けるときも同じことです。</p>
 <!-- 広告 -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -270,10 +273,10 @@ data-full-width-responsive="true"></ins></p>
   href="../assets/2020-02-08-13-02-24.png"><img  src="../assets/2020-02-08-13-02-24.png"
         alt="動作確認3"/></a></p>
 <h1 id="静的サイトジェネレータ-hugoをインストールしてみて">静的サイトジェネレータ Hugoをインストールしてみて</h1>
-<p>静的サイトジェネレータ Hugoのインストールはとてもとても簡単な作業で、十分なクオリティのWebサイトが手に入ることはもちろんのこと、手元で編集作業をしているときも、実際のWebサイトの動作も、とても軽快でストレスフリーです。</p>
-<p>Wordpressでのブログ運営を念頭に置くと、コメント欄が必要だったり、認証云々、それからSNS連携や、SEO対策など、いくつかの要素について対応していない状況にあります。</p>
+<p>静的サイトジェネレータ Hugoのインストールはとてもとても簡単な作業で、十分なクオリティのWebサイトが手に入ることはもちろんのこと、手元で編集作業をしているときも、実際のWebサイトの動作もとても軽快でストレスフリーです。</p>
+<p>Wordpressでのブログ運営を念頭に置くと、コメント欄が必要だったり、認証云々、それからSNS連携やSEO対策など、いくつかの要素について対応していない状況にあります。</p>
 <p>そのあたりは、おいおい充実させていき、こちらにもメモを残したいと思います。</p>
-<p>ですが、求めているものに対してWordpressは壮大すぎるし、用意しなければならない物が多すぎるとお感じの方には、十分選択肢になり得ると思います。
+<p>ですが、求めているものに対してWordpressは壮大すぎるし、用意しなければならない物が多すぎるとお感じの方には十分選択肢になり得ると思います。
 みなさんもぜひ、静的サイトジェネレータの世界へ足を踏み入れてみませんか？</p>
 <p>そして、Hugoを是非その候補のの一つに。</p>
 <!-- 広告 -->
