@@ -61,6 +61,12 @@ https://www.publickey1.jp/blog/20/visual_studio_codeeclipse_theia_10vs_codeweb.h
 
 ## Theiaを使ってみる
 
+### マニュアル
+
+Theiaについてのドキュメントは[こちら](https://theia-ide.org/docs/)ですが、このあと使う**Gitpod**については[こちら](https://www.gitpod.io/docs/)を参照してください。
+
+ひとまず読むのは後者の方が多かった印象です。
+
 ### Gitpodで使ってみる
 
 まず真っ先に試してみるべきは、ブラウザで動作するこちらです。
