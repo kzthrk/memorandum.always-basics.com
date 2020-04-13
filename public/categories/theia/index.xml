@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Sun, 12 Apr 2020 09:24:50 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 15:22:45 +0900</lastBuildDate>
     
         <atom:link href="/categories/theia/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Theia | Desktop版の可能性を探索</title>
+      <link>/theia/desktop/</link>
+      <pubDate>Mon, 13 Apr 2020 15:22:45 +0900</pubDate>
+      
+      <guid>/theia/desktop/</guid>
+      <description>Theia デスクトップ版 Theia デスクトップ版とはなにか？ですが、デスクトップ版の意味として、ネイティブなデスクトップ・アプリケーションが思い浮かぶと思い</description>
+    </item>
     
     <item>
       <title>Theia | Gitpodの環境設定</title>

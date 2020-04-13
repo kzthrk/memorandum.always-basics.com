@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Theia | Desktop版の可能性を探索&nbsp;&ndash;&nbsp;Memorandum - Danger past, got forgotten</title><link rel="stylesheet" href="/css/core.min.8d84e0eeadb042523696874218e589bc62cd7a2a375e47ef0dfea9414eadd1d01b93b8878cf4cae69d892251c385c155.css" integrity="sha384-jYTg7q2wQlI2lodCGOWJvGLNeio3XkfvDf6pQU6t0dAbk7iHjPTK5p2JIlHDhcFV"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, got forgotten</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">Theia | Desktop版の可能性を探索</h1><span class="article date">2020-04-13</span><section class="article labels"><a class="category" href=/categories/theia/>Theia</a><a class="tag" href=/tags/ide/>IDE</a><a class="tag" href=/tags/development/>Development</a></section></section><article class="article markdown-body"><h1 id="theia-デスクトップ版">Theia デスクトップ版</h1>
+<p>Theia デスクトップ版とはなにか？ですが、デスクトップ版の意味として、ネイティブなデスクトップ・アプリケーションが思い浮かぶと思います。ですので、その候補を挙げます。</p>
+<p>2020.04.13時点でのデスクトップ版の状況は芳しくありません。
+ひとまずhttps://github.com/eclipse-theia/theia　のGetting Startedに記載のある候補を当たってみることにします。</p>
+<table>
+<thead>
+<tr>
+<th align="left">No.</th>
+<th align="right">候補</th>
+<th align="center">URL</th>
+</tr>
+</thead>
+</table>
+<p>|1|Run Theia in Docker|https://github.com/theia-ide/theia-apps#theia-docker|
+|2|Package a desktop Theia application with Electron|https://github.com/theia-ide/yangster-electron|</p>
+<h2 id="theia-デスクトップ版-候補その1">Theia デスクトップ版 候補その1</h2>
+<p>「Run Theia in Docker」ってその名の通りDockerであって、デスクトップ版アプリっていうのは違うだろ？
+そうなんですが、行ってみるとTheia Desktopの文字があるんです。</p>
+<p>ですが&hellip;</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-15-27-20.png"><img  src="../assets/2020-04-13-15-27-20.png"
+        alt/></a></p>
+<p>はい、そのうち登場するかも知れないので、本稿の勝手な使命としてあげておきました。</p>
+<h2 id="theiaデスクトップ版候補その2">Theia　デスクトップ版　候補その2</h2>
+<p>つづいてリンク名称的には本命のPackage a desktop Theia application with Electronです。
+ですが、こちらも残念ながら「Latest commitea4c3d5on 13 Mar 2018」とあるとおり、期待できません。</p>
+<p>自分でビルドする以外に、いかのリンクからビルド済みのパッケージを入手可能です。が、よい子の皆さんは、この記事を見て真似はしない方が良いでしょう。
+<a href="https://github.com/theia-ide/yangster-electron/releases/tag/v0.1.1">https://github.com/theia-ide/yangster-electron/releases/tag/v0.1.1</a></p>
+<p>Mac版が、Yangster-0.1.1.dmg
+Windows版が、Yangster-Installer-0.1.1.exe</p>
+<p>どっちの環境も試せますが、Mac版で試しました。</p>
+<p>ダウンロードしたdmgファイルを起動すると、以下のウインドウが表示されるので、いつもの調子でインストールします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-15-33-03.png"><img  src="../assets/2020-04-13-15-33-03.png"
+        alt/></a></p>
+<p>警告される&hellip;　(これ以前も無保証ですが、この先はもっと無保証です)</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-15-33-20.png"><img  src="../assets/2020-04-13-15-33-20.png"
+        alt/></a></p>
+<p>設定のセキュリティとプライバシーを開き、一般タブの<strong>このまま開く</strong>をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-15-33-35.png"><img  src="../assets/2020-04-13-15-33-35.png"
+        alt/></a></p>
+<p>また確認されるので、<strong>開く</strong>をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-15-33-55.png"><img  src="../assets/2020-04-13-15-33-55.png"
+        alt/></a></p>
+<p>無味乾燥な、ウインドウが表示されたら成功です。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-15-34-14.png"><img  src="../assets/2020-04-13-15-34-14.png"
+        alt/></a></p>
+<p>ま、選択肢にならないことを念のため確認したまでです。</p>
+<h2 id="using-theia">USING THEIA</h2>
+<p>では、他にはないのか？と。</p>
+<p>公式ドキュメントに戻ってみました。<a href="https://theia-ide.org/docs/"target="_blank">こちら</a>です。</p>
+<p><a href="https://theia-ide.org/docs/composing_applications/"target="_blank">Build your own IDE</a>で、自分用のビルドをローカルで行うというもので、Electronの仕組みはChromium+Node.js=exeという構図なのできっとそれをバラした状態ですね。</p>
+<p>ま、バラしたとは言え、動きとしてはローカルで動いているのでかろうじて、本稿の目的というかなんというか、かすってるかなと。</p>
+<p>さて、この先は実際にはやっていませんが、大まかに流れを見ていきます。</p>
+<pre><code>1. Node.jsのv10が必要ということでインストールします。
+2. yarnも必要ということでインストールします。
+3. ディレクトリを作成し、package.jsonを作成します。
+4. 中身は言われるがママにコピペして、、、
+5. って思ったら、プラグイン分を含めると次のpackage.jsonをコピペですね。
+6. そして`yarn`を実行し、`yarn theia build`を実行
+7. yarn startで起動。
+</code></pre>
+<p>という流れです。</p>
+<p>でもこれって、最初にあげたDockerの成果を享受した方が楽ですよね。。。
+でも、私はDocker使っていないので、この記事はこの辺で。</p>
+<h2 id="まとめ">まとめ</h2>
+<p>デスクトップ版もある！って書いてありますが、現時点では宣伝文句の一つで、手元のVS Codeに足下にも及びません。苦労して手に入れる理由も見当たりません。</p>
+<p>メリットはやはりクラウド上で稼働するGitpodですね。
+ただ、これも日頃ローカルのVSCodeでゴリゴリ開発している人にどれだけメリットがあるかというと、限られているかも知れません。</p>
+</article>
+<section class="article navigation"><p><a class="link" href="/theia/docker_settings/"><span class="li">&rarr;</span>Theia | Gitpodの環境設定</a class="link">
+    </p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Always Basics.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-75025058-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</body>
+
+</html>

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Sun, 12 Apr 2020 09:24:50 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 15:22:45 +0900</lastBuildDate>
     
         <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Development</title>
       <link>/tags/development/</link>
-      <pubDate>Sun, 12 Apr 2020 09:24:50 +0900</pubDate>
+      <pubDate>Mon, 13 Apr 2020 15:22:45 +0900</pubDate>
       
       <guid>/tags/development/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>IDE</title>
       <link>/tags/ide/</link>
-      <pubDate>Sun, 12 Apr 2020 09:24:50 +0900</pubDate>
+      <pubDate>Mon, 13 Apr 2020 15:22:45 +0900</pubDate>
       
       <guid>/tags/ide/</guid>
       <description></description>
