@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Mon, 10 Feb 2020 16:24:31 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 21:43:54 +0900</lastBuildDate>
     
         <atom:link href="/misc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>macOS 便利な使い方</title>
+      <link>/misc/macos02/</link>
+      <pubDate>Mon, 13 Apr 2020 21:43:54 +0900</pubDate>
+      
+      <guid>/misc/macos02/</guid>
+      <description>はじめに 本稿では、Macでこんな設定こんな使い方すると便利だよ！というのを紹介していきます。 最初投稿では1つしかない状態で、都度追加していく</description>
+    </item>
     
     <item>
       <title>MacOS | MacOS Catalinaへのアップデート</title>

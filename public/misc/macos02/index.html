@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.64.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>macOS 便利な使い方&nbsp;&ndash;&nbsp;Memorandum - Danger past, got forgotten</title><link rel="stylesheet" href="/css/core.min.8d84e0eeadb042523696874218e589bc62cd7a2a375e47ef0dfea9414eadd1d01b93b8878cf4cae69d892251c385c155.css" integrity="sha384-jYTg7q2wQlI2lodCGOWJvGLNeio3XkfvDf6pQU6t0dAbk7iHjPTK5p2JIlHDhcFV"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, got forgotten</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">macOS 便利な使い方</h1><span class="article date">2020-04-13</span><section class="article labels"><a class="category" href=/categories/misc/>Misc</a><a class="tag" href=/tags/mac/>Mac</a></section></section><article class="article markdown-body"><h1 id="はじめに">はじめに</h1>
+<p>本稿では、Macでこんな設定こんな使い方すると便利だよ！というのを紹介していきます。
+最初投稿では1つしかない状態で、都度追加していく方式です。</p>
+<h2 id="お品書き">お品書き</h2>
+<ol>
+<li>どこでも(フォルダ指定)で、VSCodeを開く</li>
+</ol>
+<h2 id="どこでもフォルダ指定でvs-codeを開く">どこでも(フォルダ指定で)VS Codeを開く</h2>
+<h3 id="前書き">前書き</h3>
+<p>iTermを使われている方は、Finderを使っていてどこでもiTermが開けると思います。(設定次第だったかも知れませんが、とにかく可能です。)
+VSCodeやAtomを使われている方は、ターミナル内でコマンドを実行することでそれぞれ起動可能なことと思います。</p>
+<p>こんな感じでVSCodeを呼び出すことで、フォルダを開いた状態で起動します。</p>
+<pre><code>MacBookPro ~ $ code .
+</code></pre><p>長らくこの方法で使っていたのですが、やはり都度ターミナルが増えちゃう(閉じなければならない。Command+w)というのは少しイケてません。</p>
+<p>これをFinderのポップアップメニューから直接指定して起動できればどうでしょう。それを実現するモノです。</p>
+<h3 id="設定方法">設定方法</h3>
+<p>私はこのやり方でVSCodeを開けるようにしていますが、他のアプリでもやり方は同じです。</p>
+<p>まずは、automator.appを起動します。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-21-44-47.png"><img  src="../assets/2020-04-13-21-44-47.png"
+        alt="automator.app"/></a></p>
+<p><strong>クイックアクション</strong>をクリックし、<strong>選択</strong>ボタンをクリックします。
+<a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-21-59-18.png"><img  src="../assets/2020-04-13-21-59-18.png"
+        alt/></a></p>
+<p><strong>ファイルとフォルダ</strong>をクリック、<strong>Finder項目を開く</strong>を右側のペインへドラッグします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-22-16-22.png"><img  src="../assets/2020-04-13-22-16-22.png"
+        alt/></a></p>
+<p>アプリケーションを選択します。VSCodeの場合は、<strong>その他</strong>をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-22-17-54.png"><img  src="../assets/2020-04-13-22-17-54.png"
+        alt/></a></p>
+<p><strong>Visual Studio Code,app</strong>を選択して、<strong>選択</strong>をクリックします。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-22-19-44.png"><img  src="../assets/2020-04-13-22-19-44.png"
+        alt/></a></p>
+<p>あとはファイル→保存…で<strong>名前</strong>を付けて保存します。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-04-13-22-23-00.png"><img  src="../assets/2020-04-13-22-23-00.png"
+        alt/></a></p>
+<p>automator.appは終了して構いません。</p>
+<p>Finderを開いて、フォルダを右クリックして、付けた名前(ここではVSCodeで開く)をクリックしてください。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="..//assets/2020-04-13-22-30-49.png"><img  src="..//assets/2020-04-13-22-30-49.png"
+        alt/></a></p>
+<p>無事に動作しましたでしょうか。</p>
+<p>今回の場合、フォルダでもファイルでも開けます。
+もっともファイルの場合には<strong>このアプリケーションで開く</strong>という機能がそもそもあるのでありがたみもありませんが。</p>
+</article>
+<section class="article navigation"><p><a class="link" href="/misc/macos/"><span class="li">&rarr;</span>MacOS | MacOS Catalinaへのアップデート</a class="link">
+    </p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Always Basics.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-75025058-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</body>
+
+</html>

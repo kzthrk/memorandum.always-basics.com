@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Mon, 13 Apr 2020 15:22:45 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 13 Apr 2020 21:43:54 +0900</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Miscs</title>
+      <link>/misc/</link>
+      <pubDate>Mon, 13 Apr 2020 21:43:54 +0900</pubDate>
+      
+      <guid>/misc/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Theia</title>
@@ -45,15 +54,6 @@
       <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
       
       <guid>/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Miscs</title>
-      <link>/misc/</link>
-      <pubDate>Mon, 10 Feb 2020 16:24:31 +0900</pubDate>
-      
-      <guid>/misc/</guid>
       <description></description>
     </item>
     
