@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>npmでパッケージ管理して、webpackでビルドする&nbsp;&ndash;&nbsp;Memorandum - Danger past, god forgotten</title><link rel="stylesheet" href="/css/core.min.8d84e0eeadb042523696874218e589bc62cd7a2a375e47ef0dfea9414eadd1d01b93b8878cf4cae69d892251c385c155.css" integrity="sha384-jYTg7q2wQlI2lodCGOWJvGLNeio3XkfvDf6pQU6t0dAbk7iHjPTK5p2JIlHDhcFV"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, god forgotten</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/programming/">プログラミング</a><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">npmでパッケージ管理して、webpackでビルドする</h1><span class="article date">2020-05-05</span><section class="article labels"><a class="category" href=/categories/programming/>Programming</a><a class="tag" href=/tags/javascript/>JavaScript</a><a class="tag" href=/tags/vue.js/>Vue.js</a></section></section><article class="article markdown-body"><h1 id="はじめに">はじめに</h1>
+<p>本稿で取り扱う内容は、本来であればvue-cliを使うべきです。
+ですが、<a href="https://jp.vuejs.org/v2/guide/installation.html#CLI"target="_blank">公式</a>でも初めてのvueにおいては以下のように言及があり、使用に慎重になるべきです。</p>
+<blockquote>
+<p>CLI は Node.js および関連するビルドツールに関する事前知識を前提としています。Vue またはフロントエンドビルドツールを初めて使用している場合、CLI を使用する前に、ビルドツールなしでガイドを参照することを強くお勧めします。</p>
+</blockquote>
+<p>確かにその通りではありますが、それはvue-cliによって余りに多くの仕組みが導入されてしまうことにあるからであって、vueを習得する上で永遠をindex.htmlだけを編集し続けていても、結局vueを知って欲しいという書き手の思いだけが達成されるだけで、我々にはその次のステージへ進むタイミングで同じ課題は生じるわけです。</p>
+<p>また、何か公式ガイド以外モノを参考にしようとした時に、きっとこの教えを守って1ファイルだけで実践している例などは掲載されておらず、成長の妨げにすらなり得ます。(正直、詰んでるんですけど？ってことに)</p>
+<h1 id="npmによるパッケージインストールとビルド環境の構築">npmによるパッケージインストールとビルド環境の構築</h1>
+<p>ということで、当サイトとしてはソースコードを書いて動作を確認するという部分(ビルドするという部分)においては、先取りしてしまいます。</p>
+<h2 id="npm-コマンドによる初期設定">npm コマンドによる初期設定</h2>
+<p>まずはnpmコマンドで自分自身を定義します。といっても全てEnterキーの連投でOKです。
+あとから変えることも出来ますし、今回はこの記事に沿って体験するだけが目的かと思いますので、是非連投で。</p>
+<p>実行コマンド</p>
+<pre><code>npm init
+</code></pre><p>実行例</p>
+<pre><code>MacBookPro:accessLogAnalyzer $ npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install &lt;pkg&gt;` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (accessloganalyzer)
+version: (1.0.0)
+description:
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to /Users/kazuto/git/accessLogAnalyzer/package.json:
+
+{
+  &quot;name&quot;: &quot;accessloganalyzer&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;
+  },
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;
+}
+
+
+Is this OK? (yes)
+MacBookPro:accessLogAnalyzer $
+</code></pre><p>いよいよnpmによる最低限のパッケージのインストールです。残念ながらこれらのパッケージがどのように選定されたのか、どうやれば選定が可能になるのかは一通り経験して(1周回って)思い返してみるくらいしか思い当たりません。そして、実際にはこれらは真のミニマムではありません。あるところで私が勝手に線引きしたに過ぎません。</p>
+<p>まずは開発で最低限必要なモノをインストールします。</p>
+<pre><code>npm install -D @babel/core @babel/preset-env babel-loader css-loader file-loader vue-loader vue-template-compiler webpack webpack-cli
+</code></pre><p>それからVueそのものです。(こちらは実際に使うのは少し先のステップです)</p>
+<pre><code>npm install vue
+</code></pre><h2 id="webpackの設定">WebPackの設定</h2>
+<p>WebPackの設定ファイルを作成します。</p>
+<p>ファイル名: webpack.config.js</p>
+<pre><code>const path = require('path')
+const { VueLoaderPlugin } = require('vue-loader')
+const baseDir = __dirname;
+
+module.exports = {
+
+  mode: 'development',
+  context: path.resolve(baseDir, './src'),
+  output: {
+    path: path.resolve(baseDir, './public/js'),
+    filename: '[name].bundle.js'
+  },
+  entry: {
+    index: './index.js',
+    // admin: './admin.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [&quot;vue-style-loader&quot;, &quot;css-loader&quot;]
+      },
+
+      {
+        test: /\.vue$/,
+        loader: &quot;vue-loader&quot;
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            '@babel/preset-env',
+          ]
+        }
+      },
+    ]
+  },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    },
+    extensions: ['*', '.js', '.vue', '.json']
+  },
+  plugins: [
+    new VueLoaderPlugin(),
+  ],
+};
+</code></pre><p>お試しでビルドしてみます。</p>
+<p>コマンド</p>
+<pre><code>./node_modules/.bin/webpack
+</code></pre><p>実行例</p>
+<pre><code>MacBookPro:accessLogAnalyzer $ ./node_modules/.bin/webpack
+Hash: f568a6fbd7b410d45355
+Version: webpack 4.42.1
+Time: 599ms
+Built at: 2020-04-05 4:31:37 PM
+          Asset      Size  Chunks             Chunk Names
+index.bundle.js  3.83 KiB   index  [emitted]  index
+Entrypoint index = index.bundle.js
+[./index.js] 78 bytes {index} [built]
+MacBookPro:accessLogAnalyzer $
+</code></pre><p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-05-05-17-39-02.png"><img  src="../assets/2020-05-05-17-39-02.png"
+        alt="ビルド結果"/></a></p>
+<p>無事にpublic/jsにJavaScriptが出力されましたでしょうか。
+ただ、いまのHTMLはこの新たに出力されたJavaScriptを使用するようにはなっていません。</p>
+<p>そこで、public/index.htmlを以下のように修正します。</p>
+<p>変更前  <code>&lt;script src=&quot;/index.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>変更後  <code>&lt;script src=&quot;/js/index.bundle.js&quot;&gt;&lt;/script&gt;</code></p>
+<p>ついでに、間違いがあるとやっかいなのでpublic/index.jsも削除しておいた方が良いでしょう。
+ついでのついでですが、build.shも不要のはずです。</p>
+<p>さてこの変更によって正常に動作しましたでしょうか。ここで<strong>http-serverを再始動</strong>するのを忘れないでください。
+結果の見た目は何も変わらないはずですので動作結果の掲載は割愛します。</p>
+<h2 id="編集するのはsrc配下のみにしよう">編集するのはsrc配下のみにしよう</h2>
+<p>先ほどはsrc/index.htmlではなくpublic/index.htmlを編集しました。これは現時点ではsrc/index.htmlを編集してもbuild.shの力を借りなければpublic配下に反映できなかったからです。</p>
+<p>そこで、その作業についてもwebpackに担わせます。webpackには様々なプラグインがあり、その1つを使ってコピーというものです。そのため出来ることは実際には対したことは無いのですが、意味も分からず設定まで自動生成されて与えられると、拒絶反応も手伝って、とても理解しがたいモノです。ですが飲み込めさえすればチョロいもんで、一度動くのを見届ければあとは忘れてしまって良いので是非この機会に。</p>
+<p>まずは、npmコマンドでパッケージをインストールします。</p>
+<pre><code>npm install -D copy-webpack-plugin
+</code></pre><p>設定ファイルの頭でplug-inを読み込みます。
+<em>先頭のお仲間のところへ上記の行を追記してください</em></p>
+<p>ファイル名: webpack.config.js</p>
+<pre><code>const CopyWebpackPlugin = require('copy-webpack-plugin')
+</code></pre><p>実際の設定の部分は以下の通りです。名前のとおりプラグインなので、pluginsに設定を記載します。
+ただただプラグインの引数にfromとtoを列挙していくだけで、コピーが実行されます。
+toには<strong>path</strong>を使用しているので少し直感的ではないかも知れませんが、baseDir + publicディレクトリへコピーするようにしているだけなので、あまり突っかからずに<strong>変な書き方だな</strong>くらいでスルーするのが得策かと思います。</p>
+<pre><code>    new CopyWebpackPlugin([
+      {
+        from: '*.html',
+        to: path.resolve(baseDir, './public')
+      },
+      {
+        from: '*.css',
+        to: path.resolve(baseDir, './public')
+      },
+      {
+        from: './images/*',
+        to: path.resolve(baseDir, './public')
+      },
+    ]),
+</code></pre><p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-05-05-18-10-05.png"><img  src="../assets/2020-05-05-18-10-05.png"
+        alt="Plugin設定"/></a></p>
+<p>さて、HTMLを変更します。
+<em>{{ message }} の行の頭にmessage:を追加しています</em></p>
+<p>ファイル名: src/index.html</p>
+<pre><code>&lt;body&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    message: {{ message }}
+  &lt;/div&gt;
+  &lt;script src=&quot;/js/index.bundle.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+</code></pre><p>実際に動作するか確認してみます。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-05-05-18-10-47.png"><img  src="../assets/2020-05-05-18-10-47.png"
+        alt="実行例"/></a></p>
+<p>次に、まだHTMLのheaderタグ内でscriptタグを使ってVueを読み込んでいますが、これも止めてみましょう。
+<em>説明のためにコメントアウトにしていますが、実際には行を削除するので問題ありません。それから変更が効いていることを確認できるように{{ message }} の部分にも何らか文字列を追加しておきます</em></p>
+<p>ファイル名: src/index.html</p>
+<pre><code>&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;vue.js hello Vue! &lt;/title&gt;
+  &lt;!-- &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt; --&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    message from Vue: {{ message }}
+  &lt;/div&gt;
+  &lt;script src=&quot;/js/index.bundle.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><p>代わりにJavaScript側でVueを読み込みます。大分最初の方でvueをnpmでインストールしていましたがようやく出番です。
+<em>追加するのはimport文の行です</em></p>
+<p>ファイル名: src/index.js</p>
+<pre><code>import Vue from 'vue'
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+</code></pre><p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-05-05-22-15-56.png"><img  src="assets/2020-05-05-22-15-56.png"
+        alt="結果確認"/></a></p>
+<p>いかがでしょうか。実際に確認できましたでしょうか。</p>
+<p>ここまでで、ようやくnpmでインストールしたVue開発環境が一旦整いました。</p>
+<h2 id="http-serverを卒業しお気楽ご気楽webpack-dev-serverへ">http-serverを卒業し、お気楽ご気楽webpack-dev-serverへ</h2>
+<p>これまで変更するたびに毎回http-serverを再起動してきました。これはとても面倒な話です。
+なんだかシステムに人間様が使われているようでいい気はしません。
+そこで、自動的に変更を検出して反映されるようにします。</p>
+<pre><code>npm install -D webpack-dev-server
+npm install -D write-file-webpack-plugin
+</code></pre><p>ファイル名: package.json</p>
+<pre><code>&quot;dev&quot;: &quot;NODE_ENV=development webpack-dev-server --config ./webpack.config.js --content-base ./public/ --http&quot;
+</code></pre><p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-05-05-22-17-41.png"><img  src="assets/2020-05-05-22-17-41.png"
+        alt="変更箇所"/></a></p>
+<p>ファイル書き込みが可能になるプラグインを導入します。</p>
+<p>ファイル名: webpack.config.js</p>
+<pre><code>const WriteFilePlugin = require('write-file-webpack-plugin')
+</code></pre><p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-05-05-22-27-02.png"><img  src="assets/2020-05-05-22-27-02.png"
+        alt="変更箇所"/></a></p>
+<p>ファイル名: webpack.config.js</p>
+<pre><code>new WriteFilePlugin(),
+</code></pre><p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-05-05-22-27-15.png"><img  src="../assets/2020-05-05-22-27-15.png"
+        alt="変更箇所"/></a></p>
+<p>これで編集した内容が即座にビルドされて、かつWebブラウザも自動でリロードされたと思います。</p>
+<h2 id="単一ファイルコンポーネント">単一ファイルコンポーネント</h2>
+<p>最後に一仕事です。「単一ファイルコンポーネント」それが我々の目指すところです。いつの間にそうなった？？</p>
+<p>まだHTMLと(Vueを使った)JavaScriptという構図で、ファイルの成り立ち的にはちっともVueっぽさが出ていません。やっぱり、vue拡張子を持ったファイルを更新して、ビルドすると自動的にHTML、CSS、JSという標準的なファイル構成から全体が出来上がっているのが理想でしょう。(勝手な思い込み)</p>
+<p>いまだメッセージの文字列をvueで指定することしか出来ていませんが、「単一ファイルコンポーネント」という仕組みを手に入れたいと思います。</p>
+<h3 id="単一ファイルコンポーネントとは">単一ファイルコンポーネントとは</h3>
+<p>まずは単一ファイルコンポーネントとは何かです。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-05-05-22-29-49.png"><img  src="../assets/2020-05-05-22-29-49.png"
+        alt="単一ファイルコンポーネント"/></a></p>
+<p>こういうのが単一ファイルコンポーネントです。大きく、template、script、styleという3部構成になっています。実はこれ、HTMLファイルの中にもHTMLのHTML部分とJavaScirptやStyle Sheetの中身を書き込めるのでそんなに突飛な考え方でもありません。</p>
+<ul>
+<li>template ・・・デフォルトの言語はHTMLです。それぞれのファイルに最大で1つだけ設けることが出来ます。</li>
+<li>script　・・・デフォルトの言語はJavaScirptです。本稿ではBabelを採用しているので、ES2015+</li>
+</ul>
+<p>名前にコンポーネントと書かれているのがミソで、</p>
+<pre><code>App.vue
+  Header.vue
+    Information.vue
+    IconMenu.vue
+  Main.vue
+    LeftContent.vue
+      Menu.vue
+    CenterContent.vue
+      SerachBar.vue
+      Result.vue
+      Detail.vue
+    RightContent.vue
+      Tools.Vue
+      Advertisement.Vue
+  Footer.vue
+    StaticLink.vue
+    CopyRight.vue
+</code></pre><p>これらは全て妄想でデタラメ(それっぽくパーツに分解したもの)ですが、画面の領域毎にコンポーネント化してそれぞれの部分に対してHTMLとロジック、それにスタイルを実装することで、見通しがよく、分担して開発することも可能で、プログラミングの影響範囲も分かりやすくなります。そして別の画面を作る時に再利用も可能となります。</p>
+<p>本稿では、まずApp.vue体制に移行します。その上で、App.vueの子としてMessage.vueを追加します。</p>
+<h3 id="ようこそappvue">ようこそApp.vue</h3>
+<p>ではまずHTMLからです。</p>
+<p>{{ message }} は App.vueの役割なのでここではVueに任せる部分の起点だけを記すことになります。
+<em>idがappのdivタグです</em></p>
+<p>ファイル名: src/index.html</p>
+<pre><code>&lt;html&gt;
+
+&lt;head&gt;
+  &lt;title&gt;vue.js hello Vue! &lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+
+  &lt;script src=&quot;/js/index.bundle.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre><p>次にJavaScriptです。</p>
+<p>この変更を行ったあとビルドはエラーになります。これはまだ他のファイルを変更する必要がありますが、ファイルの変更を自動で検出してコンパイルしてしまうためです。</p>
+<p>変更の内容は、App.vueというファイルでVueのコンポーネントを作ってそれをindex.htmlの起点部分でレンダリングするというものです。</p>
+<p>ファイル名: src/index.js</p>
+<pre><code>import Vue from 'vue'
+import App from './components/App.vue';
+
+new Vue({
+  el: '#app',
+  render: h =&gt; h(App),
+})
+</code></pre><p>最後にVueファイルです。</p>
+<p>templateは、これまでindex.htmlで記載していた内容と同じで、少しだけ違うのはstyleを付けたことくらいでしょうか。それっぽくstyleにも何か書いてみただけです。</p>
+<p>ファイル名: src/compoment/App.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;message&quot;&gt;
+    {{ message }}
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  data() {
+    return { message: &quot;message from vue&quot; }
+  },
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.message {
+  color: red;
+}
+&lt;/style&gt;
+</code></pre><p>さて、肝心のscript部分ですが、これは書き方が決まっています。export default {} で囲われた所にvueとして決められたモノを書いていくことになります。</p>
+<p>index.htmlとindex.jsの時には、data: { message: &lsquo;Hello Vue!&rsquo; }　こんな感じで書いていたと思いますが、それが関数になります。なんだdata:　じゃないじゃないかと思われるようでしたら、data: function(){} として頂いても構いません。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-05-05-23-33-28.png"><img  src="assets/2020-05-05-23-33-28.png"
+        alt="動作確認"/></a></p>
+<p>さて、実際に動作しましたでしょうか。</p>
+<p>これで終わってしまうと、1世代だけで、その子を産み、育てるにはどうするんだよってことになりますので、そこまでやりましょう。</p>
+<p>ファイル名: src/App.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;message&quot;&gt;
+    {{ message }}
+    &lt;Message&gt;&lt;/Message&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Message from &quot;./util/Message.vue&quot;
+
+export default {
+  data() {
+    return { message: &quot;message from vue&quot; }
+  },
+  components: {
+    Message,
+  }
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.message {
+  color: red;
+}
+&lt;/style&gt;
+</code></pre><p>ファイル名: src/components/util/Message.vue</p>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;child&quot;&gt;
+    child: {{ message }}
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+
+export default {
+    data(){
+        return {
+            message: &quot;message from mesage.vue&quot;
+        }
+    }
+}
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.child {
+  background-color:bisque;
+}
+&lt;/style&gt;
+</code></pre><p>動作を確認してみましょう。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="assets/2020-05-05-23-35-20.png"><img  src="assets/2020-05-05-23-35-20.png"
+        alt="動作確認"/></a></p>
+<p>ついに、index.htmlとindexjsを形式上設け、あとはApp.vueとその仲間たちという形でどんどんVueな世界を展開していけばOKな状態を手に入れました。Vueとして開発することで、どんどん画面が出来上がっていく構図を手に入れました。</p>
+<p>ようやくスタートラインに立てましたね！</p>
+<p>これさえ手に入れれば、あとは好きな教材でVueを学びながら、初めての試作アプリという形で経験を積めば、立派なVue使いになれるはずです。まだ一緒に学びたいよ〜という方は、引き続き<a href="/programming/vue3/">3.Vue.jsでアプリ開発</a>へと進みお付き合い頂ければと思います。</p>
+</article>
+<section class="article navigation"><p><a class="link" href="/programming/vue3/"><span class="li">&larr;</span>3.Vue.jsでアプリ開発</a></p><p><a class="link" href="/programming/vue1/"><span class="li">&rarr;</span>1. HTMLとJavaScriptの単純構成で初めのVue.js</a class="link">
+    </p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Always Basics.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-75025058-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</body>
+
+</html>

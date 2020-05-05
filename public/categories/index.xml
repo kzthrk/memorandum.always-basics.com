@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Memorandum - Danger past, got forgotten</title>
+    <title>Categories on Memorandum - Danger past, god forgotten</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on Memorandum - Danger past, got forgotten</description>
+    <description>Recent content in Categories on Memorandum - Danger past, god forgotten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Mon, 13 Apr 2020 21:43:54 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 16:47:53 +0900</lastBuildDate>
     
         <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Programming</title>
+      <link>/categories/programming/</link>
+      <pubDate>Tue, 05 May 2020 16:47:53 +0900</pubDate>
+      
+      <guid>/categories/programming/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Misc</title>
@@ -40,7 +49,7 @@
     </item>
     
     <item>
-      <title>Web</title>
+      <title>web</title>
       <link>/categories/web/</link>
       <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
       

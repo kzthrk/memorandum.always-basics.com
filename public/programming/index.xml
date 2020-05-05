@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programmings on Memorandum - Danger past, god forgotten</title>
+    <link>/programming/</link>
+    <description>Recent content in Programmings on Memorandum - Danger past, god forgotten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>©2020 Always Basics.</copyright>
+    <lastBuildDate>Tue, 05 May 2020 16:47:53 +0900</lastBuildDate>
+    
+        <atom:link href="/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3.Vue.jsでアプリ開発</title>
+      <link>/programming/vue3/</link>
+      <pubDate>Tue, 05 May 2020 16:47:53 +0900</pubDate>
+      
+      <guid>/programming/vue3/</guid>
+      <description>だだいま絶賛編集中です</description>
+    </item>
+    
+    <item>
+      <title>npmでパッケージ管理して、webpackでビルドする</title>
+      <link>/programming/vue2/</link>
+      <pubDate>Tue, 05 May 2020 16:47:51 +0900</pubDate>
+      
+      <guid>/programming/vue2/</guid>
+      <description>はじめに 本稿で取り扱う内容は、本来であればvue-cliを使うべきです。 ですが、公式でも初めてのvueにおいては以下のように言及があり、使用</description>
+    </item>
+    
+    <item>
+      <title>1. HTMLとJavaScriptの単純構成で初めのVue.js</title>
+      <link>/programming/vue1/</link>
+      <pubDate>Tue, 05 May 2020 16:47:47 +0900</pubDate>
+      
+      <guid>/programming/vue1/</guid>
+      <description>はじめに それでは早速ですが、まずはHTMLとJavaScriptを1つずつ用意して簡単なvue.jsアプリを作成してみましょう。 本稿ではプロ</description>
+    </item>
+    
+    <item>
+      <title>初めてのVue.js</title>
+      <link>/programming/vue/</link>
+      <pubDate>Tue, 05 May 2020 16:12:05 +0900</pubDate>
+      
+      <guid>/programming/vue/</guid>
+      <description>はじめに 初めてのVue.jsということで、本当にいちからはじめてみたいと思います。 前提となる基礎知識は、JavaScriptがなんとなく分か</description>
+    </item>
+    
+  </channel>
+</rss>

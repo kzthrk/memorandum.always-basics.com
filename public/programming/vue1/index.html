@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>1. HTMLとJavaScriptの単純構成で初めのVue.js&nbsp;&ndash;&nbsp;Memorandum - Danger past, god forgotten</title><link rel="stylesheet" href="/css/core.min.8d84e0eeadb042523696874218e589bc62cd7a2a375e47ef0dfea9414eadd1d01b93b8878cf4cae69d892251c385c155.css" integrity="sha384-jYTg7q2wQlI2lodCGOWJvGLNeio3XkfvDf6pQU6t0dAbk7iHjPTK5p2JIlHDhcFV"><body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, god forgotten</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/programming/">プログラミング</a><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
+    <h1 class="article title">1. HTMLとJavaScriptの単純構成で初めのVue.js</h1><span class="article date">2020-05-05</span><section class="article labels"><a class="category" href=/categories/programming/>Programming</a><a class="tag" href=/tags/javascript/>JavaScript</a><a class="tag" href=/tags/vue.js/>Vue.js</a></section></section><article class="article markdown-body"><h1 id="はじめに">はじめに</h1>
+<p>それでは早速ですが、まずはHTMLとJavaScriptを1つずつ用意して簡単なvue.jsアプリを作成してみましょう。
+本稿ではプロジェクト名(アプリ名)を「Access Log Analyzer」とします。
+そして、以下を前提とします。</p>
+<pre><code>export PROJECT_NAME=&quot;accessLogAnalyzer&quot;
+export PROJECT_DIR=&quot;${HOME}/${PROJECT_NAME}&quot;
+</code></pre><p>コマンドやファイルのパスを示すに当たって、${PROJECT_DIR}という環境変数で示すようにしますが、実行結果、ログをご紹介するときは、上記の実際の値で出力されているものを掲載しています。</p>
+<h1 id="11ディレクトリ作成">1.1　ディレクトリ作成</h1>
+<pre><code>mkdir ${PROJECT_DIR}
+cd ${PROJECT_DIR}
+mkdir src
+mkdir public
+cd public
+</code></pre><p>srcディレクトリに以下の内容のindex.htmlとindex.jsを作成します。</p>
+<p>ファイル名: index.html</p>
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;vue.js hello Vue! &lt;/title&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;app&quot;&gt;
+{{ message }}
+&lt;/div&gt;
+&lt;script src=&quot;/index.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>ファイル名: index.js</p>
+<pre><code>var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+</code></pre><p>これらはpublicディレクトリに直接作成しても構いませんが、<a href="/programming/vue2/">2.npmでパッケージ管理して、webpackでビルドする</a>を念頭に、その役割を意識するために、あえてsrcディレクトリを設けています。</p>
+<p>publicディレクトリを設けているので、もちろんソースコードから実際に稼働するpublicディレクトリへの配置が必要です。必要な作業は単なるコピーのはずですが、ここではあえてbuild.shというファイルを作成します。</p>
+<pre><code>cd ${PROJECT_DIR}
+</code></pre><p>ファイル名: build.sh</p>
+<pre><code>#!/bin/bash
+export PROJECT_NAME=&quot;accessLogAnalyzer&quot;
+export PROJECT_DIR=&quot;${HOME}/${PROJECT_NAME}&quot;
+cd ${PROJECT_DIR}
+cp -p ./src/index.* ./public
+chmod 755 ./public/*
+</code></pre><pre><code>chmod 700 build.sh
+</code></pre><p>動作を確認するためにはHTTPServerが必要です。
+以下のコマンドで簡易のHTTPSeverをインストールして稼働させます。</p>
+<pre><code>npm install -g http-server
+cd ${PROJECT_DIR}/public
+http-server
+</code></pre><p>ブラウザで http://localhost:8080/ へアクセスしてみましょう。
+どうでしょうか。以下のように見えましたでしょうか？</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-05-05-16-53-05.png"><img  src="../assets/2020-05-05-16-53-05.png"
+        alt="Hello Vue"/></a></p>
+<p>ついでに、ブラウザにインストールした拡張(Vue.js devtools)も確認しておきます。</p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-05-05-16-54-07.png"><img  src="../assets/2020-05-05-16-54-07.png"
+        alt="拡張1"/></a></p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-05-05-16-54-33.png"><img  src="../assets/2020-05-05-16-54-33.png"
+        alt="拡張2"/></a></p>
+<p><a target="_blank" rel="noopener noreferrer" 
+  href="../assets/2020-05-05-16-54-44.png"><img  src="../assets/2020-05-05-16-54-44.png"
+        alt="拡張3"/></a></p>
+<p>devtoolsそのものの使い方については、また機会を改めたいと思いますが、動作していることは確認できたかと思います。</p>
+<h1 id="まとめ">まとめ</h1>
+<p>文字通りHello Worldレベルはありますが、Vue.jsを使ってみました。</p>
+<p>大事なことは、Vue.js自身がHTMLから読み込まれていること、そしてHTMLの中にキーワードを埋め込んで、JavaScriptのソースコードから操作できていること、この3点です。</p>
+<p>さて、続いては<a href="/programming/vue2/">npmでパッケージ管理して、webpackでビルドする</a>です。
+さきほどbuild.shで単なるコピーをするスクリプトを作成しましたが、これがwebpackというコマンドに変わることになります。</p>
+</article>
+<section class="article navigation"><p><a class="link" href="/programming/vue2/"><span class="li">&larr;</span>npmでパッケージ管理して、webpackでビルドする</a></p><p><a class="link" href="/programming/vue/"><span class="li">&rarr;</span>初めてのVue.js</a class="link">
+    </p></section></div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">©2020 Always Basics.</p>
+    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
+        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
+        target="_blank">Notepadium</a></p>
+</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-75025058-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+</div>
+</body>
+
+</html>
