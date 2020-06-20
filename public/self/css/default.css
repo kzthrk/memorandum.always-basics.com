@@ -7,10 +7,11 @@ body {
 
 /* index */
 .about {
-    margin-top: 40px;
+    margin-top: 16px;
     width: 100%;
     /* height: 500px; */
     margin-bottom: 20px;
+    justify-content: center;
 }
 
 .about_left {
@@ -58,8 +59,11 @@ body {
 }
 
 .about_right {
-    padding: 30px 10px;
+    margin-left: 16px;
+    padding: 8px 4px;
     position: relative;
+    width: 95%;
+    text-align: center;
 }
 
 .about_right > h1 {
