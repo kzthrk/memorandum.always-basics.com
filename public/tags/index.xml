@@ -1,113 +1,112 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Memorandum - Danger past, god forgotten</title>
-    <link>/tags/</link>
+    <link>http://memorandum.always-basics.com/tags/</link>
     <description>Recent content in Tags on Memorandum - Danger past, god forgotten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Tue, 05 May 2020 16:47:53 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2020 16:47:51 +0900</lastBuildDate>
     
-        <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://memorandum.always-basics.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JavaScript</title>
-      <link>/tags/javascript/</link>
-      <pubDate>Tue, 05 May 2020 16:47:53 +0900</pubDate>
+      <link>http://memorandum.always-basics.com/tags/javascript/</link>
+      <pubDate>Wed, 06 May 2020 16:47:51 +0900</pubDate>
       
-      <guid>/tags/javascript/</guid>
+      <guid>http://memorandum.always-basics.com/tags/javascript/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vue.js</title>
-      <link>/tags/vue.js/</link>
-      <pubDate>Tue, 05 May 2020 16:47:53 +0900</pubDate>
+      <link>http://memorandum.always-basics.com/tags/vue.js/</link>
+      <pubDate>Wed, 06 May 2020 16:47:51 +0900</pubDate>
       
-      <guid>/tags/vue.js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mac</title>
-      <link>/tags/mac/</link>
-      <pubDate>Mon, 13 Apr 2020 21:43:54 +0900</pubDate>
-      
-      <guid>/tags/mac/</guid>
+      <guid>http://memorandum.always-basics.com/tags/vue.js/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Development</title>
-      <link>/tags/development/</link>
+      <link>http://memorandum.always-basics.com/tags/development/</link>
       <pubDate>Mon, 13 Apr 2020 15:22:45 +0900</pubDate>
       
-      <guid>/tags/development/</guid>
+      <guid>http://memorandum.always-basics.com/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IDE</title>
-      <link>/tags/ide/</link>
+      <link>http://memorandum.always-basics.com/tags/ide/</link>
       <pubDate>Mon, 13 Apr 2020 15:22:45 +0900</pubDate>
       
-      <guid>/tags/ide/</guid>
+      <guid>http://memorandum.always-basics.com/tags/ide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mac</title>
+      <link>http://memorandum.always-basics.com/tags/mac/</link>
+      <pubDate>Wed, 01 Apr 2020 21:43:54 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/tags/mac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Arduino</title>
-      <link>/tags/arduino/</link>
+      <link>http://memorandum.always-basics.com/tags/arduino/</link>
       <pubDate>Wed, 12 Feb 2020 11:15:17 +0900</pubDate>
       
-      <guid>/tags/arduino/</guid>
+      <guid>http://memorandum.always-basics.com/tags/arduino/</guid>
       <description></description>
     </item>
     
     <item>
       <title>config</title>
-      <link>/tags/config/</link>
+      <link>http://memorandum.always-basics.com/tags/config/</link>
       <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
       
-      <guid>/tags/config/</guid>
+      <guid>http://memorandum.always-basics.com/tags/config/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>/tags/hugo/</link>
+      <link>http://memorandum.always-basics.com/tags/hugo/</link>
       <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
       
-      <guid>/tags/hugo/</guid>
+      <guid>http://memorandum.always-basics.com/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>静的サイトジェネレータ</title>
-      <link>/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</link>
+      <link>http://memorandum.always-basics.com/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</link>
       <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
       
-      <guid>/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</guid>
+      <guid>http://memorandum.always-basics.com/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>install</title>
-      <link>/tags/install/</link>
+      <link>http://memorandum.always-basics.com/tags/install/</link>
       <pubDate>Thu, 06 Feb 2020 13:57:04 +0900</pubDate>
       
-      <guid>/tags/install/</guid>
+      <guid>http://memorandum.always-basics.com/tags/install/</guid>
       <description></description>
     </item>
     
     <item>
       <title>note</title>
-      <link>/tags/note/</link>
+      <link>http://memorandum.always-basics.com/tags/note/</link>
       <pubDate>Wed, 05 Feb 2020 13:57:04 +0900</pubDate>
       
-      <guid>/tags/note/</guid>
+      <guid>http://memorandum.always-basics.com/tags/note/</guid>
       <description></description>
     </item>
     

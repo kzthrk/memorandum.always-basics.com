@@ -1,42 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Theia on Memorandum - Danger past, god forgotten</title>
-    <link>/theia/</link>
+    <link>http://memorandum.always-basics.com/theia/</link>
     <description>Recent content in Theia on Memorandum - Danger past, god forgotten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>©2020 Always Basics.</copyright>
     <lastBuildDate>Mon, 13 Apr 2020 15:22:45 +0900</lastBuildDate>
     
-        <atom:link href="/theia/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://memorandum.always-basics.com/theia/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Theia | Desktop版の可能性を探索</title>
-      <link>/theia/desktop/</link>
+      <link>http://memorandum.always-basics.com/theia/desktop/</link>
       <pubDate>Mon, 13 Apr 2020 15:22:45 +0900</pubDate>
       
-      <guid>/theia/desktop/</guid>
-      <description>Theia デスクトップ版 Theia デスクトップ版とはなにか？ですが、デスクトップ版の意味として、ネイティブなデスクトップ・アプリケーションが思い浮かぶと思い</description>
+      <guid>http://memorandum.always-basics.com/theia/desktop/</guid>
+      <description>Theia デスクトップ版 Theia デスクトップ版とはなにか？ですが、デスクトップ版の意味として、ネイティブなデスクトップ・アプリケーションが思い浮かぶと思います。ですので、その候補を挙げます。
+2020.04.13時点でのデスクトップ版の状況は芳しくありません。 ひとまずhttps://github.com/eclipse-theia/theia　のGetting Startedに記載のある候補を当たってみることにします。
+   No. 候補 URL     1 Run Theia in Docker https://github.com/theia-ide/theia-apps#theia-docker   2 Package a desktop Theia application with Electron https://github.com/theia-ide/yangster-electron    Theia デスクトップ版 候補その1 「Run Theia in Docker」ってその名の通りDockerであって、デスクトップ版アプリっていうのは違うだろ？ そうなんですが、行ってみるとTheia Desktopの文字があるんです。
+ですが&amp;hellip;
+はい、そのうち登場するかも知れないので、本稿の勝手な使命としてあげておきました。
+Theia デスクトップ版 候補その2 つづいてリンク名称的には本命のPackage a desktop Theia application with Electronです。 ですが、こちらも残念ながら「Latest commitea4c3d5on 13 Mar 2018」とあるとおり、期待できません。
+自分でビルドする以外に、以下のリンクからビルド済みのパッケージを入手可能です。 ですがよい子の皆さんは、この記事を見るだけにして、真似はしない方が良いでしょう。
+https://github.com/theia-ide/yangster-electron/releases/tag/v0.1.1
+Mac版が、Yangster-0.1.1.dmg Windows版が、Yangster-Installer-0.1.1.exe
+どっちの環境も試せますが、Mac版で試しました。</description>
     </item>
     
     <item>
       <title>Theia | Gitpodの環境設定</title>
-      <link>/theia/docker_settings/</link>
+      <link>http://memorandum.always-basics.com/theia/docker_settings/</link>
       <pubDate>Sun, 12 Apr 2020 09:24:50 +0900</pubDate>
       
-      <guid>/theia/docker_settings/</guid>
-      <description>Gitpodの環境設定 はじめに 本稿は、Theia | Theiaを始めてみようの中でGitpodおよびその中で使用されるDockerの設定につい</description>
+      <guid>http://memorandum.always-basics.com/theia/docker_settings/</guid>
+      <description>Gitpodの環境設定 はじめに 本稿は、Theia | Theiaを始めてみようの中でGitpodおよびその中で使用されるDockerの設定について切り出したものです。
+Github権限設定 作業に入る前にGithubでのGitpodの権限を変更します。すでに行われている場合は不要ですが、当サイトの流れでここまできた場合には行われていないはずです。
+右上のアイコンをクリックしてメニューを表示して、Open Access Controlをクリックします。
+write public reposにチェックを入れて、Updateをクリックします。
+これで、設定作業の中で行うブランチの作成やコミット作業が可能になります。
+環境設定 設定がまだ済んでいない場合、右下にGitpodの設定が出来るますよと小さなウインドウが出ているかと思います。 もちろん出ていなくても、この記事にあるように2つのファイルを作成することで設定することは可能です。 本稿では、敷かれたレールの上を走る形で設定したいと思います。
+赤枠で囲ったところが、表示されました。ついでに右側のバーにも1つアイコンが増えています。 設定が終わると消えてしまうようですが、それまでは表示されているようですので、もし何らかの操作によって閉じてしまった場合には、ここから再度呼び出してください。
+まずは、一番上のCreate .gitpod.ymlをクリックします。
+Create .gitpod.ymlボタンをクリックします。
+update .gitpod.Dockerfileボタンをクリックします。
+ベースとするイメージを選択します。
+.gitpod.Dockerfile を作ります。
+.gitpod.yml には、Dockefileの項目が追加されていると思います。 編集するのは、.gitpod.Dockerfileの方です。
+上記は、xclipをインストールしてみた時の例です。
+Test Drive Configurationをクリックして、Push to Branch &amp;amp; Start Workspaceをクリックします。
+直接保管した上で再起動しても問題無いのですが、間違っていたとき、想定している結果が得られなかったときに少し面倒です。 そのため、マニュアルにも記載がありますが現時点では別ブランチでコミットしておいては、Github側から新しいインスタンスを使い捨てで起動してテストすることが勧められています。
+上手く動作することが分かった場合には、そのブランチをマージするようにします。
+Create a pull requestをクリックし、Open Pull Request Viewをクリックします。
+Publish Changesをクリックします。
+ブランチをmasterから先ほど作成したxxxxx/gitpod-setupを選択します。
+設定ファイルをコミットします。左のバーでGitのペインを呼び出します。変更対象のファイルをステージングし、コメントを入力してコミットします。
+pushをクリックしてください。
+Githubにアクセスして、ブランチを先ほどpushしたブランチに切り替えてからGitpodボタンをクリックします。
+Theiaが起動しますが、その時Dockerが初期化されているのが確認できます。
+環境したら環境がセットアップされているはずです。変更を加えた内容に応じて確認してください。
+問題が無ければ、これを元のブランチにマージすることでDockerの設定作業は完了です。
+その他、.gitpod.ymlを編集することで、起動した際の動作(例えばサーバーを毎回起動するなども)可能です。 その場合には、以下echo部分を変更してください。
+以上で、Gitpodの環境設定は終了です。</description>
     </item>
     
     <item>
       <title>Theia | Theiaを始めてみよう</title>
-      <link>/theia/theia/</link>
+      <link>http://memorandum.always-basics.com/theia/theia/</link>
       <pubDate>Fri, 10 Apr 2020 23:25:55 +0900</pubDate>
       
-      <guid>/theia/theia/</guid>
-      <description>はじめに Theiaとは まずは読み方ですが『テイア』と読むようです。 Theiaとは公式ページの説明を借りれば Eclipse Theia is an extensible platform to develop multi-language Cloud &amp;amp; Desktop IDEs with state-of-the-art web technologies.</description>
+      <guid>http://memorandum.always-basics.com/theia/theia/</guid>
+      <description>はじめに Theiaとは まずは読み方ですが『テイア』と読むようです。
+Theiaとは公式ページの説明を借りれば
+ Eclipse Theia is an extensible platform to develop multi-language Cloud &amp;amp; Desktop IDEs with state-of-the-art web technologies.
+ Eclipse Theiaは、最先端のWebテクノロジーを使用して多言語のクラウドおよびデスクトップIDEを開発するための拡張可能なプラットフォームです。
+だからなに？ 我々一般ユーザーにとって見れば、このスクリーンショットのような開発環境が提供されるってことです。
+つまりは？ こちらの記事で紹介されていますが、デスクトップ版とブラウザ版が想定されていて、どちらでも同じソースコードで開発環境が提供されることになります。
+Visual Studio Codeの代替を狙う統合開発環境「Eclipse Theia 1.0」リリース。VS Codeの拡張機能を利用可能、デスクトップ版とWebブラウザ版に両対応
+ Eclipse Theiaは、「真のオープンソースによるVisual Studio Codeの代替」（a true open source alternative to Microsoft’s popular Visual Studio Code (VS Code) software）だとEclipse Foundationは紹介しており、デスクトップアプリケーションだけでなくWebブラウザからも同一機能が利用できるWebアプリケーション版も提供されています。
+ Theiaとは？ 仕切り直しますね。Theia とはVS Code(Vidual Studio Code)そっくりなんですが、それがブラウザの中で(も)動きます。先に書いた通りデスクトップ版もありますが、デスクトップ版というのはElectronでパッケージングしたものになるので、それってそのまんまVS Codeじゃんってことですね。
+脱線: ElectronとはNode.jsのアプリ(サーバーサイド)とChromium(ブラウザ)を一塊にすることでデスクトップ・アプリケーションにするフレームワークです。
+この投稿を読んでいる方がVS Codeを聞いたことがないとは思えないですが、念のため簡単に触れておくと、Microsoftが開発しているElectronベースのソースコードエディタです。 ソースコードエディタって微妙な表現ですが、MicrosoftはVisual Studioという統合開発環境をもっていてそのエディタ部分だけを切り出したというイメージなので、VS Code自身はソースコードエディタという説明に。 ただご承知の通り、だれもソースコードエディタとしての使用にとどまっている人はおらず、豊富な拡張機能を 拡張機能(プラグイン) をガシガシインストールして統合開発環境として使用している訳です。</description>
     </item>
     
   </channel>

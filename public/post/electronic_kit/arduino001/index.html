@@ -1,0 +1,813 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Memorandum - Danger past, god forgotten - Arduino | Arduinoでリモコンを作ろう </title>
+    
+    
+    <meta content="Arduino, 電子工作" name="keywords">
+    
+    <meta content="Memorandum - Danger past, god forgotten - Arduinoでリモコンを作成を作ってみたいと思います。いわゆる赤外線の信号を読み取り保管し、同じ進行を赤外線LEDで発光するという回路です。" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75025058-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-75025058-6');
+        </script>
+    
+
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/images/logo.jpg" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Memorandum - Danger past, god forgotten
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/programming/">Programming</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/web/">Hugo</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/theia/">Theia</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/">電子工作</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/about/">About</a></li>
+            
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+                    
+                        <dd><a href="/categories/programming/">Programming</a></dd>
+                    
+                        <dd><a href="/categories/web/">Hugo</a></dd>
+                    
+                        <dd><a href="/categories/theia/">Theia</a></dd>
+                    
+                        <dd><a href="/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/">電子工作</a></dd>
+                    
+                        <dd><a href="/about/">About</a></dd>
+                    
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote self-elem-quote-bg-blue markdown-body single-title" >
+                    <h1>Arduino | Arduinoでリモコンを作ろう</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-02-12</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">電子工作</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/arduino/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Arduino</span>
+        </a>
+    
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h1 id="概要">概要</h1>
+<p>Arduinoでリモコンを作成してみたいと思います。作成するリモコンは赤外線を使った一般的なリモコンです。いわゆるテレビやエアコンなどを操作するリモコンで、単純にリモコン側から赤外線を使った信号を送りつけ、本体が側がそれに反応しているタイプのものです。</p>
+<p>一部のリモコンには一方通行ではないものがあるようですが、今回作成するArduinoのリモコンはそれには対応していません。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="準備するもの">準備するもの</h1>
+<p>Arduinoでリモコンを作成するにあたり、必要なパーツを以下にリストします。まず<strong>Arduinoでリモコンに特化したもの</strong>を先に挙げます。続いて、ArduinoでLチカだったり、Raspberry Piでリモコンだったり、いわゆる<strong>電子工作として一般的に必要なもの</strong>をリストします。この分類は微妙な線引きではありますが、察してやって下さい。</p>
+<h2 id="arduinoでリモコンに必要なもの">Arduinoでリモコンに必要なもの</h2>
+<table>
+<thead>
+<tr>
+<th>価格</th>
+<th>品名</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100円</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gI-04659/">赤外線リモコン受信モジュール OSRB38C9AA（2個入）</a></td>
+<td></td>
+</tr>
+<tr>
+<td>100円</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gI-12612/">5mm 赤外線LED OSI5LA5113A（10個入）</a></td>
+<td>可視光線のLEDもあると動作確認に便利。赤外線は目に見えないので。</td>
+</tr>
+<tr>
+<td>200円</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gR-07960/">抵抗 27Ω 1W（100本入）</a></td>
+<td>これである必要はありません。実際、最終的には並行に繋いで抵抗を下げました。</td>
+</tr>
+<tr>
+<td>1980円</td>
+<td><a href="https://www.switch-science.com/catalog/2500/">ESPr® Developer（ESP-WROOM-02開発ボード）</a></td>
+<td>これも他のArduinoでもOKです。実際最初はUnoを使って試していました</td>
+</tr>
+</tbody>
+</table>
+<h2 id="電子工作として一般的に必要なもの">電子工作として一般的に必要なもの</h2>
+<table>
+<thead>
+<tr>
+<th>参考価格</th>
+<th>品名</th>
+<th>商品例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>35円</td>
+<td>ピンヘッダ</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gC-00167/">ピンヘッダ　１×４０　（４０Ｐ）</a></td>
+</tr>
+<tr>
+<td>270円</td>
+<td>ブレッドボード</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gP-00315/">ブレッドボード（1枚）</a></td>
+</tr>
+<tr>
+<td>180円</td>
+<td>ジャンパーワイヤ</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gC-05371/">ブレッドボード・ジャンパーワイヤ（オス－オス）　１０ｃｍセット</a></td>
+</tr>
+<tr>
+<td>60円</td>
+<td>ユニバーサル基板</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gP-03229/">片面ガラスコンポジット・ユニバーサル基板　Ｃタイプ　めっき仕上げ　（７２×４７ｍｍ）　日本製</a></td>
+</tr>
+<tr>
+<td>210円</td>
+<td>はんだ</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gT-02594/">はんだ　０．８ｍｍ</a></td>
+</tr>
+<tr>
+<td>2,300円</td>
+<td>はんだごて</td>
+<td><a href="http://akizukidenshi.com/catalog/g/gT-02534/">即熱はんだこて　ＴＱ－９５（９０Ｗ／１５Ｗ）</a></td>
+</tr>
+</tbody>
+</table>
+<p>これらに関しては、これでなければダメというものでもありませんし、道具の類いは特に好みやこだわりもあると思いますので、手持ちのものをご使用いただくか、必要に応じて購入(場合によっては我慢)するなど、適宜ご判断の上お願いします。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h1 id="実装">実装</h1>
+<p>実装は次の3段階に分けて行います。</p>
+<ol>
+<li>赤外線受信機能</li>
+<li>赤外線送信機能</li>
+<li>Webブラウザリモコン化</li>
+</ol>
+<p>実際に世の中で使われているリモコンというのは2の<strong>赤外線送信機能</strong>しか無いはずです。
+1の<strong>赤外線受信機能</strong>は、2の送信機能で送信するデータを取得するためのものです。
+3の<strong>Webブラウザリモコン化</strong>は、使用しているArduinoがWi-Fiをしゃべることから、リモコンのリモコン化(Web化)をするものです。</p>
+<p>従って、純粋にリモコンという意味では2のみ。完成形としては2+3で、1はブレッドボード止まりで、ユニバーサル基板に実装する必要はありません。
+もちろん、学習モードと言うことで、受信した値を登録可能にする所までプログラミングすると面白いですね。</p>
+<h2 id="実装その1">実装その1</h2>
+<p>まずは、赤外線受信機能からです。</p>
+<p>Arduinoでリモコンを作るのにちょうど良いライブラリが公開されています。</p>
+<p><a href="https://github.com/z3t0/Arduino-IRremote">Arduino-IRremote</a></p>
+<p>今回Arduinoとして用いたのは<a href="ESP-WROOM-02">https://www.switch-science.com/catalog/2346/</a>を用いた[https://www.switch-science.com/catalog/2500/](ESPr® Developer（ESP-WROOM-02開発ボード）)です。<strong>ESP-WROOM-02</strong>は<strong>ESP8266</strong>ベースとしており、IRremoteのライブラリは使えませんが、その代わりにArduino-IRremoteをベースにしたライブラリがこれまた公開されており、これを使います。</p>
+<p><a href="https://github.com/crankyoldgit/IRremoteESP8266">IRremoteESP8266</a></p>
+<p>Arduino-IRremoteもIRremoteESP8266もホント感謝ですね。</p>
+<h3 id="回路1">回路1</h3>
+<p>使うのはこちらのみ。(本体は別にという意味です)</p>
+<p><img src="../assets/2020-02-13-22-34-40.png" alt="赤外線リモコン受信モジュール"></p>
+<p>モジュールの仕様を確認すると、向かって左からOUTPUT、GROUND、VCCとなっています。</p>
+<p><img src="../assets/2020-02-13-22-36-02.png" alt="OSRB38C9AAの仕様"></p>
+<p>ということで、単純に3つ接続すると使えるわけですが、回路は以下です。</p>
+<p><img src="../assets/2020-02-13-23-47-56.png" alt="回路1"></p>
+<p>実物そのもののパーツがなかったので代用品ですが、ピンの位置と名前をラベルで貼ってあるので伝わりますでしょうか。</p>
+<h3 id="スケッチ1">スケッチ1</h3>
+<p>スケッチはこだわりのある方は別として、単に情報が取りたいだけでしたらIRremoteESP8266のサンプルスケッチにIRrecvDumpV2というのがあるのでそれで十分です。</p>
+<p><a href="https://github.com/crankyoldgit/IRremoteESP8266/blob/master/examples/IRrecvDumpV2/IRrecvDumpV2.ino">IRrecvDumpV2</a></p>
+<p>ここの載せちゃってもライセンス的に平気だとは思いますが、サンプルなので割愛です。</p>
+<h3 id="動作確認1">動作確認1</h3>
+<p>実際に手持ちのリモコンを受信機に向けて、ボタンを一押しします。</p>
+<p>うちのTVのリモコンの電源ボタンをONしてみました。</p>
+<pre><code>01:15:20.680 -&gt; Encoding  : NEC
+01:15:20.680 -&gt; Code      : 30EEB14E (32 bits)
+01:15:20.713 -&gt; Timing[67]: 
+01:15:20.747 -&gt;      +8800, -4400     + 550, - 550     + 550, - 550     + 550, -1700
+01:15:20.818 -&gt;      + 500, -1700     + 550, - 550     + 550, - 550     + 550, - 550
+01:15:20.890 -&gt;      + 550, - 550     + 550, -1650     + 600, -1650     + 550, -1650
+01:15:20.957 -&gt;      + 550, - 550     + 550, -1650     + 550, -1650     + 550, -1650
+01:15:21.023 -&gt;      + 600, - 600     + 500, -1650     + 550, - 550     + 550, -1650
+01:15:21.094 -&gt;      + 550, -1700     + 500, - 600     + 550, - 550     + 550, - 550
+01:15:21.160 -&gt;      + 550, -1650     + 550, - 550     + 550, -1700     + 550, - 550
+01:15:21.227 -&gt;      + 550, - 550     + 550, -1650     + 550, -1650     + 550, -1700
+01:15:21.336 -&gt;      + 500, - 550     + 550
+01:15:21.336 -&gt; unsigned int  rawData[67] = {8800,4400, 550,550, 550,550, 550,1700, 500,1700, 550,550, 550,550, 550,550, 550,550, 550,1650, 600,1650, 550,1650, 550,550, 550,1650, 550,1650, 550,1650, 600,600, 500,1650, 550,550, 550,1650, 550,1700, 500,600, 550,550, 550,550, 550,1650, 550,550, 550,1700, 550,550, 550,550, 550,1650, 550,1650, 550,1700, 500,550, 550};  // NEC 30EEB14E
+01:15:21.750 -&gt; unsigned int  data = 0x30EEB14E;
+01:15:21.750 -&gt; 
+</code></pre><p>結果は内容全てに意味はあるのですが、次の実装で使うのは1行目の<strong>NEC</strong>であることと2行目の<strong>30EEB14E</strong>です。
+RAWデータも使えますので、興味のある方は、次の実装2で見かけたライブラリの機能を深掘りしてみて下さい。</p>
+<p>ここでやることは作成するリモコンで走査したいボタンの情報を全て集めると言うことです。</p>
+<h2 id="実装その2">実装その2</h2>
+<p>つぎは純粋にArduinoでリモコンです。
+実装1の内容とこの実装2の内容を1つにしてしまっても構いませんが、ここでは一旦チャラにしています。</p>
+<h3 id="回路2">回路2</h3>
+<p><img src="../assets/2020-02-14-00-57-12.png" alt="回路2"></p>
+<p>抵抗を2つにしたのは単に思ったよりも赤外線が弱くてかなり近づけないと反応しなかったからで、本体、LEDなど壊れない範囲でお好みで。</p>
+<h3 id="スケッチ2">スケッチ2</h3>
+<p>これまた、サンプルがあるのでそれを少しいじればOKです。
+サンプルではなくて、私が実際に使っているものは<strong>スケッチ3</strong>を見て下さい。</p>
+<p>使うのは<strong>IRremoteESP8266</strong>の<strong>IRsendDemo</strong>です。</p>
+<p><a href="https://github.com/crankyoldgit/IRremoteESP8266/blob/master/examples/IRsendDemo/IRsendDemo.ino">IRsendDemo</a></p>
+<p>先ほどの電源ONの場合どうなるかというと</p>
+<pre><code>void loop() {
+  Serial.println(&quot;NEC&quot;);
+  irsend.sendNEC(0x30EEB14E);
+  delay(2000);
+}
+</code></pre><p>でも、くれぐれも真似しないで下さいね。そうです、2秒おきに電源のON/OFFが繰り返されます。
+ま、メーカーが違えば何の問題も無いんですが。</p>
+<p>そして先ほど深掘りしてといっていたのは<code>irsend.sendRaw()</code>のことです。RAWデータをメモしておいて、これに与えると同じことが出来ます。</p>
+<h3 id="動作確認2">動作確認2</h3>
+<p>この例の場合、スケッチを描き込むと、問答無用で2秒おきに電源ボタンが押されていくので、テレビに向けたり外したりをして確認できればと思います。</p>
+<h2 id="上手く動作しない場合">上手く動作しない場合</h2>
+<h3 id="デバッグその1">デバッグその1</h3>
+<p>赤外線LEDが本当に光っているかが最も気になるところかと思いますが、それを確かめる方法を紹介する前に、まずは可視光を放つLEDでデバッグしてみましょう。</p>
+<p>スケッチに変更はありません。ただただLEDを可視光を放つLEDに変更してみます。</p>
+<p>多分ですが光るんですよ、これが。
+そんでもって、押したボタンのバリエーション分だけ別のリズムで光るんですよ。
+こんな回路で間違えるわけ無いですもんね。。。</p>
+<h3 id="デバッグその2">デバッグその2</h3>
+<p>可視光のLEDが実際に光った場合、それでも赤外線LEDは光っていないのではないかと疑心暗鬼になる気持ち、十分すぎるほどに分かります。私自身がそうでした。</p>
+<p>過去には携帯電話(ガラケー)のカメラであれば、赤外線の光線を撮影することが可能でした。最近のスマートフォンの場合は赤外線をカットしているものがあり、お手元のスマートフォンで写るかどうかは分かりませんが、幸いなことにお手元のリモコンは確実に赤外線を発しているはずで、それを撮影することで写るカメラであるかどうかはすぐに判断可能です。</p>
+<p>なお、iPhoneの場合にはインカメラ(液晶画面側のカメラ)であれば赤外線の光が写ります。</p>
+<p>そのカメラを使って赤外線LEDが光っているかを確かめてみましょう。
+あー、一つだけ言っておきますと、真っ暗闇でやった方が良いかもしれません。私は見えなくて泣きそうでしたから。</p>
+<p><img src="../assets/2020-02-14-01-54-44.png" alt="赤外線LEDを撮影"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="実装その3">実装その3</h2>
+<p>いよいよ最終形です。Webリモコン化します。</p>
+<h3 id="回路3">回路3</h3>
+<p>回路は実装その2と変わりません。</p>
+<h3 id="スケッチ3">スケッチ3</h3>
+<pre><code>#include &lt;Arduino.h&gt;
+#include &lt;ESP8266WebServer.h&gt;
+#include &lt;ESP8266WiFi.h&gt;
+#include &lt;ESP8266mDNS.h&gt;
+#include &lt;IRremoteESP8266.h&gt;
+#include &lt;IRsend.h&gt;
+#include &lt;WiFiClient.h&gt;
+
+#ifndef STASSID
+#define STASSID &quot;xxxxxxxxxx&quot;
+#define STAPSK &quot;xxxxxxxxxx&quot;
+#endif
+
+const char* ssid = STASSID;
+const char* password = STAPSK;
+
+ESP8266WebServer server(80);
+
+const int led = 13;
+
+//赤外線シグナル送信
+const uint16_t kIrLed = 4;  // ESP8266 GPIO pin to use. Recommended: 4 (D2).
+IRsend irsend(kIrLed);      // Set the GPIO to be used to sending the message.
+
+//リモコンのシグナル定義
+const unsigned int ON_OFF = 0x30EEB14E;
+const unsigned int UP = 0x30EE39C6;
+const unsigned int DOWN = 0x30EE43BC;
+const unsigned int RIGHT = 0x30EE03FC;
+const unsigned int LEFT = 0x30EE7986;
+const unsigned int FILE_LIST = 0x30EEC738;
+const unsigned int PROGRAM_TABLE = 0x30EED926;
+const unsigned int MENU = 0x30EEC33C;
+const unsigned int BACK = 0x30EEB946;
+const unsigned int SCREEN_DISPLAY = 0x30EE29D6;
+const unsigned int PLAY = 0x30EE8B74;
+const unsigned int STOP = 0x30EE2BD4;
+const unsigned int FORWARD = 0x30EE4BB4;
+const unsigned int BACKWARD = 0x30EE0BF4;
+
+const unsigned int ENTER = 0x30EEF906;
+const unsigned int TV = 0x30EEBB44;
+const unsigned int BS = 0x30EE7B84;
+
+
+//============================================================================
+// Function
+//============================================================================
+void handleRoot() {
+  digitalWrite(led, 1);
+  server.send(200, &quot;text/plain&quot;, &quot;hello from esp8266!&quot;);
+  digitalWrite(led, 0);
+}
+//------------------------------------------------
+void handleNotFound() {
+  digitalWrite(led, 1);
+  String message = &quot;File Not Found\n\n&quot;;
+  message += &quot;URI: &quot;;
+  message += server.uri();
+  message += &quot;\nMethod: &quot;;
+  message += (server.method() == HTTP_GET) ? &quot;GET&quot; : &quot;POST&quot;;
+  message += &quot;\nArguments: &quot;;
+  message += server.args();
+  message += &quot;\n&quot;;
+  for (uint8_t i = 0; i &lt; server.args(); i++) {
+    message += &quot; &quot; + server.argName(i) + &quot;: &quot; + server.arg(i) + &quot;\n&quot;;
+  }
+  server.send(404, &quot;text/plain&quot;, message);
+  digitalWrite(led, 0);
+}
+
+//------------------------------------------------
+void sendSignal(String button) {
+  if (button == &quot;ON_OFF&quot;) {
+    irsend.sendNEC(ON_OFF, 32);
+  } else if (button == &quot;UP&quot;) {
+    irsend.sendNEC(UP, 32);
+  } else if (button == &quot;DOWN&quot;) {
+    irsend.sendNEC(DOWN, 32);
+  } else if (button == &quot;RIGHT&quot;) {
+    irsend.sendNEC(RIGHT, 32);
+  } else if (button == &quot;LEFT&quot;) {
+    irsend.sendNEC(RIGHT, 32);
+  } else if (button == &quot;FILE_LIST&quot;) {
+    irsend.sendNEC(FILE_LIST, 32);
+  } else if (button == &quot;PROGRAM_TABLE&quot;) {
+    irsend.sendNEC(PROGRAM_TABLE, 32);
+  } else if (button == &quot;MENU&quot;) {
+    irsend.sendNEC(MENU, 32);
+  } else if (button == &quot;BACK&quot;) {
+    irsend.sendNEC(BACK, 32);
+  } else if (button == &quot;SCREEN_DISPLAY&quot;) {
+    irsend.sendNEC(SCREEN_DISPLAY, 32);
+  } else if (button == &quot;PLAY&quot;) {
+    irsend.sendNEC(PLAY, 32);
+  } else if (button == &quot;STOP&quot;) {
+    irsend.sendNEC(STOP, 32);
+  } else if (button == &quot;FORWARD&quot;) {
+    irsend.sendNEC(FORWARD, 32);
+  } else if (button == &quot;BACKWARD&quot;) {
+    irsend.sendNEC(BACKWARD, 32);
+  } else if (button == &quot;favicon.ico&quot;) {
+    Serial.println(&quot;favicon request&quot;);
+    return;
+  } else {
+    Serial.println(&quot;invalid request&quot;);
+    return;
+  }
+
+  Serial.println(&quot;IR signal sended&quot;);
+  server.sendHeader(&quot;Location&quot;, &quot;http://always-basics.com/RemoCon.html&quot;);
+  server.send(302, &quot;text/plain&quot;, &quot;this works as well&quot;);
+}
+
+//------------------------------------------------
+void handle_ON_OFF() { sendSignal(&quot;ON_OFF&quot;); }
+void handle_UP() { sendSignal(&quot;UP&quot;); }
+void handle_DOWN() { sendSignal(&quot;DOWN&quot;); }
+void handle_RIGHT() { sendSignal(&quot;RIGHT&quot;); }
+void handle_LEFT() { sendSignal(&quot;LEFT&quot;); }
+void handle_FILE_LIST() { sendSignal(&quot;FILE_LIST&quot;); }
+void handle_PROGRAM_TABLE() { sendSignal(&quot;PROGRAM_TABLE&quot;); }
+void handle_MENU() { sendSignal(&quot;MENU&quot;); }
+void handle_BACK() { sendSignal(&quot;BACK&quot;); }
+void handle_SCREEN_DISPLAY() { sendSignal(&quot;SCREEN_DISPLAY&quot;); }
+void handle_PLAY() { sendSignal(&quot;PLAY&quot;); }
+void handle_STOP() { sendSignal(&quot;STOP&quot;); }
+void handle_FORWARD() { sendSignal(&quot;FORWARD&quot;); }
+void handle_BACKWARD() { sendSignal(&quot;BACKWARD&quot;); }
+
+void handle_ENTER() { sendSignal(&quot;ENTER&quot;); }
+void handle_TV() { sendSignal(&quot;TV&quot;); }
+void handle_BS() { sendSignal(&quot;BS&quot;); }
+
+//============================================================================
+// Setup
+//============================================================================
+void setup(void) {
+  pinMode(led, OUTPUT);
+  digitalWrite(led, 0);
+  irsend.begin();
+  Serial.begin(115200, SERIAL_8N1, SERIAL_TX_ONLY);
+
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, password);
+  Serial.println(&quot;&quot;);
+
+  // Wait for connection
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(&quot;.&quot;);
+  }
+  WiFi.config(IPAddress(192, 168, 3, 103), WiFi.gatewayIP(), WiFi.subnetMask());
+  Serial.println(&quot;&quot;);
+  Serial.print(&quot;Connected to &quot;);
+  Serial.println(ssid);
+  Serial.print(&quot;IP address: &quot;);
+  Serial.println(WiFi.localIP());
+
+  if (MDNS.begin(&quot;esp8266&quot;)) {
+    Serial.println(&quot;MDNS responder started&quot;);
+  }
+
+  server.on(&quot;/&quot;, handleRoot);
+  server.on(&quot;/ON_OFF&quot;, handle_ON_OFF);
+  server.on(&quot;/UP&quot;, handle_UP);
+  server.on(&quot;/DOWN&quot;, handle_DOWN);
+  server.on(&quot;/RIGHT&quot;, handle_RIGHT);
+  server.on(&quot;/LEFT&quot;, handle_LEFT);
+  server.on(&quot;/FILE_LIST&quot;, handle_FILE_LIST);
+  server.on(&quot;/PROGRAM_TABLE&quot;, handle_PROGRAM_TABLE);
+  server.on(&quot;/MENU&quot;, handle_MENU);
+  server.on(&quot;/BACK&quot;, handle_BACK);
+  server.on(&quot;/SCREEN_DISPLAY&quot;, handle_SCREEN_DISPLAY);
+  server.on(&quot;/PLAY&quot;, handle_PLAY);
+  server.on(&quot;/STOP&quot;, handle_STOP);
+  server.on(&quot;/FORWARD&quot;, handle_FORWARD);
+  server.on(&quot;/BACKWARD&quot;, handle_BACKWARD);
+
+  server.on(&quot;/ENTER&quot;, handle_ENTER);
+  server.on(&quot;/TV&quot;, handle_TV);
+  server.on(&quot;/BS&quot;, handle_BS);
+
+  server.on(&quot;/inline&quot;,
+            []() { server.send(200, &quot;text/plain&quot;, &quot;this works as well&quot;); });
+
+  server.onNotFound(handleNotFound);
+
+  server.begin();
+  Serial.println(&quot;HTTP server started&quot;);
+}
+
+//============================================================================
+// Main
+//============================================================================
+int cnt = 0;
+void loop(void) {
+  cnt += 1;
+  if (cnt % 100000 == 0) {
+    Serial.print(&quot;.&quot;);
+    cnt = 0;
+  }
+  // delay(2000);
+  server.handleClient();
+  MDNS.update();
+}
+</code></pre><p>ちょっと余計なものも見えていますが、ご愛敬と言うことで。</p>
+<p>今回Arduinoとして用いたのは<a href="https://www.switch-science.com/catalog/2346/">ESP-WROOM-02</a>を用いた<a href="https://www.switch-science.com/catalog/2500/">ESPr® Developer（ESP-WROOM-02開発ボード）</a>です。このボードの用いた理由は、一番は私のような素人でも取り扱いやすいということですが、同時にWi-Fiで制御することが可能になります。</p>
+<p>具体的にはArduinoをWebサーバーとして自宅のWi-Fiルータに接続しています。多くの場合DHCPで繋いでいるのではないかと思いますが今回はやりやすいように固定にしました。(自宅のWi-Fiの設定をいじって固定のIPを割り振っています)　ArduinoのWebサーバーでは、リモコンの各ボタンをURLと紐付けてアクセスされたURLに応じて赤外線のシグナルを発信するという形です。</p>
+<p>また一つ工夫をしています。それはHTMLを外部に持たせることにしました。ArduinoをWebサーバーにしたのは良いのですが、HTMLを返させるには少々編集に手間が掛かります。
+そこでHTMLは外部のサーバーに配置しています。Webブラウザからみるとリンク先が自宅内のネットワーク上にあるWebサーバーを指していますので、HTTPリクエストは無事にArduinoへ届きます。Arduinoでは&quot;302 Moved Temporarily&quot;を返し、再び外部のWebサーバー上のHTMLへ戻るようにしています。</p>
+<p>この方法は、ArduinoにWebSocketをしゃべらせて外部サーバーと通信させるケースに比べてセキュリティに優れていると思います。</p>
+<p>いずれにしてもこの方法は単純にHTMLを編集し、その中でリンクしているURLの機能をArduinoのWebで実行されるようにしているという極めて単純な連動を用意すると、色々とスマートフォンから操作したいと思ったときに安全にやる1つの方法だということです。もちろん、同じWi-Fiルーターに接続していないと使えないわけですが。</p>
+<h1 id="編集後記">編集後記</h1>
+<p>軟弱な(Softwareな)世界に生きていると、電子工作(ハード)な世界のデバッグのやりづらさたるや半端ない負担で、実際にはこれもう一つ回路設計しないと分からないのでは？と思うこともあるほどですが&hellip;</p>
+<p>今回は送信と受信のArduinoを用意して、それをお迎え合わせにして確かめたりもしました。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+</div>
+            </div>
+        </div>
+
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+                
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/programming/vue2/">
+                            <h3 class="">2. npmでパッケージ管理して、webpackでビルドする</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-06</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/programming/vue1/">
+                            <h3 class="">1. HTMLとJavaScriptの単純構成で初めのVue.js</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-05</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/programming/vue/">
+                            <h3 class="">初めてのVue.js</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-05</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/theia/desktop/">
+                            <h3 class="">Theia | Desktop版の可能性を探索</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-04-13</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/theia/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Theia</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/ide/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">IDE</span>
+        </a>
+    
+        <a href="/tags/development/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Development</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/theia/docker_settings/">
+                            <h3 class="">Theia | Gitpodの環境設定</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-04-12</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/theia/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Theia</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/ide/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">IDE</span>
+        </a>
+    
+        <a href="/tags/development/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Development</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                    
+                
+                <br />
+            </div>
+            <div class="layui-card single-card">
+                <div class="ad">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9230307049349065" data-ad-slot="8967221851"
+    data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs6">
+                <h3> Related Sites </h3>
+            </div>
+        </div>
+        <div class="layui-row">
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="https://python.always-basics.com/"><p class="footer-url">Pythonなら空も飛べるはず</p></a>
+            </div>
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/about/"><p class="footer-url">About</p></a>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
+</html>

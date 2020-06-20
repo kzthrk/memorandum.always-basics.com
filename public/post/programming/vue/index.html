@@ -1,0 +1,442 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Memorandum - Danger past, god forgotten - 初めてのVue.js </title>
+    
+    
+    <meta content="JavaScript, Vue.js, Programming" name="keywords">
+    
+    <meta content="Memorandum - Danger past, god forgotten - はじめてのVue.js。前提はJavaScriptがなんとなく分かる程度ですので、文字取り本当に一から取り組みます。3部構成になっており、2つ目まで実施すれば後は独学の道もよしです。" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75025058-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-75025058-6');
+        </script>
+    
+
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/images/logo.jpg" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Memorandum - Danger past, god forgotten
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/programming/">Programming</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/web/">Hugo</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/theia/">Theia</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/">電子工作</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/about/">About</a></li>
+            
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+                    
+                        <dd><a href="/categories/programming/">Programming</a></dd>
+                    
+                        <dd><a href="/categories/web/">Hugo</a></dd>
+                    
+                        <dd><a href="/categories/theia/">Theia</a></dd>
+                    
+                        <dd><a href="/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/">電子工作</a></dd>
+                    
+                        <dd><a href="/about/">About</a></dd>
+                    
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote self-elem-quote-bg-blue markdown-body single-title" >
+                    <h1>初めてのVue.js</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-05</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h1 id="はじめに">はじめに</h1>
+<p>初めてのVue.jsということで、本当にいちからはじめてみたいと思います。</p>
+<p>前提となる基礎知識は、JavaScriptがなんとなく分かる程度です。</p>
+<p>私自身はJavaScriptができるとは到底言えないレベルですが、なんとなく読めてなんとなくかけます。(仕事をする上で一番たちの悪いパターンですね) node.jsやnpmコマンドも使ったことがありますし、他のフレームワークの経験もあります。</p>
+<p>そのため、以下のような開発スタイルをなんとか自力でとれるレベルです。</p>
+<ul>
+<li>node.jsを複数インストールし切り替え可能な環境を構築し、</li>
+<li>npmコマンドを使ってパッケージ管理をして</li>
+<li>フレームワークの標準に沿ったソースファイルを編集することでプログラミングをし</li>
+<li>webpackを使ってビルドをして</li>
+<li>node.jsでAPIを提供するアプリに組み込んで、</li>
+</ul>
+<p>SPA(Single Page Application)と呼ばれるWebのシステムを1つ動かすことができます。</p>
+<p>さて、出発点を挙げるとするならば、やはりオフィシャルサイトの以下です。
+<a href="https://jp.vuejs.org/v2/guide/installation.html">https://jp.vuejs.org/v2/guide/installation.html</a></p>
+<p>誰も否定する人はいないと思いますが、如何せん分かりやすいとは言えません。</p>
+<p>例えばインストール手順ですが、<code>HTML内でCDNを指せばいい</code>と言ったかと思えば、<code>npm install vue</code>などと言い放ったりします。</p>
+<p>当然これらは同値ではありません。全然次元が違うじゃんと。</p>
+<p>CDNは指せば動きますが、npmでインストールしてもそれだけではなにも動作しないわけです。CLIを使ったインストール方法も紹介されていますが、CLIでのインストールでは裏でこのnpmでインストールが実行されているのであって、はっきり言ってなんのこっちゃ？です。</p>
+<p>そっちがその気ならこっちも言わせてもらいますと</p>
+<p>「てめーが書きたいことを書いて満足してるんじゃねーぞ」</p>
+<p>ってなもんです。</p>
+<h1 id="コンテンツ">コンテンツ</h1>
+<p>さて当サイトのコンテンツは、次のような構成となります。</p>
+<ol>
+<li><a href="/programming/vue1/">HTMLとJavaScriptの単純構成で初めのVue.js</a></li>
+<li><a href="/programming/vue2/">npmでパッケージ管理して、webpackでビルドする</a></li>
+<li><a href="/programming/vue3/">Vue.jsでアプリ開発</a></li>
+</ol>
+<p>『1.HTMLとJavaScirptの単純構成で初めてのVue.js』では、index.htmlとindex.jsの2ファイルだけでVue.jsを体験します。実際の所、この2つだけで最後まで開発しきることは無理ではないと思います。したがって、とにかく試して試して試すだけという人は、このまま突き進んでも良いかと思います。</p>
+<p>続いて『2.npmでパッケージ管理して、webpackでビルドする』では、『1.HTMLとJavaScirptの単純構成で初めてのVue.js』のindex.htmlとindex.jsをゴールに定めて、開発環境を整える手順を紹介します。</p>
+<p>具体的には、</p>
+<ol>
+<li>複数バージョンを切り替え可能なようにNode.jsをインストール</li>
+<li>npmでBabelとWebPackをインストール</li>
+<li>WebPackを構成して、ビルド</li>
+</ol>
+<p>の流れでご紹介します。</p>
+<p>読者の前提をJavaScrptがなんとなく分かる程度という風に設定していますので、
+Node.jsやnpmで寄り道し、BabelやWebPackについても取り上げます。</p>
+<p>最後に『3.Vue.jsでアプリ開発』ですが、ここではVue.jsでアプリ開発する上で必要となる要素を一通り試していきたいと思います。もちろん『1.HTMLとJavaScirptの単純構成で初めてのVue.js』から直接ここへ来て試すだけ試すというのも可能です。</p>
+<p>それでは早速ですが、<a href="/programming/vue1/">1. HTMLとJavaScriptの単純構成で初めのVue.js</a>へどうぞ。</p>
+</div>
+            </div>
+        </div>
+
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+                
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/programming/vue2/">
+                            <h3 class="">2. npmでパッケージ管理して、webpackでビルドする</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-06</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/programming/vue1/">
+                            <h3 class="">1. HTMLとJavaScriptの単純構成で初めのVue.js</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-05</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/programming/vue/">
+                            <h3 class="">初めてのVue.js</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-05</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/theia/desktop/">
+                            <h3 class="">Theia | Desktop版の可能性を探索</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-04-13</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/theia/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Theia</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/ide/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">IDE</span>
+        </a>
+    
+        <a href="/tags/development/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Development</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/theia/docker_settings/">
+                            <h3 class="">Theia | Gitpodの環境設定</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-04-12</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/theia/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Theia</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/ide/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">IDE</span>
+        </a>
+    
+        <a href="/tags/development/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Development</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                    
+                
+                <br />
+            </div>
+            <div class="layui-card single-card">
+                <div class="ad">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9230307049349065" data-ad-slot="8967221851"
+    data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs6">
+                <h3> Related Sites </h3>
+            </div>
+        </div>
+        <div class="layui-row">
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="https://python.always-basics.com/"><p class="footer-url">Pythonなら空も飛べるはず</p></a>
+            </div>
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/about/"><p class="footer-url">About</p></a>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
+</html>

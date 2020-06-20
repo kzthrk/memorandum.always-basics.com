@@ -1,24 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>note on Memorandum - Danger past, god forgotten</title>
-    <link>/tags/note/</link>
+    <link>http://memorandum.always-basics.com/tags/note/</link>
     <description>Recent content in note on Memorandum - Danger past, god forgotten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>©2020 Always Basics.</copyright>
     <lastBuildDate>Wed, 05 Feb 2020 13:57:04 +0900</lastBuildDate>
     
-        <atom:link href="/tags/note/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://memorandum.always-basics.com/tags/note/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Welcome</title>
-      <link>/misc/welcome/</link>
+      <link>http://memorandum.always-basics.com/post/misc/welcome/</link>
       <pubDate>Wed, 05 Feb 2020 13:57:04 +0900</pubDate>
       
-      <guid>/misc/welcome/</guid>
-      <description>はじめに この投稿はお試し投稿です。 なにするサイト？ このサイトでは、プログラミング言語や電子工作など日頃行っている作業のメモを纏め公開していく</description>
+      <guid>http://memorandum.always-basics.com/post/misc/welcome/</guid>
+      <description>はじめに この投稿はお試し投稿です。
+なにするサイト？ このサイトでは、プログラミング言語や電子工作など日頃行っている作業のメモを纏め公開していく予定です。 加えてそれに日々の雑多な疑問などTwitterに収まりきらないようなものもダラダラと投下します。
+このカテゴリー(Misc)とタグ(note)はダラダラ系なので、programmingやelectric_kitあたりを中心に見て回っていただければと思います。
+お試し それでは早速Markdown記法でいくつかお試しです。 Markdown記法、実際の表示の順に並べていきます。
+見出し # 見出し1 ## 見出し2 ### 見出し3 #### 見出し4 ##### 見出し5 ###### 見出し6 見出し1 見出し2 見出し3 見出し4 見出し5 見出し6 箇条書きリスト markdown - リスト1 - ネスト リスト1_1 - ネスト リスト1_1_1 - ネスト リスト1_1_2 - ネスト リスト1_2 - リスト2 - リスト3 実例  リスト1  ネスト リスト1_1  ネスト リスト1_1_1 ネスト リスト1_1_2   ネスト リスト1_2   リスト2 リスト3  番号つきリスト markdown 1.</description>
     </item>
     
   </channel>

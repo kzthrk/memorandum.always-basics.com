@@ -1,29 +1,155 @@
-<!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Hugo | Hugoで作成したサイトを追加構成&nbsp;&ndash;&nbsp;Memorandum - Danger past, god forgotten</title><link rel="stylesheet" href="/css/core.min.8d84e0eeadb042523696874218e589bc62cd7a2a375e47ef0dfea9414eadd1d01b93b8878cf4cae69d892251c385c155.css" integrity="sha384-jYTg7q2wQlI2lodCGOWJvGLNeio3XkfvDf6pQU6t0dAbk7iHjPTK5p2JIlHDhcFV"><body>
-    <div class="base-body"><section id="header" class="site header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, god forgotten</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/programming/">プログラミング</a><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
-    <h1 class="article title">Hugo | Hugoで作成したサイトを追加構成</h1><span class="article date">2020-02-10<span class="lastmod"> • edited 2020-02-16</span></span><section class="article labels"><a class="category" href=/categories/web/>Web</a><a class="tag" href=/tags/hugo/>Hugo</a><a class="tag" href=/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/>静的サイトジェネレータ</a><a class="tag" href=/tags/config/>config</a></section></section><article class="article markdown-body"><h1 id="はじめに">はじめに</h1>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Memorandum - Danger past, god forgotten - 2. Hugoで作成したサイトを追加構成 </title>
+    
+    
+    <meta content="Hugo, 静的サイトジェネレータ, config, Web" name="keywords">
+    
+    <meta content="Memorandum - Danger past, god forgotten - Hugoで作成したサイトの追加構成" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75025058-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-75025058-6');
+        </script>
+    
+
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/images/terminal.gif" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Memorandum - Danger past, god forgotten
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/about/">About</a></li>
+            
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+                    
+                        <dd><a href="/about/">About</a></dd>
+                    
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote self-elem-quote-bg-red markdown-body single-title" >
+                    <h1>2. Hugoで作成したサイトを追加構成</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-02-10</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/web/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Web</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">静的サイトジェネレータ</span>
+        </a>
+    
+        <a href="/tags/config/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">config</span>
+        </a>
+    
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h1 id="はじめに">はじめに</h1>
 <p>前回は<a href="/web/hugo001/">静的サイトジェネレータ Hugoをインストール</a>で、静的サイトジェネレータのひとつであるHugoをインストールしました。
 今回はそのサイトに記事を増やす方向の充実ではなく、<strong>機能や構成</strong>を充実させていく方向でのメモをです。</p>
 <p>この記事は、順次追記されて充実していきます。(つまり、最初は1つ、2つしかトピックがありません)</p>
-<!-- 広告 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- memorandum_yoko -->
-<p><ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-9230307049349065"
-data-ad-slot="9446890582"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></p>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- 広告 -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h1 id="hugoで作成したサイトに追加の構成を行う">Hugoで作成したサイトに追加の構成を行う</h1>
-<!-- ==================================================================================================== -->
+<!-- raw HTML omitted -->
 <h2 id="sitemapxml">sitemap.xml</h2>
 <p>Googleさんをはじめ各種サーチエンジンに正しく認識してもらうためにも、sitemap.xmlがあった方がいいですね。
 Hugoは自動的にsitemap.xmlが生成されています。</p>
@@ -32,124 +158,116 @@ Hugoは自動的にsitemap.xmlが生成されています。</p>
 <p>これがGoogle先生に気に入られるという話ではありません。こうやったら出来るんですよ。この作りを覚えておきましょうねというものです。</p>
 <h3 id="設定方法">設定方法</h3>
 <p>layoutsディレクトリ配下に以下のsitemap.xmlファイルを配置するだけです。</p>
-<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;urlset</span> <span class="na">xmlns=</span><span class="s">&#34;http://www.sitemaps.org/schemas/sitemap/0.9&#34;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;urlset</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://www.sitemaps.org/schemas/sitemap/0.9&#34;</span><span style="color:#f92672">&gt;</span>
 {{ range .Data.Pages }}
     {{ if .IsPage }}
-        <span class="nt">&lt;url&gt;</span>
-        <span class="nt">&lt;loc&gt;</span>{{ .Permalink }}<span class="nt">&lt;/loc&gt;</span>
+        <span style="color:#f92672">&lt;url&gt;</span>
+        <span style="color:#f92672">&lt;loc&gt;</span>{{ .Permalink }}<span style="color:#f92672">&lt;/loc&gt;</span>
         {{ if not .Lastmod.IsZero }}
-            <span class="nt">&lt;lastmod&gt;</span>{{ safeHTML ( .Lastmod.Format &#34;2006-01-02T15:04:05-07:00&#34; ) }}<span class="nt">&lt;/lastmod&gt;</span>
+            <span style="color:#f92672">&lt;lastmod&gt;</span>{{ safeHTML ( .Lastmod.Format &#34;2006-01-02T15:04:05-07:00&#34; ) }}<span style="color:#f92672">&lt;/lastmod&gt;</span>
         {{ end }}
-        <span class="nt">&lt;/url&gt;</span>
+        <span style="color:#f92672">&lt;/url&gt;</span>
     {{ end }}
 {{ end }}
-<span class="nt">&lt;/urlset&gt;</span>
+<span style="color:#f92672">&lt;/urlset&gt;</span>
 </code></pre></div><p>雑でも説明はあった方が良いかと思いますので致しますと、ページある分だけループを回してそのページがコンテンツのページだったら
 sitemap.xmlに載るようにし、最終更新日時がとれなかったらそれは出さないようになっています。</p>
 <p>ま、このサイトではGoは知らぬ存ぜぬの立場で書いていますので、この要件で良ければこのままコピペで良いと思います。</p>
 <h3 id="確認">確認</h3>
-<p><a href="http://localhost:1313/sitemap.xml"target="_blank">http://localhost:1313/sitemap.xml</a>にアクセスして下さい。</p>
+<p><a href="http://localhost:1313/sitemap.xml">http://localhost:1313/sitemap.xml</a>にアクセスして下さい。</p>
 <p>もちろんこれは、<a href="/web/hugo001/">前回</a>も記載しましたが<code>hugo server -w</code>を実行している前提です。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-11-00-00-56.png"><img  src="../assets/2020-02-11-00-00-56.png"
-        alt="sitemap.xmlの確認"/></a></p>
-<!-- ==================================================================================================== -->
+<p><img src="../assets/2020-02-11-00-00-56.png" alt="sitemap.xmlの確認"></p>
+<!-- raw HTML omitted -->
 <h2 id="googleanalytics">GoogleAnalytics</h2>
 <p>GoogleAnalyticsとの連携は、拍子抜けするほど簡単です。</p>
 <h3 id="設定方法-1">設定方法</h3>
 <p>config.tomlに以下を設定するだけです。</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># Google Analytics</span>
-<span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;UA-xxxxx-xx&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># Google Analytics</span>
+<span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#34;UA-xxxxx-xx&#34;</span>
 </code></pre></div><h3 id="確認-1">確認</h3>
 <p>これに関しては、確認を割愛します。</p>
-<!-- ==================================================================================================== -->
+<!-- raw HTML omitted -->
 <h2 id="faviconico">Favicon.ico</h2>
 <p><strong>Favicon.ico</strong>ってなんだ？って方がもしもいらっしゃった場合に、その話をスルーしてしまうと悲しいことになってしまうので、
 念のためにいたしますと、ブラウザを開くとタブの左端に着いているアイコン、それからブックマークしたときなどにも使われているアイコンです。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-10-23-24-23.png"><img  src="../assets/2020-02-10-23-24-23.png"
-        alt="faviconサンプル"/></a></p>
+<p><img src="../assets/2020-02-10-23-24-23.png" alt="faviconサンプル"></p>
 <p>これはなにも設定していないときの例ですね。</p>
 <h3 id="設定方法-2">設定方法</h3>
 <p>Hugoで作成したサイトで、favicon.icoを配置したいとおもったら、やることは単純です。
 <strong>static</strong>ディレクトリの直下にfavicon.icoをおくだけで設定できます。</p>
 <h3 id="確認-2">確認</h3>
 <p>HugoにFaviconを設定した後の確認です。
-<a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-10-23-35-12.png"><img  src="../assets/2020-02-10-23-35-12.png"
-        alt="favicon設定確認"/></a></p>
+<img src="../assets/2020-02-10-23-35-12.png" alt="favicon設定確認"></p>
 <p>適当に写真を切り取って使いましたが、やはりアイコンとしてデザインしたモノを用意した方が良いですね。</p>
-<!-- ==================================================================================================== -->
+<!-- raw HTML omitted -->
 <h2 id="テーマを変更">テーマを変更</h2>
 <p>単なる思いつきですが、このタイミングでテーマを変更してみたいと思います。</p>
 <p>選んだのはこちら。
-<a href="https://themes.gohugo.io/hugo-theme-techlog-simple/"target="_blank">Techlog Simple</a></p>
+<a href="https://themes.gohugo.io/hugo-theme-techlog-simple/">Techlog Simple</a></p>
 <h3 id="設定方法-3">設定方法</h3>
 <p>ガイドされている方法に逆らってしまいますが、submodueとして加えます。</p>
 <p>まずはインストールから。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">git submodule add https://github.com/mazgi/hugo-theme-techlog-simple.git themes/hugo-theme-techlog-simple
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">git submodule add https://github.com/mazgi/hugo-theme-techlog-simple.git themes/hugo-theme-techlog-simple
 </code></pre></div><p>続いてテーマを有効にしておきます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo -t hugo-theme-techlog-simple
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo -t hugo-theme-techlog-simple
 </code></pre></div><p>たぶん、何個か怒られると思います。
 たぶん、次のconfig.tomlファイルの修正で治ると思います。</p>
-<p>今ある<strong>conig.toml</strong>ファイルをバックアップして、代わりに<a href="https://github.com/mazgi/hugo-theme-techlog-simple/blob/master/exampleSite/config.toml"target="_blank">こちら</a>で置き換えます。
+<p>今ある<strong>conig.toml</strong>ファイルをバックアップして、代わりに<a href="https://github.com/mazgi/hugo-theme-techlog-simple/blob/master/exampleSite/config.toml">こちら</a>で置き換えます。
 その例がこちらです。</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml">
-<span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://memorandum.always-basics.com/&#34;</span>
-<span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;en-us&#34;</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;Memorandum - Danger past, got forgotten&#34;</span>
-<span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;hugo-theme-techlog-simple&#34;</span>
-<span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s2">&#34;ja&#34;</span>
-<span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="nx">enableEmoji</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="nx">pygmentsCodeFences</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="nx">pygmentsStyle</span> <span class="p">=</span> <span class="s2">&#34;friendly&#34;</span>
-<span class="nx">enableGitInfo</span> <span class="p">=</span> <span class="kc">false</span>
-<span class="nx">enableRobotsTXT</span> <span class="p">=</span> <span class="kc">true</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">
+<span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;http://memorandum.always-basics.com/&#34;</span>
+<span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;en-us&#34;</span>
+<span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;Memorandum - Danger past, got forgotten&#34;</span>
+<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;hugo-theme-techlog-simple&#34;</span>
+<span style="color:#a6e22e">defaultContentLanguage</span> = <span style="color:#e6db74">&#34;ja&#34;</span>
+<span style="color:#a6e22e">hasCJKLanguage</span> = <span style="color:#66d9ef">true</span>
+<span style="color:#a6e22e">enableEmoji</span> = <span style="color:#66d9ef">true</span>
+<span style="color:#a6e22e">pygmentsCodeFences</span> = <span style="color:#66d9ef">true</span>
+<span style="color:#a6e22e">pygmentsStyle</span> = <span style="color:#e6db74">&#34;friendly&#34;</span>
+<span style="color:#a6e22e">enableGitInfo</span> = <span style="color:#66d9ef">false</span>
+<span style="color:#a6e22e">enableRobotsTXT</span> = <span style="color:#66d9ef">true</span>
 
-<span class="nx">copyright</span> <span class="p">=</span> <span class="s2">&#34;©2020 Always Basics.&#34;</span>
+<span style="color:#a6e22e">copyright</span> = <span style="color:#e6db74">&#34;©2020 Always Basics.&#34;</span>
 
-<span class="c"># Google Analytics</span>
-<span class="nx">googleAnalytics</span> <span class="p">=</span> <span class="s2">&#34;UA-75025058-6&#34;</span>
-
-
-<span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-<span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;継続する秘訣は、途切れたと思った時にもう一度繰り返すこと&#34;</span>
-
-<span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">sns</span><span class="p">]</span>
-<span class="nx">github</span> <span class="p">=</span> <span class="s2">&#34;mazgi&#34;</span>
-<span class="nx">twitter</span> <span class="p">=</span> <span class="s2">&#34;mazgi&#34;</span>
-<span class="nx">instagram</span> <span class="p">=</span> <span class="s2">&#34;mazgi&#34;</span>
-<span class="c"># facebook = &#34;&#34;</span>
-
-<span class="p">[</span><span class="nx">taxonomies</span><span class="p">]</span>
-<span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;categories&#34;</span>
-<span class="nx">tag</span> <span class="p">=</span> <span class="s2">&#34;tags&#34;</span>
-<span class="nx">author</span> <span class="p">=</span> <span class="s2">&#34;authors&#34;</span>
-
-<span class="c"># [languages]</span>
-<span class="c"># [languages.en]</span>
-<span class="c"># weight = 1</span>
-<span class="c"># languageName = &#34;English&#34;</span>
-
-<span class="c"># [languages.ja]</span>
-<span class="c"># weight = 10</span>
-<span class="c"># languageName = &#34;日本語&#34;</span>
+<span style="color:#75715e"># Google Analytics</span>
+<span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#34;UA-75025058-6&#34;</span>
 
 
-<span class="nx">logo</span> <span class="p">=</span> <span class="s2">&#34;/images/logo.jpg&#34;</span>
+[<span style="color:#a6e22e">params</span>]
+<span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;継続する秘訣は、途切れたと思った時にもう一度繰り返すこと&#34;</span>
 
-<span class="c"># disqus</span>
-<span class="nx">disqusShortname</span> <span class="p">=</span> <span class="s2">&#34;kzthrk&#34;</span>  <span class="c"># your short name</span>
+[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">sns</span>]
+<span style="color:#a6e22e">github</span> = <span style="color:#e6db74">&#34;mazgi&#34;</span>
+<span style="color:#a6e22e">twitter</span> = <span style="color:#e6db74">&#34;mazgi&#34;</span>
+<span style="color:#a6e22e">instagram</span> = <span style="color:#e6db74">&#34;mazgi&#34;</span>
+<span style="color:#75715e"># facebook = &#34;&#34;</span>
+
+[<span style="color:#a6e22e">taxonomies</span>]
+<span style="color:#a6e22e">category</span> = <span style="color:#e6db74">&#34;categories&#34;</span>
+<span style="color:#a6e22e">tag</span> = <span style="color:#e6db74">&#34;tags&#34;</span>
+<span style="color:#a6e22e">author</span> = <span style="color:#e6db74">&#34;authors&#34;</span>
+
+<span style="color:#75715e"># [languages]</span>
+<span style="color:#75715e"># [languages.en]</span>
+<span style="color:#75715e"># weight = 1</span>
+<span style="color:#75715e"># languageName = &#34;English&#34;</span>
+
+<span style="color:#75715e"># [languages.ja]</span>
+<span style="color:#75715e"># weight = 10</span>
+<span style="color:#75715e"># languageName = &#34;日本語&#34;</span>
+
+
+<span style="color:#a6e22e">logo</span> = <span style="color:#e6db74">&#34;/images/logo.jpg&#34;</span>
+
+<span style="color:#75715e"># disqus</span>
+<span style="color:#a6e22e">disqusShortname</span> = <span style="color:#e6db74">&#34;kzthrk&#34;</span>  <span style="color:#75715e"># your short name</span>
 
 </code></pre></div><h3 id="確認-3">確認</h3>
 <p>確認といっても単に表示するだけです。
-<a href="http://localhost:1313/"target="_blank">http://localhost:1313/</a>にアクセスして下さい。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-12-01-46-33.png"><img  src="../assets/2020-02-12-01-46-33.png"
-        alt="テーマ変更確認"/></a></p>
+<a href="http://localhost:1313/">http://localhost:1313/</a>にアクセスして下さい。</p>
+<p><img src="../assets/2020-02-12-01-46-33.png" alt="テーマ変更確認"></p>
 <p>無事に変更できていました。</p>
-<!-- ==================================================================================================== -->
+<!-- raw HTML omitted -->
 <h2 id="topページに記事がリストされない">TOPページに記事がリストされない</h2>
 <p>なんだかTOPページに追加したはずの記事がリストされません。ですが、カテゴリーとかタグから辿ると確かに存在します。
 どうも、見えているのはWebカテゴリーに投稿した記事のみのようです。</p>
@@ -176,61 +294,57 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
 <pre><code>{{- $paginator := .Paginate (where site.RegularPages &quot;Type&quot; &quot;in&quot; site.Params.mainSections) -}}
 </code></pre><p>という行があります。<strong>site.Params.mainSections</strong>なんてステキなキーワードが見つかりました。</p>
 <p>Google先生にお尋ねして探してみると、こんなページがあります。
-<a href="https://gohugo.io/functions/where/#mainsections"target="_blank">https://gohugo.io/functions/where/#mainsections</a></p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-12-22-08-57.png"><img  src="../assets/2020-02-12-22-08-57.png"
-        alt="スクリーンショット"/></a></p>
+<a href="https://gohugo.io/functions/where/#mainsections">https://gohugo.io/functions/where/#mainsections</a></p>
+<p><img src="../assets/2020-02-12-22-08-57.png" alt="スクリーンショット"></p>
 <p>まさにキタコレ。</p>
 <h3 id="設定">設定</h3>
 <p>というわけで、config.tomlに<strong>mainSections</strong>を追加してみます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-<span class="nx">mainSections</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;electronic_kit&#34;</span><span class="p">,</span> <span class="s2">&#34;misc&#34;</span><span class="p">,</span> <span class="s2">&#34;programming&#34;</span><span class="p">,</span> <span class="s2">&#34;web&#34;</span><span class="p">]</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">params</span>]
+<span style="color:#a6e22e">mainSections</span> = [<span style="color:#e6db74">&#34;electronic_kit&#34;</span>, <span style="color:#e6db74">&#34;misc&#34;</span>, <span style="color:#e6db74">&#34;programming&#34;</span>, <span style="color:#e6db74">&#34;web&#34;</span>]
 
 </code></pre></div><h3 id="確認-4">確認</h3>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-12-22-11-29.png"><img  src="../assets/2020-02-12-22-11-29.png"
-        alt="メインセクション追加確認"/></a></p>
+<p><img src="../assets/2020-02-12-22-11-29.png" alt="メインセクション追加確認"></p>
 <p>無事に出てくるようになりました！</p>
-<!-- ==================================================================================================== -->
+<!-- raw HTML omitted -->
 <h2 id="hugoでgoogle-adsenseに対応してみる">HugoでGoogle Adsenseに対応してみる</h2>
 <p>HugoでGoogle Adsenseに対応させてみたいと思います。
 根本的には<code>&lt;HEAD&gt;...&lt;/HEAD&gt;</code>に任意の文字列と挿入できればゴールです。</p>
 <p>以下のようなコードを入れるように指示されたと思います。
 個別に広告を配置する場合、投稿(mdファイル)毎にHTMLを直書きする感じで対応するイメージでしょうか。</p>
-<div class="highlight"><pre class="chroma"><code class="language-HTML" data-lang="HTML"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">data-ad-client</span><span class="o">=</span><span class="s">&#34;ca-pub-000000000000000000&#34;</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">data-ad-client</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ca-pub-000000000000000000&#34;</span> <span style="color:#a6e22e">async</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
 </code></pre></div><p>※0000・・・の部分はご自身のもので置き換えて下さいね。</p>
 <h3 id="設定-1">設定</h3>
 <p>まず<code>themes/hugo-notepadium/layouts/_default/baseof.html</code>をみると、HEADタグの中身はhead.htmlに任せているようですね。</p>
-<div class="highlight"><pre class="chroma"><code class="language-HTML" data-lang="HTML"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;{{- site.Language.Lang -}}&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{- site.Language.Lang -}}&#34;</span>&gt;
 {{- partial &#34;head.html&#34; . -}}
 
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;base-body&#34;</span><span class="p">&gt;</span>
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;base-body&#34;</span>&gt;
         {{- partial &#34;header.html&#34; . -}}
-        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;content&#34;</span><span class="p">&gt;</span>
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;content&#34;</span>&gt;
             {{- block &#34;main&#34; . -}}{{- end -}}
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        &lt;/<span style="color:#f92672">div</span>&gt;
         {{- partial &#34;footer.html&#34; . -}}
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
 
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+&lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div><p>なので<code>themes/hugo-notepadium/layouts/partials/head.html</code>を見てみます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-HTML" data-lang="HTML"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML">&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
 {{- hugo.Generator -}}
-<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width,initial-scale=1,viewport-fit=cover&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;color-scheme&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;light dark&#34;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;supported-color-schemes&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;light dark&#34;</span><span class="p">&gt;</span>
+&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width,initial-scale=1,viewport-fit=cover&#34;</span>&gt;
+&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color-scheme&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;light dark&#34;</span>&gt;
+&lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;supported-color-schemes&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;light dark&#34;</span>&gt;
 
 {{- define &#34;title&#34; -}}
     {{- $title := .Title -}}
     {{- if and (ne $title &#34;&#34;) (ne $title site.Title) -}}
-        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{- $title | safeHTML -}} <span class="ni">&amp;nbsp;&amp;ndash;&amp;nbsp;</span> {{- site.Title | safeHTML -}}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        &lt;<span style="color:#f92672">title</span>&gt;{{- $title | safeHTML -}} &amp;nbsp;&amp;ndash;&amp;nbsp; {{- site.Title | safeHTML -}}&lt;/<span style="color:#f92672">title</span>&gt;
     {{- else -}}
         {{- $slogan := site.Params.slogan -}}
-        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{{- site.Title | safeHTML -}}{{- if and (isset site.Params &#34;slogan&#34;) (ne $slogan &#34;&#34;) -}} <span class="ni">&amp;nbsp;&amp;ndash;&amp;nbsp;</span>
-            {{- $slogan | safeHTML -}}{{- end -}}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        &lt;<span style="color:#f92672">title</span>&gt;{{- site.Title | safeHTML -}}{{- if and (isset site.Params &#34;slogan&#34;) (ne $slogan &#34;&#34;) -}} &amp;nbsp;&amp;ndash;&amp;nbsp;
+            {{- $slogan | safeHTML -}}{{- end -}}&lt;/<span style="color:#f92672">title</span>&gt;
     {{- end -}}
 {{- end -}}
 
@@ -242,55 +356,124 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
 </code></pre></div><p>まぁ、ごちゃごちゃ書いてありますが、こっちは中身は何にも分からないという前提で突き進んでいますので、一番下の行に注目です。
 なにやら、追加があったらそれらはこのextraファイルに書いてね、という雰囲気を感じますね。</p>
 <p>なので<code>themes/hugo-notepadium/layouts/partials/head-extra.html</code>を見てみます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-HTML" data-lang="HTML"><span class="c">&lt;!--
-</span><span class="c">    for user-side override
-</span><span class="c">--&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML"><span style="color:#75715e">&lt;!--
+</span><span style="color:#75715e">    for user-side override
+</span><span style="color:#75715e">--&gt;</span>
 </code></pre></div><p>どうやらあたりのようです。</p>
 <p>ということで、<code>layouts/partials/head-extra.html</code>を作り、以下のようにしました。</p>
-<div class="highlight"><pre class="chroma"><code class="language-HTML" data-lang="HTML"><span class="c">&lt;!--
-</span><span class="c">    for user-side override
-</span><span class="c">--&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">data-ad-client</span><span class="o">=</span><span class="s">&#34;ca-pub-000000000000000000&#34;</span> <span class="na">async</span>
-    <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML"><span style="color:#75715e">&lt;!--
+</span><span style="color:#75715e">    for user-side override
+</span><span style="color:#75715e">--&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">data-ad-client</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ca-pub-000000000000000000&#34;</span> <span style="color:#a6e22e">async</span>
+    <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
 </code></pre></div><h3 id="確認-5">確認</h3>
 <p>実際に広告が配信されることを持って確認としても良いのですが、一応やったことの確認ということで。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-16-21-06-14.png"><img  src="../assets/2020-02-16-21-06-14.png"
-        alt="GoogleAdsense設定確認"/></a></p>
+<p><img src="../assets/2020-02-16-21-06-14.png" alt="GoogleAdsense設定確認"></p>
 <p>他にも自動で挿入されているんだと思いますが、一応下線を引いたところが追加されているのでよしとします。</p>
-<!-- ==================================================================================================== -->
+<!-- raw HTML omitted -->
 <p>以上</p>
-<!-- 広告 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- memorandum_yoko -->
-<p><ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-9230307049349065"
-data-ad-slot="9446890582"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></p>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- 広告 --></article>
-<section class="article navigation"><p><a class="link" href="/web/hugo001/"><span class="li">&rarr;</span>Hugo | 静的サイトジェネレータ Hugoをインストール</a class="link">
-    </p></section></div><section id="footer" class="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Always Basics.</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-75025058-6', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 </div>
-</body>
+            </div>
+        </div>
 
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+            <div class="layui-card single-card">
+                <h2 class="single-title">Relevant Topics</h2>
+                
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/web/hugo001/">
+                                <h3 class="">1. 静的サイトジェネレータ Hugoをインストール</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-02-06</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/web/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Web</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">静的サイトジェネレータ</span>
+        </a>
+    
+        <a href="/tags/install/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">install</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                
+                <br />
+            </div>
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+            
+            <br />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs6">
+                <h3> Related Sites </h3>
+            </div>
+        </div>
+        <div class="layui-row">
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/"><p class="footer-url">home</p></a>
+            </div>
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/about/"><p class="footer-url">About</p></a>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
 </html>

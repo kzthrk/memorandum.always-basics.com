@@ -1,26 +1,144 @@
-<!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Arduino | Arduinoでリモコンを作ろう&nbsp;&ndash;&nbsp;Memorandum - Danger past, god forgotten</title><link rel="stylesheet" href="/css/core.min.8d84e0eeadb042523696874218e589bc62cd7a2a375e47ef0dfea9414eadd1d01b93b8878cf4cae69d892251c385c155.css" integrity="sha384-jYTg7q2wQlI2lodCGOWJvGLNeio3XkfvDf6pQU6t0dAbk7iHjPTK5p2JIlHDhcFV"><body>
-    <div class="base-body"><section id="header" class="site header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, god forgotten</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/programming/">プログラミング</a><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
-    <h1 class="article title">Arduino | Arduinoでリモコンを作ろう</h1><span class="article date">2020-02-12</span><section class="article labels"><a class="category" href=/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/>電子工作</a><a class="tag" href=/tags/arduino/>Arduino</a></section></section><article class="article markdown-body"><h1 id="概要">概要</h1>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Memorandum - Danger past, god forgotten - Arduino | Arduinoでリモコンを作ろう </title>
+    
+    
+    <meta content="Arduino, 電子工作" name="keywords">
+    
+    <meta content="Memorandum - Danger past, god forgotten - Arduinoでリモコンを作成" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75025058-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-75025058-6');
+        </script>
+    
+
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/images/terminal.gif" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Memorandum - Danger past, god forgotten
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/about/">About</a></li>
+            
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+                    
+                        <dd><a href="/about/">About</a></dd>
+                    
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote self-elem-quote-bg-red markdown-body single-title" >
+                    <h1>Arduino | Arduinoでリモコンを作ろう</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-02-12</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">電子工作</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/arduino/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Arduino</span>
+        </a>
+    
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h1 id="概要">概要</h1>
 <p>Arduinoでリモコンを作成してみたいと思います。作成するリモコンは赤外線を使った一般的なリモコンです。いわゆるテレビやエアコンなどを操作するリモコンで、単純にリモコン側から赤外線を使った信号を送りつけ、本体が側がそれに反応しているタイプのものです。</p>
 <p>一部のリモコンには一方通行ではないものがあるようですが、今回作成するArduinoのリモコンはそれには対応していません。</p>
-<!-- 広告 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- memorandum_yoko -->
-<p><ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-9230307049349065"
-data-ad-slot="9446890582"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></p>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- 広告 -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h1 id="準備するもの">準備するもの</h1>
 <p>Arduinoでリモコンを作成するにあたり、必要なパーツを以下にリストします。まず<strong>Arduinoでリモコンに特化したもの</strong>を先に挙げます。続いて、ArduinoでLチカだったり、Raspberry Piでリモコンだったり、いわゆる<strong>電子工作として一般的に必要なもの</strong>をリストします。この分類は微妙な線引きではありますが、察してやって下さい。</p>
 <h2 id="arduinoでリモコンに必要なもの">Arduinoでリモコンに必要なもの</h2>
@@ -35,22 +153,22 @@ data-full-width-responsive="true"></ins></p>
 <tbody>
 <tr>
 <td>100円</td>
-<td><a href="http://akizukidenshi.com/catalog/g/gI-04659/"target="_blank">赤外線リモコン受信モジュール OSRB38C9AA（2個入）</a></td>
+<td><a href="http://akizukidenshi.com/catalog/g/gI-04659/">赤外線リモコン受信モジュール OSRB38C9AA（2個入）</a></td>
 <td></td>
 </tr>
 <tr>
 <td>100円</td>
-<td><a href="http://akizukidenshi.com/catalog/g/gI-12612/"target="_blank">5mm 赤外線LED OSI5LA5113A（10個入）</a></td>
+<td><a href="http://akizukidenshi.com/catalog/g/gI-12612/">5mm 赤外線LED OSI5LA5113A（10個入）</a></td>
 <td>可視光線のLEDもあると動作確認に便利。赤外線は目に見えないので。</td>
 </tr>
 <tr>
 <td>200円</td>
-<td><a href="http://akizukidenshi.com/catalog/g/gR-07960/"target="_blank">抵抗 27Ω 1W（100本入）</a></td>
+<td><a href="http://akizukidenshi.com/catalog/g/gR-07960/">抵抗 27Ω 1W（100本入）</a></td>
 <td>これである必要はありません。実際、最終的には並行に繋いで抵抗を下げました。</td>
 </tr>
 <tr>
 <td>1980円</td>
-<td><a href="https://www.switch-science.com/catalog/2500/"target="_blank">ESPr® Developer（ESP-WROOM-02開発ボード）</a></td>
+<td><a href="https://www.switch-science.com/catalog/2500/">ESPr® Developer（ESP-WROOM-02開発ボード）</a></td>
 <td>これも他のArduinoでもOKです。実際最初はUnoを使って試していました</td>
 </tr>
 </tbody>
@@ -68,49 +186,43 @@ data-full-width-responsive="true"></ins></p>
 <tr>
 <td>35円</td>
 <td>ピンヘッダ</td>
-<td><a href="http://akizukidenshi.com/catalog/g/gC-00167/"target="_blank">ピンヘッダ　１×４０　（４０Ｐ）</a></td>
+<td><a href="http://akizukidenshi.com/catalog/g/gC-00167/">ピンヘッダ　１×４０　（４０Ｐ）</a></td>
 </tr>
 <tr>
 <td>270円</td>
 <td>ブレッドボード</td>
-<td><a href="http://akizukidenshi.com/catalog/g/gP-00315/"target="_blank">ブレッドボード（1枚）</a></td>
+<td><a href="http://akizukidenshi.com/catalog/g/gP-00315/">ブレッドボード（1枚）</a></td>
 </tr>
 <tr>
 <td>180円</td>
 <td>ジャンパーワイヤ</td>
-<td><a href="http://akizukidenshi.com/catalog/g/gC-05371/"target="_blank">ブレッドボード・ジャンパーワイヤ（オス－オス）　１０ｃｍセット</a></td>
+<td><a href="http://akizukidenshi.com/catalog/g/gC-05371/">ブレッドボード・ジャンパーワイヤ（オス－オス）　１０ｃｍセット</a></td>
 </tr>
 <tr>
 <td>60円</td>
 <td>ユニバーサル基板</td>
-<td><a href="http://akizukidenshi.com/catalog/g/gP-03229/"target="_blank">片面ガラスコンポジット・ユニバーサル基板　Ｃタイプ　めっき仕上げ　（７２×４７ｍｍ）　日本製</a></td>
+<td><a href="http://akizukidenshi.com/catalog/g/gP-03229/">片面ガラスコンポジット・ユニバーサル基板　Ｃタイプ　めっき仕上げ　（７２×４７ｍｍ）　日本製</a></td>
 </tr>
 <tr>
 <td>210円</td>
 <td>はんだ</td>
-<td><a href="http://akizukidenshi.com/catalog/g/gT-02594/"target="_blank">はんだ　０．８ｍｍ</a></td>
+<td><a href="http://akizukidenshi.com/catalog/g/gT-02594/">はんだ　０．８ｍｍ</a></td>
 </tr>
 <tr>
 <td>2,300円</td>
 <td>はんだごて</td>
-<td><a href="http://akizukidenshi.com/catalog/g/gT-02534/"target="_blank">即熱はんだこて　ＴＱ－９５（９０Ｗ／１５Ｗ）</a></td>
+<td><a href="http://akizukidenshi.com/catalog/g/gT-02534/">即熱はんだこて　ＴＱ－９５（９０Ｗ／１５Ｗ）</a></td>
 </tr>
 </tbody>
 </table>
 <p>これらに関しては、これでなければダメというものでもありませんし、道具の類いは特に好みやこだわりもあると思いますので、手持ちのものをご使用いただくか、必要に応じて購入(場合によっては我慢)するなど、適宜ご判断の上お願いします。</p>
-<!-- 広告 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- memorandum_yoko -->
-<p><ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-9230307049349065"
-data-ad-slot="9446890582"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></p>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- 広告 -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h1 id="実装">実装</h1>
 <p>実装は次の3段階に分けて行います。</p>
 <ol>
@@ -126,27 +238,21 @@ data-full-width-responsive="true"></ins></p>
 <h2 id="実装その1">実装その1</h2>
 <p>まずは、赤外線受信機能からです。</p>
 <p>Arduinoでリモコンを作るのにちょうど良いライブラリが公開されています。</p>
-<p><a href="https://github.com/z3t0/Arduino-IRremote"target="_blank">Arduino-IRremote</a></p>
+<p><a href="https://github.com/z3t0/Arduino-IRremote">Arduino-IRremote</a></p>
 <p>今回Arduinoとして用いたのは<a href="ESP-WROOM-02">https://www.switch-science.com/catalog/2346/</a>を用いた[https://www.switch-science.com/catalog/2500/](ESPr® Developer（ESP-WROOM-02開発ボード）)です。<strong>ESP-WROOM-02</strong>は<strong>ESP8266</strong>ベースとしており、IRremoteのライブラリは使えませんが、その代わりにArduino-IRremoteをベースにしたライブラリがこれまた公開されており、これを使います。</p>
-<p><a href="https://github.com/crankyoldgit/IRremoteESP8266"target="_blank">IRremoteESP8266</a></p>
+<p><a href="https://github.com/crankyoldgit/IRremoteESP8266">IRremoteESP8266</a></p>
 <p>Arduino-IRremoteもIRremoteESP8266もホント感謝ですね。</p>
 <h3 id="回路1">回路1</h3>
 <p>使うのはこちらのみ。(本体は別にという意味です)</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-13-22-34-40.png"><img  src="../assets/2020-02-13-22-34-40.png"
-        alt="赤外線リモコン受信モジュール"/></a></p>
+<p><img src="../assets/2020-02-13-22-34-40.png" alt="赤外線リモコン受信モジュール"></p>
 <p>モジュールの仕様を確認すると、向かって左からOUTPUT、GROUND、VCCとなっています。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-13-22-36-02.png"><img  src="../assets/2020-02-13-22-36-02.png"
-        alt="OSRB38C9AAの仕様"/></a></p>
+<p><img src="../assets/2020-02-13-22-36-02.png" alt="OSRB38C9AAの仕様"></p>
 <p>ということで、単純に3つ接続すると使えるわけですが、回路は以下です。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-13-23-47-56.png"><img  src="../assets/2020-02-13-23-47-56.png"
-        alt="回路1"/></a></p>
+<p><img src="../assets/2020-02-13-23-47-56.png" alt="回路1"></p>
 <p>実物そのもののパーツがなかったので代用品ですが、ピンの位置と名前をラベルで貼ってあるので伝わりますでしょうか。</p>
 <h3 id="スケッチ1">スケッチ1</h3>
 <p>スケッチはこだわりのある方は別として、単に情報が取りたいだけでしたらIRremoteESP8266のサンプルスケッチにIRrecvDumpV2というのがあるのでそれで十分です。</p>
-<p><a href="https://github.com/crankyoldgit/IRremoteESP8266/blob/master/examples/IRrecvDumpV2/IRrecvDumpV2.ino"target="_blank">IRrecvDumpV2</a></p>
+<p><a href="https://github.com/crankyoldgit/IRremoteESP8266/blob/master/examples/IRrecvDumpV2/IRrecvDumpV2.ino">IRrecvDumpV2</a></p>
 <p>ここの載せちゃってもライセンス的に平気だとは思いますが、サンプルなので割愛です。</p>
 <h3 id="動作確認1">動作確認1</h3>
 <p>実際に手持ちのリモコンを受信機に向けて、ボタンを一押しします。</p>
@@ -173,15 +279,13 @@ RAWデータも使えますので、興味のある方は、次の実装2で見�
 <p>つぎは純粋にArduinoでリモコンです。
 実装1の内容とこの実装2の内容を1つにしてしまっても構いませんが、ここでは一旦チャラにしています。</p>
 <h3 id="回路2">回路2</h3>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-14-00-57-12.png"><img  src="../assets/2020-02-14-00-57-12.png"
-        alt="回路2"/></a></p>
+<p><img src="../assets/2020-02-14-00-57-12.png" alt="回路2"></p>
 <p>抵抗を2つにしたのは単に思ったよりも赤外線が弱くてかなり近づけないと反応しなかったからで、本体、LEDなど壊れない範囲でお好みで。</p>
 <h3 id="スケッチ2">スケッチ2</h3>
 <p>これまた、サンプルがあるのでそれを少しいじればOKです。
 サンプルではなくて、私が実際に使っているものは<strong>スケッチ3</strong>を見て下さい。</p>
 <p>使うのは<strong>IRremoteESP8266</strong>の<strong>IRsendDemo</strong>です。</p>
-<p><a href="https://github.com/crankyoldgit/IRremoteESP8266/blob/master/examples/IRsendDemo/IRsendDemo.ino"target="_blank">IRsendDemo</a></p>
+<p><a href="https://github.com/crankyoldgit/IRremoteESP8266/blob/master/examples/IRsendDemo/IRsendDemo.ino">IRsendDemo</a></p>
 <p>先ほどの電源ONの場合どうなるかというと</p>
 <pre><code>void loop() {
   Serial.println(&quot;NEC&quot;);
@@ -206,22 +310,14 @@ RAWデータも使えますので、興味のある方は、次の実装2で見�
 <p>なお、iPhoneの場合にはインカメラ(液晶画面側のカメラ)であれば赤外線の光が写ります。</p>
 <p>そのカメラを使って赤外線LEDが光っているかを確かめてみましょう。
 あー、一つだけ言っておきますと、真っ暗闇でやった方が良いかもしれません。私は見えなくて泣きそうでしたから。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-14-01-54-44.png"><img  src="../assets/2020-02-14-01-54-44.png"
-        alt="赤外線LEDを撮影"/></a></p>
-<!-- 広告 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- memorandum_yoko -->
-<p><ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-9230307049349065"
-data-ad-slot="9446890582"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></p>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- 広告 -->
+<p><img src="../assets/2020-02-14-01-54-44.png" alt="赤外線LEDを撮影"></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="実装その3">実装その3</h2>
 <p>いよいよ最終形です。Webリモコン化します。</p>
 <h3 id="回路3">回路3</h3>
@@ -434,7 +530,7 @@ void loop(void) {
   MDNS.update();
 }
 </code></pre><p>ちょっと余計なものも見えていますが、ご愛敬と言うことで。</p>
-<p>今回Arduinoとして用いたのは<a href="https://www.switch-science.com/catalog/2346/"target="_blank">ESP-WROOM-02</a>を用いた<a href="https://www.switch-science.com/catalog/2500/"target="_blank">ESPr® Developer（ESP-WROOM-02開発ボード）</a>です。このボードの用いた理由は、一番は私のような素人でも取り扱いやすいということですが、同時にWi-Fiで制御することが可能になります。</p>
+<p>今回Arduinoとして用いたのは<a href="https://www.switch-science.com/catalog/2346/">ESP-WROOM-02</a>を用いた<a href="https://www.switch-science.com/catalog/2500/">ESPr® Developer（ESP-WROOM-02開発ボード）</a>です。このボードの用いた理由は、一番は私のような素人でも取り扱いやすいということですが、同時にWi-Fiで制御することが可能になります。</p>
 <p>具体的にはArduinoをWebサーバーとして自宅のWi-Fiルータに接続しています。多くの場合DHCPで繋いでいるのではないかと思いますが今回はやりやすいように固定にしました。(自宅のWi-Fiの設定をいじって固定のIPを割り振っています)　ArduinoのWebサーバーでは、リモコンの各ボタンをURLと紐付けてアクセスされたURLに応じて赤外線のシグナルを発信するという形です。</p>
 <p>また一つ工夫をしています。それはHTMLを外部に持たせることにしました。ArduinoをWebサーバーにしたのは良いのですが、HTMLを返させるには少々編集に手間が掛かります。
 そこでHTMLは外部のサーバーに配置しています。Webブラウザからみるとリンク先が自宅内のネットワーク上にあるWebサーバーを指していますので、HTTPリクエストは無事にArduinoへ届きます。Arduinoでは&quot;302 Moved Temporarily&quot;を返し、再び外部のWebサーバー上のHTMLへ戻るようにしています。</p>
@@ -443,37 +539,57 @@ void loop(void) {
 <h1 id="編集後記">編集後記</h1>
 <p>軟弱な(Softwareな)世界に生きていると、電子工作(ハード)な世界のデバッグのやりづらさたるや半端ない負担で、実際にはこれもう一つ回路設計しないと分からないのでは？と思うこともあるほどですが&hellip;</p>
 <p>今回は送信と受信のArduinoを用意して、それをお迎え合わせにして確かめたりもしました。</p>
-<!-- 広告 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- memorandum_yoko -->
-<p><ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-9230307049349065"
-data-ad-slot="9446890582"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></p>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- 広告 -->
-</article>
-</div><section id="footer" class="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Always Basics.</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-75025058-6', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 </div>
-</body>
+            </div>
+        </div>
 
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+            
+            <br />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs6">
+                <h3> Related Sites </h3>
+            </div>
+        </div>
+        <div class="layui-row">
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/"><p class="footer-url">home</p></a>
+            </div>
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/about/"><p class="footer-url">About</p></a>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
 </html>

@@ -1,51 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on Memorandum - Danger past, god forgotten</title>
-    <link>/categories/programming/</link>
+    <link>http://memorandum.always-basics.com/categories/programming/</link>
     <description>Recent content in Programming on Memorandum - Danger past, god forgotten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Tue, 05 May 2020 16:47:53 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2020 16:47:51 +0900</lastBuildDate>
     
-        <atom:link href="/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://memorandum.always-basics.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>3.Vue.jsでアプリ開発</title>
-      <link>/programming/vue3/</link>
-      <pubDate>Tue, 05 May 2020 16:47:53 +0900</pubDate>
-      
-      <guid>/programming/vue3/</guid>
-      <description>だだいま絶賛編集中です</description>
-    </item>
     
     <item>
-      <title>npmでパッケージ管理して、webpackでビルドする</title>
-      <link>/programming/vue2/</link>
-      <pubDate>Tue, 05 May 2020 16:47:51 +0900</pubDate>
+      <title>2. npmでパッケージ管理して、webpackでビルドする</title>
+      <link>http://memorandum.always-basics.com/post/programming/vue2/</link>
+      <pubDate>Wed, 06 May 2020 16:47:51 +0900</pubDate>
       
-      <guid>/programming/vue2/</guid>
-      <description>はじめに 本稿で取り扱う内容は、本来であればvue-cliを使うべきです。 ですが、公式でも初めてのvueにおいては以下のように言及があり、使用</description>
+      <guid>http://memorandum.always-basics.com/post/programming/vue2/</guid>
+      <description>はじめに 本稿で取り扱う内容は、本来であればvue-cliを使うべきです。 ですが、公式でも初めてのvueにおいては以下のように言及があり、使用に慎重になるべきです。
+ CLI は Node.js および関連するビルドツールに関する事前知識を前提としています。Vue またはフロントエンドビルドツールを初めて使用している場合、CLI を使用する前に、ビルドツールなしでガイドを参照することを強くお勧めします。
+ 確かにその通りではありますが、それはvue-cliによって余りに多くの仕組みが導入されてしまうことにあるからであって、vueを習得する上で永遠をindex.htmlだけを編集し続けていても、結局vueを知って欲しいという書き手の思いだけが達成されるだけで、我々にはその次のステージへ進むタイミングで同じ課題は生じるわけです。
+また、何か公式ガイド以外モノを参考にしようとした時に、きっとこの教えを守って1ファイルだけで実践している例などは掲載されておらず、成長の妨げにすらなり得ます。(正直、詰んでるんですけど？ってことに)
+npmによるパッケージインストールとビルド環境の構築 ということで、当サイトとしてはソースコードを書いて動作を確認するという部分(ビルドするという部分)においては、先取りしてしまいます。
+npm コマンドによる初期設定 まずはnpmコマンドで自分自身を定義します。といっても全てEnterキーの連投でOKです。 あとから変えることも出来ますし、今回はこの記事に沿って体験するだけが目的かと思いますので、是非連投で。
+実行コマンド
+npm init 実行例
+MacBookPro:accessLogAnalyzer $ npm init This utility will walk you through creating a package.json file. It only covers the most common items, and tries to guess sensible defaults. See `npm help json` for definitive documentation on these fields and exactly what they do. Use `npm install &amp;lt;pkg&amp;gt;` afterwards to install a package and save it as a dependency in the package.</description>
     </item>
     
     <item>
       <title>1. HTMLとJavaScriptの単純構成で初めのVue.js</title>
-      <link>/programming/vue1/</link>
+      <link>http://memorandum.always-basics.com/post/programming/vue1/</link>
       <pubDate>Tue, 05 May 2020 16:47:47 +0900</pubDate>
       
-      <guid>/programming/vue1/</guid>
-      <description>はじめに それでは早速ですが、まずはHTMLとJavaScriptを1つずつ用意して簡単なvue.jsアプリを作成してみましょう。 本稿ではプロ</description>
+      <guid>http://memorandum.always-basics.com/post/programming/vue1/</guid>
+      <description>はじめに それでは早速ですが、まずはHTMLとJavaScriptを1つずつ用意して簡単なvue.jsアプリを作成してみましょう。 本稿ではプロジェクト名(アプリ名)を「Access Log Analyzer」とします。 そして、以下を前提とします。
+export PROJECT_NAME=&amp;quot;accessLogAnalyzer&amp;quot; export PROJECT_DIR=&amp;quot;${HOME}/${PROJECT_NAME}&amp;quot; コマンドやファイルのパスを示すに当たって、${PROJECT_DIR}という環境変数で示すようにしますが、実行結果、ログをご紹介するときは、上記の実際の値で出力されているものを掲載しています。
+1.1　ディレクトリ作成 mkdir ${PROJECT_DIR} cd ${PROJECT_DIR} mkdir src mkdir public cd public srcディレクトリに以下の内容のindex.htmlとindex.jsを作成します。
+ファイル名: index.html
+&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;vue.js hello Vue! &amp;lt;/title&amp;gt; &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt; {{ message }} &amp;lt;/div&amp;gt; &amp;lt;script src=&amp;quot;/index.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; ファイル名: index.js
+var app = new Vue({ el: &#39;#app&#39;, data: { message: &#39;Hello Vue!&#39; } }) これらはpublicディレクトリに直接作成しても構いませんが、2.npmでパッケージ管理して、webpackでビルドするを念頭に、その役割を意識するために、あえてsrcディレクトリを設けています。
+publicディレクトリを設けているので、もちろんソースコードから実際に稼働するpublicディレクトリへの配置が必要です。必要な作業は単なるコピーのはずですが、ここではあえてbuild.shというファイルを作成します。
+cd ${PROJECT_DIR} ファイル名: build.sh
+#!/bin/bash export PROJECT_NAME=&amp;quot;accessLogAnalyzer&amp;quot; export PROJECT_DIR=&amp;quot;${HOME}/${PROJECT_NAME}&amp;quot; cd ${PROJECT_DIR} cp -p .</description>
     </item>
     
     <item>
       <title>初めてのVue.js</title>
-      <link>/programming/vue/</link>
+      <link>http://memorandum.always-basics.com/post/programming/vue/</link>
       <pubDate>Tue, 05 May 2020 16:12:05 +0900</pubDate>
       
-      <guid>/programming/vue/</guid>
-      <description>&amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD はじめに 初めてのVue.jsということで、本当にいちからはじめてみたいと思います。 前提となる基礎知識は、JavaScriptがなんとなく</description>
+      <guid>http://memorandum.always-basics.com/post/programming/vue/</guid>
+      <description>はじめに 初めてのVue.jsということで、本当にいちからはじめてみたいと思います。
+前提となる基礎知識は、JavaScriptがなんとなく分かる程度です。
+私自身はJavaScriptができるとは到底言えないレベルですが、なんとなく読めてなんとなくかけます。(仕事をする上で一番たちの悪いパターンですね) node.jsやnpmコマンドも使ったことがありますし、他のフレームワークの経験もあります。
+そのため、以下のような開発スタイルをなんとか自力でとれるレベルです。
+ node.jsを複数インストールし切り替え可能な環境を構築し、 npmコマンドを使ってパッケージ管理をして フレームワークの標準に沿ったソースファイルを編集することでプログラミングをし webpackを使ってビルドをして node.jsでAPIを提供するアプリに組み込んで、  SPA(Single Page Application)と呼ばれるWebのシステムを1つ動かすことができます。
+さて、出発点を挙げるとするならば、やはりオフィシャルサイトの以下です。 https://jp.vuejs.org/v2/guide/installation.html
+誰も否定する人はいないと思いますが、如何せん分かりやすいとは言えません。
+例えばインストール手順ですが、HTML内でCDNを指せばいいと言ったかと思えば、npm install vueなどと言い放ったりします。
+当然これらは同値ではありません。全然次元が違うじゃんと。
+CDNは指せば動きますが、npmでインストールしてもそれだけではなにも動作しないわけです。CLIを使ったインストール方法も紹介されていますが、CLIでのインストールでは裏でこのnpmでインストールが実行されているのであって、はっきり言ってなんのこっちゃ？です。
+そっちがその気ならこっちも言わせてもらいますと
+「てめーが書きたいことを書いて満足してるんじゃねーぞ」
+ってなもんです。
+コンテンツ さて当サイトのコンテンツは、次のような構成となります。
+ HTMLとJavaScriptの単純構成で初めのVue.js npmでパッケージ管理して、webpackでビルドする Vue.jsでアプリ開発  『1.HTMLとJavaScirptの単純構成で初めてのVue.js』では、index.htmlとindex.jsの2ファイルだけでVue.jsを体験します。実際の所、この2つだけで最後まで開発しきることは無理ではないと思います。したがって、とにかく試して試して試すだけという人は、このまま突き進んでも良いかと思います。
+続いて『2.npmでパッケージ管理して、webpackでビルドする』では、『1.HTMLとJavaScirptの単純構成で初めてのVue.js』のindex.htmlとindex.jsをゴールに定めて、開発環境を整える手順を紹介します。
+具体的には、
+ 複数バージョンを切り替え可能なようにNode.jsをインストール npmでBabelとWebPackをインストール WebPackを構成して、ビルド  の流れでご紹介します。
+読者の前提をJavaScrptがなんとなく分かる程度という風に設定していますので、 Node.jsやnpmで寄り道し、BabelやWebPackについても取り上げます。
+最後に『3.Vue.jsでアプリ開発』ですが、ここではVue.jsでアプリ開発する上で必要となる要素を一通り試していきたいと思います。もちろん『1.HTMLとJavaScirptの単純構成で初めてのVue.js』から直接ここへ来て試すだけ試すというのも可能です。
+それでは早速ですが、1. HTMLとJavaScriptの単純構成で初めのVue.jsへどうぞ。</description>
     </item>
     
   </channel>

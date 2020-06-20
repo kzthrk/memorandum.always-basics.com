@@ -2,9 +2,9 @@
 
     
         <url>
-        <loc>http://memorandum.always-basics.com/programming/vue3/</loc>
+        <loc>http://memorandum.always-basics.com/post/programming/vue2/</loc>
         
-            <lastmod>2020-05-05T16:47:53+09:00</lastmod>
+            <lastmod>2020-05-06T16:47:51+09:00</lastmod>
         
         </url>
     
@@ -23,16 +23,7 @@
 
     
         <url>
-        <loc>http://memorandum.always-basics.com/programming/vue2/</loc>
-        
-            <lastmod>2020-05-05T16:47:51+09:00</lastmod>
-        
-        </url>
-    
-
-    
-        <url>
-        <loc>http://memorandum.always-basics.com/programming/vue1/</loc>
+        <loc>http://memorandum.always-basics.com/post/programming/vue1/</loc>
         
             <lastmod>2020-05-05T16:47:47+09:00</lastmod>
         
@@ -41,7 +32,7 @@
 
     
         <url>
-        <loc>http://memorandum.always-basics.com/programming/vue/</loc>
+        <loc>http://memorandum.always-basics.com/post/programming/vue/</loc>
         
             <lastmod>2020-05-05T16:12:05+09:00</lastmod>
         
@@ -51,29 +42,12 @@
     
 
     
-        <url>
-        <loc>http://memorandum.always-basics.com/misc/macos02/</loc>
-        
-            <lastmod>2020-04-13T21:43:54+09:00</lastmod>
-        
-        </url>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     
 
     
         <url>
-        <loc>http://memorandum.always-basics.com/theia/desktop/</loc>
+        <loc>http://memorandum.always-basics.com/post/theia/desktop/</loc>
         
             <lastmod>2020-04-13T15:22:45+09:00</lastmod>
         
@@ -93,7 +67,7 @@
 
     
         <url>
-        <loc>http://memorandum.always-basics.com/theia/docker_settings/</loc>
+        <loc>http://memorandum.always-basics.com/post/theia/docker_settings/</loc>
         
             <lastmod>2020-04-12T09:24:50+09:00</lastmod>
         
@@ -102,7 +76,7 @@
 
     
         <url>
-        <loc>http://memorandum.always-basics.com/theia/theia/</loc>
+        <loc>http://memorandum.always-basics.com/post/theia/theia/</loc>
         
             <lastmod>2020-04-10T23:25:55+09:00</lastmod>
         
@@ -113,9 +87,9 @@
 
     
         <url>
-        <loc>http://memorandum.always-basics.com/electronic_kit/arduino001/</loc>
+        <loc>http://memorandum.always-basics.com/post/misc/macos02/</loc>
         
-            <lastmod>2020-02-12T11:15:17+09:00</lastmod>
+            <lastmod>2020-04-13T21:43:54+09:00</lastmod>
         
         </url>
     
@@ -125,12 +99,19 @@
     
 
     
+        <url>
+        <loc>http://memorandum.always-basics.com/post/electronic_kit/arduino001/</loc>
+        
+            <lastmod>2020-02-12T11:15:17+09:00</lastmod>
+        
+        </url>
+    
 
     
 
     
         <url>
-        <loc>http://memorandum.always-basics.com/web/hugo002/</loc>
+        <loc>http://memorandum.always-basics.com/post/web/hugo002/</loc>
         
             <lastmod>2020-02-16T23:11:57+09:00</lastmod>
         
@@ -144,8 +125,10 @@
     
 
     
+
+    
         <url>
-        <loc>http://memorandum.always-basics.com/misc/macos/</loc>
+        <loc>http://memorandum.always-basics.com/post/misc/macos/</loc>
         
             <lastmod>2020-02-10T16:24:31+09:00</lastmod>
         
@@ -154,7 +137,7 @@
 
     
         <url>
-        <loc>http://memorandum.always-basics.com/web/hugo001/</loc>
+        <loc>http://memorandum.always-basics.com/post/web/hugo001/</loc>
         
             <lastmod>2020-02-06T13:57:04+09:00</lastmod>
         
@@ -167,7 +150,7 @@
 
     
         <url>
-        <loc>http://memorandum.always-basics.com/misc/welcome/</loc>
+        <loc>http://memorandum.always-basics.com/post/misc/welcome/</loc>
         
             <lastmod>2020-02-05T13:57:04+09:00</lastmod>
         

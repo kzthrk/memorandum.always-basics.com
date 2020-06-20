@@ -1,36 +1,631 @@
-<!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Memorandum - Danger past, god forgotten&nbsp;&ndash;&nbsp;継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</title><link rel="stylesheet" href="/css/core.min.8d84e0eeadb042523696874218e589bc62cd7a2a375e47ef0dfea9414eadd1d01b93b8878cf4cae69d892251c385c155.css" integrity="sha384-jYTg7q2wQlI2lodCGOWJvGLNeio3XkfvDf6pQU6t0dAbk7iHjPTK5p2JIlHDhcFV"><link rel="alternate" type="application/rss+xml" href="/index.xml" title="Memorandum - Danger past, god forgotten" /><body>
-    <div class="base-body"><section id="header" class="site header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, god forgotten</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/programming/">プログラミング</a><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><ul class="note list"><li class="item"><a class="note" href="/web/hugo001/">
-            <p class="note title">Hugo | 静的サイトジェネレータ Hugoをインストール</p><p class="note date">2020-02-06</p><p class="note content">はじめに 静的サイトジェネレータのひとつであるHugoをインストールし、実際にWebサイトとして公開する過程を記録しました。 このサイトはHug<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/categories/web/">web</a><a class="tag" href="/tags/hugo/">Hugo</a><a class="tag" href="/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/">静的サイトジェネレータ</a><a class="tag" href="/tags/install/">install</a></p></li><li class="item"><a class="note" href="/web/hugo002/">
-            <p class="note title">Hugo | Hugoで作成したサイトを追加構成</p><p class="note date">2020-02-10</p><p class="note content">はじめに 前回は静的サイトジェネレータ Hugoをインストールで、静的サイトジェネレータのひとつであるHugoをインストールしました。 今回はその<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/categories/web/">Web</a><a class="tag" href="/tags/hugo/">Hugo</a><a class="tag" href="/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/">静的サイトジェネレータ</a><a class="tag" href="/tags/config/">config</a></p></li><li class="item"><a class="note" href="/electronic_kit/arduino001/">
-            <p class="note title">Arduino | Arduinoでリモコンを作ろう</p><p class="note date">2020-02-12</p><p class="note content">概要 Arduinoでリモコンを作成してみたいと思います。作成するリモコンは赤外線を使った一般的なリモコンです。いわゆるテレビやエアコンなどを<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/">電子工作</a><a class="tag" href="/tags/arduino/">Arduino</a></p></li><li class="item"><a class="note" href="/theia/theia/">
-            <p class="note title">Theia | Theiaを始めてみよう</p><p class="note date">2020-04-10</p><p class="note content">はじめに Theiaとは まずは読み方ですが『テイア』と読むようです。 Theiaとは公式ページの説明を借りれば Eclipse Theia is an extensible platform to develop multi-language Cloud &amp; Desktop IDEs with state-of-the-art web technologies.<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/categories/theia/">Theia</a><a class="tag" href="/tags/ide/">IDE</a><a class="tag" href="/tags/development/">Development</a></p></li><li class="item"><a class="note" href="/theia/docker_settings/">
-            <p class="note title">Theia | Gitpodの環境設定</p><p class="note date">2020-04-12</p><p class="note content">Gitpodの環境設定 はじめに 本稿は、Theia | Theiaを始めてみようの中でGitpodおよびその中で使用されるDockerの設定につい<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/categories/theia/">Theia</a><a class="tag" href="/tags/ide/">IDE</a><a class="tag" href="/tags/development/">Development</a></p></li><li class="item"><a class="note" href="/theia/desktop/">
-            <p class="note title">Theia | Desktop版の可能性を探索</p><p class="note date">2020-04-13</p><p class="note content">Theia デスクトップ版 Theia デスクトップ版とはなにか？ですが、デスクトップ版の意味として、ネイティブなデスクトップ・アプリケーションが思い浮かぶと思い<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/categories/theia/">Theia</a><a class="tag" href="/tags/ide/">IDE</a><a class="tag" href="/tags/development/">Development</a></p></li><li class="item"><a class="note" href="/programming/vue/">
-            <p class="note title">初めてのVue.js</p><p class="note date">2020-05-05</p><p class="note content">&laquo;&laquo;&laquo;&lt; HEAD はじめに 初めてのVue.jsということで、本当にいちからはじめてみたいと思います。 前提となる基礎知識は、JavaScriptがなんとなく<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/categories/programming/">Programming</a><a class="tag" href="/tags/javascript/">JavaScript</a><a class="tag" href="/tags/vue.js/">Vue.js</a></p></li><li class="item"><a class="note" href="/programming/vue1/">
-            <p class="note title">1. HTMLとJavaScriptの単純構成で初めのVue.js</p><p class="note date">2020-05-05</p><p class="note content">はじめに それでは早速ですが、まずはHTMLとJavaScriptを1つずつ用意して簡単なvue.jsアプリを作成してみましょう。 本稿ではプロ<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/categories/programming/">Programming</a><a class="tag" href="/tags/javascript/">JavaScript</a><a class="tag" href="/tags/vue.js/">Vue.js</a></p></li><li class="item"><a class="note" href="/programming/vue2/">
-            <p class="note title">npmでパッケージ管理して、webpackでビルドする</p><p class="note date">2020-05-05</p><p class="note content">はじめに 本稿で取り扱う内容は、本来であればvue-cliを使うべきです。 ですが、公式でも初めてのvueにおいては以下のように言及があり、使用<span class="mldr">&mldr;more</span></p></a><p class="note labels"><a class="category" href="/categories/programming/">Programming</a><a class="tag" href="/tags/javascript/">JavaScript</a><a class="tag" href="/tags/vue.js/">Vue.js</a></p></li><li class="item"><a class="note" href="/programming/vue3/">
-            <p class="note title">3.Vue.jsでアプリ開発</p><p class="note date">2020-05-05</p><p class="note content">だだいま絶賛編集中です</p></a><p class="note labels"><a class="category" href="/categories/programming/">Programming</a><a class="tag" href="/tags/javascript/">JavaScript</a><a class="tag" href="/tags/vue.js/">Vue.js</a></p></li></ul></div><section id="footer" class="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Always Basics.</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-75025058-6', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-</div>
-</body>
+<html>
+<head>
+	<meta name="generator" content="Hugo 0.69.2" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>Memorandum - Danger past, god forgotten</title>
+    
+    
+    <meta content="Memorandum - Danger past, god forgotten" name="keywords">
+    
+    <meta content="Memorandum - Danger past, god forgotten - A website called Memorandum - Danger past, god forgotten" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+        <link href="/index.xml" rel="alternate" type="application/rss&#43;xml" title="Memorandum - Danger past, god forgotten" />
+        <link href="/index.xml" rel="feed" type="application/rss&#43;xml" title="Memorandum - Danger past, god forgotten" />
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75025058-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-75025058-6');
+        </script>
+    
+
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/images/logo.jpg" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Memorandum - Danger past, god forgotten
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/programming/">Programming</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/web/">Hugo</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/theia/">Theia</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/">電子工作</a></li>
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/about/">About</a></li>
+            
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+                    
+                        <dd><a href="/categories/programming/">Programming</a></dd>
+                    
+                        <dd><a href="/categories/web/">Hugo</a></dd>
+                    
+                        <dd><a href="/categories/theia/">Theia</a></dd>
+                    
+                        <dd><a href="/categories/%E9%9B%BB%E5%AD%90%E5%B7%A5%E4%BD%9C/">電子工作</a></dd>
+                    
+                        <dd><a href="/about/">About</a></dd>
+                    
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+
+<main>
+<div class="layui-container">
+    <div class="layui-row about">
+        <div class="layui-col-xs12 layui-col-sm8 layui-col-md8 about_right">
+
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-col-xs12 layui-col-sm8 layui-col-md8">
+            <h4>    <p> 継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</p>
+    <br />
+    </h4>
+        </div>
+    </div>
+</div>
+
+<div class="layui-fluid recent" >
+    <div class="layui-container">
+        <div class="layui-row recent-inner" >
+            <div class="layui-col-md8 layui-col-sm8 layui-col-xs12">
+                <h1> Recent Posts </h1>
+                
+                    
+                    
+                            <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+        <a href="/post/programming/vue2/">
+            <h2 class="">2. npmでパッケージ管理して、webpackでビルドする</h2>
+        </a>
+        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-06</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+        <h3>
+        	
+				npmでパッケージ管理して、webpackでビルド可能な環境を整えます。そしてコンポーネント化しての開発スタイルまで到達します。これを乗り越えれば巷にあふれるサンプルでどんどん独学で進んでいけるはず！
+			 <a href="/post/programming/vue2/"><span style="color:#01AAED">Read More</span></a>
+        </h3>
+    </blockquote>
+
+                    
+                            <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+        <a href="/post/programming/vue1/">
+            <h2 class="">1. HTMLとJavaScriptの単純構成で初めのVue.js</h2>
+        </a>
+        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-05</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+        <h3>
+        	
+				 HTMLとJavaScriptの単純構成で初めのVue.jsに触れてみます。こんな使い方する人はおそらくいませんが、把握せずに次のステップに進もうとするとして混乱するといけないので素振りと思ってお付き合い下さい。
+			 <a href="/post/programming/vue1/"><span style="color:#01AAED">Read More</span></a>
+        </h3>
+    </blockquote>
+
+                    
+                            <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+        <a href="/post/programming/vue/">
+            <h2 class="">初めてのVue.js</h2>
+        </a>
+        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-05</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+        <h3>
+        	
+				はじめてのVue.js。前提はJavaScriptがなんとなく分かる程度ですので、文字取り本当に一から取り組みます。3部構成になっており、2つ目まで実施すれば後は独学の道もよしです。
+			 <a href="/post/programming/vue/"><span style="color:#01AAED">Read More</span></a>
+        </h3>
+    </blockquote>
+
+                    
+                            <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+        <a href="/post/theia/desktop/">
+            <h2 class="">Theia | Desktop版の可能性を探索</h2>
+        </a>
+        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-04-13</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/theia/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Theia</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/ide/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">IDE</span>
+        </a>
+    
+        <a href="/tags/development/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Development</span>
+        </a>
+    
+    
+</h3>
+        <h3>
+        	
+				Theiaのデスクトップ版とは何か、そしてそれは存在するのか？デスクトップ版の可能性を探ってみます。
+			 <a href="/post/theia/desktop/"><span style="color:#01AAED">Read More</span></a>
+        </h3>
+    </blockquote>
+
+                    
+                            <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+        <a href="/post/theia/docker_settings/">
+            <h2 class="">Theia | Gitpodの環境設定</h2>
+        </a>
+        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-04-12</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/theia/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Theia</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/ide/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">IDE</span>
+        </a>
+    
+        <a href="/tags/development/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Development</span>
+        </a>
+    
+    
+</h3>
+        <h3>
+        	
+				Theiaを動かすならまず真っ先にGitpodが候補に挙がります。Gitpodはクラウド上でDocker環境で提供されているためその環境設定について解説します
+			 <a href="/post/theia/docker_settings/"><span style="color:#01AAED">Read More</span></a>
+        </h3>
+    </blockquote>
+
+                    
+                            <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+        <a href="/post/theia/theia/">
+            <h2 class="">Theia | Theiaを始めてみよう</h2>
+        </a>
+        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-04-10</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/theia/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Theia</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/ide/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">IDE</span>
+        </a>
+    
+        <a href="/tags/development/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Development</span>
+        </a>
+    
+    
+</h3>
+        <h3>
+        	
+				Theiaとは何か？そしてどこでどうしたら使えるのか。何それおいしいの？を探ってみました。
+			 <a href="/post/theia/theia/"><span style="color:#01AAED">Read More</span></a>
+        </h3>
+    </blockquote>
+
+                    
+                            <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+        <a href="/post/misc/macos02/">
+            <h2 class="">macOS 便利な使い方</h2>
+        </a>
+        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-04-01</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/misc/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Misc</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/mac/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Mac</span>
+        </a>
+    
+    
+</h3>
+        <h3>
+        	
+				Macの便利な使い方をご紹介します。当方が遭遇したものをその都度追加していく予定です
+			 <a href="/post/misc/macos02/"><span style="color:#01AAED">Read More</span></a>
+        </h3>
+    </blockquote>
+
+                    
+                            <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+        <a href="/post/electronic_kit/arduino001/">
+            <h2 class="">Arduino | Arduinoでリモコンを作ろう</h2>
+        </a>
+        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-02-12</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">電子工作</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/arduino/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Arduino</span>
+        </a>
+    
+    
+</h3>
+        <h3>
+        	
+				Arduinoでリモコンを作成を作ってみたいと思います。いわゆる赤外線の信号を読み取り保管し、同じ進行を赤外線LEDで発光するという回路です。
+			 <a href="/post/electronic_kit/arduino001/"><span style="color:#01AAED">Read More</span></a>
+        </h3>
+    </blockquote>
+
+                    
+                
+            </div>
+
+            <div class="layui-col-md4 layui-col-sm4 layui-col-xs12">
+                <div class="layui-row about">
+                    <div class="layui-col-12 about_left">
+                        <img class="lazyload about_portrait" data-src="/images/logo.jpg" />
+                        <h2> Always Basics </h2>
+                        
+                        
+                        
+                        
+                        <div class="layui-row layui-col-space10 about_left_icon">
+                            
+                            <div class="layui-col-md3 layui-col-sm3 layui-col-xs3">
+                            <a href="https://github.com/kzthrk/"><i class="fa fa-github" style="font-size:32px;"></i></a>
+                            </div>
+                            
+                            <div class="layui-col-md3 layui-col-sm3 layui-col-xs3">
+                            <a href="mailto:kzthrk@gmail.com"><i class="fa fa-envelope-o" style="font-size:32px;"></i></a>
+                            </div>
+                            
+                            <div class="layui-col-md3 layui-col-sm3 layui-col-xs3">
+                            <a href="https://twitter.com/Always_Basics"><i class="fa fa-twitter" style="font-size:32px;"></i></a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="layui-row search">
+                    
+                    <input id="search" type="text" name="search" placeholder="Intra-Site Search" autocomplete="off" class="layui-input">
+                    <script type="text/javascript">
+                        $("#search").keyup(function(event){
+                            if(event.keyCode ==13){
+                                document.location = "https://www.google.com/search?q=" + $("#search").val() + "+site%3Ahttp:\/\/memorandum.always-basics.com\/"
+                            }
+                        });
+                    </script>
+                    
+                </div>
+                <div class="layui-row taxonomy">
+                    
+                        <h2><a href="/categories">categories</a> </h2>
+                        
+                            <a href="/categories/misc/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">misc</span>
+                            </a>
+                        
+                            <a href="/categories/programming/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">programming</span>
+                            </a>
+                        
+                            <a href="/categories/theia/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">theia</span>
+                            </a>
+                        
+                            <a href="/categories/web/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">web</span>
+                            </a>
+                        
+                            <a href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">電子工作</span>
+                            </a>
+                        
+                    
+                        <h2><a href="/tags">tags</a> </h2>
+                        
+                            <a href="/tags/arduino/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">arduino</span>
+                            </a>
+                        
+                            <a href="/tags/config/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">config</span>
+                            </a>
+                        
+                            <a href="/tags/development/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">development</span>
+                            </a>
+                        
+                            <a href="/tags/hugo/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">hugo</span>
+                            </a>
+                        
+                            <a href="/tags/ide/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">ide</span>
+                            </a>
+                        
+                            <a href="/tags/install/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">install</span>
+                            </a>
+                        
+                            <a href="/tags/javascript/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">javascript</span>
+                            </a>
+                        
+                            <a href="/tags/mac/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">mac</span>
+                            </a>
+                        
+                            <a href="/tags/note/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">note</span>
+                            </a>
+                        
+                            <a href="/tags/vue.js/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">vue.js</span>
+                            </a>
+                        
+                            <a href="/tags/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf/">
+                                <span class="layui-badge layui-bg-red" style="margin: 5px">静的サイトジェネレータ</span>
+                            </a>
+                        
+                    
+                </div>
+                <div class="layui-row">
+                    <div class="ad">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9230307049349065" data-ad-slot="8967221851"
+    data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+
+        </div><footer>
+    
+
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs6">
+                <h3> Related Sites </h3>
+            </div>
+        </div>
+        <div class="layui-row">
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="https://python.always-basics.com/"><p class="footer-url">Pythonなら空も飛べるはず</p></a>
+            </div>
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/about/"><p class="footer-url">About</p></a>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
 </html>

@@ -36,4 +36,4 @@ draft: false
 
 ## Contact
 - E-mail  kzthrk @ gmail.com
-- Twitter [@Always-Basic](https://twitter.com/always_basics)
+- Twitter [@Always_Basic](https://twitter.com/always_basics)

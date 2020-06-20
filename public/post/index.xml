@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Memorandum - Danger past, god forgotten</title>
+    <link>http://memorandum.always-basics.com/post/</link>
+    <description>Recent content in Posts on Memorandum - Danger past, god forgotten</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 May 2020 16:47:51 +0900</lastBuildDate>
+    
+	<atom:link href="http://memorandum.always-basics.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2. npmでパッケージ管理して、webpackでビルドする</title>
+      <link>http://memorandum.always-basics.com/post/programming/vue2/</link>
+      <pubDate>Wed, 06 May 2020 16:47:51 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/programming/vue2/</guid>
+      <description>はじめに 本稿で取り扱う内容は、本来であればvue-cliを使うべきです。 ですが、公式でも初めてのvueにおいては以下のように言及があり、使用に慎重になるべきです。
+ CLI は Node.js および関連するビルドツールに関する事前知識を前提としています。Vue またはフロントエンドビルドツールを初めて使用している場合、CLI を使用する前に、ビルドツールなしでガイドを参照することを強くお勧めします。
+ 確かにその通りではありますが、それはvue-cliによって余りに多くの仕組みが導入されてしまうことにあるからであって、vueを習得する上で永遠をindex.htmlだけを編集し続けていても、結局vueを知って欲しいという書き手の思いだけが達成されるだけで、我々にはその次のステージへ進むタイミングで同じ課題は生じるわけです。
+また、何か公式ガイド以外モノを参考にしようとした時に、きっとこの教えを守って1ファイルだけで実践している例などは掲載されておらず、成長の妨げにすらなり得ます。(正直、詰んでるんですけど？ってことに)
+npmによるパッケージインストールとビルド環境の構築 ということで、当サイトとしてはソースコードを書いて動作を確認するという部分(ビルドするという部分)においては、先取りしてしまいます。
+npm コマンドによる初期設定 まずはnpmコマンドで自分自身を定義します。といっても全てEnterキーの連投でOKです。 あとから変えることも出来ますし、今回はこの記事に沿って体験するだけが目的かと思いますので、是非連投で。
+実行コマンド
+npm init 実行例
+MacBookPro:accessLogAnalyzer $ npm init This utility will walk you through creating a package.json file. It only covers the most common items, and tries to guess sensible defaults. See `npm help json` for definitive documentation on these fields and exactly what they do. Use `npm install &amp;lt;pkg&amp;gt;` afterwards to install a package and save it as a dependency in the package.</description>
+    </item>
+    
+    <item>
+      <title>1. HTMLとJavaScriptの単純構成で初めのVue.js</title>
+      <link>http://memorandum.always-basics.com/post/programming/vue1/</link>
+      <pubDate>Tue, 05 May 2020 16:47:47 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/programming/vue1/</guid>
+      <description>はじめに それでは早速ですが、まずはHTMLとJavaScriptを1つずつ用意して簡単なvue.jsアプリを作成してみましょう。 本稿ではプロジェクト名(アプリ名)を「Access Log Analyzer」とします。 そして、以下を前提とします。
+export PROJECT_NAME=&amp;quot;accessLogAnalyzer&amp;quot; export PROJECT_DIR=&amp;quot;${HOME}/${PROJECT_NAME}&amp;quot; コマンドやファイルのパスを示すに当たって、${PROJECT_DIR}という環境変数で示すようにしますが、実行結果、ログをご紹介するときは、上記の実際の値で出力されているものを掲載しています。
+1.1　ディレクトリ作成 mkdir ${PROJECT_DIR} cd ${PROJECT_DIR} mkdir src mkdir public cd public srcディレクトリに以下の内容のindex.htmlとindex.jsを作成します。
+ファイル名: index.html
+&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;vue.js hello Vue! &amp;lt;/title&amp;gt; &amp;lt;script src=&amp;quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt; {{ message }} &amp;lt;/div&amp;gt; &amp;lt;script src=&amp;quot;/index.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; ファイル名: index.js
+var app = new Vue({ el: &#39;#app&#39;, data: { message: &#39;Hello Vue!&#39; } }) これらはpublicディレクトリに直接作成しても構いませんが、2.npmでパッケージ管理して、webpackでビルドするを念頭に、その役割を意識するために、あえてsrcディレクトリを設けています。
+publicディレクトリを設けているので、もちろんソースコードから実際に稼働するpublicディレクトリへの配置が必要です。必要な作業は単なるコピーのはずですが、ここではあえてbuild.shというファイルを作成します。
+cd ${PROJECT_DIR} ファイル名: build.sh
+#!/bin/bash export PROJECT_NAME=&amp;quot;accessLogAnalyzer&amp;quot; export PROJECT_DIR=&amp;quot;${HOME}/${PROJECT_NAME}&amp;quot; cd ${PROJECT_DIR} cp -p .</description>
+    </item>
+    
+    <item>
+      <title>初めてのVue.js</title>
+      <link>http://memorandum.always-basics.com/post/programming/vue/</link>
+      <pubDate>Tue, 05 May 2020 16:12:05 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/programming/vue/</guid>
+      <description>はじめに 初めてのVue.jsということで、本当にいちからはじめてみたいと思います。
+前提となる基礎知識は、JavaScriptがなんとなく分かる程度です。
+私自身はJavaScriptができるとは到底言えないレベルですが、なんとなく読めてなんとなくかけます。(仕事をする上で一番たちの悪いパターンですね) node.jsやnpmコマンドも使ったことがありますし、他のフレームワークの経験もあります。
+そのため、以下のような開発スタイルをなんとか自力でとれるレベルです。
+ node.jsを複数インストールし切り替え可能な環境を構築し、 npmコマンドを使ってパッケージ管理をして フレームワークの標準に沿ったソースファイルを編集することでプログラミングをし webpackを使ってビルドをして node.jsでAPIを提供するアプリに組み込んで、  SPA(Single Page Application)と呼ばれるWebのシステムを1つ動かすことができます。
+さて、出発点を挙げるとするならば、やはりオフィシャルサイトの以下です。 https://jp.vuejs.org/v2/guide/installation.html
+誰も否定する人はいないと思いますが、如何せん分かりやすいとは言えません。
+例えばインストール手順ですが、HTML内でCDNを指せばいいと言ったかと思えば、npm install vueなどと言い放ったりします。
+当然これらは同値ではありません。全然次元が違うじゃんと。
+CDNは指せば動きますが、npmでインストールしてもそれだけではなにも動作しないわけです。CLIを使ったインストール方法も紹介されていますが、CLIでのインストールでは裏でこのnpmでインストールが実行されているのであって、はっきり言ってなんのこっちゃ？です。
+そっちがその気ならこっちも言わせてもらいますと
+「てめーが書きたいことを書いて満足してるんじゃねーぞ」
+ってなもんです。
+コンテンツ さて当サイトのコンテンツは、次のような構成となります。
+ HTMLとJavaScriptの単純構成で初めのVue.js npmでパッケージ管理して、webpackでビルドする Vue.jsでアプリ開発  『1.HTMLとJavaScirptの単純構成で初めてのVue.js』では、index.htmlとindex.jsの2ファイルだけでVue.jsを体験します。実際の所、この2つだけで最後まで開発しきることは無理ではないと思います。したがって、とにかく試して試して試すだけという人は、このまま突き進んでも良いかと思います。
+続いて『2.npmでパッケージ管理して、webpackでビルドする』では、『1.HTMLとJavaScirptの単純構成で初めてのVue.js』のindex.htmlとindex.jsをゴールに定めて、開発環境を整える手順を紹介します。
+具体的には、
+ 複数バージョンを切り替え可能なようにNode.jsをインストール npmでBabelとWebPackをインストール WebPackを構成して、ビルド  の流れでご紹介します。
+読者の前提をJavaScrptがなんとなく分かる程度という風に設定していますので、 Node.jsやnpmで寄り道し、BabelやWebPackについても取り上げます。
+最後に『3.Vue.jsでアプリ開発』ですが、ここではVue.jsでアプリ開発する上で必要となる要素を一通り試していきたいと思います。もちろん『1.HTMLとJavaScirptの単純構成で初めてのVue.js』から直接ここへ来て試すだけ試すというのも可能です。
+それでは早速ですが、1. HTMLとJavaScriptの単純構成で初めのVue.jsへどうぞ。</description>
+    </item>
+    
+    <item>
+      <title>Theia | Desktop版の可能性を探索</title>
+      <link>http://memorandum.always-basics.com/post/theia/desktop/</link>
+      <pubDate>Mon, 13 Apr 2020 15:22:45 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/theia/desktop/</guid>
+      <description>Theia デスクトップ版 Theia デスクトップ版とはなにか？ですが、デスクトップ版の意味として、ネイティブなデスクトップ・アプリケーションが思い浮かぶと思います。ですので、その候補を挙げます。
+2020.04.13時点でのデスクトップ版の状況は芳しくありません。 ひとまずhttps://github.com/eclipse-theia/theia　のGetting Startedに記載のある候補を当たってみることにします。
+   No. 候補 URL     1 Run Theia in Docker https://github.com/theia-ide/theia-apps#theia-docker   2 Package a desktop Theia application with Electron https://github.com/theia-ide/yangster-electron    Theia デスクトップ版 候補その1 「Run Theia in Docker」ってその名の通りDockerであって、デスクトップ版アプリっていうのは違うだろ？ そうなんですが、行ってみるとTheia Desktopの文字があるんです。
+ですが&amp;hellip;
+はい、そのうち登場するかも知れないので、本稿の勝手な使命としてあげておきました。
+Theia デスクトップ版 候補その2 つづいてリンク名称的には本命のPackage a desktop Theia application with Electronです。 ですが、こちらも残念ながら「Latest commitea4c3d5on 13 Mar 2018」とあるとおり、期待できません。
+自分でビルドする以外に、以下のリンクからビルド済みのパッケージを入手可能です。 ですがよい子の皆さんは、この記事を見るだけにして、真似はしない方が良いでしょう。
+https://github.com/theia-ide/yangster-electron/releases/tag/v0.1.1
+Mac版が、Yangster-0.1.1.dmg Windows版が、Yangster-Installer-0.1.1.exe
+どっちの環境も試せますが、Mac版で試しました。</description>
+    </item>
+    
+    <item>
+      <title>Theia | Gitpodの環境設定</title>
+      <link>http://memorandum.always-basics.com/post/theia/docker_settings/</link>
+      <pubDate>Sun, 12 Apr 2020 09:24:50 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/theia/docker_settings/</guid>
+      <description>Gitpodの環境設定 はじめに 本稿は、Theia | Theiaを始めてみようの中でGitpodおよびその中で使用されるDockerの設定について切り出したものです。
+Github権限設定 作業に入る前にGithubでのGitpodの権限を変更します。すでに行われている場合は不要ですが、当サイトの流れでここまできた場合には行われていないはずです。
+右上のアイコンをクリックしてメニューを表示して、Open Access Controlをクリックします。
+write public reposにチェックを入れて、Updateをクリックします。
+これで、設定作業の中で行うブランチの作成やコミット作業が可能になります。
+環境設定 設定がまだ済んでいない場合、右下にGitpodの設定が出来るますよと小さなウインドウが出ているかと思います。 もちろん出ていなくても、この記事にあるように2つのファイルを作成することで設定することは可能です。 本稿では、敷かれたレールの上を走る形で設定したいと思います。
+赤枠で囲ったところが、表示されました。ついでに右側のバーにも1つアイコンが増えています。 設定が終わると消えてしまうようですが、それまでは表示されているようですので、もし何らかの操作によって閉じてしまった場合には、ここから再度呼び出してください。
+まずは、一番上のCreate .gitpod.ymlをクリックします。
+Create .gitpod.ymlボタンをクリックします。
+update .gitpod.Dockerfileボタンをクリックします。
+ベースとするイメージを選択します。
+.gitpod.Dockerfile を作ります。
+.gitpod.yml には、Dockefileの項目が追加されていると思います。 編集するのは、.gitpod.Dockerfileの方です。
+上記は、xclipをインストールしてみた時の例です。
+Test Drive Configurationをクリックして、Push to Branch &amp;amp; Start Workspaceをクリックします。
+直接保管した上で再起動しても問題無いのですが、間違っていたとき、想定している結果が得られなかったときに少し面倒です。 そのため、マニュアルにも記載がありますが現時点では別ブランチでコミットしておいては、Github側から新しいインスタンスを使い捨てで起動してテストすることが勧められています。
+上手く動作することが分かった場合には、そのブランチをマージするようにします。
+Create a pull requestをクリックし、Open Pull Request Viewをクリックします。
+Publish Changesをクリックします。
+ブランチをmasterから先ほど作成したxxxxx/gitpod-setupを選択します。
+設定ファイルをコミットします。左のバーでGitのペインを呼び出します。変更対象のファイルをステージングし、コメントを入力してコミットします。
+pushをクリックしてください。
+Githubにアクセスして、ブランチを先ほどpushしたブランチに切り替えてからGitpodボタンをクリックします。
+Theiaが起動しますが、その時Dockerが初期化されているのが確認できます。
+環境したら環境がセットアップされているはずです。変更を加えた内容に応じて確認してください。
+問題が無ければ、これを元のブランチにマージすることでDockerの設定作業は完了です。
+その他、.gitpod.ymlを編集することで、起動した際の動作(例えばサーバーを毎回起動するなども)可能です。 その場合には、以下echo部分を変更してください。
+以上で、Gitpodの環境設定は終了です。</description>
+    </item>
+    
+    <item>
+      <title>Theia | Theiaを始めてみよう</title>
+      <link>http://memorandum.always-basics.com/post/theia/theia/</link>
+      <pubDate>Fri, 10 Apr 2020 23:25:55 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/theia/theia/</guid>
+      <description>はじめに Theiaとは まずは読み方ですが『テイア』と読むようです。
+Theiaとは公式ページの説明を借りれば
+ Eclipse Theia is an extensible platform to develop multi-language Cloud &amp;amp; Desktop IDEs with state-of-the-art web technologies.
+ Eclipse Theiaは、最先端のWebテクノロジーを使用して多言語のクラウドおよびデスクトップIDEを開発するための拡張可能なプラットフォームです。
+だからなに？ 我々一般ユーザーにとって見れば、このスクリーンショットのような開発環境が提供されるってことです。
+つまりは？ こちらの記事で紹介されていますが、デスクトップ版とブラウザ版が想定されていて、どちらでも同じソースコードで開発環境が提供されることになります。
+Visual Studio Codeの代替を狙う統合開発環境「Eclipse Theia 1.0」リリース。VS Codeの拡張機能を利用可能、デスクトップ版とWebブラウザ版に両対応
+ Eclipse Theiaは、「真のオープンソースによるVisual Studio Codeの代替」（a true open source alternative to Microsoft’s popular Visual Studio Code (VS Code) software）だとEclipse Foundationは紹介しており、デスクトップアプリケーションだけでなくWebブラウザからも同一機能が利用できるWebアプリケーション版も提供されています。
+ Theiaとは？ 仕切り直しますね。Theia とはVS Code(Vidual Studio Code)そっくりなんですが、それがブラウザの中で(も)動きます。先に書いた通りデスクトップ版もありますが、デスクトップ版というのはElectronでパッケージングしたものになるので、それってそのまんまVS Codeじゃんってことですね。
+脱線: ElectronとはNode.jsのアプリ(サーバーサイド)とChromium(ブラウザ)を一塊にすることでデスクトップ・アプリケーションにするフレームワークです。
+この投稿を読んでいる方がVS Codeを聞いたことがないとは思えないですが、念のため簡単に触れておくと、Microsoftが開発しているElectronベースのソースコードエディタです。 ソースコードエディタって微妙な表現ですが、MicrosoftはVisual Studioという統合開発環境をもっていてそのエディタ部分だけを切り出したというイメージなので、VS Code自身はソースコードエディタという説明に。 ただご承知の通り、だれもソースコードエディタとしての使用にとどまっている人はおらず、豊富な拡張機能を 拡張機能(プラグイン) をガシガシインストールして統合開発環境として使用している訳です。</description>
+    </item>
+    
+    <item>
+      <title>macOS 便利な使い方</title>
+      <link>http://memorandum.always-basics.com/post/misc/macos02/</link>
+      <pubDate>Wed, 01 Apr 2020 21:43:54 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/misc/macos02/</guid>
+      <description>はじめに 本稿では、Macでこんな設定こんな使い方すると便利だよ！というのを紹介していきます。 最初投稿では1つしかない状態で、都度追加していく方式です。
+お品書き  どこでも(フォルダ指定)で、VSCodeを開く  どこでも(フォルダ指定で)VS Codeを開く 前書き iTermを使われている方は、Finderを使っていてどこでもiTermが開けると思います。(設定次第だったかも知れませんが、とにかく可能です。) VSCodeやAtomを使われている方は、ターミナル内でコマンドを実行することでそれぞれ起動可能なことと思います。
+こんな感じでVSCodeを呼び出すことで、フォルダを開いた状態で起動します。
+MacBookPro ~ $ code . 長らくこの方法で使っていたのですが、やはり都度ターミナルが増えちゃう(閉じなければならない。Command+w)というのは少しイケてません。
+これをFinderのポップアップメニューから直接指定して起動できればどうでしょう。それを実現するモノです。
+設定方法 私はこのやり方でVSCodeを開けるようにしていますが、他のアプリでもやり方は同じです。
+まずは、automator.appを起動します。
+クイックアクションをクリックし、選択ボタンをクリックします。 ファイルとフォルダをクリック、Finder項目を開くを右側のペインへドラッグします。
+アプリケーションを選択します。VSCodeの場合は、その他をクリックします。
+Visual Studio Code,appを選択して、選択をクリックします。
+あとはファイル→保存…で名前を付けて保存します。
+automator.appは終了して構いません。
+Finderを開いて、フォルダを右クリックして、付けた名前(ここではVSCodeで開く)をクリックしてください。
+無事に動作しましたでしょうか。
+今回の場合、フォルダでもファイルでも開けます。 もっともファイルの場合にはこのアプリケーションで開くという機能がそもそもあるのでありがたみもありませんが。</description>
+    </item>
+    
+    <item>
+      <title>Arduino | Arduinoでリモコンを作ろう</title>
+      <link>http://memorandum.always-basics.com/post/electronic_kit/arduino001/</link>
+      <pubDate>Wed, 12 Feb 2020 11:15:17 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/electronic_kit/arduino001/</guid>
+      <description>概要 Arduinoでリモコンを作成してみたいと思います。作成するリモコンは赤外線を使った一般的なリモコンです。いわゆるテレビやエアコンなどを操作するリモコンで、単純にリモコン側から赤外線を使った信号を送りつけ、本体が側がそれに反応しているタイプのものです。
+一部のリモコンには一方通行ではないものがあるようですが、今回作成するArduinoのリモコンはそれには対応していません。
+準備するもの Arduinoでリモコンを作成するにあたり、必要なパーツを以下にリストします。まずArduinoでリモコンに特化したものを先に挙げます。続いて、ArduinoでLチカだったり、Raspberry Piでリモコンだったり、いわゆる電子工作として一般的に必要なものをリストします。この分類は微妙な線引きではありますが、察してやって下さい。
+Arduinoでリモコンに必要なもの    価格 品名 備考     100円 赤外線リモコン受信モジュール OSRB38C9AA（2個入）    100円 5mm 赤外線LED OSI5LA5113A（10個入） 可視光線のLEDもあると動作確認に便利。赤外線は目に見えないので。   200円 抵抗 27Ω 1W（100本入） これである必要はありません。実際、最終的には並行に繋いで抵抗を下げました。   1980円 ESPr® Developer（ESP-WROOM-02開発ボード） これも他のArduinoでもOKです。実際最初はUnoを使って試していました    電子工作として一般的に必要なもの    参考価格 品名 商品例     35円 ピンヘッダ ピンヘッダ　１×４０　（４０Ｐ）   270円 ブレッドボード ブレッドボード（1枚）   180円 ジャンパーワイヤ ブレッドボード・ジャンパーワイヤ（オス－オス）　１０ｃｍセット   60円 ユニバーサル基板 片面ガラスコンポジット・ユニバーサル基板　Ｃタイプ　めっき仕上げ　（７２×４７ｍｍ）　日本製   210円 はんだ はんだ　０．８ｍｍ   2,300円 はんだごて 即熱はんだこて　ＴＱ－９５（９０Ｗ／１５Ｗ）    これらに関しては、これでなければダメというものでもありませんし、道具の類いは特に好みやこだわりもあると思いますので、手持ちのものをご使用いただくか、必要に応じて購入(場合によっては我慢)するなど、適宜ご判断の上お願いします。</description>
+    </item>
+    
+    <item>
+      <title>2. Hugoで作成したサイトを追加構成</title>
+      <link>http://memorandum.always-basics.com/post/web/hugo002/</link>
+      <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/web/hugo002/</guid>
+      <description>はじめに 前回は静的サイトジェネレータ Hugoをインストールで、静的サイトジェネレータのひとつであるHugoをインストールしました。 今回はそのサイトに記事を増やす方向の充実ではなく、機能や構成を充実させていく方向でのメモをです。
+この記事は、順次追記されて充実していきます。(つまり、最初は1つ、2つしかトピックがありません)
+Hugoで作成したサイトに追加の構成を行う sitemap.xml Googleさんをはじめ各種サーチエンジンに正しく認識してもらうためにも、sitemap.xmlがあった方がいいですね。 Hugoは自動的にsitemap.xmlが生成されています。
+ただ、カテゴリーやタグのページはページ自体をコンテンツとして見たときに纏まっているわけではなく、あくまで集合体、リンク集に過ぎません。 そのため、すべてをsitemap.xmlに載せたくない。そんなときに、sitemap.xmlは自動生成させるも、いいさじ加減にするための方法がこちらです。
+これがGoogle先生に気に入られるという話ではありません。こうやったら出来るんですよ。この作りを覚えておきましょうねというものです。
+設定方法 layoutsディレクトリ配下に以下のsitemap.xmlファイルを配置するだけです。
+&amp;lt;urlset xmlns=&amp;#34;http://www.sitemaps.org/schemas/sitemap/0.9&amp;#34;&amp;gt; {{ range .Data.Pages }} {{ if .IsPage }} &amp;lt;url&amp;gt; &amp;lt;loc&amp;gt;{{ .Permalink }}&amp;lt;/loc&amp;gt; {{ if not .Lastmod.IsZero }} &amp;lt;lastmod&amp;gt;{{ safeHTML ( .Lastmod.Format &amp;#34;2006-01-02T15:04:05-07:00&amp;#34; ) }}&amp;lt;/lastmod&amp;gt; {{ end }} &amp;lt;/url&amp;gt; {{ end }} {{ end }} &amp;lt;/urlset&amp;gt; 雑でも説明はあった方が良いかと思いますので致しますと、ページある分だけループを回してそのページがコンテンツのページだったら sitemap.xmlに載るようにし、最終更新日時がとれなかったらそれは出さないようになっています。
+ま、このサイトではGoは知らぬ存ぜぬの立場で書いていますので、この要件で良ければこのままコピペで良いと思います。
+確認 http://localhost:1313/sitemap.xmlにアクセスして下さい。
+もちろんこれは、前回も記載しましたがhugo server -wを実行している前提です。
+GoogleAnalytics GoogleAnalyticsとの連携は、拍子抜けするほど簡単です。
+設定方法 config.tomlに以下を設定するだけです。
+# Google Analytics googleAnalytics = &amp;#34;UA-xxxxx-xx&amp;#34; 確認 これに関しては、確認を割愛します。</description>
+    </item>
+    
+    <item>
+      <title>MacOS | MacOS Catalinaへのアップデート</title>
+      <link>http://memorandum.always-basics.com/post/misc/macos/</link>
+      <pubDate>Mon, 10 Feb 2020 16:24:31 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/misc/macos/</guid>
+      <description>概要 職業柄OSは最新を常に使うようにしています。と、同様に職業柄少し遅れて(様子見てから)OSのアップデート(最新化)はします。
+先陣切って乗り込むと、OSとしての問題に遭遇し、その解決方法が現在進行形で目の前を流れて行きます。 OSのバグが理由で仕事が停滞してしまったり、その情報を追うのに時間を取られるというのは困りものです。
+もう一つは、仕事で使うツール類がすべて自分と同じペースでアップデートをしているわけではないということです。 こちらはどんなに自分に頑張る気があっても、開発している側がそれに追いついていなければ一向に前に進みません。
+なので、少し遅れてアップデートするようにしています。
+一つ今になった理由としては、仕事が忙しい時期には出来ないということです。
+もしも問題が起こった時には、事前に取得済みのバックアップから戻すといったことも想定しなければなりませんし、最悪のケースとしては 文鎮化するということさえどこかで覚悟は必要です。
+ということで、少し遅れて+仕事が落ち着いているときの結果が2月になってしまったという次第です。
+内容 内容は1つずつ対応するたびにアップデートして追加していきます。 つまり、いまから書く内容は次の1つだけです。
+ アップデート後gitコマンドが使えない  アップデート後gitコマンドが使えない 文字通りCatalinaにアプデート後、gitコマンドを使用しようとするとxcrunがないと怒られる。 前提としては、Xcode/Command Line Toolsでgitをインストールしているというのがあるかと思います。 Homebrewとかgitが用意したインストーラーだったり、人それぞれだと思います。
+エラー、症状 xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun 対応 xcode-selectをインストールし直しました。
+xcode-select --install 確認 その後、バージョン表示させて確認しました。
+git --version MacBookPro-2:~ $ git --version git version 2.21.1 (Apple Git-122.3) MacBookPro-2:~ $ おわり。</description>
+    </item>
+    
+    <item>
+      <title>1. 静的サイトジェネレータ Hugoをインストール</title>
+      <link>http://memorandum.always-basics.com/post/web/hugo001/</link>
+      <pubDate>Thu, 06 Feb 2020 13:57:04 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/web/hugo001/</guid>
+      <description>はじめに 静的サイトジェネレータのひとつであるHugoをインストールし、実際にWebサイトとして公開する過程を記録しました。
+このサイトはHugoを使って作成されています。
+静的サイトジェネレータ ところで静的サイトジェネレータってなに？ 静的サイトジェネレータなんて聞き覚えのない言葉かも知れません。私も聞き覚えは無かったのですがはてなとかQiitaがMarkdownで記事を書けるのを見ていて、自分のサイトでも同じことをしてみようかなと思い一瞬自作が頭をよぎったところで、でも冷静に考えてみるとMarkdownをHTMLに変換するライブラリ、エディタの拡張(プラグイン)はいくつもあるわけで、誰かが仕組みを作ってくれているのでは？と思い「静的　サイト　生成」をキーワードに検索して存在をしった次第です。
+静的サイトジェネレータの使い方 静的サイトジェネレータとは、文字通り静的サイトを作るものなので、Webサイトとして公開するには、出来上がったファイルをいわゆるApacheやNginxといったWebサーバーが見ているディレクトリにコピーすれば良いだけです。
+雑な表現で流れをつかむとしたら、以下の1〜3の手順を繰り返すことでブログの運用をするというイメージです。
+静的サイトジェネレータをご自身のパソコンにインストール(これは最初の1回目だけ) Markdownで記事を書く ジェネレートする アップロードする  また作成されるものが静的であるということは、PHPやPython、Rubyなどの言語環境はもとよりデータベースなども不要なことから、ご自身でサーバーを借り受けて運用する必要もなく、例えばGitHub Pagesのように無料のサービスを使ってWebサイトを公開することも可能です。
+静的サイトジェネレータ Hugo 静的サイトジェネレータが何者かは分かりました。ではHugoとは何者でしょうか？ HugoとはGo言語というGoogleが開発したプログラミング言語で作られた静的サイトジェネレータです。 安心してください。Goについてはまったく知る必要はありません。Goをインストールするということもありません。 知って頂くのは嬉しいですが、知らなくてもHugoに関しては使いこなせます。
+静的サイトジェネレータはHugo以外にもいくつも存在しています。できることは似たり寄ったり。というかどのツールもゴールは静的ページの生成なので、そんなに劇的に違うと事件ですよね？この記事では比較はいたしませんが、ひとまずHugoを押しておきます。
+Hugoのインストール 前提 静的サイトジェネレータHugoをインストールするための前提ではありません。この記事が例示するのが、以下のOS,バージョンというだけです。
+macOS 10.14.6
+実際には、Windows、Mac、Linuxと事実上この記事の読者全ての方がインストール可能かと思います。
+手順1 Hugoのインストール Hugoのインストール手順はとても簡単です。Homebrewを使えば一発インストールが可能です。
+brew install hugo 長々と処理が流れて行きますが、しばらく放置しておけば良いです。
+もしHomeBrewがまだインストールされていない場合は、こちらを参考にしてインストールしてください。 とはいっても、以下のコマンドを1発実行するだけだと思います。
+/usr/bin/ruby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34; 手順2 新規サイトの作成 Hugoをインストールすると、hugoコマンドが使えるようになります。 ここでは、memorandum.always-basics.comという新規サイトを作成するべく、以下のコマンドを実行します。
+hugo new site memorandum.always-basics.com MacBookPro-2:git $ hugo new site memorandum.always-basics.com Congratulations! Your new Hugo site is created in /Users/user/git/memorandum.always-basics.com. Just a few more steps and you&#39;re ready to go: 1.</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>http://memorandum.always-basics.com/post/misc/welcome/</link>
+      <pubDate>Wed, 05 Feb 2020 13:57:04 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/post/misc/welcome/</guid>
+      <description>はじめに この投稿はお試し投稿です。
+なにするサイト？ このサイトでは、プログラミング言語や電子工作など日頃行っている作業のメモを纏め公開していく予定です。 加えてそれに日々の雑多な疑問などTwitterに収まりきらないようなものもダラダラと投下します。
+このカテゴリー(Misc)とタグ(note)はダラダラ系なので、programmingやelectric_kitあたりを中心に見て回っていただければと思います。
+お試し それでは早速Markdown記法でいくつかお試しです。 Markdown記法、実際の表示の順に並べていきます。
+見出し # 見出し1 ## 見出し2 ### 見出し3 #### 見出し4 ##### 見出し5 ###### 見出し6 見出し1 見出し2 見出し3 見出し4 見出し5 見出し6 箇条書きリスト markdown - リスト1 - ネスト リスト1_1 - ネスト リスト1_1_1 - ネスト リスト1_1_2 - ネスト リスト1_2 - リスト2 - リスト3 実例  リスト1  ネスト リスト1_1  ネスト リスト1_1_1 ネスト リスト1_1_2   ネスト リスト1_2   リスト2 リスト3  番号つきリスト markdown 1.</description>
+    </item>
+    
+  </channel>
+</rss>

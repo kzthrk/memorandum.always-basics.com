@@ -1,0 +1,80 @@
+baseURL = "http://memorandum.always-basics.com/"
+languageCode = "en-us"
+title = "Memorandum - Danger past, god forgotten"
+theme = "hugo-notepadium"
+hasCJKLanguage = "true"
+copyright = "©2020 Always Basics."
+enableRobotsTXT = true
+
+# Google Analytics
+googleAnalytics = "UA-75025058-6"
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+
+[markup.goldmark.renderer]
+unsafe = true  # enable raw HTML in Markdown
+
+[params]
+style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+# dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
+slogan = "継続する秘訣は、途切れたと思った時にもう一度繰り返すこと"
+license = ""  # CC License
+logo = "/images/logo.jpg"
+readingTime = false  # show reading time after article date
+
+mainSections = ["electronic_kit", "programming", "web", "theia"]
+
+[params.nav]
+showCategories = false       # /categories/
+showTags = false             # /tags/
+
+# disqus
+disqusShortname = "kzthrk"  # your short name
+
+[params.comments]
+enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+
+# [params.math]
+# enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
+# use = "katex"  # option: "katex", "mathjax". default: "katex"
+
+[params.syntax]
+use = "hljs"  # 1. prismjs 2. hljs 3. none
+theme = "dracula"
+darkTheme = "xcode-dark"  # apply this theme in dark mode
+
+# # custom navigation items
+
+# [[params.nav.custom]]
+# title = "Hugo"
+# url = "https://gohugo.io/"
+
+# [[params.nav.custom]]
+# title = "iOS"
+# url = "/tags/ios"
+
+[[params.nav.custom]]
+title = "プログラミング"
+url = "/categories/programming/"
+
+[[params.nav.custom]]
+title = "Hugo"
+url = "/categories/web/"
+
+[[params.nav.custom]]
+title = "Theia"
+url = "/categories/theia/"
+
+[[params.nav.custom]]
+title = "電子工作"
+url = "/categories/電子工作/"
+
+[[params.nav.custom]]
+title = "Misc."
+url = "/categories/misc/"
+
+[[params.nav.custom]]
+title = "About"
+url = "/about"

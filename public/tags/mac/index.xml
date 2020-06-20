@@ -1,33 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mac on Memorandum - Danger past, god forgotten</title>
-    <link>/tags/mac/</link>
+    <link>http://memorandum.always-basics.com/tags/mac/</link>
     <description>Recent content in Mac on Memorandum - Danger past, god forgotten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>©2020 Always Basics.</copyright>
-    <lastBuildDate>Mon, 13 Apr 2020 21:43:54 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2020 21:43:54 +0900</lastBuildDate>
     
-        <atom:link href="/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://memorandum.always-basics.com/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>macOS 便利な使い方</title>
-      <link>/misc/macos02/</link>
-      <pubDate>Mon, 13 Apr 2020 21:43:54 +0900</pubDate>
+      <link>http://memorandum.always-basics.com/post/misc/macos02/</link>
+      <pubDate>Wed, 01 Apr 2020 21:43:54 +0900</pubDate>
       
-      <guid>/misc/macos02/</guid>
-      <description>はじめに 本稿では、Macでこんな設定こんな使い方すると便利だよ！というのを紹介していきます。 最初投稿では1つしかない状態で、都度追加していく</description>
+      <guid>http://memorandum.always-basics.com/post/misc/macos02/</guid>
+      <description>はじめに 本稿では、Macでこんな設定こんな使い方すると便利だよ！というのを紹介していきます。 最初投稿では1つしかない状態で、都度追加していく方式です。
+お品書き  どこでも(フォルダ指定)で、VSCodeを開く  どこでも(フォルダ指定で)VS Codeを開く 前書き iTermを使われている方は、Finderを使っていてどこでもiTermが開けると思います。(設定次第だったかも知れませんが、とにかく可能です。) VSCodeやAtomを使われている方は、ターミナル内でコマンドを実行することでそれぞれ起動可能なことと思います。
+こんな感じでVSCodeを呼び出すことで、フォルダを開いた状態で起動します。
+MacBookPro ~ $ code . 長らくこの方法で使っていたのですが、やはり都度ターミナルが増えちゃう(閉じなければならない。Command+w)というのは少しイケてません。
+これをFinderのポップアップメニューから直接指定して起動できればどうでしょう。それを実現するモノです。
+設定方法 私はこのやり方でVSCodeを開けるようにしていますが、他のアプリでもやり方は同じです。
+まずは、automator.appを起動します。
+クイックアクションをクリックし、選択ボタンをクリックします。 ファイルとフォルダをクリック、Finder項目を開くを右側のペインへドラッグします。
+アプリケーションを選択します。VSCodeの場合は、その他をクリックします。
+Visual Studio Code,appを選択して、選択をクリックします。
+あとはファイル→保存…で名前を付けて保存します。
+automator.appは終了して構いません。
+Finderを開いて、フォルダを右クリックして、付けた名前(ここではVSCodeで開く)をクリックしてください。
+無事に動作しましたでしょうか。
+今回の場合、フォルダでもファイルでも開けます。 もっともファイルの場合にはこのアプリケーションで開くという機能がそもそもあるのでありがたみもありませんが。</description>
     </item>
     
     <item>
       <title>MacOS | MacOS Catalinaへのアップデート</title>
-      <link>/misc/macos/</link>
+      <link>http://memorandum.always-basics.com/post/misc/macos/</link>
       <pubDate>Mon, 10 Feb 2020 16:24:31 +0900</pubDate>
       
-      <guid>/misc/macos/</guid>
-      <description>概要 職業柄OSは最新を常に使うようにしています。と、同様に職業柄少し遅れて(様子見てから)OSのアップデート(最新化)はします。 先陣切って乗</description>
+      <guid>http://memorandum.always-basics.com/post/misc/macos/</guid>
+      <description>概要 職業柄OSは最新を常に使うようにしています。と、同様に職業柄少し遅れて(様子見てから)OSのアップデート(最新化)はします。
+先陣切って乗り込むと、OSとしての問題に遭遇し、その解決方法が現在進行形で目の前を流れて行きます。 OSのバグが理由で仕事が停滞してしまったり、その情報を追うのに時間を取られるというのは困りものです。
+もう一つは、仕事で使うツール類がすべて自分と同じペースでアップデートをしているわけではないということです。 こちらはどんなに自分に頑張る気があっても、開発している側がそれに追いついていなければ一向に前に進みません。
+なので、少し遅れてアップデートするようにしています。
+一つ今になった理由としては、仕事が忙しい時期には出来ないということです。
+もしも問題が起こった時には、事前に取得済みのバックアップから戻すといったことも想定しなければなりませんし、最悪のケースとしては 文鎮化するということさえどこかで覚悟は必要です。
+ということで、少し遅れて+仕事が落ち着いているときの結果が2月になってしまったという次第です。
+内容 内容は1つずつ対応するたびにアップデートして追加していきます。 つまり、いまから書く内容は次の1つだけです。
+ アップデート後gitコマンドが使えない  アップデート後gitコマンドが使えない 文字通りCatalinaにアプデート後、gitコマンドを使用しようとするとxcrunがないと怒られる。 前提としては、Xcode/Command Line Toolsでgitをインストールしているというのがあるかと思います。 Homebrewとかgitが用意したインストーラーだったり、人それぞれだと思います。
+エラー、症状 xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun 対応 xcode-selectをインストールし直しました。
+xcode-select --install 確認 その後、バージョン表示させて確認しました。
+git --version MacBookPro-2:~ $ git --version git version 2.21.1 (Apple Git-122.3) MacBookPro-2:~ $ おわり。</description>
     </item>
     
   </channel>

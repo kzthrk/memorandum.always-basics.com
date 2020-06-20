@@ -1,33 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Webs on Memorandum - Danger past, god forgotten</title>
-    <link>/web/</link>
+    <link>http://memorandum.always-basics.com/web/</link>
     <description>Recent content in Webs on Memorandum - Danger past, god forgotten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>©2020 Always Basics.</copyright>
     <lastBuildDate>Mon, 10 Feb 2020 23:11:57 +0900</lastBuildDate>
     
-        <atom:link href="/web/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://memorandum.always-basics.com/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hugo | Hugoで作成したサイトを追加構成</title>
-      <link>/web/hugo002/</link>
+      <title>2. Hugoで作成したサイトを追加構成</title>
+      <link>http://memorandum.always-basics.com/web/hugo002/</link>
       <pubDate>Mon, 10 Feb 2020 23:11:57 +0900</pubDate>
       
-      <guid>/web/hugo002/</guid>
-      <description>はじめに 前回は静的サイトジェネレータ Hugoをインストールで、静的サイトジェネレータのひとつであるHugoをインストールしました。 今回はその</description>
+      <guid>http://memorandum.always-basics.com/web/hugo002/</guid>
+      <description>はじめに 前回は静的サイトジェネレータ Hugoをインストールで、静的サイトジェネレータのひとつであるHugoをインストールしました。 今回はそのサイトに記事を増やす方向の充実ではなく、機能や構成を充実させていく方向でのメモをです。
+この記事は、順次追記されて充実していきます。(つまり、最初は1つ、2つしかトピックがありません)
+Hugoで作成したサイトに追加の構成を行う sitemap.xml Googleさんをはじめ各種サーチエンジンに正しく認識してもらうためにも、sitemap.xmlがあった方がいいですね。 Hugoは自動的にsitemap.xmlが生成されています。
+ただ、カテゴリーやタグのページはページ自体をコンテンツとして見たときに纏まっているわけではなく、あくまで集合体、リンク集に過ぎません。 そのため、すべてをsitemap.xmlに載せたくない。そんなときに、sitemap.xmlは自動生成させるも、いいさじ加減にするための方法がこちらです。
+これがGoogle先生に気に入られるという話ではありません。こうやったら出来るんですよ。この作りを覚えておきましょうねというものです。
+設定方法 layoutsディレクトリ配下に以下のsitemap.xmlファイルを配置するだけです。
+&amp;lt;urlset xmlns=&amp;#34;http://www.sitemaps.org/schemas/sitemap/0.9&amp;#34;&amp;gt; {{ range .Data.Pages }} {{ if .IsPage }} &amp;lt;url&amp;gt; &amp;lt;loc&amp;gt;{{ .Permalink }}&amp;lt;/loc&amp;gt; {{ if not .Lastmod.IsZero }} &amp;lt;lastmod&amp;gt;{{ safeHTML ( .Lastmod.Format &amp;#34;2006-01-02T15:04:05-07:00&amp;#34; ) }}&amp;lt;/lastmod&amp;gt; {{ end }} &amp;lt;/url&amp;gt; {{ end }} {{ end }} &amp;lt;/urlset&amp;gt; 雑でも説明はあった方が良いかと思いますので致しますと、ページある分だけループを回してそのページがコンテンツのページだったら sitemap.xmlに載るようにし、最終更新日時がとれなかったらそれは出さないようになっています。
+ま、このサイトではGoは知らぬ存ぜぬの立場で書いていますので、この要件で良ければこのままコピペで良いと思います。
+確認 http://localhost:1313/sitemap.xmlにアクセスして下さい。
+もちろんこれは、前回も記載しましたがhugo server -wを実行している前提です。
+GoogleAnalytics GoogleAnalyticsとの連携は、拍子抜けするほど簡単です。
+設定方法 config.tomlに以下を設定するだけです。
+# Google Analytics googleAnalytics = &amp;#34;UA-xxxxx-xx&amp;#34; 確認 これに関しては、確認を割愛します。</description>
     </item>
     
     <item>
-      <title>Hugo | 静的サイトジェネレータ Hugoをインストール</title>
-      <link>/web/hugo001/</link>
+      <title>1. 静的サイトジェネレータ Hugoをインストール</title>
+      <link>http://memorandum.always-basics.com/web/hugo001/</link>
       <pubDate>Thu, 06 Feb 2020 13:57:04 +0900</pubDate>
       
-      <guid>/web/hugo001/</guid>
-      <description>はじめに 静的サイトジェネレータのひとつであるHugoをインストールし、実際にWebサイトとして公開する過程を記録しました。 このサイトはHug</description>
+      <guid>http://memorandum.always-basics.com/web/hugo001/</guid>
+      <description>はじめに 静的サイトジェネレータのひとつであるHugoをインストールし、実際にWebサイトとして公開する過程を記録しました。
+このサイトはHugoを使って作成されています。
+静的サイトジェネレータ ところで静的サイトジェネレータってなに？ 静的サイトジェネレータなんて聞き覚えのない言葉かも知れません。私も聞き覚えは無かったのですがはてなとかQiitaがMarkdownで記事を書けるのを見ていて、自分のサイトでも同じことをしてみようかなと思い一瞬自作が頭をよぎったところで、でも冷静に考えてみるとMarkdownをHTMLに変換するライブラリ、エディタの拡張(プラグイン)はいくつもあるわけで、誰かが仕組みを作ってくれているのでは？と思い「静的　サイト　生成」をキーワードに検索して存在をしった次第です。
+静的サイトジェネレータの使い方 静的サイトジェネレータとは、文字通り静的サイトを作るものなので、Webサイトとして公開するには、出来上がったファイルをいわゆるApacheやNginxといったWebサーバーが見ているディレクトリにコピーすれば良いだけです。
+雑な表現で流れをつかむとしたら、以下の1〜3の手順を繰り返すことでブログの運用をするというイメージです。
+静的サイトジェネレータをご自身のパソコンにインストール(これは最初の1回目だけ) Markdownで記事を書く ジェネレートする アップロードする  また作成されるものが静的であるということは、PHPやPython、Rubyなどの言語環境はもとよりデータベースなども不要なことから、ご自身でサーバーを借り受けて運用する必要もなく、例えばGitHub Pagesのように無料のサービスを使ってWebサイトを公開することも可能です。
+静的サイトジェネレータ Hugo 静的サイトジェネレータが何者かは分かりました。ではHugoとは何者でしょうか？ HugoとはGo言語というGoogleが開発したプログラミング言語で作られた静的サイトジェネレータです。 安心してください。Goについてはまったく知る必要はありません。Goをインストールするということもありません。 知って頂くのは嬉しいですが、知らなくてもHugoに関しては使いこなせます。
+静的サイトジェネレータはHugo以外にもいくつも存在しています。できることは似たり寄ったり。というかどのツールもゴールは静的ページの生成なので、そんなに劇的に違うと事件ですよね？この記事では比較はいたしませんが、ひとまずHugoを押しておきます。
+Hugoのインストール 前提 静的サイトジェネレータHugoをインストールするための前提ではありません。この記事が例示するのが、以下のOS,バージョンというだけです。
+macOS 10.14.6
+実際には、Windows、Mac、Linuxと事実上この記事の読者全ての方がインストール可能かと思います。
+手順1 Hugoのインストール Hugoのインストール手順はとても簡単です。Homebrewを使えば一発インストールが可能です。
+brew install hugo 長々と処理が流れて行きますが、しばらく放置しておけば良いです。
+もしHomeBrewがまだインストールされていない場合は、こちらを参考にしてインストールしてください。 とはいっても、以下のコマンドを1発実行するだけだと思います。
+/usr/bin/ruby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34; 手順2 新規サイトの作成 Hugoをインストールすると、hugoコマンドが使えるようになります。 ここでは、memorandum.always-basics.comという新規サイトを作成するべく、以下のコマンドを実行します。
+hugo new site memorandum.always-basics.com MacBookPro-2:git $ hugo new site memorandum.always-basics.com Congratulations! Your new Hugo site is created in /Users/user/git/memorandum.always-basics.com. Just a few more steps and you&#39;re ready to go: 1.</description>
     </item>
     
   </channel>

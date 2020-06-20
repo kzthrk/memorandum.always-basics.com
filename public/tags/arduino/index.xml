@@ -1,24 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Arduino on Memorandum - Danger past, god forgotten</title>
-    <link>/tags/arduino/</link>
+    <link>http://memorandum.always-basics.com/tags/arduino/</link>
     <description>Recent content in Arduino on Memorandum - Danger past, god forgotten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>©2020 Always Basics.</copyright>
     <lastBuildDate>Wed, 12 Feb 2020 11:15:17 +0900</lastBuildDate>
     
-        <atom:link href="/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://memorandum.always-basics.com/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Arduino | Arduinoでリモコンを作ろう</title>
-      <link>/electronic_kit/arduino001/</link>
+      <link>http://memorandum.always-basics.com/post/electronic_kit/arduino001/</link>
       <pubDate>Wed, 12 Feb 2020 11:15:17 +0900</pubDate>
       
-      <guid>/electronic_kit/arduino001/</guid>
-      <description>概要 Arduinoでリモコンを作成してみたいと思います。作成するリモコンは赤外線を使った一般的なリモコンです。いわゆるテレビやエアコンなどを</description>
+      <guid>http://memorandum.always-basics.com/post/electronic_kit/arduino001/</guid>
+      <description>概要 Arduinoでリモコンを作成してみたいと思います。作成するリモコンは赤外線を使った一般的なリモコンです。いわゆるテレビやエアコンなどを操作するリモコンで、単純にリモコン側から赤外線を使った信号を送りつけ、本体が側がそれに反応しているタイプのものです。
+一部のリモコンには一方通行ではないものがあるようですが、今回作成するArduinoのリモコンはそれには対応していません。
+準備するもの Arduinoでリモコンを作成するにあたり、必要なパーツを以下にリストします。まずArduinoでリモコンに特化したものを先に挙げます。続いて、ArduinoでLチカだったり、Raspberry Piでリモコンだったり、いわゆる電子工作として一般的に必要なものをリストします。この分類は微妙な線引きではありますが、察してやって下さい。
+Arduinoでリモコンに必要なもの    価格 品名 備考     100円 赤外線リモコン受信モジュール OSRB38C9AA（2個入）    100円 5mm 赤外線LED OSI5LA5113A（10個入） 可視光線のLEDもあると動作確認に便利。赤外線は目に見えないので。   200円 抵抗 27Ω 1W（100本入） これである必要はありません。実際、最終的には並行に繋いで抵抗を下げました。   1980円 ESPr® Developer（ESP-WROOM-02開発ボード） これも他のArduinoでもOKです。実際最初はUnoを使って試していました    電子工作として一般的に必要なもの    参考価格 品名 商品例     35円 ピンヘッダ ピンヘッダ　１×４０　（４０Ｐ）   270円 ブレッドボード ブレッドボード（1枚）   180円 ジャンパーワイヤ ブレッドボード・ジャンパーワイヤ（オス－オス）　１０ｃｍセット   60円 ユニバーサル基板 片面ガラスコンポジット・ユニバーサル基板　Ｃタイプ　めっき仕上げ　（７２×４７ｍｍ）　日本製   210円 はんだ はんだ　０．８ｍｍ   2,300円 はんだごて 即熱はんだこて　ＴＱ－９５（９０Ｗ／１５Ｗ）    これらに関しては、これでなければダメというものでもありませんし、道具の類いは特に好みやこだわりもあると思いますので、手持ちのものをご使用いただくか、必要に応じて購入(場合によっては我慢)するなど、適宜ご判断の上お願いします。</description>
     </item>
     
   </channel>

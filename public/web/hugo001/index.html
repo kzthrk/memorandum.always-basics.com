@@ -1,26 +1,152 @@
-<!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Hugo | 静的サイトジェネレータ Hugoをインストール&nbsp;&ndash;&nbsp;Memorandum - Danger past, god forgotten</title><link rel="stylesheet" href="/css/core.min.8d84e0eeadb042523696874218e589bc62cd7a2a375e47ef0dfea9414eadd1d01b93b8878cf4cae69d892251c385c155.css" integrity="sha384-jYTg7q2wQlI2lodCGOWJvGLNeio3XkfvDf6pQU6t0dAbk7iHjPTK5p2JIlHDhcFV"><body>
-    <div class="base-body"><section id="header" class="site header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, god forgotten</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/programming/">プログラミング</a><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
-    <h1 class="article title">Hugo | 静的サイトジェネレータ Hugoをインストール</h1><span class="article date">2020-02-06</span><section class="article labels"><a class="category" href=/categories/web/>web</a><a class="tag" href=/tags/hugo/>Hugo</a><a class="tag" href=/tags/%E9%9D%99%E7%9A%84%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF/>静的サイトジェネレータ</a><a class="tag" href=/tags/install/>install</a></section></section><article class="article markdown-body"><h1 id="はじめに">はじめに</h1>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Memorandum - Danger past, god forgotten - 1. 静的サイトジェネレータ Hugoをインストール </title>
+    
+    
+    <meta content="Hugo, 静的サイトジェネレータ, install, Web" name="keywords">
+    
+    <meta content="Memorandum - Danger past, god forgotten - 静的サイトジェネレータ Hugoをインストール" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75025058-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-75025058-6');
+        </script>
+    
+
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/images/terminal.gif" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Memorandum - Danger past, god forgotten
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/about/">About</a></li>
+            
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+                    
+                        <dd><a href="/about/">About</a></dd>
+                    
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote self-elem-quote-bg-red markdown-body single-title" >
+                    <h1>1. 静的サイトジェネレータ Hugoをインストール</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-02-06</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/web/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Web</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/hugo/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Hugo</span>
+        </a>
+    
+        <a href="/tags/%e9%9d%99%e7%9a%84%e3%82%b5%e3%82%a4%e3%83%88%e3%82%b8%e3%82%a7%e3%83%8d%e3%83%ac%e3%83%bc%e3%82%bf/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">静的サイトジェネレータ</span>
+        </a>
+    
+        <a href="/tags/install/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">install</span>
+        </a>
+    
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h1 id="はじめに">はじめに</h1>
 <p>静的サイトジェネレータのひとつであるHugoをインストールし、実際にWebサイトとして公開する過程を記録しました。</p>
 <p>このサイトはHugoを使って作成されています。</p>
-<!-- 広告 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- memorandum_yoko -->
-<p><ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-9230307049349065"
-data-ad-slot="9446890582"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></p>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- 広告 -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h1 id="静的サイトジェネレータ">静的サイトジェネレータ</h1>
 <h2 id="ところで静的サイトジェネレータってなに">ところで静的サイトジェネレータってなに？</h2>
 <p><strong>静的サイトジェネレータ</strong>なんて聞き覚えのない言葉かも知れません。私も聞き覚えは無かったのですが<strong>はてな</strong>とか<strong>Qiita</strong>がMarkdownで記事を書けるのを見ていて、自分のサイトでも同じことをしてみようかなと思い一瞬自作が頭をよぎったところで、でも冷静に考えてみるとMarkdownをHTMLに変換するライブラリ、エディタの拡張(プラグイン)はいくつもあるわけで、誰かが仕組みを作ってくれているのでは？と思い「静的　サイト　生成」をキーワードに検索して存在をしった次第です。</p>
@@ -40,19 +166,13 @@ HugoとはGo言語というGoogleが開発したプログラミング言語で�
 安心してください。Goについてはまったく知る必要はありません。Goをインストールするということもありません。
 知って頂くのは嬉しいですが、知らなくてもHugoに関しては使いこなせます。</p>
 <p>静的サイトジェネレータはHugo以外にもいくつも存在しています。できることは似たり寄ったり。というかどのツールもゴールは静的ページの生成なので、そんなに劇的に違うと事件ですよね？この記事では比較はいたしませんが、ひとまずHugoを押しておきます。</p>
-<!-- 広告 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- memorandum_yoko -->
-<p><ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-9230307049349065"
-data-ad-slot="9446890582"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></p>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- 広告 -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h1 id="hugoのインストール">Hugoのインストール</h1>
 <h2 id="前提">前提</h2>
 <p>静的サイトジェネレータHugoをインストールするための前提ではありません。この記事が例示するのが、以下のOS,バージョンというだけです。</p>
@@ -60,15 +180,15 @@ data-full-width-responsive="true"></ins></p>
 <p>実際には、Windows、Mac、Linuxと事実上この記事の読者全ての方がインストール可能かと思います。</p>
 <h2 id="手順1-hugoのインストール">手順1 Hugoのインストール</h2>
 <p>Hugoのインストール手順はとても簡単です。Homebrewを使えば一発インストールが可能です。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">brew install hugo 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">brew install hugo 
 </code></pre></div><p>長々と処理が流れて行きますが、しばらく放置しておけば良いです。</p>
-<p>もしHomeBrewがまだインストールされていない場合は、<a href="https://brew.sh/index_ja"target="_blank">こちら</a>を参考にしてインストールしてください。
+<p>もしHomeBrewがまだインストールされていない場合は、<a href="https://brew.sh/index_ja">こちら</a>を参考にしてインストールしてください。
 とはいっても、以下のコマンドを1発実行するだけだと思います。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">/usr/bin/ruby -e <span class="s2">&#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">/usr/bin/ruby -e <span style="color:#e6db74">&#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&#34;</span>
 </code></pre></div><h2 id="手順2-新規サイトの作成">手順2 新規サイトの作成</h2>
 <p>Hugoをインストールすると、hugoコマンドが使えるようになります。
 ここでは、memorandum.always-basics.comという新規サイトを作成するべく、以下のコマンドを実行します。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo new site memorandum.always-basics.com
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo new site memorandum.always-basics.com
 </code></pre></div><pre><code class="language-ログ" data-lang="ログ">MacBookPro-2:git $ hugo new site memorandum.always-basics.com
 Congratulations! Your new Hugo site is created in /Users/user/git/memorandum.always-basics.com.
 
@@ -98,7 +218,7 @@ MacBookPro-2:git $
 </code></pre><p>まぁ、大体こんな感じです。</p>
 <h3 id="確認">確認</h3>
 <p>Hugoは果たして無事にインストールできているのかを確認する意味でも、出来たファイルを見てみます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="k">cd</span> memorandum.always-basics.com
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd"><span style="color:#66d9ef">cd</span> memorandum.always-basics.com
 ls -l
 </code></pre></div><pre><code class="language-ログ" data-lang="ログ">MacBookPro-2:memorandum.always-basics.com $ ll
 total 8
@@ -117,7 +237,7 @@ MacBookPro-2:memorandum.always-basics.com $
 <p>なお、Hugoにgitが必須ということではありません。テーマをダウンロードしてthemesディレクトリに配置することでも問題ありません。
 おそらく各テーマのインストール手順の説明で、gitを使う場合と使わない場合の説明があると思います。</p>
 <p>当サイトでは一つ一つの記事の繋がりは薄く、カテゴリーやタグによってなんとなく分類されるメモを残していくのが趣旨なので、hugo-notepadiumというテーマを選択しました。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">git init
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">git init
 git submodule add https://github.com/cntrump/hugo-notepadium.git themes/hugo-notepadium
 </code></pre></div><pre><code class="language-ログ" data-lang="ログ">MacBookPro-2:memorandum.always-basics.com $ git init
 Initialized empty Git repository in /Users/user/git/memorandum.always-basics.com/.git/
@@ -133,17 +253,17 @@ MacBookPro-2:memorandum.always-basics.com $
 </code></pre><p>もしもgitをインストールしていない方でいまインストールされる方には、ここではHomebrewでのインストールを記載しておきます。
 gitに関してはXcodeあるいはCommand Line Tools、またはgitが提供するインストーラーなど様々なインストール方法がありますが、
 どれでも構いませんので適宜お調べの上インストールください。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">brew install git
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">brew install git
 </code></pre></div><h2 id="手順5-configtomlを編集">手順5 config.tomlを編集</h2>
 <p>Hugoの設定ファイルであるconfig.tomlを編集します。
 サイトの構成を変える場合には編集することがあるかと思いますが、最初に編集した内容で問題が無ければ、記事を追加していく通常の運用のタイミングでは、変更することは無いと思います。</p>
 <p>ひとまず、動作確認が出来るように以下を設定しました。ご自身の環境に合わせて変更して下さい。</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;http://memorandum.always-basics.com/&#34;</span>
-<span class="nx">languageCode</span> <span class="p">=</span> <span class="s2">&#34;en-us&#34;</span>
-<span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;memorandum - Danger past, got forgotten&#34;</span>
-<span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;hugo-notepadium&#34;</span>
-<span class="nx">hasCJKLanguage</span> <span class="p">=</span> <span class="s2">&#34;true&#34;</span>
-<span class="nx">copyright</span> <span class="p">=</span> <span class="s2">&#34;©2020 Always Basics.&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#34;http://memorandum.always-basics.com/&#34;</span>
+<span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;en-us&#34;</span>
+<span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;memorandum - Danger past, got forgotten&#34;</span>
+<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;hugo-notepadium&#34;</span>
+<span style="color:#a6e22e">hasCJKLanguage</span> = <span style="color:#e6db74">&#34;true&#34;</span>
+<span style="color:#a6e22e">copyright</span> = <span style="color:#e6db74">&#34;©2020 Always Basics.&#34;</span>
 </code></pre></div><p>それぞれ以下のような設定を意味しています。</p>
 <table>
 <thead>
@@ -181,10 +301,10 @@ gitに関してはXcodeあるいはCommand Line Tools、またはgitが提供す
 </table>
 <h2 id="手順6-テーマを有効にする">手順6 テーマを有効にする</h2>
 <p>すでにHugoのテーマとして1つをインストールしたわけですが、そのテーマを有効にしておきます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo -t hugo-notepadium
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo -t hugo-notepadium
 </code></pre></div><h2 id="手順7-1つ目の記事を作成">手順7 1つ目の記事を作成</h2>
 <p>静的ジェネレーター Hugoをインストールしてからようやく1つ目の記事の作成です。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo new post/welcome.md
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo new post/welcome.md
 </code></pre></div><p>これで<strong>content/post/welcome.md</strong>ファイルが作られたので、それを編集して記念すべき1つ目のページを生成してみましょう。</p>
 <p>生成されたファイルを開くと、&mdash;で囲われているヘッダー部分があることが分かります。これはフロントマター(front matter)と呼ばれている情報で、キーと値の組み合わせがコロンで区切られています。</p>
 <pre><code>---
@@ -196,22 +316,20 @@ draft: false
 <h2 id="動作確認">動作確認</h2>
 <p>静的サイトジェネレータ Hugoをインストールしてから、ようやくこのときが来ました。
 動作確認をしてみます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo server -w
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo server -w
 </code></pre></div><p>最後のwは、更新があったら自動的にブラウザの表示がリロードされるというものです。便利なのでぜぴ。</p>
-<p><a href="http://localhost:1313/"target="_blank">http://localhost:1313/</a> にアクセスしてみて下さい。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-08-12-22-50.png"><img  src="../assets/2020-02-08-12-22-50.png"
-        alt="動作確認"/></a></p>
+<p><a href="http://localhost:1313/">http://localhost:1313/</a> にアクセスしてみて下さい。</p>
+<p><img src="../assets/2020-02-08-12-22-50.png" alt="動作確認"></p>
 <p>無事に画面が表示されましたでしょうか。
-また、<a href="http://localhost:1313/post/welcome/"target="_blank">http://localhost:1313/post/welcome/</a> にもアクセスしてみて下さい。
+また、<a href="http://localhost:1313/post/welcome/">http://localhost:1313/post/welcome/</a> にもアクセスしてみて下さい。
 こちらが中身は空ですが記念すべき1つ目の投稿です。せっかくですので中身を適当に追記して、自動で更新される所を体験してみてはどうでしょうか。</p>
 <p>なお、先ほどテーマを設定しましたが、実際にはサーバを起動するタイミングでも指定は出来ます。</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo server -t hugo-uno -w
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo server -t hugo-uno -w
 </code></pre></div><h1 id="静的サイトジェネレータ-hugoで作成したサイトを公開">静的サイトジェネレータ Hugoで作成したサイトを公開</h1>
 <p>ここまではローカルで動作させているだけなので、実際にインターネット上に公開して動作させてみたいと思います。</p>
 <h2 id="静的サイトをジェネレートする">静的サイトをジェネレートする</h2>
 <p>いよいよ静的サイトジェネレータが静的サイトをジェネレートする瞬間です！</p>
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">hugo
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">hugo
 </code></pre></div><p>ちょっと拍子抜けですかね？ここでもテーマを切り替えて(指定して)の実行が可能です。
 できあがり品は、publicディレクトリの中にあります。これをWebサーバーで公開するだけです。</p>
 <p>このWebサーバーで公開するところは、それぞれの環境によって異なる部分ですので割愛いたします。
@@ -221,57 +339,47 @@ draft: false
 <p>静的サイトジェネレータ Hugoをインストールして実質中身ゼロの記事を1つだけ投稿した状態になっていますので、もうもう少しきちんと構成してみたいと思います。</p>
 <p>ただし、ここから先は選択したテーマに依存する部分があると思います。もしインストールを経験するためだけにこの記事の指示に従って来た方は、ここでお別れしてご自身の道を進まれるのも一案だと思います。もちろん、最後までお付き合いいただいた上で、お好みのテーマに切り替えていただくというのもアリです！</p>
 <h2 id="configtomlの編集">config.tomlの編集</h2>
-<p>ほとんど<a href="https://themes.gohugo.io/hugo-notepadium/"target="_blank">https://themes.gohugo.io/hugo-notepadium/</a> に解説の通りです。</p>
-<div class="highlight"><pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">highlight</span><span class="p">]</span>
-<span class="nx">codeFences</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="nx">noClasses</span> <span class="p">=</span> <span class="kc">false</span>
+<p>ほとんど<a href="https://themes.gohugo.io/hugo-notepadium/">https://themes.gohugo.io/hugo-notepadium/</a> に解説の通りです。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">highlight</span>]
+<span style="color:#a6e22e">codeFences</span> = <span style="color:#66d9ef">true</span>
+<span style="color:#a6e22e">noClasses</span> = <span style="color:#66d9ef">false</span>
 
-<span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
-<span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span>  <span class="c"># enable raw HTML in Markdown</span>
+[<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+<span style="color:#a6e22e">unsafe</span> = <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># enable raw HTML in Markdown</span>
 
-<span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-<span class="nx">style</span> <span class="p">=</span> <span class="s2">&#34;auto&#34;</span>  <span class="c"># default: auto. light: light theme, dark: dark theme, auto: based on system.</span>
-<span class="nx">dateFormat</span> <span class="p">=</span> <span class="s2">&#34;Monday, January 2, 2006&#34;</span>  <span class="c"># if unset, default is &#34;2006-01-02&#34;</span>
-<span class="nx">slogan</span> <span class="p">=</span> <span class="s2">&#34;継続する秘訣は、途切れたと思った時に、もう一度だけ繰り返すこと&#34;</span>
-<span class="nx">license</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>  <span class="c"># CC License</span>
-<span class="nx">logo</span> <span class="p">=</span> <span class="s2">&#34;/images/logo.jpg&#34;</span>
+[<span style="color:#a6e22e">params</span>]
+<span style="color:#a6e22e">style</span> = <span style="color:#e6db74">&#34;auto&#34;</span>  <span style="color:#75715e"># default: auto. light: light theme, dark: dark theme, auto: based on system.</span>
+<span style="color:#a6e22e">dateFormat</span> = <span style="color:#e6db74">&#34;Monday, January 2, 2006&#34;</span>  <span style="color:#75715e"># if unset, default is &#34;2006-01-02&#34;</span>
+<span style="color:#a6e22e">slogan</span> = <span style="color:#e6db74">&#34;継続する秘訣は、途切れたと思った時に、もう一度だけ繰り返すこと&#34;</span>
+<span style="color:#a6e22e">license</span> = <span style="color:#e6db74">&#34;&#34;</span>  <span style="color:#75715e"># CC License</span>
+<span style="color:#a6e22e">logo</span> = <span style="color:#e6db74">&#34;/images/logo.jpg&#34;</span>
 
-<span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">nav</span><span class="p">]</span>
-<span class="nx">showCategories</span> <span class="p">=</span> <span class="kc">true</span>       <span class="c"># /categories/</span>
-<span class="nx">showTags</span> <span class="p">=</span> <span class="kc">true</span>             <span class="c"># /tags/</span>
+[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">nav</span>]
+<span style="color:#a6e22e">showCategories</span> = <span style="color:#66d9ef">true</span>       <span style="color:#75715e"># /categories/</span>
+<span style="color:#a6e22e">showTags</span> = <span style="color:#66d9ef">true</span>             <span style="color:#75715e"># /tags/</span>
 
-<span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">comments</span><span class="p">]</span>
-<span class="nx">enable</span> <span class="p">=</span> <span class="kc">true</span>  <span class="c"># En/Disable comments globally, default: false. You can always enable comments on per page.</span>
+[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">comments</span>]
+<span style="color:#a6e22e">enable</span> = <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># En/Disable comments globally, default: false. You can always enable comments on per page.</span>
 
-<span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">syntax</span><span class="p">]</span>
-<span class="nx">use</span> <span class="p">=</span> <span class="s2">&#34;hljs&#34;</span>  <span class="c"># 1. prismjs 2. hljs 3. none</span>
-<span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;dracula&#34;</span>
-<span class="nx">darkTheme</span> <span class="p">=</span> <span class="s2">&#34;xcode-dark&#34;</span>  <span class="c"># apply this theme in dark mode</span>
+[<span style="color:#a6e22e">params</span>.<span style="color:#a6e22e">syntax</span>]
+<span style="color:#a6e22e">use</span> = <span style="color:#e6db74">&#34;hljs&#34;</span>  <span style="color:#75715e"># 1. prismjs 2. hljs 3. none</span>
+<span style="color:#a6e22e">theme</span> = <span style="color:#e6db74">&#34;dracula&#34;</span>
+<span style="color:#a6e22e">darkTheme</span> = <span style="color:#e6db74">&#34;xcode-dark&#34;</span>  <span style="color:#75715e"># apply this theme in dark mode</span>
 </code></pre></div><p>一つだけ、これはどうしたら良いのか？と調べたのは、logoのイメージファイルの配置先です。
 Hugoにはstaticという名前のディレクトリが作られており、ここに画像ファイルなどを配置するようです。パスはそこをTOPにした状態で記載します。</p>
 <p>一つ一つの投稿の中で画像を貼り付けるときも同じことです。</p>
-<!-- 広告 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- memorandum_yoko -->
-<p><ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-9230307049349065"
-data-ad-slot="9446890582"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></p>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- 広告 -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="記事を追加">記事を追加</h2>
 <p>1つ本稿を追加しました.</p>
 <h2 id="動作確認-1">動作確認</h2>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-08-12-55-40.png"><img  src="../assets/2020-02-08-12-55-40.png"
-        alt="動作確認2"/></a></p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-02-08-13-02-24.png"><img  src="../assets/2020-02-08-13-02-24.png"
-        alt="動作確認3"/></a></p>
+<p><img src="../assets/2020-02-08-12-55-40.png" alt="動作確認2"></p>
+<p><img src="../assets/2020-02-08-13-02-24.png" alt="動作確認3"></p>
 <h1 id="静的サイトジェネレータ-hugoをインストールしてみて">静的サイトジェネレータ Hugoをインストールしてみて</h1>
 <p>静的サイトジェネレータ Hugoのインストールはとてもとても簡単な作業で、十分なクオリティのWebサイトが手に入ることはもちろんのこと、手元で編集作業をしているときも、実際のWebサイトの動作もとても軽快でストレスフリーです。</p>
 <p>Wordpressでのブログ運営を念頭に置くと、コメント欄が必要だったり、認証云々、それからSNS連携やSEO対策など、いくつかの要素について対応していない状況にあります。</p>
@@ -279,36 +387,57 @@ data-full-width-responsive="true"></ins></p>
 <p>ですが、求めているものに対してWordpressは壮大すぎるし、用意しなければならない物が多すぎるとお感じの方には十分選択肢になり得ると思います。
 みなさんもぜひ、静的サイトジェネレータの世界へ足を踏み入れてみませんか？</p>
 <p>そして、Hugoを是非その候補のの一つに。</p>
-<!-- 広告 -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- memorandum_yoko -->
-<p><ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-9230307049349065"
-data-ad-slot="9446890582"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></p>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-<!-- 広告 --></article>
-<section class="article navigation"><p><a class="link" href="/web/hugo002/"><span class="li">&larr;</span>Hugo | Hugoで作成したサイトを追加構成</a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Always Basics.</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-75025058-6', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 </div>
-</body>
+            </div>
+        </div>
 
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+            
+            <br />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs6">
+                <h3> Related Sites </h3>
+            </div>
+        </div>
+        <div class="layui-row">
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/"><p class="footer-url">home</p></a>
+            </div>
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/about/"><p class="footer-url">About</p></a>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
 </html>

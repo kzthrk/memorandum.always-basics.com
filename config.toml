@@ -1,80 +1,88 @@
 baseURL = "http://memorandum.always-basics.com/"
 languageCode = "en-us"
 title = "Memorandum - Danger past, god forgotten"
-theme = "hugo-notepadium"
-hasCJKLanguage = "true"
-copyright = "©2020 Always Basics."
-enableRobotsTXT = true
+theme = "erblog"
+paginate = 5
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
 
 # Google Analytics
 googleAnalytics = "UA-75025058-6"
 
-[markup.highlight]
-codeFences = true
-noClasses = false
-
-[markup.goldmark.renderer]
-unsafe = true  # enable raw HTML in Markdown
-
 [params]
-style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
-# dateFormat = "Monday, January 2, 2006"  # if unset, default is "2006-01-02"
-slogan = "継続する秘訣は、途切れたと思った時にもう一度繰り返すこと"
-license = ""  # CC License
-logo = "/images/logo.jpg"
-readingTime = false  # show reading time after article date
+    author = "Always Basics"
+    badge = "red"
+    quote = "blue"
+    index_posts_num = 8
+    google_search = true
+    logo = "/images/logo.jpg"
+    portrait = "/images/logo.jpg"
+    bio = """
+    <p> 継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</p>
+    <br />
+    """
+    # copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
 
-mainSections = ["electronic_kit", "programming", "web", "theia"]
+[[menu.main]]
+    identifier = "programming"
+    name = "Programming"
+    url = "/categories/programming/"
+    weight = 1
+[[menu.main]]
+    identifier = "hugo"
+    name = "Hugo"
+    url = "/categories/web/"
+    weight = 2
+[[menu.main]]
+    identifier = "theia"
+    name = "Theia"
+    url = "/categories/theia/"
+    weight = 3
+[[menu.main]]
+    identifier = "electronic_kit"
+    name = "電子工作"
+    url = "/categories/電子工作/"
+    weight = 4
+[[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
 
-[params.nav]
-showCategories = false       # /categories/
-showTags = false             # /tags/
+[[menu.footer]]
+    identifier = "python"
+    name = "Pythonなら空も飛べるはず"
+    url = "https://python.always-basics.com/"
+    weight = 1
 
-# disqus
-disqusShortname = "kzthrk"  # your short name
+[[menu.footer]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
 
-[params.comments]
-enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    # series = "series"
 
-# [params.math]
-# enable = false  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
-# use = "katex"  # option: "katex", "mathjax". default: "katex"
+[[menu.icon]]
+    url = "https://github.com/kzthrk/"
+    name = "github"
+    weight = 1
 
-[params.syntax]
-use = "hljs"  # 1. prismjs 2. hljs 3. none
-theme = "dracula"
-darkTheme = "xcode-dark"  # apply this theme in dark mode
+[[menu.icon]]
+    url = "mailto:kzthrk@gmail.com"
+    name = "envelope-o"
+    weight = 2
 
-# # custom navigation items
+[[menu.icon]]
+    url = "https://twitter.com/Always_Basics"
+    name = "twitter"
+    weight = 3
 
-# [[params.nav.custom]]
-# title = "Hugo"
-# url = "https://gohugo.io/"
-
-# [[params.nav.custom]]
-# title = "iOS"
-# url = "/tags/ios"
-
-[[params.nav.custom]]
-title = "プログラミング"
-url = "/categories/programming/"
-
-[[params.nav.custom]]
-title = "Hugo"
-url = "/categories/web/"
-
-[[params.nav.custom]]
-title = "Theia"
-url = "/categories/theia/"
-
-[[params.nav.custom]]
-title = "電子工作"
-url = "/categories/電子工作/"
-
-[[params.nav.custom]]
-title = "Misc."
-url = "/categories/misc/"
-
-[[params.nav.custom]]
-title = "About"
-url = "/about"
+# [[menu.icon]]
+#     url = "https://www.instagram.com/username/"
+#     name = "instagram"
+#     weight = 4

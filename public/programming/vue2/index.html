@@ -1,13 +1,141 @@
-<!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>npmでパッケージ管理して、webpackでビルドする&nbsp;&ndash;&nbsp;Memorandum - Danger past, god forgotten</title><link rel="stylesheet" href="/css/core.min.8d84e0eeadb042523696874218e589bc62cd7a2a375e47ef0dfea9414eadd1d01b93b8878cf4cae69d892251c385c155.css" integrity="sha384-jYTg7q2wQlI2lodCGOWJvGLNeio3XkfvDf6pQU6t0dAbk7iHjPTK5p2JIlHDhcFV"><body>
-    <div class="base-body"><section id="header" class="site header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, god forgotten</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/programming/">プログラミング</a><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
-    <h1 class="article title">npmでパッケージ管理して、webpackでビルドする</h1><span class="article date">2020-05-05</span><section class="article labels"><a class="category" href=/categories/programming/>Programming</a><a class="tag" href=/tags/javascript/>JavaScript</a><a class="tag" href=/tags/vue.js/>Vue.js</a></section></section><article class="article markdown-body"><h1 id="はじめに">はじめに</h1>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Memorandum - Danger past, god forgotten - 2. npmでパッケージ管理して、webpackでビルドする </title>
+    
+    
+    <meta content="JavaScript, Vue.js, Programming" name="keywords">
+    
+    <meta content="Memorandum - Danger past, god forgotten - はじめてのVue.js|npmでパッケージ管理して、webpackでビルドする" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75025058-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-75025058-6');
+        </script>
+    
+
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/images/terminal.gif" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Memorandum - Danger past, god forgotten
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/about/">About</a></li>
+            
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+                    
+                        <dd><a href="/about/">About</a></dd>
+                    
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote self-elem-quote-bg-red markdown-body single-title" >
+                    <h1>2. npmでパッケージ管理して、webpackでビルドする</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-05</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h1 id="はじめに">はじめに</h1>
 <p>本稿で取り扱う内容は、本来であればvue-cliを使うべきです。
-ですが、<a href="https://jp.vuejs.org/v2/guide/installation.html#CLI"target="_blank">公式</a>でも初めてのvueにおいては以下のように言及があり、使用に慎重になるべきです。</p>
+ですが、<a href="https://jp.vuejs.org/v2/guide/installation.html#CLI">公式</a>でも初めてのvueにおいては以下のように言及があり、使用に慎重になるべきです。</p>
 <blockquote>
 <p>CLI は Node.js および関連するビルドツールに関する事前知識を前提としています。Vue またはフロントエンドビルドツールを初めて使用している場合、CLI を使用する前に、ビルドツールなしでガイドを参照することを強くお勧めします。</p>
 </blockquote>
@@ -128,9 +256,7 @@ index.bundle.js  3.83 KiB   index  [emitted]  index
 Entrypoint index = index.bundle.js
 [./index.js] 78 bytes {index} [built]
 MacBookPro:accessLogAnalyzer $
-</code></pre><p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-05-05-17-39-02.png"><img  src="../assets/2020-05-05-17-39-02.png"
-        alt="ビルド結果"/></a></p>
+</code></pre><p><img src="../assets/2020-05-05-17-39-02.png" alt="ビルド結果"></p>
 <p>無事にpublic/jsにJavaScriptが出力されましたでしょうか。
 ただ、いまのHTMLはこの新たに出力されたJavaScriptを使用するようにはなっていません。</p>
 <p>そこで、public/index.htmlを以下のように修正します。</p>
@@ -166,9 +292,7 @@ toには<strong>path</strong>を使用しているので少し直感的ではな
         to: path.resolve(baseDir, './public')
       },
     ]),
-</code></pre><p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-05-05-18-10-05.png"><img  src="../assets/2020-05-05-18-10-05.png"
-        alt="Plugin設定"/></a></p>
+</code></pre><p><img src="../assets/2020-05-05-18-10-05.png" alt="Plugin設定"></p>
 <p>さて、HTMLを変更します。
 <em>{{ message }} の行の頭にmessage:を追加しています</em></p>
 <p>ファイル名: src/index.html</p>
@@ -180,9 +304,7 @@ toには<strong>path</strong>を使用しているので少し直感的ではな
 
 &lt;/body&gt;
 </code></pre><p>実際に動作するか確認してみます。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-05-05-18-10-47.png"><img  src="../assets/2020-05-05-18-10-47.png"
-        alt="実行例"/></a></p>
+<p><img src="../assets/2020-05-05-18-10-47.png" alt="実行例"></p>
 <p>次に、まだHTMLのheaderタグ内でscriptタグを使ってVueを読み込んでいますが、これも止めてみましょう。
 <em>説明のためにコメントアウトにしていますが、実際には行を削除するので問題ありません。それから変更が効いていることを確認できるように{{ message }} の部分にも何らか文字列を追加しておきます</em></p>
 <p>ファイル名: src/index.html</p>
@@ -213,9 +335,7 @@ var app = new Vue({
     message: 'Hello Vue!'
   }
 })
-</code></pre><p><a target="_blank" rel="noopener noreferrer" 
-  href="assets/2020-05-05-22-15-56.png"><img  src="assets/2020-05-05-22-15-56.png"
-        alt="結果確認"/></a></p>
+</code></pre><p><img src="assets/2020-05-05-22-15-56.png" alt="結果確認"></p>
 <p>いかがでしょうか。実際に確認できましたでしょうか。</p>
 <p>ここまでで、ようやくnpmでインストールしたVue開発環境が一旦整いました。</p>
 <h2 id="http-serverを卒業しお気楽ご気楽webpack-dev-serverへ">http-serverを卒業し、お気楽ご気楽webpack-dev-serverへ</h2>
@@ -226,20 +346,14 @@ var app = new Vue({
 npm install -D write-file-webpack-plugin
 </code></pre><p>ファイル名: package.json</p>
 <pre><code>&quot;dev&quot;: &quot;NODE_ENV=development webpack-dev-server --config ./webpack.config.js --content-base ./public/ --http&quot;
-</code></pre><p><a target="_blank" rel="noopener noreferrer" 
-  href="assets/2020-05-05-22-17-41.png"><img  src="assets/2020-05-05-22-17-41.png"
-        alt="変更箇所"/></a></p>
+</code></pre><p><img src="assets/2020-05-05-22-17-41.png" alt="変更箇所"></p>
 <p>ファイル書き込みが可能になるプラグインを導入します。</p>
 <p>ファイル名: webpack.config.js</p>
 <pre><code>const WriteFilePlugin = require('write-file-webpack-plugin')
-</code></pre><p><a target="_blank" rel="noopener noreferrer" 
-  href="assets/2020-05-05-22-27-02.png"><img  src="assets/2020-05-05-22-27-02.png"
-        alt="変更箇所"/></a></p>
+</code></pre><p><img src="assets/2020-05-05-22-27-02.png" alt="変更箇所"></p>
 <p>ファイル名: webpack.config.js</p>
 <pre><code>new WriteFilePlugin(),
-</code></pre><p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-05-05-22-27-15.png"><img  src="../assets/2020-05-05-22-27-15.png"
-        alt="変更箇所"/></a></p>
+</code></pre><p><img src="../assets/2020-05-05-22-27-15.png" alt="変更箇所"></p>
 <p>これで編集した内容が即座にビルドされて、かつWebブラウザも自動でリロードされたと思います。</p>
 <h2 id="単一ファイルコンポーネント">単一ファイルコンポーネント</h2>
 <p>最後に一仕事です。「単一ファイルコンポーネント」それが我々の目指すところです。いつの間にそうなった？？</p>
@@ -247,9 +361,7 @@ npm install -D write-file-webpack-plugin
 <p>いまだメッセージの文字列をvueで指定することしか出来ていませんが、「単一ファイルコンポーネント」という仕組みを手に入れたいと思います。</p>
 <h3 id="単一ファイルコンポーネントとは">単一ファイルコンポーネントとは</h3>
 <p>まずは単一ファイルコンポーネントとは何かです。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-05-05-22-29-49.png"><img  src="../assets/2020-05-05-22-29-49.png"
-        alt="単一ファイルコンポーネント"/></a></p>
+<p><img src="../assets/2020-05-05-22-29-49.png" alt="単一ファイルコンポーネント"></p>
 <p>こういうのが単一ファイルコンポーネントです。大きく、template、script、styleという3部構成になっています。実はこれ、HTMLファイルの中にもHTMLのHTML部分とJavaScirptやStyle Sheetの中身を書き込めるのでそんなに突飛な考え方でもありません。</p>
 <ul>
 <li>template ・・・デフォルトの言語はHTMLです。それぞれのファイルに最大で1つだけ設けることが出来ます。</li>
@@ -329,9 +441,7 @@ export default {
 &lt;/style&gt;
 </code></pre><p>さて、肝心のscript部分ですが、これは書き方が決まっています。export default {} で囲われた所にvueとして決められたモノを書いていくことになります。</p>
 <p>index.htmlとindex.jsの時には、data: { message: &lsquo;Hello Vue!&rsquo; }　こんな感じで書いていたと思いますが、それが関数になります。なんだdata:　じゃないじゃないかと思われるようでしたら、data: function(){} として頂いても構いません。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="assets/2020-05-05-23-33-28.png"><img  src="assets/2020-05-05-23-33-28.png"
-        alt="動作確認"/></a></p>
+<p><img src="assets/2020-05-05-23-33-28.png" alt="動作確認"></p>
 <p>さて、実際に動作しましたでしょうか。</p>
 <p>これで終わってしまうと、1世代だけで、その子を産み、育てるにはどうするんだよってことになりますので、そこまでやりましょう。</p>
 <p>ファイル名: src/App.vue</p>
@@ -384,31 +494,140 @@ export default {
 }
 &lt;/style&gt;
 </code></pre><p>動作を確認してみましょう。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="assets/2020-05-05-23-35-20.png"><img  src="assets/2020-05-05-23-35-20.png"
-        alt="動作確認"/></a></p>
+<p><img src="assets/2020-05-05-23-35-20.png" alt="動作確認"></p>
 <p>ついに、index.htmlとindexjsを形式上設け、あとはApp.vueとその仲間たちという形でどんどんVueな世界を展開していけばOKな状態を手に入れました。Vueとして開発することで、どんどん画面が出来上がっていく構図を手に入れました。</p>
 <p>ようやくスタートラインに立てましたね！</p>
 <p>これさえ手に入れれば、あとは好きな教材でVueを学びながら、初めての試作アプリという形で経験を積めば、立派なVue使いになれるはずです。まだ一緒に学びたいよ〜という方は、引き続き<a href="/programming/vue3/">3.Vue.jsでアプリ開発</a>へと進みお付き合い頂ければと思います。</p>
-</article>
-<section class="article navigation"><p><a class="link" href="/programming/vue3/"><span class="li">&larr;</span>3.Vue.jsでアプリ開発</a></p><p><a class="link" href="/programming/vue1/"><span class="li">&rarr;</span>1. HTMLとJavaScriptの単純構成で初めのVue.js</a class="link">
-    </p></section></div><section id="footer" class="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Always Basics.</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-75025058-6', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 </div>
-</body>
+            </div>
+        </div>
 
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+            <div class="layui-card single-card">
+                <h2 class="single-title">Relevant Topics</h2>
+                
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/programming/vue1/">
+                                <h3 class="">1. HTMLとJavaScriptの単純構成で初めのVue.js</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-05</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/programming/vue/">
+                                <h3 class="">初めてのVue.js</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-05-05</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/programming/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Programming</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/javascript/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">JavaScript</span>
+        </a>
+    
+        <a href="/tags/vue.js/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Vue.js</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
+                	
+                
+                <br />
+            </div>
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+            
+            <br />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs6">
+                <h3> Related Sites </h3>
+            </div>
+        </div>
+        <div class="layui-row">
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/"><p class="footer-url">home</p></a>
+            </div>
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/about/"><p class="footer-url">About</p></a>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
 </html>

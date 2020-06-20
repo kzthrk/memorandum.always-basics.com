@@ -1,26 +1,152 @@
-<!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.69.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Theia | Theiaを始めてみよう&nbsp;&ndash;&nbsp;Memorandum - Danger past, god forgotten</title><link rel="stylesheet" href="/css/core.min.8d84e0eeadb042523696874218e589bc62cd7a2a375e47ef0dfea9414eadd1d01b93b8878cf4cae69d892251c385c155.css" integrity="sha384-jYTg7q2wQlI2lodCGOWJvGLNeio3XkfvDf6pQU6t0dAbk7iHjPTK5p2JIlHDhcFV"><body>
-    <div class="base-body"><section id="header" class="site header">
-    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><img class="site logo" src="/images/logo.jpg" alt /><span class="site name">Memorandum - Danger past, god forgotten</span></a></span>
-        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/programming/">プログラミング</a><a class="nav item" href="/categories/web/">Hugo</a><a class="nav item" href="/categories/theia/">Theia</a><a class="nav item" href="/categories/%e9%9b%bb%e5%ad%90%e5%b7%a5%e4%bd%9c/">電子工作</a><a class="nav item" href="/categories/misc/">Misc.</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</span></div></section><div id="content"><section class="article header">
-    <h1 class="article title">Theia | Theiaを始めてみよう</h1><span class="article date">2020-04-10</span><section class="article labels"><a class="category" href=/categories/theia/>Theia</a><a class="tag" href=/tags/ide/>IDE</a><a class="tag" href=/tags/development/>Development</a></section></section><article class="article markdown-body"><h1 id="はじめに">はじめに</h1>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Memorandum - Danger past, god forgotten - Theia | Theiaを始めてみよう </title>
+    
+    
+    <meta content="IDE, Development, Theia" name="keywords">
+    
+    <meta content="Memorandum - Danger past, god forgotten - Cloud &amp; Desktop IDE Platform" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75025058-6"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'UA-75025058-6');
+        </script>
+    
+
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/images/terminal.gif" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Memorandum - Danger past, god forgotten
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/about/">About</a></li>
+            
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+                    
+                        <dd><a href="/about/">About</a></dd>
+                    
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote self-elem-quote-bg-red markdown-body single-title" >
+                    <h1>Theia | Theiaを始めてみよう</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-04-10</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/theia/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Theia</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/ide/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">IDE</span>
+        </a>
+    
+        <a href="/tags/development/">
+            <span class="layui-badge layui-bg-blue" style="vertical-align: 2px;">Development</span>
+        </a>
+    
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h1 id="はじめに">はじめに</h1>
 <h2 id="theiaとは">Theiaとは</h2>
-<p>まずは読み方ですが『<a href="https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%A4%E3%82%A2_%28%E4%BB%AE%E8%AA%AC%E4%B8%8A%E3%81%AE%E5%A4%A9%E4%BD%93%29"target="_blank">テイア</a>』と読むようです。</p>
-<p>Theiaとは<a href="https://theia-ide.org/"target="_blank">公式ページ</a>の説明を借りれば</p>
+<p>まずは読み方ですが『<a href="https://ja.wikipedia.org/wiki/%E3%83%86%E3%82%A4%E3%82%A2_(%E4%BB%AE%E8%AA%AC%E4%B8%8A%E3%81%AE%E5%A4%A9%E4%BD%93)">テイア</a>』と読むようです。</p>
+<p>Theiaとは<a href="https://theia-ide.org/">公式ページ</a>の説明を借りれば</p>
 <blockquote>
 <p>Eclipse Theia is an extensible platform to develop multi-language Cloud &amp; Desktop IDEs with state-of-the-art web technologies.</p>
 </blockquote>
 <p>Eclipse Theiaは、最先端のWebテクノロジーを使用して多言語のクラウドおよびデスクトップIDEを開発するための拡張可能なプラットフォームです。</p>
 <h3 id="だからなに">だからなに？</h3>
 <p>我々一般ユーザーにとって見れば、このスクリーンショットのような開発環境が提供されるってことです。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-10-23-54-22.png"><img  src="../assets/2020-04-10-23-54-22.png"
-        alt="ScreenShot"/></a></p>
+<p><img src="../assets/2020-04-10-23-54-22.png" alt="ScreenShot"></p>
 <h3 id="つまりは">つまりは？</h3>
 <p>こちらの記事で紹介されていますが、デスクトップ版とブラウザ版が想定されていて、どちらでも同じソースコードで開発環境が提供されることになります。</p>
-<p><a href="https://www.publickey1.jp/blog/20/visual_studio_codeeclipse_theia_10vs_codeweb.html"target="_blank">Visual Studio Codeの代替を狙う統合開発環境「Eclipse Theia 1.0」リリース。VS Codeの拡張機能を利用可能、デスクトップ版とWebブラウザ版に両対応</a></p>
+<p><a href="https://www.publickey1.jp/blog/20/visual_studio_codeeclipse_theia_10vs_codeweb.html">Visual Studio Codeの代替を狙う統合開発環境「Eclipse Theia 1.0」リリース。VS Codeの拡張機能を利用可能、デスクトップ版とWebブラウザ版に両対応</a></p>
 <blockquote>
 <p>Eclipse Theiaは、「真のオープンソースによるVisual Studio Codeの代替」（a true open source alternative to Microsoft’s popular Visual Studio Code (VS Code) software）だとEclipse Foundationは紹介しており、デスクトップアプリケーションだけでなくWebブラウザからも同一機能が利用できるWebアプリケーション版も提供されています。</p>
 </blockquote>
@@ -34,91 +160,59 @@
 はっきり言って、第一印象は丸パクリ状態です。</p>
 <h2 id="theiaを使ってみる">Theiaを使ってみる</h2>
 <h3 id="マニュアル">マニュアル</h3>
-<p>Theiaについてのドキュメントは<a href="https://theia-ide.org/docs/"target="_blank">こちら</a>ですが、このあと使う<strong>Gitpod</strong>については<a href="https://www.gitpod.io/docs/"target="_blank">こちら</a>を参照してください。</p>
+<p>Theiaについてのドキュメントは<a href="https://theia-ide.org/docs/">こちら</a>ですが、このあと使う<strong>Gitpod</strong>については<a href="https://www.gitpod.io/docs/">こちら</a>を参照してください。</p>
 <p>ひとまず読むのは後者の方が多かった印象です。</p>
 <h3 id="gitpodで使ってみる">Gitpodで使ってみる</h3>
 <p>まず真っ先に試してみるべきは、ブラウザで動作するこちらです。
-<a href="https://theia-ide.org/"target="_blank">公式ページ</a>の<strong>Try in Gitpod</strong>を利用します。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-00-22-21.png"><img  src="../assets/2020-04-11-00-22-21.png"
-        alt="Try in Gitpod"/></a></p>
+<a href="https://theia-ide.org/">公式ページ</a>の<strong>Try in Gitpod</strong>を利用します。</p>
+<p><img src="../assets/2020-04-11-00-22-21.png" alt="Try in Gitpod"></p>
 <p>Gitpodへ移動すると、 <strong>Login with Github &amp; Launch Workspace</strong> をクリックします。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-00-49-55.png"><img  src="../assets/2020-04-11-00-49-55.png"
-        alt="Gitpod"/></a></p>
+<p><img src="../assets/2020-04-11-00-49-55.png" alt="Gitpod"></p>
 <p>Githubのアカウントで認証します。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-00-51-39.png"><img  src="../assets/2020-04-11-00-51-39.png"
-        alt="Sign in to Github"/></a></p>
+<p><img src="../assets/2020-04-11-00-51-39.png" alt="Sign in to Github"></p>
 <p>拡張機能のインストールの案内が出てくるはずです。 <strong>Get Chrome Extension</strong> をクリックします。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-00-58-05.png"><img  src="../assets/2020-04-11-00-58-05.png"
-        alt="拡張機能"/></a></p>
+<p><img src="../assets/2020-04-11-00-58-05.png" alt="拡張機能"></p>
 <p>すでにインストールしてしまった状態で画面をキャプチャしたので、ボタンが削除になっているのは許してください。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-00-59-47.png"><img  src="../assets/2020-04-11-00-59-47.png"
-        alt="機能拡張のインストール"/></a></p>
+<p><img src="../assets/2020-04-11-00-59-47.png" alt="機能拡張のインストール"></p>
 <p>そして、いよいよ&hellip;いよいよ&hellip;　ええ、Dockerですのでしばらくお待ちください。
 こんな状態になっていると思います。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-01-10-33.png"><img  src="../assets/2020-04-11-01-10-33.png"
-        alt="theia"/></a></p>
+<p><img src="../assets/2020-04-11-01-10-33.png" alt="theia"></p>
 <p>これが、GitpodによるTheiaです。
 Theia自身の開発をしたい人はこのままで良いかと思いますが、多分そんな人はほとんどいないと思いますので一旦閉じます。</p>
 <p>右上のアイコンをクリックするとメニューが表示されるので、 <strong>Stop Workspace</strong> をクリックします。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-01-22-20.png"><img  src="../assets/2020-04-11-01-22-20.png"
-        alt="Menu"/></a></p>
+<p><img src="../assets/2020-04-11-01-22-20.png" alt="Menu"></p>
 <p><strong>Workspaces</strong> をクリックします。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-01-23-35.png"><img  src="../assets/2020-04-11-01-23-35.png"
-        alt="Dialog"/></a></p>
+<p><img src="../assets/2020-04-11-01-23-35.png" alt="Dialog"></p>
 <p>ワークスペースのリストが表示されていることと思います。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-01-34-07.png"><img  src="../assets/2020-04-11-01-34-07.png"
-        alt="WorkspaceList"/></a></p>
+<p><img src="../assets/2020-04-11-01-34-07.png" alt="WorkspaceList"></p>
 <p>この画面は何度か訪れることになりますが、今は自分の環境を手に入れることが目的なので、一旦放置します。
 Githubの自分のリポジトリにブラウザでアクセスします。</p>
 <p><strong>Gitpod</strong> ボタンがあるはずなのでクリックしてください。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-01-38-44.png"><img  src="../assets/2020-04-11-01-38-44.png"
-        alt="Github"/></a></p>
+<p><img src="../assets/2020-04-11-01-38-44.png" alt="Github"></p>
 <p>これで自分自身は、 <strong>拡張機能</strong> を導入していないですが、VS Codeでプロジェクトを開いた相当の環境が手に入りました。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-01-51-04.png"><img  src="../assets/2020-04-11-01-51-04.png"
-        alt="Theia"/></a></p>
+<p><img src="../assets/2020-04-11-01-51-04.png" alt="Theia"></p>
 <h3 id="拡張機能をインストールしてみる">拡張機能をインストールしてみる</h3>
 <p>さて、先ほどから何度となくVS Codeの拡張が使えると言ってきました。
 いくつかの拡張がすでにインストールされているようですが、やはり自分のお好みのものをインストールしたいと思うでしょう。</p>
 <p>ですが、拡張機能をインストールしようとしてみても、検索なんて出来ません。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-02-01-26.png"><img  src="../assets/2020-04-11-02-01-26.png"
-        alt="拡張機能"/></a></p>
+<p><img src="../assets/2020-04-11-02-01-26.png" alt="拡張機能"></p>
 <p>これは、VS Codeの拡張機能には制限があるためです。正確には拡張自身ではなくてそのカタログ表示の部分です。</p>
 <p>Microsoftは、Visual Studio Marketplaceを他のソフトウェアによって直接使用することを禁止しているのです。
-拡張機能事態はそのほとんどがオープンソースで、Microsoftが開発したり保守したりしていませんが、<a href="https://marketplace.visualstudio.com/vscode"target="_blank">マーケットプレイス</a>へのアクセスは制限されています。</p>
-<p>ということで、<a href="https://marketplace.visualstudio.com/vscode"target="_blank">マーケットプレイス</a>にアクセスして、直接ファイルを手に入れてTheiaにインストールするという流れを取ります。
+拡張機能事態はそのほとんどがオープンソースで、Microsoftが開発したり保守したりしていませんが、<a href="https://marketplace.visualstudio.com/vscode">マーケットプレイス</a>へのアクセスは制限されています。</p>
+<p>ということで、<a href="https://marketplace.visualstudio.com/vscode">マーケットプレイス</a>にアクセスして、直接ファイルを手に入れてTheiaにインストールするという流れを取ります。
 また多くの拡張がGithubを利用しているのでそちらで手に入れても構いません。</p>
-<p>早速ですが<a href="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons"target="_blank">vscode-icons</a>を例にインストールしてみたいと思います。</p>
+<p>早速ですが<a href="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons">vscode-icons</a>を例にインストールしてみたいと思います。</p>
 <p>vsixファイルをダウンロードするためのリンクが用意されていますので、それをクリックします。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-02-41-49.png"><img  src="../assets/2020-04-11-02-41-49.png"
-        alt="DownloadExtension"/></a></p>
+<p><img src="../assets/2020-04-11-02-41-49.png" alt="DownloadExtension"></p>
 <p>手元にダウンロードしたファイルを、TheiaにDrag &amp; Dropするとインストールできます。
 (っていうか、リンク教えたらそっちで勝手にやってよって感じですが・・・)</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-02-43-08.png"><img  src="../assets/2020-04-11-02-43-08.png"
-        alt="Install"/></a></p>
+<p><img src="../assets/2020-04-11-02-43-08.png" alt="Install"></p>
 <p>右下にダイアログが表示されるので、有効化をクリックします。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-02-41-15.png"><img  src="../assets/2020-04-11-02-41-15.png"
-        alt="有効化"/></a></p>
+<p><img src="../assets/2020-04-11-02-41-15.png" alt="有効化"></p>
 <p>この例だとインストール前とそれほど変わってませんが、一応有効になったようです。</p>
-<p><a target="_blank" rel="noopener noreferrer" 
-  href="../assets/2020-04-11-02-45-45.png"><img  src="../assets/2020-04-11-02-45-45.png"
-        alt="icon"/></a></p>
+<p><img src="../assets/2020-04-11-02-45-45.png" alt="icon"></p>
 <p>ただ、色々試してみて分かったのですが、全部が全部手放しで喜べるほど甘くはなさそうです。</p>
-<p>たとえばこの記事は、Markdownで書き殴っているのですが、スクリーンショットは<a href="https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image"target="_blank">Paste Image</a>を使ってベタペタ貼り付けています。</p>
+<p>たとえばこの記事は、Markdownで書き殴っているのですが、スクリーンショットは<a href="https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image">Paste Image</a>を使ってベタペタ貼り付けています。</p>
 <p>ですが、これをTheiaにインストールしてみたらxclipコマンドが必要だと言われました。
 Dockerfileを作ってインストールしてみたら、今度は「There is not a image in clipboard.」と言われました。
 そうですね、そっちからだと思います。</p>
@@ -127,31 +221,57 @@ Dockerfileを作ってインストールしてみたら、今度は「There is n
 <p>Docker含め環境の設定方法は<a href="/theia/docker_settings/">こちら</a>に纏めました</p>
 <h3 id="今更ですが無料なのか">今更ですが、無料なのか？</h3>
 <p>今更ですが、これタダなの？と。</p>
-<p><a href="https://www.gitpod.io/pricing/"target="_blank">Gitpod</a>にお値段表があります。
+<p><a href="https://www.gitpod.io/pricing/">Gitpod</a>にお値段表があります。
 ここまでの手順で来た方は、50時間までは無料という形でFreeアカウントになっているはずです。</p>
 <p>個人でお金払ってまでブラウザ越しに開発したいかというと微妙な気がしますが、とにかくそういうことです。</p>
 <p>日頃忙しく働いている傍ら、隙間時間を使って開発を進めている人とかであれば、日々の隙間時間や移動中、出張中とかで個人用のPCがなくても、ブラウザさえ手に入れば開発が継続できるというのはありがたいのかも知れません。</p>
 <p>ひとつ注意事項としては、止めるの忘れて放置しても適当なところでタイムアウトはしてくれるのですが、それでも50時間の1割、2割は浪費する構図になりますので、ご利用は計画的にということで。</p>
 <h2 id="theiaを使ってみる-その2">Theiaを使ってみる その2</h2>
 <p>Electron版つまりは、デスクトップ版はについては、また改めて記載したいと思います。</p>
-</article>
-<section class="article navigation"><p><a class="link" href="/theia/docker_settings/"><span class="li">&larr;</span>Theia | Gitpodの環境設定</a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
-    <p class="copyright">©2020 Always Basics.</p>
-    <p class="powerby"><span>Powered by </span><a href="https://gohugo.io" 
-        target="_blank">Hugo</a><span> and the </span><a href="https://themes.gohugo.io/hugo-notepadium/" 
-        target="_blank">Notepadium</a></p>
-</div></section><script src="/js/hljs.min.0799348a91dce12c6be4a73f943cfe78f181f4e6f6ec35c4af0fca1de377879f77cfab03c30f03a174d675737b5a9314.js" integrity="sha384-B5k0ipHc4Sxr5Kc/lDz&#43;ePGB9Ob27DXErw/KHeN3h593z6sDww8DoXTWdXN7WpMU"></script><script>hljs.initHighlightingOnLoad();</script>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-75025058-6', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
 </div>
-</body>
+            </div>
+        </div>
 
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+            
+            <br />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+
+    <div class="layui-container">
+        <div class="layui-row">
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs6">
+                <h3> Related Sites </h3>
+            </div>
+        </div>
+        <div class="layui-row">
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/"><p class="footer-url">home</p></a>
+            </div>
+            
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="/about/"><p class="footer-url">About</p></a>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
 </html>
