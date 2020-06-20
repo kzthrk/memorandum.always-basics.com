@@ -22,7 +22,7 @@ googleAnalytics = "UA-75025058-6"
     <p> 継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</p>
     <br />
     """
-    # copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
+    copyright = "Copyright © 2020, Always Basics and the Hugo Authors; all rights reserved."
 
 [[menu.main]]
     identifier = "programming"
