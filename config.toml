@@ -6,6 +6,7 @@ paginate = 5
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
+disqusShortname = "https-memorandum-always-basics-com"
 
 # Google Analytics
 googleAnalytics = "UA-75025058-6"
