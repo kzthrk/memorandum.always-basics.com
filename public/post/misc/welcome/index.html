@@ -18,10 +18,10 @@
     
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75025058-6"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)};
-          gtag('js', new Date());
-          gtag('config', 'UA-75025058-6');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)};
+            gtag('js', new Date());
+            gtag('config', 'UA-75025058-6');
         </script>
     
 
@@ -112,6 +112,7 @@ layui.use('element', function(){
     
 
     <div class="layui-row layui-col-space10">
+        
         <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
             <div class="layui-card single-card">
                 <br />
@@ -119,8 +120,7 @@ layui.use('element', function(){
                     <h1>Welcome</h1>
                     <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-02-05</span>
-
+    <span>2020-02-05(更新日: 2020-02-05)</span>
     
      
     <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
@@ -144,8 +144,7 @@ layui.use('element', function(){
     
 </h3>
                 </blockquote>
-                <div class="layui-card-body markdown-body single-content">
-                    <h1 id="はじめに">はじめに</h1>
+                <div class="layui-card-body markdown-body single-content"><h1 id="はじめに">はじめに</h1>
 <p>この投稿はお試し投稿です。</p>
 <h1 id="なにするサイト">なにするサイト？</h1>
 <p>このサイトでは、プログラミング言語や電子工作など日頃行っている作業のメモを纏め公開していく予定です。
@@ -237,15 +236,49 @@ Markdown記法、実際の表示の順に並べていきます。</p>
 <p>あの新機能バグってるっすね</p>
 </blockquote>
 </blockquote>
-<h2 id="pre記法スペース4-または-タブ">pre記法(スペース4 または タブ)</h2>
+<h2 id="表">表</h2>
 <h3 id="markdown-4">markdown</h3>
+<pre><code>|名前|年齢|職業|
+|------|---------|--------|
+|太郎|19才|学生|
+|花子|32才|会社員|
+|次郎|56才|会社役員|
+</code></pre><h3 id="実例-4">実例</h3>
+<table>
+<thead>
+<tr>
+<th>名前</th>
+<th>年齢</th>
+<th>職業</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>太郎</td>
+<td>19才</td>
+<td>学生</td>
+</tr>
+<tr>
+<td>花子</td>
+<td>32才</td>
+<td>会社員</td>
+</tr>
+<tr>
+<td>次郎</td>
+<td>56才</td>
+<td>会社役員</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pre記法スペース4-または-タブ">pre記法(スペース4 または タブ)</h2>
+<h3 id="markdown-5">markdown</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">    class aaa
         def bbb
             print &#39;ccc&#39;
         end
     end
 
-</code></pre></div><h3 id="実例-4">実例</h3>
+</code></pre></div><h3 id="実例-5">実例</h3>
 <pre><code>class aaa
     def bbb
         print 'ccc'
@@ -253,54 +286,54 @@ Markdown記法、実際の表示の順に並べていきます。</p>
 end
 </code></pre>
 <h2 id="コード">コード</h2>
-<h3 id="markdown-5">markdown</h3>
+<h3 id="markdown-6">markdown</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">お試しコードはこちらです: <span style="color:#e6db74">`cd; mkdir git; mkdir my_project; git init`</span>
-</code></pre></div><h3 id="実例-5">実例</h3>
+</code></pre></div><h3 id="実例-6">実例</h3>
 <p>お試しコードはこちらです: <code>cd; mkdir git; mkdir my_project; git init</code></p>
 <h2 id="強調-em">強調 em</h2>
-<h3 id="markdown-6">markdown</h3>
+<h3 id="markdown-7">markdown</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">normal <span style="font-style:italic">*italic*</span> normal
 normal <span style="font-style:italic">_italic_</span> normal
-</code></pre></div><h3 id="実例-6">実例</h3>
+</code></pre></div><h3 id="実例-7">実例</h3>
 <p>normal <em>italic</em> normal
 normal <em>italic</em> normal</p>
 <h2 id="強調-strong">強調 strong</h2>
-<h3 id="markdown-7">markdown</h3>
+<h3 id="markdown-8">markdown</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">normal <span style="font-weight:bold">**bold**</span> normal
 normal <span style="font-weight:bold">__bold__</span> normal
-</code></pre></div><h3 id="実例-7">実例</h3>
+</code></pre></div><h3 id="実例-8">実例</h3>
 <p>normal <strong>bold</strong> normal
 normal <strong>bold</strong> normal</p>
 <h2 id="水平線">水平線</h2>
-<h3 id="markdown-8">markdown</h3>
+<h3 id="markdown-9">markdown</h3>
 <pre><code class="language-markdown***" data-lang="markdown***">---
 ___
 * * * 
-</code></pre><h3 id="実例-8">実例</h3>
+</code></pre><h3 id="実例-9">実例</h3>
 <hr>
 <hr>
 <hr>
 <hr>
 <h2 id="リンク">リンク</h2>
-<h3 id="markdown-9">markdown</h3>
+<h3 id="markdown-10">markdown</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">[<span style="color:#f92672">Google</span>](<span style="color:#a6e22e">https://www.google.co.jp/</span>)
 
-</code></pre></div><h3 id="実例-9">実例</h3>
+</code></pre></div><h3 id="実例-10">実例</h3>
 <p><a href="https://www.google.co.jp/">Google</a></p>
 <h2 id="取り消し線">取り消し線</h2>
-<h3 id="markdown-10">markdown</h3>
+<h3 id="markdown-11">markdown</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">~~取り消し線~~
-</code></pre></div><h3 id="実例-10">実例</h3>
+</code></pre></div><h3 id="実例-11">実例</h3>
 <p><del>取り消し線</del></p>
 <h2 id="pre記法のシンタックスハイライト">pre記法のシンタックスハイライト</h2>
-<h3 id="markdown-11">markdown</h3>
+<h3 id="markdown-12">markdown</h3>
 <pre><code>```python
 def make_sense():
     return &quot;なるほどね！&quot;
 
 print(make_sense())
 ```
-</code></pre><h3 id="実例-11">実例</h3>
+</code></pre><h3 id="実例-12">実例</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">make_sense</span>():
     <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;なるほどね！&#34;</span>
 
@@ -329,12 +362,47 @@ print(make_sense())
             </div>
         </div>
 
+        
         <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
             
-
+            
+            
             <div class="layui-card single-card">
                 <h2 class="single-title">Recent Posts</h2>
                 
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/misc/mask/">
+                            <h3 class="">再利用可能なマスクの情報集めてみました</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-06-21(更新日: 2020-06-21)</span>
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/misc/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Misc</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/mask/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">mask</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
                     
                     <div style="margin-left: 10px;">
                         <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
@@ -343,8 +411,7 @@ print(make_sense())
                         </a>
                         <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-05-06</span>
-
+    <span>2020-05-06(更新日: 2020-05-06)</span>
     
      
     <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
@@ -381,8 +448,7 @@ print(make_sense())
                         </a>
                         <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-05-05</span>
-
+    <span>2020-05-05(更新日: 2020-05-05)</span>
     
      
     <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
@@ -419,8 +485,7 @@ print(make_sense())
                         </a>
                         <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-05-05</span>
-
+    <span>2020-05-05(更新日: 2020-05-05)</span>
     
      
     <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
@@ -457,46 +522,7 @@ print(make_sense())
                         </a>
                         <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-04-13</span>
-
-    
-     
-    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
-    
-
-    
-        <a href="/categories/theia/">
-            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Theia</span>
-        </a>
-    
-
-    
-    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
-    
-
-    
-        <a href="/tags/ide/">
-            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">IDE</span>
-        </a>
-    
-        <a href="/tags/development/">
-            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Development</span>
-        </a>
-    
-    
-</h3>
-                        </blockquote>
-                    </div>
-                    
-                    <div style="margin-left: 10px;">
-                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
-                        <a href="/post/theia/docker_settings/">
-                            <h3 class="">Theia | Gitpodの環境設定</h3>
-                        </a>
-                        <h3 style="margin-top:10px; margin-bottom:10px"> 
-    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-04-12</span>
-
+    <span>2020-04-13(更新日: 2020-04-13)</span>
     
      
     <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
@@ -529,6 +555,7 @@ print(make_sense())
                 
                 <br />
             </div>
+            
             <div class="layui-card single-card">
                 <div class="ad">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

@@ -25,14 +25,15 @@
 静的サイトジェネレータをご自身のパソコンにインストール(これは最初の1回目だけ) Markdownで記事を書く ジェネレートする アップロードする  また作成されるものが静的であるということは、PHPやPython、Rubyなどの言語環境はもとよりデータベースなども不要なことから、ご自身でサーバーを借り受けて運用する必要もなく、例えばGitHub Pagesのように無料のサービスを使ってWebサイトを公開することも可能です。
 静的サイトジェネレータ Hugo 静的サイトジェネレータが何者かは分かりました。ではHugoとは何者でしょうか？ HugoとはGo言語というGoogleが開発したプログラミング言語で作られた静的サイトジェネレータです。 安心してください。Goについてはまったく知る必要はありません。Goをインストールするということもありません。 知って頂くのは嬉しいですが、知らなくてもHugoに関しては使いこなせます。
 静的サイトジェネレータはHugo以外にもいくつも存在しています。できることは似たり寄ったり。というかどのツールもゴールは静的ページの生成なので、そんなに劇的に違うと事件ですよね？この記事では比較はいたしませんが、ひとまずHugoを押しておきます。
-Hugoのインストール 前提 静的サイトジェネレータHugoをインストールするための前提ではありません。この記事が例示するのが、以下のOS,バージョンというだけです。
+ 
+ (adsbygoogle = window.adsbygoogle || []).push({});  Hugoのインストール 前提 静的サイトジェネレータHugoをインストールするための前提ではありません。この記事が例示するのが、以下のOS,バージョンというだけです。
 macOS 10.14.6
 実際には、Windows、Mac、Linuxと事実上この記事の読者全ての方がインストール可能かと思います。
 手順1 Hugoのインストール Hugoのインストール手順はとても簡単です。Homebrewを使えば一発インストールが可能です。
 brew install hugo 長々と処理が流れて行きますが、しばらく放置しておけば良いです。
 もしHomeBrewがまだインストールされていない場合は、こちらを参考にしてインストールしてください。 とはいっても、以下のコマンドを1発実行するだけだと思います。
 /usr/bin/ruby -e &amp;#34;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;#34; 手順2 新規サイトの作成 Hugoをインストールすると、hugoコマンドが使えるようになります。 ここでは、memorandum.always-basics.comという新規サイトを作成するべく、以下のコマンドを実行します。
-hugo new site memorandum.always-basics.com MacBookPro-2:git $ hugo new site memorandum.always-basics.com Congratulations! Your new Hugo site is created in /Users/user/git/memorandum.always-basics.com. Just a few more steps and you&#39;re ready to go: 1.</description>
+hugo new site memorandum.always-basics.com MacBookPro-2:git $ hugo new site memorandum.always-basics.com Congratulations! Your new Hugo site is created in /Users/user/git/memorandum.</description>
     </item>
     
   </channel>

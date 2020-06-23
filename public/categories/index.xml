@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Memorandum - Danger past, god forgotten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 May 2020 16:47:51 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 00:58:07 +0900</lastBuildDate>
     
 	<atom:link href="http://memorandum.always-basics.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Misc</title>
+      <link>http://memorandum.always-basics.com/categories/misc/</link>
+      <pubDate>Sun, 21 Jun 2020 00:58:07 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/categories/misc/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Programming</title>
@@ -26,15 +35,6 @@
       <pubDate>Mon, 13 Apr 2020 15:22:45 +0900</pubDate>
       
       <guid>http://memorandum.always-basics.com/categories/theia/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Misc</title>
-      <link>http://memorandum.always-basics.com/categories/misc/</link>
-      <pubDate>Wed, 01 Apr 2020 21:43:54 +0900</pubDate>
-      
-      <guid>http://memorandum.always-basics.com/categories/misc/</guid>
       <description></description>
     </item>
     

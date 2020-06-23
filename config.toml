@@ -25,6 +25,9 @@ googleAnalytics = "UA-75025058-6"
     """
     copyright = "Copyright © 2020, Always Basics and the Hugo Authors; all rights reserved."
 
+[markup.goldmark.renderer]
+unsafe = true  # enable raw HTML in Markdown
+
 [[menu.main]]
     identifier = "programming"
     name = "Programming"

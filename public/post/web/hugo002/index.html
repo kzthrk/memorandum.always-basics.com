@@ -18,10 +18,10 @@
     
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75025058-6"></script>
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments)};
-          gtag('js', new Date());
-          gtag('config', 'UA-75025058-6');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)};
+            gtag('js', new Date());
+            gtag('config', 'UA-75025058-6');
         </script>
     
 
@@ -112,6 +112,7 @@ layui.use('element', function(){
     
 
     <div class="layui-row layui-col-space10">
+        
         <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
             <div class="layui-card single-card">
                 <br />
@@ -119,8 +120,7 @@ layui.use('element', function(){
                     <h1>2. Hugoで作成したサイトを追加構成</h1>
                     <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-02-10</span>
-
+    <span>2020-02-10(更新日: 2020-06-21)</span>
     
      
     <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
@@ -152,20 +152,35 @@ layui.use('element', function(){
     
 </h3>
                 </blockquote>
-                <div class="layui-card-body markdown-body single-content">
-                    <h1 id="はじめに">はじめに</h1>
+                <div class="layui-card-body markdown-body single-content"><h1 id="はじめに">はじめに</h1>
 <p>前回は<a href="/web/hugo001/">静的サイトジェネレータ Hugoをインストール</a>で、静的サイトジェネレータのひとつであるHugoをインストールしました。
 今回はそのサイトに記事を増やす方向の充実ではなく、<strong>機能や構成</strong>を充実させていく方向でのメモをです。</p>
-<p>この記事は、順次追記されて充実していきます。(つまり、最初は1つ、2つしかトピックがありません)</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<h1 id="hugoで作成したサイトに追加の構成を行う">Hugoで作成したサイトに追加の構成を行う</h1>
-<!-- raw HTML omitted -->
+<p>この記事は、順次追記されて充実していきます。(つまり、最初は数個しかトピックがありません)</p>
+<h2 id="お品書き">お品書き</h2>
+<ol>
+<li><a href="#sitemapxml">sitemap.xml</a></li>
+<li><a href="#googleanalytics">Google Analytics</a></li>
+<li><a href="#faviconico">Favicon.ico</a></li>
+<li><a href="#%E3%83%86%E3%83%BC%E3%83%9E%E3%82%92%E5%A4%89%E6%9B%B4">テーマを変更</a></li>
+<li><a href="#TOP%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AB%E8%A8%98%E4%BA%8B%E3%81%8C%E3%83%AA%E3%82%B9%E3%83%88%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84">TOPページに記事がリストされない</a></li>
+<li><a href="#googleadsense">Google Adsense</a></li>
+<li><a href="#HTML%E3%82%BF%E3%82%B0%E3%81%AE%E6%B7%B7%E5%9C%A8%E3%82%92%E8%A8%B1%E5%8F%AF">HTMLタグの混在を許可</a></li>
+</ol>
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<p><ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-9230307049349065"
+data-ad-slot="9446890582"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
+<h1 id="hugoで作成したサイトに追加構成">Hugoで作成したサイトに追加構成</h1>
+<!-- ==================================================================================================== -->
 <h2 id="sitemapxml">sitemap.xml</h2>
 <p>Googleさんをはじめ各種サーチエンジンに正しく認識してもらうためにも、sitemap.xmlがあった方がいいですね。
 Hugoは自動的にsitemap.xmlが生成されています。</p>
@@ -193,16 +208,17 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
 <p><a href="http://localhost:1313/sitemap.xml">http://localhost:1313/sitemap.xml</a>にアクセスして下さい。</p>
 <p>もちろんこれは、<a href="/web/hugo001/">前回</a>も記載しましたが<code>hugo server -w</code>を実行している前提です。</p>
 <p><img src="../assets/2020-02-11-00-00-56.png" alt="sitemap.xmlの確認"></p>
-<!-- raw HTML omitted -->
-<h2 id="googleanalytics">GoogleAnalytics</h2>
-<p>GoogleAnalyticsとの連携は、拍子抜けするほど簡単です。</p>
+<!-- ==================================================================================================== -->
+<hr>
+<h2 id="google-analytics">Google Analytics</h2>
+<p>Google Analyticsとの連携は、拍子抜けするほど簡単です。</p>
 <h3 id="設定方法-1">設定方法</h3>
 <p>config.tomlに以下を設定するだけです。</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml"><span style="color:#75715e"># Google Analytics</span>
 <span style="color:#a6e22e">googleAnalytics</span> = <span style="color:#e6db74">&#34;UA-xxxxx-xx&#34;</span>
 </code></pre></div><h3 id="確認-1">確認</h3>
 <p>これに関しては、確認を割愛します。</p>
-<!-- raw HTML omitted -->
+<!-- ==================================================================================================== -->
 <h2 id="faviconico">Favicon.ico</h2>
 <p><strong>Favicon.ico</strong>ってなんだ？って方がもしもいらっしゃった場合に、その話をスルーしてしまうと悲しいことになってしまうので、
 念のためにいたしますと、ブラウザを開くとタブの左端に着いているアイコン、それからブックマークしたときなどにも使われているアイコンです。</p>
@@ -215,7 +231,8 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
 <p>HugoにFaviconを設定した後の確認です。
 <img src="../assets/2020-02-10-23-35-12.png" alt="favicon設定確認"></p>
 <p>適当に写真を切り取って使いましたが、やはりアイコンとしてデザインしたモノを用意した方が良いですね。</p>
-<!-- raw HTML omitted -->
+<!-- ==================================================================================================== -->
+<hr>
 <h2 id="テーマを変更">テーマを変更</h2>
 <p>単なる思いつきですが、このタイミングでテーマを変更してみたいと思います。</p>
 <p>選んだのはこちら。
@@ -283,7 +300,8 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
 <a href="http://localhost:1313/">http://localhost:1313/</a>にアクセスして下さい。</p>
 <p><img src="../assets/2020-02-12-01-46-33.png" alt="テーマ変更確認"></p>
 <p>無事に変更できていました。</p>
-<!-- raw HTML omitted -->
+<!-- ==================================================================================================== -->
+<hr>
 <h2 id="topページに記事がリストされない">TOPページに記事がリストされない</h2>
 <p>なんだかTOPページに追加したはずの記事がリストされません。ですが、カテゴリーとかタグから辿ると確かに存在します。
 どうも、見えているのはWebカテゴリーに投稿した記事のみのようです。</p>
@@ -321,7 +339,8 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
 </code></pre></div><h3 id="確認-4">確認</h3>
 <p><img src="../assets/2020-02-12-22-11-29.png" alt="メインセクション追加確認"></p>
 <p>無事に出てくるようになりました！</p>
-<!-- raw HTML omitted -->
+<!-- ==================================================================================================== -->
+<hr>
 <h2 id="hugoでgoogle-adsenseに対応してみる">HugoでGoogle Adsenseに対応してみる</h2>
 <p>HugoでGoogle Adsenseに対応させてみたいと思います。
 根本的には<code>&lt;HEAD&gt;...&lt;/HEAD&gt;</code>に任意の文字列と挿入できればゴールです。</p>
@@ -386,16 +405,48 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
 <p>実際に広告が配信されることを持って確認としても良いのですが、一応やったことの確認ということで。</p>
 <p><img src="../assets/2020-02-16-21-06-14.png" alt="GoogleAdsense設定確認"></p>
 <p>他にも自動で挿入されているんだと思いますが、一応下線を引いたところが追加されているのでよしとします。</p>
-<!-- raw HTML omitted -->
+<!-- ==================================================================================================== -->
+<hr>
+<h2 id="リンクを別タブで開く">リンクを別タブで開く</h2>
+<p>リンクを別タブで開く方法としては、全て別タブになってしまうのを避けるため、結果的には次の<a href="#HTML%E3%82%BF%E3%82%B0%E3%81%AE%E6%B7%B7%E5%9C%A8%E3%82%92%E8%A8%B1%E5%8F%AF">HTMLタグの混在を許可</a>で
+HTMLタグを直接記載することで実現しました。</p>
+<p>が、その時に他の方法についても知ることになったので、それを記録しておくものです。</p>
+<p>それは以下をHTMLのheadタグに追加するというモノです。</p>
+<pre><code>&lt;base target=&quot;_blank&quot;&gt;
+</code></pre><p>おそらくほとんどのテーマには、テーマのソースコードは変更せずにユーザーコードを追加出来るようになっていると思います。</p>
+<p>テーマが<a href="https://themes.gohugo.io/hugo-notepadium/">Hugo Notepadium</a>であれば、<code>head-extra.html</code>、
+<a href="https://themes.gohugo.io/erblog/">erblog</a>であれば、<code>self-define-head.html</code>に上記を記載することで全てのページでこの設定が有効になるはずです。</p>
+<hr>
+<h2 id="htmlタグの混在を許可">HTMLタグの混在を許可</h2>
+<p>Hugoの良いところの1つとして、記事をMarkdownで記述出来るところが挙げられます。
+ですが、Markdownで許された範囲を超えた表現が欲しくなるということが起こりえます。</p>
+<p>私の場合のきっかけは、<a href="#%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%92%E5%88%A5%E3%82%BF%E3%83%96%E3%81%A7%E9%96%8B%E3%81%8F">リンクを別タブで開く</a>というものでした。
+ですが、この方法では他のリンクまで全て別タブで開いてしまうため、この方法を調べたということです。</p>
+<p>さて、ちょっと古い情報だとHugoではMarkdownがblackfridayというエンジンで処理されているということで、
+その方法が紹介されているのを見かけましたが、どうやら何の変化も起こらずエンジンが変わってしまったようだなと。</p>
+<p>ということで、変わったということを加味してGoogle先生に聞いてみると、どうやらgoldmarkに変わっているようです。
+変わったのはHugo v0.60.0からで、変わっているといっても選択式で戻すことも可能なようです。</p>
+<h3 id="パーサー変更方法">パーサー変更方法</h3>
+<pre><code>[markup]
+  defaultMarkdownHandler = &quot;blackfriday&quot;
+</code></pre><h3 id="htmlタグを許可する設定">HTMLタグを許可する設定</h3>
+<pre><code>[markup.goldmark.renderer]
+    unsafe = true  # enable raw HTML in Markdown
+</code></pre><!-- ==================================================================================================== -->
 <p>以上</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<div id="disqus_thread"></div>
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<p><ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-9230307049349065"
+data-ad-slot="9446890582"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 --><div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
     
@@ -419,7 +470,9 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
             </div>
         </div>
 
+        
         <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
             
             <div class="layui-card single-card">
                 <h2 class="single-title">Relevant Topics</h2>
@@ -433,8 +486,7 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
                             
                             <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-02-06</span>
-
+    <span>2020-02-06(更新日: 2020-02-06)</span>
     
      
     <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
@@ -472,10 +524,43 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
                 <br />
             </div>
             
-
+            
             <div class="layui-card single-card">
                 <h2 class="single-title">Recent Posts</h2>
                 
+                    
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
+                        <a href="/post/misc/mask/">
+                            <h3 class="">再利用可能なマスクの情報集めてみました</h3>
+                        </a>
+                        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-06-21(更新日: 2020-06-21)</span>
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/misc/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Misc</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/mask/">
+            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">mask</span>
+        </a>
+    
+    
+</h3>
+                        </blockquote>
+                    </div>
                     
                     <div style="margin-left: 10px;">
                         <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
@@ -484,8 +569,7 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
                         </a>
                         <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-05-06</span>
-
+    <span>2020-05-06(更新日: 2020-05-06)</span>
     
      
     <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
@@ -522,8 +606,7 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
                         </a>
                         <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-05-05</span>
-
+    <span>2020-05-05(更新日: 2020-05-05)</span>
     
      
     <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
@@ -560,8 +643,7 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
                         </a>
                         <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-05-05</span>
-
+    <span>2020-05-05(更新日: 2020-05-05)</span>
     
      
     <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
@@ -598,46 +680,7 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
                         </a>
                         <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-04-13</span>
-
-    
-     
-    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
-    
-
-    
-        <a href="/categories/theia/">
-            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Theia</span>
-        </a>
-    
-
-    
-    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
-    
-
-    
-        <a href="/tags/ide/">
-            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">IDE</span>
-        </a>
-    
-        <a href="/tags/development/">
-            <span class="layui-badge layui-bg-red" style="vertical-align: 2px;">Development</span>
-        </a>
-    
-    
-</h3>
-                        </blockquote>
-                    </div>
-                    
-                    <div style="margin-left: 10px;">
-                        <blockquote class="self-elem-quote self-elem-quote-bg-blue" style="background-color:#FFFFFF;margin-top: 10px;">
-                        <a href="/post/theia/docker_settings/">
-                            <h3 class="">Theia | Gitpodの環境設定</h3>
-                        </a>
-                        <h3 style="margin-top:10px; margin-bottom:10px"> 
-    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2020-04-12</span>
-
+    <span>2020-04-13(更新日: 2020-04-13)</span>
     
      
     <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
@@ -670,6 +713,7 @@ sitemap.xmlに載るようにし、最終更新日時がとれなかったらそ
                 
                 <br />
             </div>
+            
             <div class="layui-card single-card">
                 <div class="ad">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

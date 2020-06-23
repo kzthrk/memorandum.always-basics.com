@@ -1,18 +1,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+
+    
+
+    
+
+    
+
+    
+
+    
+        <url>
+        <loc>http://memorandum.always-basics.com/post/misc/mask/</loc>
+        
+            <lastmod>2020-06-21T00:58:07+09:00</lastmod>
+        
+        </url>
+    
+
+    
         <url>
         <loc>http://memorandum.always-basics.com/post/programming/vue2/</loc>
         
             <lastmod>2020-05-06T16:47:51+09:00</lastmod>
         
         </url>
-    
-
-    
-
-    
-
     
 
     
@@ -97,8 +110,6 @@
     
 
     
-
-    
         <url>
         <loc>http://memorandum.always-basics.com/post/electronic_kit/arduino001/</loc>
         
@@ -113,7 +124,7 @@
         <url>
         <loc>http://memorandum.always-basics.com/post/web/hugo002/</loc>
         
-            <lastmod>2020-02-16T23:11:57+09:00</lastmod>
+            <lastmod>2020-06-21T23:00:00+09:00</lastmod>
         
         </url>
     

@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Memorandum - Danger past, god forgotten</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 May 2020 16:47:51 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jun 2020 00:58:07 +0900</lastBuildDate>
     
 	<atom:link href="http://memorandum.always-basics.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>mask</title>
+      <link>http://memorandum.always-basics.com/tags/mask/</link>
+      <pubDate>Sun, 21 Jun 2020 00:58:07 +0900</pubDate>
+      
+      <guid>http://memorandum.always-basics.com/tags/mask/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>JavaScript</title>
