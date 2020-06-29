@@ -53,6 +53,7 @@ draft: false
 |<a href="https://store.cox-online.jp/fashion-mask-pc.html" target="_blank">AEON</a>|<a href="#ぴたマスク">ぴたマスク</a>|||ポ|3|1200|400|
 |AEON|<a href="#パステルマスク">パステルマスク</a>|冷|||3|858|286|
 
+※ AEONグループについては、紹介記事の見出しがAEON始まりなケースが散見されたため、一律AEONとしていますが、実際のリンクはその子会社または関連会社となっています
 
 ## アパレル(スーツ)系
 
@@ -151,7 +152,7 @@ draft: false
 |<a href="https://www.makuake.com/project/sheltech-mask/" target="_blank">SHELTECH</a>|<a href="#sheltech-basic-mask">SHELTECH BASIC MASK</a>|冷菌ウイルス臭カビUV乾|||1|1760|1760|
 |<a href="https://www.makuake.com/project/salaf/" target="_blank">公大株式会社</a>|<a href="#salafサラフの立体マスク">Salaf(サラフ)の立体マスク</a>|冷|||1|1500|1500|
 |<a href="https://www.makuake.com/project/infinity_peaks02/" target="_blank">infinity peaks</a>|<a href="#rebreass">Re.Breass</a>|乾|||1|2500|2500|
-|<a href="https://www.makuake.com/project/kumoran/" target="_blank">株式会社SPY</a>|kumoran|||1|3168|3168|
+|<a href="https://www.makuake.com/project/kumoran/" target="_blank">株式会社SPY</a>|kumoran||||1|3168|3168|
 |<a href="https://www.makuake.com/project/mediplus02/" target="_blank">株式会社ゼフィール</a>|<a href="#とことんクールな抗菌コールドマスク">とことんクールな抗菌コールドマスク</a>|冷菌臭||ポ|2|2178|1089|
 |<a href="https://www.makuake.com/project/mediplus02/" target="_blank">株式会社ゼフィール</a>|<a href="#抗菌UVひんやりネックゲイター">抗菌UVひんやりネックゲイター</a>|冷菌臭||ポ|2|3822|1911|
 |<a href="https://www.makuake.com/project/hartwel/" target="_blank">ハートウエル</a>|<a href="#今治タオル品質の冷感抗菌マスク">今治タオル品質の冷感・抗菌マスク</a>|冷菌臭||綿|1|2510|2510|
