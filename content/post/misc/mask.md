@@ -1,7 +1,7 @@
 ---
 title: "再利用可能なマスクの情報集めてみました"
 date: 2020-06-21T00:58:07+09:00
-lastmod: 2020-06-29T12:49:00+09:00
+lastmod: 2020-0706T11:28:00+09:00
 Categories: ["Misc"]
 Tags: ["mask"]
 Description: "使い捨てマスクが当たり前のように使われていたのは今は昔。新型コロナ対策でどんどん再利用可能なマスクの新商品が販売されています。そんなマスクの情報を集めてみました"
@@ -118,7 +118,7 @@ draft: false
 |<a href="https://shpn.me/item/90929" target="_blank">カラフル株式会社</a>|冷感ひんやり夏マスク冷|||ポ|1|980|980|
 |<a href="https://www.yodobashi.com/product/100000001005590556/" target="_blank">KING JIM</a>|くりかえし使えるマスク||||1|1320|1320|
 |<a href="https://mamol.shop-pro.jp/?mode=f2" target="_blank">岡田商会</a>|<a href="#COOLIST">COOLIST</a>|冷蒸乾||ポ|||0|
-|<a href="https://monstella.net/shopping/lp.php?p=061_tokyomouthwear" target="_blank">monstella</a>|東京マウスウェア||||1|840|840|
+|<a href="https://monstella.net/shopping/lp.php?p=061_tokyomouthwear" target="_blank">モンステラ</a>|<a href="#東京マウスウェア">東京マウスウェア</a>|冷UV乾|||1|¥840|¥840|
 |<a href="https://primaqua.shop-pro.jp/?pid=150181698" target="_blank">プリマクア</a>|フリルマスク|||綿|2|2860|1430|
 |<a href="https://www.cogit.co.jp/goods/5811/" target="_blank">コジット</a>|COOL PASTEL MASK||||1|1000|1000|
 |<a href="https://item.rakuten.co.jp/citto/mask-air-m/" target="_blank"></a>|スポーツマスク エアーM|||ポ|1|3100|3100|
@@ -130,7 +130,7 @@ draft: false
 |<a href="https://www.karuizawa-shirt.jp/products/details/K93S3M001" target="_blank">フレックスジャパン</a>|洗えるマスク|||ポ|3|2000|667|
 |<a href="https://www.cecile.co.jp/detail/CU-1329/?micd=01207&appno=234371&miseq=281&ordno=0076" target="_blank">CECILE</a>|ひんやりマスク|||綿|1|2178|2178|
 |<a href="https://spice.jp/categories/collection/cooolmask.html" target="_blank">SPICE OF LIFE</a>|<a href="#UVカットウォータークールマスク">UVカットウォータークールマスク</a>|冷UV||ポ|2|800|400|
-|三陽商会|<a href="#VEX by KRIZIA ウォッシャブルマスク">VEX by KRIZIA ウォッシャブルマスク</a>|||綿|1|1800|1800|
+|<a href="http://www.evexbykrizia.com/news/#42972" target="_blank">三陽商会</a>|<a href="#vex-by-krizia-ウォッシャブルマスク">VEX by KRIZIA ウォッシャブルマスク</a>|||綿|1|¥1800|¥1800|
 |<a href="https://www.virinamaternity.com/smp/item/vma20fw02MSK239.html" target="_blank">ヴィリーナジャパン</a>|<a href="#バリアファイブクールタッチマスク">バリアファイブ・クールタッチマスク</a>|冷菌ウイルス臭カビ|||1|2750|2750|
 |<a href="https://usagi-online.com/s/200624RNB/?link=TOP_FEATURE_FASHION_03" target="_blank">SNIDEL</a>|<a href="#オリジナルマスク">オリジナルマスク</a>|冷蒸||綿|1|1950|1950|
 |<a href="https://www.markandlona.com/c/acc/fashion-accessories/mlf-0b-so03" target="_blank">マーク＆ロナ</a>|<a href="#one-another-mask">One Another Mask</a>|冷蒸乾|||1|3000|3000|
@@ -143,6 +143,34 @@ draft: false
 |<a href="https://jackandmarie-store.com/GORDON%20MILLER%20COOL%20REVERSIBLE%20MASK(3Colors)(%E3%82%B4%E3%83%BC%E3%83%89%E3%83%B3%E3%83%9F%E3%83%A9%E3%83%BC%20%E3%82%AF%E3%83%BC%E3%83%AB%20%E3%83%AA%E3%83%90%E3%83%BC%E3%82%B7%E3%83%96%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%AF)(WHITE,COYOTE,DARK%20GRAY)(Unisex)/i/204076/c/78/keyword/%E3%83%9E%E3%82%B9%E3%82%AF/sort/regist_new/disp/70/c_p/1" target="_blank">ゴードンミラー</a>|<a href="#GORDON MILLER COOL REVERSIBLE MASK">GORDON MILLER COOL REVERSIBLE MASK</a>|冷乾UV||ポ|1|1659|1659|
 |<a href="https://anyemask.com/" target="_blank">アビタクリエイト</a>|<a href="#ANYeエニーマスク">ANYe（エニー）マスク</a>|冷菌臭|||||0|
 |<a href="https://tential.jp/products/mask?utm_source=PRTIMES&utm_medium=PRESS%20RELEASE&utm_campaign=PR_mask" target="_blank">TENTIAL</a>|<a href="#tential-mask">TENTIAL MASK</a>|蒸臭しわ||ポ|1|1980|1980|
+|<a href="http://polerstuff.jp/?mode=cate&cbid=2401548&csid=7" target="_blank">POLeR</a>|<a href="#surf---blue">SURF - BLUE</a>|UV乾|||1|¥1200|¥1200|
+|<a href="https://www.keyuca.com/shopping/products/detail.php?product_id=41390&category_id=458" target="_blank">KEYUCA</a>|<a href="#接触冷感ひんやりクールマスク">接触冷感ひんやりクールマスク</a>|冷UV乾|||1|¥890|¥890|
+|<a href="https://www.keyuca.com/shopping/products/detail.php?product_id=41391&category_id=458" target="_blank">KEYUCA</a>|抗菌防臭 ムレにくいガーゼマスク|蒸菌臭|||1|¥890|¥890|
+|<a href="https://hivix.shop-pro.jp/?mode=cate&cbid=2609143&csid=0" target="_blank">ハイビックス</a>|<a href="#シームレスマスク">シームレスマスク</a>|花ウUV|||1|¥750|¥750|
+|<a href="https://www.ennichi-shop.com/SHOP/en-p-55.html" target="_blank">京屋染物店</a>|<a href="#natsuiromask">natsuiroMASK</a>||||1|¥1800|¥1800|
+|<a href="https://www.hidamarihonpo.com/page/mask.html" target="_blank">ひだまり本舗</a>|<a href="#ひだまりマスク-スズミ-エア">ひだまりマスク スズミ エア</a>|冷乾|100||1|¥1250|¥1250|
+|<a href="http://www.pinecreate.jp/shopdetail/000000001540/ct308/page1/order/" target="_blank">パイン・クリエイト</a>|<a href="#ひんやりマスクmasscool">ひんやりマスクMASSCOOL</a>|冷|||1|¥500|¥500|
+|<a href="https://fenice.style/products/%E3%81%94%E4%BA%88%E7%B4%84%E5%8F%97%E4%BB%98%E4%B8%AD-7%E6%9C%8831%E6%97%A5%E5%85%A5%E8%8D%B7%E4%BA%88%E5%AE%9A%E5%88%86-summer-style-mask-cool-white-%E3%82%B5%E3%83%9E%E3%83%BC%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%AF-%E5%A4%8F%E7%94%A8-%E5%86%B7%E6%84%9F-%E6%8A%97%E8%8F%8C-%E6%B6%88%E8%87%AD%E5%8A%B9%E6%9E%9C-%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88?pr_prod_strat=collection_fallback&pr_rec_pid=4647145734247&pr_ref_pid=4647193215079&pr_seq=uniform" target="_blank">FENICE</a>|<a href="#summer-style-mask-cool-white">SUMMER STYLE MASK "COOL" WHITE </a>|冷臭ウ菌花乾UV|100||1|¥1080|¥1080|
+|<a href="https://fenice.style/products/%E3%81%94%E4%BA%88%E7%B4%84%E5%8F%97%E4%BB%98%E4%B8%AD-7%E6%9C%8831%E6%97%A5%E5%85%A5%E8%8D%B7%E4%BA%88%E5%AE%9A%E5%88%86-pink-ribbon-summer-style-mask-%E3%83%94%E3%83%B3%E3%82%AF%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%B5%E3%83%9E%E3%83%BC%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%AF-%E3%83%8C%E3%83%BC%E3%83%87%E3%82%A3%E3%83%94%E3%83%B3%E3%82%AF?_pos=1&_sid=9e302fef7&_ss=r" target="_blank">FENICE</a>|PINK RIBBON SUMMER STYLE MASK|ウ菌花乾UV||ポ|1|¥1080|¥1080|
+|<a href="https://bigjohn.co.jp/products/washable-cool-mask-light-%E6%B4%97%E3%81%88%E3%82%8B%E3%82%AF%E3%83%BC%E3%83%AB%E3%83%9E%E3%82%B9%E3%82%AF-%EF%BC%92%E8%89%B2%EF%BC%91%E3%82%BB%E3%83%83%E3%83%88-%E4%BA%88%E7%B4%847%E6%9C%8810%E6%97%A5%E5%87%BA%E8%8D%B7" target="_blank">BIG JOHN</a>|<a href="#washable-cool-mask-light">Washable Cool Mask "Light"</a>|冷乾UV|||2|¥2800|¥1400|
+|<a href="https://www.grip-swany.co.jp/?mode=srh&keyword=GSM-01" target="_blank">GRIP SWANY</a>|<a href="#gs-mask">GS MASK</a>|ウ菌カ||ポ|1|¥1980|¥1980|
+|<a href="https://tesoro-online.com/shopbrand/ct6023" target="_blank">tesoro</a>|<a href="#冷感オリジナルマスク">冷感オリジナルマスク</a>|冷蒸|||1|¥1500|¥1500|
+|<a href="https://www.zamst-online.jp/SHOP/389402.html" target="_blank">ZAMST</a>|<a href="#ザムスト-マウスカバー">ザムスト マウスカバー</a>||||2|¥2970|¥1485|
+
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 
 ## クラウドファンディング
@@ -156,6 +184,8 @@ draft: false
 |<a href="https://www.makuake.com/project/mediplus02/" target="_blank">株式会社ゼフィール</a>|<a href="#とことんクールな抗菌コールドマスク">とことんクールな抗菌コールドマスク</a>|冷菌臭||ポ|2|2178|1089|
 |<a href="https://www.makuake.com/project/mediplus02/" target="_blank">株式会社ゼフィール</a>|<a href="#抗菌UVひんやりネックゲイター">抗菌UVひんやりネックゲイター</a>|冷菌臭||ポ|2|3822|1911|
 |<a href="https://www.makuake.com/project/hartwel/" target="_blank">ハートウエル</a>|<a href="#今治タオル品質の冷感抗菌マスク">今治タオル品質の冷感・抗菌マスク</a>|冷菌臭||綿|1|2510|2510|
+|<a href="https://www.makuake.com/project/sameway_mask" target="_blank">Sameway</a>|<a href="#夏に負けない快適マスク">夏に負けない快適マスク</a>|冷UV臭菌乾|||1|¥1800|¥1800|
+|<a href="https://www.makuake.com/project/apparel_oota/" target="_blank">アパレルオオタ</a>|<a href="#天然アイスコットンx-小林製薬の抗菌加工夏を乗り切る爽快マスク">天然アイスコットンx 小林製薬の抗菌加工、夏を乗り切る爽快マスク！</a>|冷菌|||2|¥3800|¥1900|
 
 
 ## 一覧表を見る上での注意
@@ -246,6 +276,20 @@ draft: false
 ### パステルマスク
 {{< web_card url="https://sirabee.com/2020/06/23/20162354632/" >}}
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
+
 ### 抗菌・洗えるマスク
 {{< web_card url="https://netatopi.jp/article/1258270.html" >}}
 
@@ -260,9 +304,24 @@ draft: false
 
 ### スポーツフェイスマスク
 {{< web_card url="https://event-checker.info/mask-yonex/" >}}
+
 ### アイスタッチ マウスカバー
 {{< web_card url="https://tabi-labo.com/295994/wt-mizuno-cool-mask-summer" >}}
 
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 
 ### メイドインジャパンの洗える和紙マスク
@@ -283,6 +342,20 @@ draft: false
 ### Suriv
 {{< web_card url="https://tabi-labo.com/295337/wt-suriv" >}}
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
+
 ### 洗えるウレタンマスク
 {{< web_card url="https://iemone.jp/article/zakka/miyuki_hayashi_54119/" >}}
 
@@ -298,9 +371,23 @@ draft: false
 ### 西川だからつくれるこだわりマスク 涼感 麻素材
 {{< web_card url="https://prtimes.jp/main/html/rd/p/000000143.000010201.html" >}}
 
-
 ### 洗える伸縮マスク
 {{< web_card url="https://prtimes.jp/main/html/rd/p/000000022.000037947.html" >}}
+
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 ### Bio Face
 {{< web_card url="https://prtimes.jp/main/html/rd/p/000000114.000016815.html" >}}
@@ -320,6 +407,20 @@ draft: false
 ### 洗える夏用絹マスク
 {{< web_card url="https://prtimes.jp/main/html/rd/p/000000005.000058706.html" >}}
 
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 ### COOLIST
 {{< web_card url="https://www.walkerplus.com/article/1003234/" >}}
@@ -341,6 +442,20 @@ draft: false
 ### オリジナルマスク
 {{< web_card url="https://bg-mania.jp/2020/06/26344165.html" >}}
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
+
 ### One Another Mask
 {{< web_card url="https://internetcom.jp/206208/mark-and-lona-one-another-mask" >}}
 
@@ -358,6 +473,20 @@ draft: false
 
 ### chiffon face mask
 {{< web_card url="https://www.bcnretail.com/news/detail/20200625_178973.html" >}}
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
 
 ### お風呂で洗えるマスク
 {{< web_card url="https://sotokoto-online.jp/1820" >}}
@@ -377,6 +506,20 @@ draft: false
 ### SHELTECH BASIC MASK
 {{< web_card url="https://oceans.tokyo.jp/news/2020-0626-4-ocn/" >}}
 
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
+
 ### Salaf(サラフ)の立体マスク
 {{< web_card url="https://www.bcnretail.com/news/detail/20200615_178024.html" >}}
 
@@ -391,3 +534,89 @@ draft: false
 
 ### 今治タオル品質の冷感・抗菌マスク
 {{< web_card url="https://grapee.jp/839405" >}}
+
+### SURF - BLUE
+{{< web_card url="https://web.goout.jp/fashion/153020/" >}}
+
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
+
+### 接触冷感ひんやりクールマスク
+{{< web_card url="https://www.watch.impress.co.jp/docs/news/1261813.html" >}}
+
+### シームレスマスク
+{{< web_card url="https://tokusengai.com/_ct/17371317" >}}
+
+### natsuiroMASK
+{{< web_card url="https://www.iwate-np.co.jp/article/2020/6/29/80641" >}}
+
+### ひだまりマスク スズミ エア
+{{< web_card url="https://www.bcnretail.com/news/detail/20200624_178952.html" >}}
+
+### ひんやりマスクMASSCOOL
+{{< web_card url="https://bg-mania.jp/2020/07/01345646.html" >}}
+
+### SUMMER STYLE MASK "COOL" WHITE 
+{{< web_card url="https://cyclejapan.club/fenice-stylemask-2020/" >}}
+
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
+
+### Washable Cool Mask "Light"
+{{< web_card url="https://internetcom.jp/206226/big-john-cool-mask-light" >}}
+
+### GS MASK
+{{< web_card url="https://web.goout.jp/fashion/153473/" >}}
+
+### 夏に負けない快適マスク
+{{< web_card url="https://sotokoto-online.jp/1887" >}}
+
+### 冷感オリジナルマスク
+{{< web_card url="https://enuchi.jp/10014/tesoro-original-mask" >}}
+
+### ザムスト マウスカバー
+{{< web_card url="https://internetcom.jp/206231/zamst-mouth-cover" >}}
+
+### 天然アイスコットンx 小林製薬の抗菌加工、夏を乗り切る爽快マスク！
+{{< web_card url="https://internetcom.jp/206237/ice-cotton-and-koba-guard-face-mask" >}}
+
+### 東京マウスウェア
+{{< web_card url="https://bg-mania.jp/2020/06/27344221.html" >}}
+
+<!-- 広告 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- memorandum_yoko -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9230307049349065"
+     data-ad-slot="9446890582"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- 広告 -->
