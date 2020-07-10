@@ -17,8 +17,8 @@ googleAnalytics = "UA-75025058-6"
     quote = "blue"
     index_posts_num = 8
     google_search = true
-    logo = "/images/logo.jp2"
-    portrait = "/images/logo.jp2"
+    logo = "/images/logo.jpg"
+    portrait = "/images/logo.jpg"
     bio = """
     <p> 継続する秘訣は、途切れたと思った時にもう一度繰り返すこと</p>
     <br />
