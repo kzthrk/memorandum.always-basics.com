@@ -1,7 +1,7 @@
 ---
 title: "再利用可能なマスクの情報集めてみました"
 date: 2020-06-21T00:58:07+09:00
-lastmod: 2020-07-12T19:10:00+09:00
+lastmod: 2020-07-12T20:10:00+09:00
 Categories: ["Misc"]
 Tags: ["mask"]
 Description: "使い捨てマスクが当たり前のように使われていたのは今は昔。新型コロナ対策でどんどん再利用可能なマスクの新商品が販売されています。そんなマスクの情報を集めてみました"
@@ -23,7 +23,7 @@ draft: false
 いわゆる、コロナ禍におけるマスク不足に端を発して、使い捨てマスクではなく使用後の手洗い等によって再び使用するタイプのマスクが増えてきました。
 最近ではただただ再利用可能なだけではなく、様々な機能性を追求したものが開発されており、ユニクロの「エアリズムマスク」への期待などはまさにそれを象徴するものだと思います。
 
-日々目の前を通過していくマスクの情報を小まめにメモしていたのですが、それを~~一覧表に纏めたい~~と思います。
+日々目の前を通過していくマスクの情報を小まめにメモしていたのですが、それを~~一覧表に~~纏めたいと思います。
 ~~そして個人的に気になった商品については、個別に取り上げてみたいと思います。~~
 
 
@@ -40,13 +40,15 @@ draft: false
 - 間違っていても責任は負えません。
 - が、自分を騙すような趣味もありません。
 
+
 {{< web_card_mask com_name="ユニクロ" prod_name="エアリズムマスク" func="菌UV" count="" material="" price="990" amount="3" unit_price="330" com_url="https://www.uniqlo.com/jp/store/feature/uq/airism/men/#fC139" news_url="https://www.phileweb.com/news/hobby/202006/24/3403.html" >}}
 {{< web_card_mask com_name="無印良品" prod_name="繰り返し　使える　２枚組・三層マスク" func="" count="30" material="綿" price="999" amount="2" unit_price="499.5" com_url="https://www.muji.com/jp/ja/store/cmdty/detail/4550344279700" news_url="https://www.beauty-matome.net/lifestyle/muji_0513.html" >}}
 {{< web_card_mask com_name="AEON" prod_name="洗って使えるフィットマスク" func="冷UV蒸" count="" material="ポ" price="398" amount="1" unit_price="398" com_url="https://www.reform-s.com/shop/pop-eventnews.jsp?id=141" news_url="https://sotokoto-online.jp/1847" >}}
 {{< web_card_mask com_name="AEON" prod_name="ひやマスク" func="冷" count="" material="ポ" price="1200" amount="2" unit_price="600" com_url="https://store.cox-online.jp/fashion-mask-pc.html" news_url="https://bg-mania.jp/2020/06/10342709.html?in=news.yahoo.co.jp" >}}
 {{< web_card_mask com_name="AEON" prod_name="ぴたマスク" func="" count="" material="ポ" price="1200" amount="3" unit_price="400" com_url="https://store.cox-online.jp/fashion-mask-pc.html" news_url="https://39mag.benesse.ne.jp/lifestyle/content/?id=75783" >}}
 {{< web_card_mask com_name="AEON" prod_name="パステルマスク" func="冷" count="" material="" price="858" amount="3" unit_price="286" com_url="" news_url="https://sirabee.com/2020/06/23/20162354632/" >}}
-{{< web_card_mask com_name="アオキ" prod_name="抗菌・洗えるマスク" func="" count="30" material="" price="3990" amount="20" unit_price="199.5" com_url="https://www.aoki-style.com/shop/item/A29_MASK001B?colorCode=05" news_url="https://netatopi.jp/article/1258270.html" >}}
+{{< web_card_mask com_name="アオキ" prod_name="抗菌・洗えるマスク" func="菌" count="30" material="" price="3990" amount="20" unit_price="199.5" com_url="https://www.aoki-style.com/shop/item/A29_MASK001B?colorCode=05" news_url="https://netatopi.jp/article/1258270.html" >}}
+{{< web_card_mask com_name="アオキ" prod_name="ダブル抗菌・洗えるクールマスク" func="冷菌" count="30" material="" price="4000" amount="20" unit_price="200" com_url="https://cloud.dm.aoki-style.com/mask_lottery_landing" news_url="https://www.itmedia.co.jp/business/articles/2007/09/news099.html" >}}
 {{< web_card_mask com_name="はるやま" prod_name="クールプレストマスク" func="冷臭菌乾UV" count="50" material="" price="1078" amount="1" unit_price="1078" com_url="https://haruyama.jp/display/item/?di=144970090901" news_url="https://travel.watch.impress.co.jp/docs/news/1258390.html" >}}
 {{< web_card_mask com_name="青山" prod_name="TioTioプレミアム洗える立体マスク" func="臭ウイルス菌カビ" count="" material="ポ" price="590" amount="1" unit_price="590" com_url="https://cloud.ma.aoyama-syouji.co.jp/mask" news_url="https://internetcom.jp/206127/aoyama-tiotio-face-mask-3rd-lottery-sale" >}}
 {{< web_card_mask com_name="TAKA-Q" prod_name="水着素材マスク" func="乾UV" count="" material="ポ" price="1500" amount="3" unit_price="500" com_url="https://online.taka-q.jp/shop/g/g110458915100010019999/" news_url="https://travel.watch.impress.co.jp/docs/news/1264746.html" >}}
@@ -139,6 +141,7 @@ draft: false
 {{< web_card_mask com_name="Sameway" prod_name="夏に負けない快適マスク" func="冷UV臭菌乾" count="" material="" price="1800" amount="1" unit_price="1800" com_url="https://www.makuake.com/project/sameway_mask" news_url="https://sotokoto-online.jp/1887" >}}
 {{< web_card_mask com_name="WABIWORLD" prod_name="COOL BAMBOO" func="冷菌臭UV" count="" material="" price="3490" amount="1" unit_price="3490" com_url="https://www.makuake.com/project/coolbamboo/" news_url="https://www.j-cast.com/trend/2020/07/09389857.html?p=all" >}}
 {{< web_card_mask com_name="Subdial" prod_name="CLEVALIGN MASK" func="冷臭乾UV" count="50" material="" price="2980" amount="1" unit_price="2980" com_url="https://www.makuake.com/project/subdial/" news_url="https://www.bcnretail.com/market/detail/20200709_181922.html" >}}
+
 --------
 
 ここから下は過去の記事の内容を残したものです。
