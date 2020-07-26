@@ -265,8 +265,8 @@ draft: false
 </script>
 <!-- 広告 -->
 
-{{< web_card_mask com_name="アグレッソスポーツプロジェクト" prod_name="－3.8℃夏マスク" func="冷" count="" material="" price="2200" amount="1" unit_price="2200" com_url="https://www.makuake.com/project/agresso/" news_url="https://internetcom.jp/206133/minus-3-point-8-degrees-summer-mask" >}}
-{{< web_card_mask com_name="SHELTECH" prod_name="SHELTECH BASIC MASK" func="冷菌ウイルス臭カビUV乾" count="" material="" price="1760" amount="1" unit_price="1760" com_url="https://www.makuake.com/project/sheltech-mask/" news_url="https://oceans.tokyo.jp/news/2020-0626-4-ocn/" >}}
+{{< web_card_mask com_name="アグレッソスポーツプロジェクト" prod_name="－3.8℃夏マスク" func="冷臭菌UV乾" count="" material="" price="2200" amount="1" unit_price="2200" com_url="https://www.makuake.com/project/agresso/" news_url="https://internetcom.jp/206133/minus-3-point-8-degrees-summer-mask" >}}
+{{< web_card_mask com_name="SHELTECH" prod_name="SHELTECH BASIC MASK" func="冷菌ウ臭乾カUV" count="" material="" price="1760" amount="1" unit_price="1760" com_url="https://www.makuake.com/project/sheltech-mask/" news_url="https://oceans.tokyo.jp/news/2020-0626-4-ocn/" >}}
 {{< web_card_mask com_name="公大株式会社" prod_name="Salaf(サラフ)の立体マスク" func="冷" count="" material="" price="1500" amount="1" unit_price="1500" com_url="https://www.makuake.com/project/salaf/" news_url="https://www.bcnretail.com/news/detail/20200615_178024.html" >}}
 {{< web_card_mask com_name="infinity peaks" prod_name="Re.Breass" func="乾" count="" material="" price="2500" amount="1" unit_price="2500" com_url="https://www.makuake.com/project/infinity_peaks02/" news_url="https://internetcom.jp/206198/infinity-peaks-re-breass" >}}
 {{< web_card_mask com_name="株式会社SPY" prod_name="kumoran" func="" count="" material="" price="3168" amount="1" unit_price="3168" com_url="https://www.makuake.com/project/kumoran/" news_url="https://www.atpress.ne.jp/news/218151" >}}
